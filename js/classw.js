@@ -1,6 +1,8 @@
 $(window).load(function(){
 			$('#loading_screen').fadeOut('slow');
-			$('body').css('overflow-y','initial')
+			$('body').css({
+				'overflow-y':'auto'
+			});
 			$('#pf01_home_content').delay(5000).css({
 					'opacity':'0'
 			}).animate({
