@@ -6,37 +6,36 @@
 	.st0{fill:#FFFFFF;}
 	.st1{fill:none;stroke:url(#SVGID_1_);stroke-width:0.746;stroke-miterlimit:10;}
 	.st2{fill:none;stroke:url(#SVGID_2_);stroke-width:0.746;stroke-miterlimit:10;}
+	.st3{clip-path:url(#SVGID_4_);}
 </style>
 <g>
-	<g>
-		<polygon class="st0" points="401.4,105.2 349.6,53.4 53,53.4 53,387.8 107.8,442.5 401.4,442.5 		"/>
-	</g>
-	
-		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="2.483375e-04" y1="77.2215" x2="156.0558" y2="77.2215" gradientTransform="matrix(1 0 0 -1 0 490)">
-		<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0"/>
-		<stop  offset="0.5" style="stop-color:#000000"/>
-		<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
-	</linearGradient>
-	<line class="st1" x1="155.8" y1="490.5" x2="0.3" y2="335"/>
-	
-		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="296.2022" y1="411.9725" x2="452.2588" y2="411.9725" gradientTransform="matrix(1 0 0 -1 0 490)">
-		<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0"/>
-		<stop  offset="0.5" style="stop-color:#000000"/>
-		<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
-	</linearGradient>
-	<line class="st2" x1="452" y1="155.8" x2="296.5" y2="0.3"/>
+	<polygon class="st0" points="401.4,105.2 349.6,53.4 53,53.4 53,387.8 107.8,442.5 401.4,442.5 	"/>
 </g>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="3.624919e-02" y1="-27.25" x2="156.0638" y2="-27.25" gradientTransform="matrix(1 0 0 1 0 440)">
+	<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0"/>
+	<stop  offset="0.5" style="stop-color:#000000"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</linearGradient>
+<line class="st1" x1="155.8" y1="490.5" x2="0.3" y2="335"/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="296.2362" y1="-361.95" x2="452.2638" y2="-361.95" gradientTransform="matrix(1 0 0 1 0 440)">
+	<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0"/>
+	<stop  offset="0.5" style="stop-color:#000000"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</linearGradient>
+<line class="st2" x1="452" y1="155.8" x2="296.5" y2="0.3"/>
 <g>
-	<defs>
-		<polygon id="SVGID_3_" points="400.3,102.6 348.5,50.8 52,50.8 52,385.2 106.7,440 400.3,440 		"/>
-	</defs>
-	<clipPath id="SVGID_4_">
-		<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
-	</clipPath>
-	<g style="clip-path:url(#SVGID_4_);">
-		
-			<image style="overflow:visible;" width="720" height="960" xlink:href="D:\다운\김종완\Pictures\KakaoTalk_20191007_231931313.jpg"  transform="matrix(0.4838 0 0 0.4838 51.9545 23.5058)">
-		</image>
+	<g>
+		<defs>
+			<polygon id="SVGID_3_" points="401.3,105.2 349.5,53.3 53.1,53.3 53.1,387.8 107.8,442.5 401.3,442.5 			"/>
+		</defs>
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st3">
+			
+				<image style="overflow:visible;enable-background:new    ;" width="720" height="960" xlink:href="D:\다운\김종완\Pictures\KakaoTalk_20191007_231931313.jpg"  transform="matrix(0.4838 0 0 0.4838 53.0045 26.0558)">
+			</image>
+		</g>
 	</g>
 </g>
 </svg>
