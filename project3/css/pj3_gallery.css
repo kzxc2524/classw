@@ -1,0 +1,1837 @@
+@charset "UTF-8";
+/*
+썸네일에 패럴렉스 스크롤, active 된 썸네일 페이지로 자동 전환
+갤러리 이미지 제목 애니메이션
+스크롤, key press 애니메이션
+*/
+body{background:linear-gradient(-145deg,#a8addf,#a5a2bc);
+	 background-repeat:no-repeat;
+	 background-size:100% 100%;
+	 width:100vw; height:100vh;
+	}
+
+.tap_box{width:fit-content;
+		 width:-webkit-fit-content;
+		 width:-moz-fit-content;
+		 width:-ms-fit-content;
+		 width:-o-fit-content;
+		 height:30px;
+		  position:absolute;
+		  left:50%; top:150px;
+		  transform:translateX(-50%);
+		  -webkit-transform:translateX(-50%);
+		  -moz-transform:translateX(-50%);
+		  -ms-transform:translateX(-50%);
+		  -o-transform:translateX(-50%);
+		  z-index:2;
+		 }
+.tap_box>li{float:left;
+			margin-right:60px;
+			}
+.tap_box>li:nth-last-child(1){margin-right:0;}
+
+.tap_box>li>label
+				{font:1.4em 'YiSunShinDotumM';
+				 color:#cccccc;
+				 display:block;
+				 padding:0 10px;
+				 width:100%; height:100%;
+				 text-align:center;
+				 transition:background 0.5s,color 0.5s;
+				 -webkit-transition:background 0.5s,color 0.5s;
+				 -moz-transition:background 0.5s,color 0.5s;
+				 -ms-transition:background 0.5s,color 0.5s;
+				 -o-transition:background 0.5s,color 0.5s;
+				 border-radius:20px;
+				 -webkit-border-radius:20px;
+				 -moz-border-radius:20px;
+				 -ms-border-radius:20px;
+				 -o-border-radius:20px;
+				}
+.tap_box>li>label:hover
+				{background:rgba(0,0,0,0.3);
+				 color:#fff;
+				 }
+#gallery_photo:checked+input+.tap_box>li:nth-child(1)>label
+				{background:rgba(0,0,0,0.3);
+				 color:#fff;
+				 }
+#gallery_video:checked+.tap_box>li:nth-child(2)>label
+				{background:rgba(0,0,0,0.3);
+				 color:#fff;
+				 }
+.gallery_container{width:80vw; height:60vh;
+				   margin:0 auto;
+				   overflow:hidden;
+				   position:absolute;
+				   left:50%; top:210px;
+				   transform:translateX(-50%);
+				   -webkit-transform:translateX(-50%);
+				   -moz-transform:translateX(-50%);
+				   -ms-transform:translateX(-50%);
+				   -o-transform:translateX(-50%);
+				  }
+.gallery_big .swiper-wrapper{width:49%; height:100%;}
+
+.gallery_big{width:100%; height:100%;
+				 float:left;
+				 position:relative;
+				}
+
+
+.gallery_big .swiper-slide,
+.gallery_big .big_img_filter,
+.gallery_big .big_img_contain,
+.gallery_big .big_video_filter,
+.gallery_big .big_video_contain
+				{width:100%; height:100%;}
+
+
+
+.big_img_filter
+		{position:absolute;
+		 left:0; top:0;
+		 filter:blur(5px) brightness(1.2);
+		 -webkit-filter:blur(5px) brightness(1.2);
+		 -moz-filter:blur(5px) brightness(1.2);
+		 -ms-filter:blur(5px) brightness(1.2);
+		 -o-filter:blur(5px) brightness(1.2);
+		 }
+.big_img_contain
+		{position:absolute;
+		 left:0; top:0;
+		 z-index:1;
+		}
+
+.big_img_filter1
+		{background:url(../image/gallery/nn10202.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+
+.big_img_contain1
+		{background:url(../image/gallery/nn10202.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+
+.big_img_filter2
+		{background:url(../image/gallery/nn10204.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain2
+		{background:url(../image/gallery/nn10204.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_filter3
+		{background:url(../image/gallery/nn10206.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain3
+		{background:url(../image/gallery/nn10206.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_filter4
+		{background:url(../image/gallery/nn10207.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain4
+		{background:url(../image/gallery/nn10207.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_filter5
+		{background:url(../image/gallery/nn10201.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain5
+		{background:url(../image/gallery/nn10201.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_filter6
+		{background:url(../image/gallery/nn10205.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain6
+		{background:url(../image/gallery/nn10205.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_filter7
+		{background:url(../image/gallery/nn10208.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain7
+		{background:url(../image/gallery/nn10208.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_filter8
+		{background:url(../image/gallery/nn10209.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain8
+		{background:url(../image/gallery/nn10209.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_filter9
+		{background:url(../image/gallery/miniwedding.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain9
+		{background:url(../image/gallery/miniwedding.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_filter10
+		{background:url(../image/gallery/miniwedding1.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain10
+		{background:url(../image/gallery/miniwedding1.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_filter11
+		{background:url(../image/gallery/miniwedding2.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain11
+		{background:url(../image/gallery/miniwedding2.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_filter12
+		{background:url(../image/gallery/miniwedding3.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain12
+		{background:url(../image/gallery/miniwedding3.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_filter13
+		{background:url(../image/gallery/miniwedding4.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain13
+		{background:url(../image/gallery/miniwedding4.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_filter14
+		{background:url(../image/gallery/miniwedding5.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain14
+		{background:url(../image/gallery/miniwedding5.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_filter15
+		{background:url(../image/gallery/miniwedding6.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain15
+		{background:url(../image/gallery/miniwedding6.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_filter16
+		{background:url(../image/gallery/miniwedding7.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain16
+		{background:url(../image/gallery/miniwedding7.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_filter17
+		{background:url(../image/gallery/picnic.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain17
+		{background:url(../image/gallery/picnic.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_filter18
+		{background:url(../image/gallery/picnic1.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain18
+		{background:url(../image/gallery/picnic1.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_filter19
+		{background:url(../image/gallery/picnic2.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain19
+		{background:url(../image/gallery/picnic2.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_filter20
+		{background:url(../image/gallery/picnic3.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain20
+		{background:url(../image/gallery/picnic3.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_filter21
+		{background:url(../image/gallery/picnic4.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain21
+		{background:url(../image/gallery/picnic4.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_filter22
+		{background:url(../image/gallery/picnic5.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain22
+		{background:url(../image/gallery/picnic5.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_filter23
+		{background:url(../image/gallery/picnic6.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_img_contain23
+		{background:url(../image/gallery/picnic6.jpg)no-repeat center center;
+		 background-size:contain;
+		 -webkit-background-size:contain;
+		 -moz-background-size:contain;
+		 -ms-background-size:contain;
+		 -o-background-size:contain;
+		}
+.big_img_contain24
+		{background:black;
+		} 
+
+
+.swiper-pagination{width:49%; height:100%;
+				   display:flex;
+				   flex-wrap:wrap;
+				   -webkit-flex-wrap:wrap;
+				   -moz-flex-wrap:wrap;
+				   -ms-flex-wrap:wrap;
+				   overflow-y:auto;
+				   right:0; top:0;
+				   overflow-y:-moz-scrollbars-none;
+				   -ms-overflow-style:none;
+				  }
+.swiper-pagination::-webkit-scrollbar{
+				width:5px;
+				}
+.swiper-pagination::-webkit-scrollbar-track {
+		 background-color:rgba(150,150,150,0.1);
+		}
+
+.swiper-pagination::-webkit-scrollbar-thumb {
+					  border-radius:100px;
+					  -webkit-border-radius:100px;
+					  background-color:rgba(200,200,200,0.8);
+					}
+
+
+.swiper-pagination .swiper-pagination-bullet
+				  {width:33%;
+				   height:33%;
+				   border-radius:0;
+				   margin:0 0.5% 0.5% 0 !important;
+				  }
+.swiper-pagination .swiper-pagination-bullet:nth-of-type(3n)
+					{margin-right:0 !important;}
+.swiper-pagination .swiper-pagination-bullet:not(.swiper-pagination-bullet-active)
+					{opacity:0.5}
+.swiper-pagination-bullet-active{opacity:1;}
+
+
+
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(1)
+		{background:url(../image/gallery/nn10202.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(2)
+		{background:url(../image/gallery/nn10204.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(3)
+		{background:url(../image/gallery/nn10206.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(4)
+		{background:url(../image/gallery/nn10207.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(5)
+		{background:url(../image/gallery/nn10201.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(6)
+		{background:url(../image/gallery/nn10205.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(7)
+		{background:url(../image/gallery/nn10208.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(8)
+		{background:url(../image/gallery/nn10209.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(9)
+		{background:url(../image/gallery/miniwedding.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(10)
+		{background:url(../image/gallery/miniwedding1.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(11)
+		{background:url(../image/gallery/miniwedding2.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(12)
+		{background:url(../image/gallery/miniwedding3.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination .swiper-pagination-bullet:nth-of-type(13)
+		{background:url(../image/gallery/miniwedding4.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(14)
+		{background:url(../image/gallery/miniwedding5.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(15)
+		{background:url(../image/gallery/miniwedding6.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(16)
+		{background:url(../image/gallery/miniwedding7.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(17)
+		{background:url(../image/gallery/picnic.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(18)
+		{background:url(../image/gallery/picnic1.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination .swiper-pagination-bullet:nth-of-type(19)
+		{background:url(../image/gallery/picnic2.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(20)
+		{background:url(../image/gallery/picnic3.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(21)
+		{background:url(../image/gallery/picnic4.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(22)
+		{background:url(../image/gallery/picnic5.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(23)
+		{background:url(../image/gallery/picnic6.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.photo .swiper-pagination-bullet:nth-of-type(24)
+		{background:black;
+		}
+
+.big_video_filter
+		{position:absolute;
+		 left:0; top:0;
+		 filter:blur(5px) brightness(1.2);
+		 -webkit-filter:blur(5px) brightness(1.2);
+		 -moz-filter:blur(5px) brightness(1.2);
+		 -ms-filter:blur(5px) brightness(1.2);
+		 -o-filter:blur(5px) brightness(1.2);
+		 }
+.big_video_contain
+		{position:absolute;
+		 left:0; top:0;
+		 z-index:1;
+		}
+
+.big_video_contain1
+		{background:url(../image/gallery/pj3_v1.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_video_contain2
+		{background:url(../image/gallery/pj3_v2.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_video_contain3
+		{background:url(../image/gallery/pj3_v3.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_video_contain4
+		{background:url(../image/gallery/pj3_v4.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+
+.big_video_contain5
+		{background:url(../image/discography/a4.4.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_video_contain6
+		{background:url(../image/gallery/pj3_v5.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+
+.big_video_contain7
+		{background:url(../image/gallery/pj3_v6.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_video_contain8
+		{background:url(../image/gallery/pj3_v7.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_video_contain9
+		{background:url(../image/gallery/pj3_v8.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_video_contain10
+		{background:url(../image/gallery/pj3_v9.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_video_contain11
+		{background:url(../image/gallery/pj3_v10.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_video_contain12
+		{background:url(../image/gallery/pj3_v11.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_video_contain13
+		{background:url(../image/gallery/pj3_v12.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_video_contain14
+		{background:url(../image/gallery/pj3_v13.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_video_contain15
+		{background:url(../image/gallery/pj3_v14.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_video_contain16
+		{background:url(../image/gallery/pj3_v15.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_video_contain17
+		{background:url(../image/gallery/pj3_v16.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_video_contain18
+		{background:url(../image/gallery/pj3_v17.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_video_contain19
+		{background:url(../image/gallery/pj3_v18.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_video_contain20
+		{background:url(../image/gallery/pj3_v19.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_video_contain21
+		{background:url(../image/gallery/pj3_v20.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_video_contain22
+		{background:url(../image/gallery/pj3_v21.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_video_contain23
+		{background:url(../image/gallery/pj3_v22.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.big_video_contain24
+		{background:url(../image/gallery/pj3_v23.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(1)
+		{background:url(../image/gallery/pj3_v1.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(2)
+		{background:url(../image/gallery/pj3_v2.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(3)
+		{background:url(../image/gallery/pj3_v3.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(4)
+		{background:url(../image/gallery/pj3_v4.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(5)
+		{background:url(../image/discography/a4.4.jpg)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(6)
+		{background:url(../image/gallery/pj3_v5.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(7)
+		{background:url(../image/gallery/pj3_v6.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(8)
+		{background:url(../image/gallery/pj3_v7.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(9)
+		{background:url(../image/gallery/pj3_v8.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(10)
+		{background:url(../image/gallery/pj3_v9.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(11)
+		{background:url(../image/gallery/pj3_v10.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(12)
+		{background:url(../image/gallery/pj3_v11.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(13)
+		{background:url(../image/gallery/pj3_v12.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(14)
+		{background:url(../image/gallery/pj3_v13.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(15)
+		{background:url(../image/gallery/pj3_v14.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(16)
+		{background:url(../image/gallery/pj3_v15.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(17)
+		{background:url(../image/gallery/pj3_v16.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(18)
+		{background:url(../image/gallery/pj3_v17.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination .swiper-pagination-bullet:nth-of-type(19)
+		{background:url(../image/gallery/pj3_v18.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(20)
+		{background:url(../image/gallery/pj3_v19.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(21)
+		{background:url(../image/gallery/pj3_v20.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(22)
+		{background:url(../image/gallery/pj3_v21.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(23)
+		{background:url(../image/gallery/pj3_v22.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+.swiper-pagination.video .swiper-pagination-bullet:nth-of-type(24)
+		{background:url(../image/gallery/pj3_v23.png)no-repeat center center;
+		 background-size:cover;
+		 -webkit-background-size:cover;
+		 -moz-background-size:cover;
+		 -ms-background-size:cover;
+		 -o-background-size:cover;
+		}
+#guide_page{background:rgba(150,150,150,0.7);
+			z-index:10;
+			display:none;
+			}
+#guide_page>.guide_inner1
+				  {position:absolute;
+				   width:49%; height:100%;
+				   left:0; top:0;
+				   }
+#guide_page>.guide_inner2
+				  {position:absolute;
+				   width:49%; height:100%;
+				   right:0; top:0;
+				   border-left:4px dashed #ccc;
+				   }
+.guide_txt{position:absolute;
+		left: 50%; bottom: 50px;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		font:18px 'SDMiSaeng';
+		color:#ffffff;
+		}
+#guide_screen:checked+#guide_page
+			{display:block;}
+.guide_inner1>ul
+			{position:absolute;
+			left: 50%; top: 50%;
+			transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			
+			width:fit-content;
+			width:-webkit-fit-content;
+			width:-moz-fit-content;
+			width:-ms-fit-content;
+			width:-o-fit-content;
+			}
+.guide_inner1>ul>li{float:left;
+					text-align:center;
+					}
+.guide_inner1>ul>li:nth-child(2){margin:0 30px;}
+.guide_inner1>ul>li>p{font:18px 'SDMiSaeng';
+					  color:#fff;
+					  text-align:center;
+					  margin-top:15px;
+					 }
+.guide_inner2>div{position:absolute;
+			left: 50%; top: 50%;
+			transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			
+			width:fit-content;
+			width:-webkit-fit-content;
+			width:-moz-fit-content;
+			width:-ms-fit-content;
+			width:-o-fit-content;
+			text-align:center;
+			}
+.guide_inner2>div>img[alt="pointericon"]
+			{position:absolute;
+			 left:55%; top:15%;
+			 width:10%; height:auto;	
+animation:pointerMove 1.5s infinite;
+			}
+.guide_inner2>div>p{font:18px 'SDMiSaeng';
+					  color:#fff;
+					  text-align:center;
+					  margin-top:15px;
+					 }
+.guide_inner1>ul>li:nth-child(1)>img
+{animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s infinite;
+ -webkit-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s infinite;
+ -moz-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s infinite;
+ -ms-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s infinite;
+ -o-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s infinite;
+}
+.guide_inner1>ul>li:nth-child(2)>img
+{animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.75s infinite;
+ -webkit-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.75s infinite;
+ -moz-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.75s infinite;
+ -ms-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.75s infinite;
+ -o-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.75s infinite;
+}
+.guide_inner1>ul>li:nth-child(3)>img
+{animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s infinite;
+ -webkit-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s infinite;
+ -moz-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s infinite;
+ -ms-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s infinite;
+ -o-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s infinite;
+}
+@keyframes bounceAction{
+	0%,20%,50%,80%,100%
+		{transform:translateY(0);
+		 -webkit-transform:translateY(0);
+		 -moz-transform:translateY(0);
+		 -ms-transform:translateY(0);
+		 -o-transform:translateY(0);
+		}
+	40%{transform:translateY(-10px);
+		-webkit-transform:translateY(-10px);
+		-moz-transform:translateY(-10px);
+		-ms-transform:translateY(-10px);
+		-o-transform:translateY(-10px);
+		}
+	60%{transform:translateY(-5px);
+		-webkit-transform:translateY(-5px);
+		-moz-transform:translateY(-5px);
+		-ms-transform:translateY(-5px);
+		-o-transform:translateY(-5px);
+		}
+}
+-webkit-@keyframes bounceAction{
+	0%,20%,50%,80%,100%
+		{transform:translateY(0);
+		 -webkit-transform:translateY(0);
+		 -moz-transform:translateY(0);
+		 -ms-transform:translateY(0);
+		 -o-transform:translateY(0);
+		}
+	40%{transform:translateY(-10px);
+		-webkit-transform:translateY(-10px);
+		-moz-transform:translateY(-10px);
+		-ms-transform:translateY(-10px);
+		-o-transform:translateY(-10px);
+		}
+	60%{transform:translateY(-5px);
+		-webkit-transform:translateY(-5px);
+		-moz-transform:translateY(-5px);
+		-ms-transform:translateY(-5px);
+		-o-transform:translateY(-5px);
+		}
+}
+-moz-@keyframes bounceAction{
+	0%,20%,50%,80%,100%
+		{transform:translateY(0);
+		 -webkit-transform:translateY(0);
+		 -moz-transform:translateY(0);
+		 -ms-transform:translateY(0);
+		 -o-transform:translateY(0);
+		}
+	40%{transform:translateY(-10px);
+		-webkit-transform:translateY(-10px);
+		-moz-transform:translateY(-10px);
+		-ms-transform:translateY(-10px);
+		-o-transform:translateY(-10px);
+		}
+	60%{transform:translateY(-5px);
+		-webkit-transform:translateY(-5px);
+		-moz-transform:translateY(-5px);
+		-ms-transform:translateY(-5px);
+		-o-transform:translateY(-5px);
+		}
+}
+-ms-@keyframes bounceAction{
+	0%,20%,50%,80%,100%
+		{transform:translateY(0);
+		 -webkit-transform:translateY(0);
+		 -moz-transform:translateY(0);
+		 -ms-transform:translateY(0);
+		 -o-transform:translateY(0);
+		}
+	40%{transform:translateY(-10px);
+		-webkit-transform:translateY(-10px);
+		-moz-transform:translateY(-10px);
+		-ms-transform:translateY(-10px);
+		-o-transform:translateY(-10px);
+		}
+	60%{transform:translateY(-5px);
+		-webkit-transform:translateY(-5px);
+		-moz-transform:translateY(-5px);
+		-ms-transform:translateY(-5px);
+		-o-transform:translateY(-5px);
+		}
+}
+-o-@keyframes bounceAction{
+	0%,20%,50%,80%,100%
+		{transform:translateY(0);
+		 -webkit-transform:translateY(0);
+		 -moz-transform:translateY(0);
+		 -ms-transform:translateY(0);
+		 -o-transform:translateY(0);
+		}
+	40%{transform:translateY(-10px);
+		-webkit-transform:translateY(-10px);
+		-moz-transform:translateY(-10px);
+		-ms-transform:translateY(-10px);
+		-o-transform:translateY(-10px);
+		}
+	60%{transform:translateY(-5px);
+		-webkit-transform:translateY(-5px);
+		-moz-transform:translateY(-5px);
+		-ms-transform:translateY(-5px);
+		-o-transform:translateY(-5px);
+		}
+}
+@keyframes pointerMove{
+	0%{left:100%}
+	100%{left:55%}
+}
+
+@media screen and (min-width:768px) and (max-width:1279px){
+.tap_box{width:fit-content;
+		 width:-webkit-fit-content;
+		 width:-moz-fit-content;
+		 width:-ms-fit-content;
+		 width:-o-fit-content;
+		 height: 30px;
+		position: absolute;
+		left: 50%; top: 150px;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		z-index: 2;
+				}
+.tap_box>li>label
+				{font:1.5em 'YiSunShinDotumM';
+				 color:#cccccc;
+				 display:block;
+				 padding:0 10px;
+				 width:100%; height:100%;
+				 text-align:center;
+				 transition:background 0.5s,color 0.5s;
+				 -webkit-transition:background 0.5s,color 0.5s;
+				 -moz-transition:background 0.5s,color 0.5s;
+				 -ms-transition:background 0.5s,color 0.5s;
+				 -o-transition:background 0.5s,color 0.5s;
+				 border-radius:20px;
+				 -webkit-border-radius:20px;
+				 -moz-border-radius:20px;
+				 -ms-border-radius:20px;
+				 -o-border-radius:20px;
+				}
+.tap_box>li>label:hover
+				{background:rgba(0,0,0,0.3);
+				 color:#fff;
+				 }
+#gallery_photo:checked+input+.tap_box>li:nth-child(1)>label
+				{background:rgba(0,0,0,0.3);
+				 color:#fff;
+				 }
+#gallery_video:checked+.tap_box>li:nth-child(2)>label
+				{background:rgba(0,0,0,0.3);
+				 color:#fff;
+				 }
+.gallery_container{width:95vw; height:70vh;
+				   margin:0 auto;
+				   position:absolute;
+				   left:50%; top:210px;
+				   transform:translateX(-50%);
+				   -webkit-transform:translateX(-50%);
+				   -moz-transform:translateX(-50%);
+				   -ms-transform:translateX(-50%);
+				   -o-transform:translateX(-50%);
+				  }
+
+
+.gallery_big{width:100%; height:49%;
+			 margin:0 auto 1%;
+			 overflow:hidden;
+			}
+.gallery_big .swiper-wrapper{width:100%; height:100%;
+							 position:absolute;
+							 top:0;
+							}
+.swiper-pagination{width:100%; height:49%;
+				   margin:0 auto;
+				   display:flex;
+				   flex-wrap:wrap;
+				   -webkit-flex-wrap:wrap;
+				   -moz-flex-wrap:wrap;
+				   -ms-flex-wrap:wrap;
+				   overflow-y:auto;				   
+				   overflow-y:-moz-scrollbars-none;
+				   -ms-overflow-style:none;
+				   position:initial !important;
+				  }
+.swiper-pagination::-webkit-scrollbar{
+				width:5px;
+				}
+.swiper-pagination::-webkit-scrollbar-track {
+		 background-color:rgba(150,150,150,0.1);
+		}
+
+.swiper-pagination::-webkit-scrollbar-thumb {
+					  border-radius:100px;
+					  -webkit-border-radius:100px;
+					  background-color:rgba(200,200,200,0.8);
+					}
+.swiper-pagination.photo .swiper-pagination-bullet
+					{background-position:center -30px !important;}
+
+#guide_page{background:rgba(150,150,150,0.7);
+			z-index:10;
+			display:none;
+			}
+#guide_page>.guide_inner1
+				  {position:absolute;
+				   width:100%; height:49%;
+				   left:0; top:0;
+				   }
+#guide_page>.guide_inner2
+				  {position:absolute;
+				   width:100%; height:49%;
+				   right:0; top:50%;
+				   border-top:4px dashed #ccc;
+				   }
+.guide_txt{position:absolute;
+		left: 50%; bottom: 50px;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		font:18px 'SDMiSaeng';
+		color:#ffffff;
+		}
+#guide_screen:checked+#guide_page
+			{display:block;}
+.guide_inner1>ul
+			{position:absolute;
+			left: 50%; top: 50%;
+			transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			overflow:hidden;
+			width:fit-content;
+			width:-webkit-fit-content;
+			width:-moz-fit-content;
+			width:-ms-fit-content;
+			width:-o-fit-content;
+			}
+.guide_inner1>ul>li{float:left;
+					text-align:center;
+					}
+.guide_inner1>ul>li:nth-child(2){margin:0 30px;}
+.guide_inner1>ul>li>p{font:18px 'SDMiSaeng';
+					  color:#fff;
+					  text-align:center;
+					  margin-top:15px;
+					 }
+.guide_inner2>div{position:absolute;
+			left: 50%; top: 50%;
+			transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			overflow:hidden;
+			width:fit-content;
+			width:-webkit-fit-content;
+			width:-moz-fit-content;
+			width:-ms-fit-content;
+			width:-o-fit-content;
+			text-align:center;
+			}
+.guide_inner2>div>img[alt="pointericon"]
+			{position:absolute;
+			 left:55%; top:15%;
+			}
+.guide_inner2>div>p{font:18px 'SDMiSaeng';
+					  color:#fff;
+					  text-align:center;
+					  margin-top:15px;}
+
+}
+
+@media screen and (min-width:550px) and (max-width:767px){
+.tap_box{width:fit-content;
+		 width:-webkit-fit-content;
+		 width:-moz-fit-content;
+		 width:-ms-fit-content;
+		 width:-o-fit-content;
+		 height: 30px;
+		position: absolute;
+		left: 50%; top: 120px;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		z-index: 2;
+				}
+.tap_box>li{float:left;}
+.tap_box>li:nth-child(1){margin-right:60px;}
+
+.tap_box>li>label
+				{font:2em 'YiSunShinDotumM';
+				 color:#cccccc;
+				 display:block;
+				 padding:0 10px;
+				 width:100%; height:100%;
+				 text-align:center;
+				 transition:background 0.5s,color 0.5s;
+				 -webkit-transition:background 0.5s,color 0.5s;
+				 -moz-transition:background 0.5s,color 0.5s;
+				 -ms-transition:background 0.5s,color 0.5s;
+				 -o-transition:background 0.5s,color 0.5s;
+				 border-radius:20px;
+				 -webkit-border-radius:20px;
+				 -moz-border-radius:20px;
+				 -ms-border-radius:20px;
+				 -o-border-radius:20px;
+				}
+.tap_box>li>label:hover
+				{background:rgba(0,0,0,0.3);
+				 color:#fff;
+				 }
+#gallery_photo:checked+input+.tap_box>li:nth-child(1)>label
+				{background:rgba(0,0,0,0.3);
+				 color:#fff;
+				 }
+#gallery_video:checked+.tap_box>li:nth-child(2)>label
+				{background:rgba(0,0,0,0.3);
+				 color:#fff;
+				 }
+.gallery_container{width:95vw; height:70vh;
+				   margin:0 auto;
+				   position:absolute;
+				   left:50%; top:150px;
+				   transform:translateX(-50%);
+				   -webkit-transform:translateX(-50%);
+				   -moz-transform:translateX(-50%);
+				   -ms-transform:translateX(-50%);
+				   -o-transform:translateX(-50%);
+				  }
+
+
+.gallery_big{width:100%; height:49%;
+			 margin:0 auto 1%;
+			 overflow:hidden;
+			}
+.gallery_big .swiper-wrapper{width:100%; height:100%;
+							 position:absolute;
+							 top:0;
+							}
+.swiper-pagination{width:100%; height:49%;
+				   margin:0 auto;
+				   display:flex;
+				   flex-wrap:wrap;
+				   -webkit-flex-wrap:wrap;
+				   -moz-flex-wrap:wrap;
+				   -ms-flex-wrap:wrap;
+				   overflow-y:auto;				   
+				   overflow-y:-moz-scrollbars-none;
+				   -ms-overflow-style:none;
+				   position:initial !important;
+				  }
+.swiper-pagination::-webkit-scrollbar{
+				width:5px;
+				}
+.swiper-pagination::-webkit-scrollbar-track {
+		 background-color:rgba(150,150,150,0.1);
+		}
+
+.swiper-pagination::-webkit-scrollbar-thumb {
+					  border-radius:100px;
+					  -webkit-border-radius:100px;
+					  background-color:rgba(200,200,200,0.8);
+					}
+.swiper-pagination.photo .swiper-pagination-bullet
+					{background-position:center top !important;}
+
+#guide_page{background:rgba(150,150,150,0.7);
+			z-index:10;
+			display:none;
+			}
+#guide_page>.guide_inner1
+				  {position:absolute;
+				   width:100%; height:49%;
+				   left:0; top:0;
+				   }
+#guide_page>.guide_inner2
+				  {position:absolute;
+				   width:100%; height:49%;
+				   left:0; top:50%;
+				   border-left:4px dashed #ccc;
+				   }
+.guide_txt{position:absolute;
+		left: 50%; bottom: 50px;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		font:18px 'SDMiSaeng';
+		color:#ffffff;
+		}
+#guide_screen:checked+#guide_page
+			{display:block;}
+.guide_inner1>ul
+			{position:absolute;
+			left: 50%; top: 50%;
+			transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			overflow:hidden;
+			width:fit-content;
+			width:-webkit-fit-content;
+			width:-moz-fit-content;
+			width:-ms-fit-content;
+			width:-o-fit-content;
+			}
+.guide_inner1>ul>li{float:left;
+					text-align:center;
+					}
+.guide_inner1>ul>li:nth-child(2){margin:0 30px;}
+.guide_inner1>ul>li>p{font:18px 'SDMiSaeng';
+					  color:#fff;
+					  text-align:center;
+					  margin-top:15px;
+					 }
+.guide_inner2>div{position:absolute;
+			left: 50%; top: 50%;
+			transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			overflow:hidden;
+			width:fit-content;
+			width:-webkit-fit-content;
+			width:-moz-fit-content;
+			width:-ms-fit-content;
+			width:-o-fit-content;
+			text-align:center;
+			}
+.guide_inner2>div>img[alt="pointericon"]
+			{position:absolute;
+			 left:55%; top:15%;
+			}
+.guide_inner2>div>p{font:18px 'SDMiSaeng';
+					  color:#fff;
+					  text-align:center;
+					  margin-top:15px;
+					 }
+}
+
+
+
+
+
+
+@media screen and (min-width:320px) and (max-width:549px){
+.tap_box{width:fit-content;
+		 width:-webkit-fit-content;
+		 width:-moz-fit-content;
+		 width:-ms-fit-content;
+		 width:-o-fit-content;
+		 height: 30px;
+		position: absolute;
+		left: 50%; top: 120px;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		z-index: 2;
+				}
+.tap_box>li{float:left;}
+.tap_box>li:nth-child(1){margin-right:60px;}
+
+.tap_box>li>label
+				{font:2em 'YiSunShinDotumM';
+				 color:#cccccc;
+				 display:block;
+				 padding:0 10px;
+				 width:100%; height:100%;
+				 text-align:center;
+				 transition:background 0.5s,color 0.5s;
+				 -webkit-transition:background 0.5s,color 0.5s;
+				 -moz-transition:background 0.5s,color 0.5s;
+				 -ms-transition:background 0.5s,color 0.5s;
+				 -o-transition:background 0.5s,color 0.5s;
+				 border-radius:20px;
+				 -webkit-border-radius:20px;
+				 -moz-border-radius:20px;
+				 -ms-border-radius:20px;
+				 -o-border-radius:20px;
+				}
+
+
+.tap_box>li>label:hover
+				{background:rgba(0,0,0,0.3);
+				 color:#fff;
+				 }
+#gallery_photo:checked+input+.tap_box>li:nth-child(1)>label
+				{background:rgba(0,0,0,0.3);
+				 color:#fff;
+				 }
+#gallery_video:checked+.tap_box>li:nth-child(2)>label
+				{background:rgba(0,0,0,0.3);
+				 color:#fff;
+				 }
+.gallery_container{width:95vw; height:65vh;
+				   margin:0 auto;
+				   position:absolute;
+				   left:50%; top:150px;
+				   transform:translateX(-50%);
+				   -webkit-transform:translateX(-50%);
+				   -moz-transform:translateX(-50%);
+				   -ms-transform:translateX(-50%);
+				   -o-transform:translateX(-50%);
+				  }
+
+.gallery_big{width:100%; height:49%;
+			 margin:0 auto 1%;
+			 overflow:hidden;
+			}
+.gallery_big .swiper-wrapper{width:100%; height:100%;
+							 position:absolute;
+							 top:0;
+							}
+.swiper-pagination{width:100%; height:49%;
+				   margin:0 auto;
+				   display:flex;
+				   flex-wrap:wrap;
+				   -webkit-flex-wrap:wrap;
+				   -moz-flex-wrap:wrap;
+				   -ms-flex-wrap:wrap;
+				   overflow-y:auto;				   
+				   overflow-y:-moz-scrollbars-none;
+				   -ms-overflow-style:none;
+				   position:initial !important;
+				  }
+.swiper-pagination::-webkit-scrollbar{
+				width:5px;
+				}
+.swiper-pagination::-webkit-scrollbar-track {
+		 background-color:rgba(150,150,150,0.1);
+		}
+
+.swiper-pagination::-webkit-scrollbar-thumb {
+					  border-radius:100px;
+					  -webkit-border-radius:100px;
+					  background-color:rgba(200,200,200,0.8);
+					}
+#guide_page{background:rgba(150,150,150,0.7);
+			z-index:10;
+			display:none;
+			}
+#guide_page>.guide_inner1
+				  {position:absolute;
+				   width:100%; height:49%;
+				   left:0; top:0;
+				   }
+#guide_page>.guide_inner2
+				  {position:absolute;
+				   width:100%; height:49%;
+				   right:0; top:50%;
+				   border-top:4px dashed #ccc;
+				   }
+.guide_txt{position:absolute;
+		left: 50%; bottom: 50px;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		font:18px 'SDMiSaeng';
+		color:#ffffff;
+		}
+#guide_screen:checked+#guide_page
+			{display:block;}
+.guide_inner1>ul
+			{position:absolute;
+			left: 50%; top: 50%;
+			transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			overflow:hidden;
+			width:fit-content;
+			width:-webkit-fit-content;
+			width:-moz-fit-content;
+			width:-ms-fit-content;
+			width:-o-fit-content;
+			}
+.guide_inner1>ul>li{float:left;
+					text-align:center;
+					}
+.guide_inner1>ul>li:nth-child(2){margin:0 30px;}
+.guide_inner1>ul>li>p{font:18px 'SDMiSaeng';
+					  color:#fff;
+					  text-align:center;
+					  margin-top:15px;
+					 }
+.guide_inner2>div{position:absolute;
+			left: 50%; top: 50%;
+			transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			overflow:hidden;
+			width:fit-content;
+			width:-webkit-fit-content;
+			width:-moz-fit-content;
+			width:-ms-fit-content;
+			width:-o-fit-content;
+			text-align:center;
+			}
+.guide_inner2>div>img[alt="pointericon"]
+			{position:absolute;
+			 left:55%; top:15%;
+			}
+.guide_inner2>div>p{font:18px 'SDMiSaeng';
+					  color:#fff;
+					  text-align:center;
+					  margin-top:15px;}
+
+}

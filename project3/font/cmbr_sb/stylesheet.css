@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Cmbr';
+    src: url('Camber-Sb.eot');
+    src: url('Camber-Sb.eot?#iefix') format('embedded-opentype'),
+        url('Camber-Sb.woff2') format('woff2'),
+        url('Camber-Sb.woff') format('woff'),
+        url('Camber-Sb.svg#Camber-Sb') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+

@@ -1,0 +1,2558 @@
+@charset "UTF-8";
+
+body{background:linear-gradient(170deg,#e2d6c8,#c88b6e);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+	 background-size:100% 100%;
+	 -webkit-background-size:100% 100%;
+	 -moz-background-size:100% 100%;
+	 -ms-background-size:100% 100%;
+	 -o-background-size:100% 100%;
+	 width:100vw; height:100vh;	 
+	}
+#profile_content{position:fixed;
+			  left:0; top:0;
+			  width:100%; height:100%;
+			  }
+#profile_content_top
+	{width:100%; height:100%;}
+
+#profile_bg{
+	position:fixed;
+	width:100%; height:100%;
+	background:url(../image/profile/note_sheetw.svg)no-repeat;
+	 background-position:left 100px;
+	 background-size:cover;
+	 transition:background-position 0.5s cubic-bezier(.51,.92,.24,1.15);
+	 -webkit-transition:background-position 0.5s cubic-bezier(.51,.92,.24,1.15);
+	 -moz-transition:background-position 0.5s cubic-bezier(.51,.92,.24,1.15);
+	 -ms-transition:background-position 0.5s cubic-bezier(.51,.92,.24,1.15);
+	 -o-transition:background-position 0.5s cubic-bezier(.51,.92,.24,1.15);
+	 opacity:0.3;
+}
+.moveX1{background-position:20% center !important;}
+.moveX2{background-position:40% top !important;}
+.moveX3{background-position:60% 100px !important;}
+.moveX4{background-position:80% 100px !important;}
+.moveX5{background-position:100% 100px !important;}
+
+
+
+#profile_content_bottom{width:100%; height:0;
+						position:absolute;
+						top:50%;
+						}
+
+#profile_content_top .swiper-wrapper,
+#profile_content_bottom .swiper-wrapper{width:100%; height:100%;}
+
+#profile_content_top .swiper-slide{width:100%; height:100vh;
+								   transition:top 0.5s cubic-bezier(.51,.92,.24,1.15);
+								   -webkit-transition:top 0.5s cubic-bezier(.51,.92,.24,1.15);
+								   -moz-transition:top 0.5s cubic-bezier(.51,.92,.24,1.15);
+								   -ms-transition:top 0.5s cubic-bezier(.51,.92,.24,1.15);
+								   -o-transition:top 0.5s cubic-bezier(.51,.92,.24,1.15);
+								  }
+#profile_content_bottom .swiper-slide{width:100%; height:100%;
+									 transition:bottom 0.5s cubic-bezier(.51,.92,.24,1.15);
+									 -webkit-transition:bottom 0.5s cubic-bezier(.51,.92,.24,1.15);
+									 -moz-transition:bottom 0.5s cubic-bezier(.51,.92,.24,1.15);
+									 -ms-transition:bottom 0.5s cubic-bezier(.51,.92,.24,1.15);
+									 -o-transition:bottom 0.5s cubic-bezier(.51,.92,.24,1.15);
+									 }
+#profile_content_bottom .swiper-slide-n{display:block;}
+#profile_content_bottom .swiper-slide-active{display:block;}
+.swiper-pagination1,.swiper-pagination2{display:none;}
+.profile_info1_1 .profile_filter
+				{width:100%; height:100%;
+				 background:url(../image/profile/pj3_10cm.png)no-repeat center top;
+				 background-size:cover;
+				  -webkit-background-size:cover;
+				  -moz-background-size:cover;
+				  -ms-background-size:cover;
+				  -o-background-size:cover;
+				 position:absolute;
+				 z-index:0;
+				 filter:blur(10px) brightness(1.2);
+				 -webkit-filter:blur(10px) brightness(1.2);
+				 -moz-filter:blur(10px) brightness(1.2);
+				 -ms-filter:blur(10px) brightness(1.2);
+				 -o-filter:blur(10px) brightness(1.2);
+				}
+.profile_info1_1 .pics1{width:100%; height:100vh;
+			  background:url(../image/profile/pj3_10cm.png)no-repeat center top;
+			  background-size:cover;
+			  -webkit-background-size:cover;
+			  -moz-background-size:cover;
+			  -ms-background-size:cover;
+			  -o-background-size:cover;
+			  position:absolute;
+			  z-index:1;
+			 }
+
+#basic_info{position:absolute;
+			top:0; right:0;
+			opacity:0;
+			background:rgba(32,12,0,0.5);
+			width:30%;
+			padding:1.2% 0; 
+			border-radius:100px 0 0 100px;
+			-webkit-border-radius:100px 0 0 100px;
+			-moz-border-radius:100px 0 0 100px;
+			-ms-border-radius:100px 0 0 100px;
+			-o-border-radius:100px 0 0 100px;
+			transition:right 0.5s 0.5s;
+			-webkit-transition:right 0.5s 0.5s;
+			-moz-transition:right 0.5s 0.5s;
+			-ms-transition:right 0.5s 0.5s;
+			o-transition:right 0.5s 0.5s;
+			}
+#basic_info>li{overflow:hidden;
+			   padding:0.5% 0 0.5% 8%;
+			  }
+
+#basic_info>li>span,
+#basic_info>li>p{display:inline-block;
+				 color:#fff;				
+				 }
+#basic_info>li>span{width:50px;
+					margin-right:15px;
+					text-align:right;
+					font:bold 1em/1.2 'YiSunShinDotumM'
+					}
+#basic_info>li>p{font:bold 1.6em/1.2 'YiSunShinDotumM'}
+
+.profile_info1_2 .pics2{width:100%; height:100%;
+			  background:url(../image/profile/pj3_10cm_americano.png)no-repeat center top;
+			  background-size:contain;
+			  -webkit-background-size:contain;
+			  -moz-background-size:contain;
+			  -ms-background-size:contain;
+			  -o-background-size:contain;
+			  position:absolute;
+			  top:150px;
+			  z-index:1;
+			  
+			 }
+.profile_info2_2 div{position:absolute;
+					 left:50%; 
+					 transform:translateX(-50%);
+					-webkit-transform:translateX(-50%);
+					-moz-transform:translateX(-50%);
+					-ms-transform:translateX(-50%);
+					-o-transform:translateX(-50%);
+					background:rgba(0,0,0,0.5);
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:4% 3%;
+					margin-top:-200%;
+					}
+.profile_info2_2 h3{width:100%;
+				  text-align:center;
+				  margin:30px 0;
+				  font:bold 1.6em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_2 p{font:1.2em/1.4 'YiSunShinDotumM';				
+				 width:fit-content;
+				 width:-webkit-fit-content;
+				 width:-moz-fit-content;
+				 width:-ms-fit-content;
+				 width:-o-fit-content;
+				 margin:0 auto;
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+				 -webkit-transition:right 0.5s 0.5s;
+				 -moz-transition:right 0.5s 0.5s;
+				 -ms-transition:right 0.5s 0.5s;
+				 -o-transition:right 0.5s 0.5s;
+				}
+
+.profile_info1_3 .pics3{width:50%; height:100vh;
+			  background:url(../image/profile/pj3_profile1.png)no-repeat center top;
+			  background-size:cover;
+			  -webkit-background-size:cover;
+			  -moz-background-size:cover;
+			  -ms-background-size:cover;
+			  -o-background-size:cover;
+			  position:absolute;
+			  top:0; right:-100%;
+			  z-index:1;
+			  opacity:0;
+			 }
+.profile_info2_3 {left:-100%;
+				  opacity:0;				  
+				 }
+.profile_info2_3 ul{position:absolute;
+					left:25%;
+					transform:translateX(-50%);
+					-webkit-transform:translateX(-50%);
+					-moz-transform:translateX(-50%);
+					-ms-transform:translateX(-50%);
+					-o-transform:translateX(-50%);
+					/*background:rgba(170,180,188,0.5);*/
+					background:rgba(49,61,94,0.5);
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:4% 3%;
+					margin-top:-200px;
+					}
+.profile_info2_3 h3{width:100%;
+				  margin:0 0 30px 0;
+				  text-align:center;
+				  font:bold 1.6em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_3 li{font:1.2em/1.4 'YiSunShinDotumM';
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+				 -webkit-transition:right 0.5s 0.5s;
+				 -moz-transition:right 0.5s 0.5s;
+				 -ms-transition:right 0.5s 0.5s;
+				 -o-transition:right 0.5s 0.5s;
+				}
+
+.profile_info1_4 .pics4{width:50%; height:100vh;
+			  background:url(../image/profile/pj3_10cm_4.4.jpg)no-repeat center center;
+			  background-size:cover;
+			  -webkit-background-size:cover;
+			  -moz-background-size:cover;
+			  -ms-background-size:cover;
+			  -o-background-size:cover;
+			  position:absolute;
+			  top:0;
+			  z-index:1;
+			  left:-100%;
+			  opacity:0;
+			 }
+.profile_info2_4 {right:100%;
+				  opacity:0;
+				 }
+.profile_info2_4 ul{position:absolute;
+					top:-50%; right:25%;
+					transform:translateX(50%);
+					-webkit-transform:translateX(50%);
+					-moz-transform:translateX(50%);
+					-ms-transform:translateX(50%);
+					-o-transform:translateX(50%);
+					background:rgba(255,255,255,0.5);
+					border-radius:50px;
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:4% 3%;
+					}
+.profile_info2_4 h3{width:100%;
+				  margin:0 0 30px 0;
+				  text-align:center;
+				  font:bold 1.6em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_4 li{font:1.2em/1.4 'YiSunShinDotumM';
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+					-webkit-transition:right 0.5s 0.5s;
+					-moz-transition:right 0.5s 0.5s;
+					-ms-transition:right 0.5s 0.5s;
+					-o-transition:right 0.5s 0.5s;
+				}
+
+
+.profile_info1_5 .pics5{width:100%; height:100vh;
+			  position:absolute;
+			  z-index:30;
+			 }
+.pics5 img{float:left;
+		   width:25%; height:auto;
+		   display:block;
+		   vertical-align:top;
+		   position:absolute;
+		   bottom:-100%;
+		   z-index:100;
+		   }
+.pics5 img:nth-of-type(1){left:0;}
+.pics5 img:nth-of-type(2){left:25%;}
+.pics5 img:nth-of-type(3){left:50%;}
+.pics5 img:nth-of-type(4){left:75%;}
+.profile_info2_5{margin-top:-200%;
+				 height:0vh !important;
+				 z-index:0;				 
+				}
+.profile_info2_5 ul{position:absolute;
+					left:50%; top:150px;
+					transform:translateX(-50%);
+					-webkit-transform:translateX(-50%);
+					-moz-transform:translateX(-50%);
+					-ms-transform:translateX(-50%);
+					-o-transform:translateX(-50%);
+					background:rgba(210,170,170,0.5);
+					border-radius:50px;
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:1.5% 3% 2%;
+					z-index:0;
+					}
+
+.profile_info2_5 h3{width:100%;
+				  text-align:center;
+				  margin:30px 0;
+				  font:bold 1.6em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_5 li{font:1.2em/1.4 'YiSunShinDotumM';
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+				 -webkit-transition:right 0.5s 0.5s;
+				 -moz-transition:right 0.5s 0.5s;
+				 -ms-transition:right 0.5s 0.5s;
+				 -o-transition:right 0.5s 0.5s;
+				}
+
+
+.profile_info1_1.swiper-slide-active
+		{animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards;
+		-webkit-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards;
+		-moz-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards;
+		-ms-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards;
+		-o-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards;
+		}
+.profile_info2_1.swiper-slide-active
+		{animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards;
+		-webkit-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards;
+		-moz-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards;
+		-ms-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards;
+		-o-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards;
+		}
+.profile_info2_1.swiper-slide-active #basic_info
+		{animation:basicActionRight 0.5s cubic-bezier(.51,.92,.24,1.15) 0.5s forwards;
+		-webkit-animation:basicActionRight 0.5s cubic-bezier(.51,.92,.24,1.15) 0.5s forwards;
+		-moz-animation:basicActionRight 0.5s cubic-bezier(.51,.92,.24,1.15) 0.5s forwards;
+		-ms-animation:basicActionRight 0.5s cubic-bezier(.51,.92,.24,1.15) 0.5s forwards;
+		-o-animation:basicActionRight 0.5s cubic-bezier(.51,.92,.24,1.15) 0.5s forwards;
+		}
+.profile_info1_2.swiper-slide-active
+		{animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards;
+		-webkit-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards;
+		-moz-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards;
+		-ms-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards;
+		-o-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards;
+		}
+.profile_info2_2.swiper-slide-active div
+		{animation:basicActionTop3 0.5s cubic-bezier(.51,.92,.24,1.15) 0.5s forwards;
+		-webkit-animation:basicActionTop3 0.5s cubic-bezier(.51,.92,.24,1.15) 0.5s forwards;
+		-moz-animation:basicActionTop3 0.5s cubic-bezier(.51,.92,.24,1.15) 0.5s forwards;
+		-ms-animation:basicActionTop3 0.5s cubic-bezier(.51,.92,.24,1.15) 0.5s forwards;
+		-o-animation:basicActionTop3 0.5s cubic-bezier(.51,.92,.24,1.15) 0.5s forwards;
+		}
+.profile_info1_3.swiper-slide-active .pics3
+		{animation:basicActionRight 0.5s cubic-bezier(.51,.92,.24,1.15) forwards;
+		-webkit-animation:basicActionRight 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.2s;
+		-moz-animation:basicActionRight 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.2s;
+		-ms-animation:basicActionRight 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.2s;
+		-o-animation:basicActionRight 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.2s;
+		}
+.profile_info2_3.swiper-slide-active
+		{animation:basicActionLeft 0.5s cubic-bezier(.51,.92,.24,1.15) 0.5s forwards;
+		-webkit-animation:basicActionLeft 0.5s cubic-bezier(.51,.92,.24,1.15) 0.5s forwards;
+		-moz-animation:basicActionLeft 0.5s cubic-bezier(.51,.92,.24,1.15) 0.5s forwards;
+		-ms-animation:basicActionLeft 0.5s cubic-bezier(.51,.92,.24,1.15) 0.5s forwards;
+		-o-animation:basicActionLeft 0.5s cubic-bezier(.51,.92,.24,1.15) 0.5s forwards;
+		}
+.profile_info1_4.swiper-slide-active .pics4
+		{animation:basicActionLeft 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.2s;
+		-webkit-animation:basicActionLeft 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.2s;
+		-moz-animation:basicActionLeft 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.2s;
+		-ms-animation:basicActionLeft 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.2s;
+		-o-animation:basicActionLeft 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.2s;
+		}
+.profile_info2_4.swiper-slide-active
+		{animation:basicActionRight 0.5s cubic-bezier(.51,.92,.24,1.15) 0.5s forwards;
+		-webkit-animation:basicActionRight 0.5s cubic-bezier(.51,.92,.24,1.15) 0.5s forwards;
+		-moz-animation:basicActionRight 0.5s cubic-bezier(.51,.92,.24,1.15) 0.5s forwards;
+		-ms-animation:basicActionRight 0.5s cubic-bezier(.51,.92,.24,1.15) 0.5s forwards;
+		-o-animation:basicActionRight 0.5s cubic-bezier(.51,.92,.24,1.15) 0.5s forwards;
+		}
+.profile_info1_5.swiper-slide-active img:nth-of-type(1)
+		{animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-webkit-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-moz-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-ms-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-o-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;}
+.profile_info1_5.swiper-slide-active img:nth-of-type(2)
+		{animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-webkit-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-moz-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-ms-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-o-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;}
+.profile_info1_5.swiper-slide-active img:nth-of-type(3)
+		{animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.7s;;
+		-webkit-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.7s;
+		-moz-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.7s;
+		-ms-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.7s;
+		-o-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.7s;}
+.profile_info1_5.swiper-slide-active img:nth-of-type(4)
+		{animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.9s;
+		-webkit-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.9s
+		-moz-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.9s
+		-ms-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.9s
+		-o-animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.9s}
+.profile_info2_5.swiper-slide-active
+		{animation:basicActionTop2 0.5s cubic-bezier(.51,.92,.24,1.15) 1s forwards;
+		-webkit-animation:basicActionTop2 0.5s cubic-bezier(.51,.92,.24,1.15) 1s forwards;
+		-moz-animation:basicActionTop2 0.5s cubic-bezier(.51,.92,.24,1.15) 1s forwards;
+		-ms-animation:basicActionTop2 0.5s cubic-bezier(.51,.92,.24,1.15) 1s forwards;
+		-o-animation:basicActionTop2 0.5s cubic-bezier(.51,.92,.24,1.15) 1s forwards;
+		}
+@keyframes basicActionTop3{
+0%{
+	margin-top:-100%;
+	opacity:0;
+}
+
+100%{
+	margin-top:0;
+	opacity:1;
+}
+}
+-webkit-@keyframes basicActionTop3{
+0%{
+	margin-top:-100%;
+	opacity:0;
+}
+
+100%{
+	margin-top:0;
+	opacity:1;
+}
+}
+-moz-@keyframes basicActionTop3{
+0%{
+	margin-top:-100%;
+	opacity:0;
+}
+
+100%{
+	margin-top:0;
+	opacity:1;
+}
+}
+-ms-@keyframes basicActionTop3{
+0%{
+	margin-top:-100%;
+	opacity:0;
+}
+
+100%{
+	margin-top:0;
+	opacity:1;
+}
+}
+-o-@keyframes basicActionTop3{
+0%{
+	margin-top:-100%;
+	opacity:0;
+}
+
+100%{
+	margin-top:0;
+	opacity:1;
+}
+}
+@keyframes basicActionTop2{
+0%{
+	margin-top:-200%;
+	opacity:0;
+}
+
+100%{
+	margin-top:-25%;
+	opacity:1;
+}
+}
+-webkit-@keyframes basicActionTop2{
+0%{
+	margin-top:-200%;
+	opacity:0;
+}
+
+100%{
+	margin-top:-25%;
+	opacity:1;
+}
+}
+-moz-@keyframes basicActionTop2{
+0%{
+	margin-top:-200%;
+	opacity:0;
+}
+
+100%{
+	margin-top:-25%;
+	opacity:1;
+}
+}
+-ms-@keyframes basicActionTop2{
+0%{
+	margin-top:-200%;
+	opacity:0;
+}
+
+100%{
+	margin-top:-25%;
+	opacity:1;
+}
+}
+-o-@keyframes basicActionTop2{
+0%{
+	margin-top:-200%;
+	opacity:0;
+}
+
+100%{
+	margin-top:-25%;
+	opacity:1;
+}
+}
+
+@keyframes basicActionTop{
+0%{
+	top:-200%;
+	opacity:0;
+}
+
+100%{
+	top:0;
+	opacity:1;
+}
+}
+-webkit-@keyframes basicActionTop{
+0%{
+	top:-200%;
+	opacity:0;
+}
+
+100%{
+	top:0;
+	opacity:1;
+}
+}
+-moz-@keyframes basicActionTop{
+0%{
+	top:-200%;
+	opacity:0;
+}
+
+100%{
+	top:0;
+	opacity:1;
+}
+}
+-ms-@keyframes basicActionTop{
+0%{
+	top:-200%;
+	opacity:0;
+}
+
+100%{
+	top:0;
+	opacity:1;
+}
+}
+-o-@keyframes basicActionTop{
+0%{
+	top:-200%;
+	opacity:0;
+}
+
+100%{
+	top:0;
+	opacity:1;
+}
+}
+
+@keyframes basicActionBottom{
+0%{
+	bottom:-200%;
+	opacity:0;
+}
+
+100%{
+	bottom:0;
+	opacity:1;
+}
+}
+-webkit-@keyframes basicActionBottom{
+0%{
+	bottom:-200%;
+	opacity:0;
+}
+
+100%{
+	bottom:0;
+	opacity:1;
+}
+}
+-moz-@keyframes basicActionBottom{
+0%{
+	bottom:-200%;
+	opacity:0;
+}
+
+100%{
+	bottom:0;
+	opacity:1;
+}
+}
+-ms-@keyframes basicActionBottom{
+0%{
+	bottom:-200%;
+	opacity:0;
+}
+
+100%{
+	bottom:0;
+	opacity:1;
+}
+}
+-o-@keyframes basicActionBottom{
+0%{
+	bottom:-200%;
+	opacity:0;
+}
+
+100%{
+	bottom:0;
+	opacity:1;
+}
+}
+
+@keyframes basicActionRight{
+0%{
+	right:-100%;
+	opacity:0;
+}
+
+100%{
+	right:0;
+	opacity:1;
+}
+}
+
+-webkit-@keyframes basicActionRight{
+0%{
+	right:-100%;
+	opacity:0;
+}
+
+100%{
+	right:0;
+	opacity:1;
+}
+}
+-moz-@keyframes basicActionRight{
+0%{
+	right:-100%;
+	opacity:0;
+}
+
+100%{
+	right:0;
+	opacity:1;
+}
+}
+-ms-@keyframes basicActionRight{
+0%{
+	right:-100%;
+	opacity:0;
+}
+
+100%{
+	right:0;
+	opacity:1;
+}
+}
+-o-@keyframes basicActionRight{
+0%{
+	right:-100%;
+	opacity:0;
+}
+
+100%{
+	right:0;
+	opacity:1;
+}
+}
+
+@keyframes basicActionLeft{
+0%{
+	left:-100%;
+	opacity:0;
+}
+
+100%{
+	left:0;
+	opacity:1;
+}
+}
+
+-webkit-@keyframes basicActionLeft{
+0%{
+	left:-100%;
+	opacity:0;
+}
+
+100%{
+	left:0;
+	opacity:0;
+}
+}
+-moz-@keyframes basicActionLeft{
+0%{
+	left:-100%;
+}
+
+100%{
+	left:0;
+	opacity:1;
+}
+}
+-ms-@keyframes basicActionLeft{
+0%{
+	left:-100%;
+	opacity:0;
+}
+
+100%{
+	left:0;
+	opacity:1;
+}
+}
+-o-@keyframes basicActionLeft{
+0%{
+	left:-100%;
+	opacity:0;
+}
+
+100%{
+	left:0;
+	opacity:1;
+}
+}
+@keyframes basicActionTop4{
+0%{
+	top:-200%;
+	opacity:0;
+}
+
+100%{
+	top:110px;
+	opacity:1;
+}
+}
+-webkit-@keyframes basicActionTop4{
+0%{
+	top:-200%;
+	opacity:0;
+}
+
+100%{
+	top:110px;
+	opacity:1;
+}
+}
+-moz-@keyframes basicActionTop4{
+0%{
+	top:-200%;
+	opacity:0;
+}
+
+100%{
+	top:110px;
+	opacity:1;
+}
+}
+-ms-@keyframes basicActionTop4{
+0%{
+	top:-200%;
+	opacity:0;
+}
+
+100%{
+	top:110px;
+	opacity:1;
+}
+}
+-o-@keyframes basicActionTop4{
+0%{
+	top:-200%;
+	opacity:0;
+}
+
+100%{
+	top:110px;
+	opacity:1;
+}
+}
+@keyframes basicActionBottom2{
+0%{
+	bottom:-200%;
+	opacity:0;
+}
+
+100%{
+	bottom:15%;
+	opacity:1;
+}
+}
+-webkit-@keyframes basicActionBottom2{
+0%{
+	bottom:-200%;
+	opacity:0;
+}
+
+100%{
+	bottom:15%;
+	opacity:1;
+}
+}
+-moz-@keyframes basicActionBottom2{
+0%{
+	bottom:-200%;
+	opacity:0;
+}
+
+100%{
+	bottom:15%;
+	opacity:1;
+}
+}
+-ms-@keyframes basicActionBottom2{
+0%{
+	bottom:-200%;
+	opacity:0;
+}
+
+100%{
+	bottom:15%;
+	opacity:1;
+}
+}
+-o-@keyframes basicActionBottom2{
+0%{
+	bottom:-200%;
+	opacity:0;
+}
+
+100%{
+	bottom:15%;
+	opacity:1;
+}
+}
+
+#guide_page{background:rgba(150,150,150,0.7);
+			z-index:10;
+			display:none;
+			position:absolute;
+			left:0; top:0;
+			width:100%; height:100%;
+			}
+#guide_page>.guide_inner1
+				  {position:absolute;
+				   width:100%; height:100%;
+				   left:0; top:0;
+				   }
+
+.guide_txt{position:absolute;
+		left: 50%; bottom:150px;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		font:18px 'SDMiSaeng';
+		color:#ffffff;
+		}
+#guide_screen:checked+#guide_page
+			{display:block;}
+.guide_inner1>ul
+			{position:absolute;
+			left: 50%; top:40%;
+			transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			width:fit-content;
+			width:-webkit-fit-content;
+			width:-moz-fit-content;
+			width:-ms-fit-content;
+			width:-o-fit-content;
+			}
+.guide_inner1>ul>li{float:left;
+					text-align:center;
+					}
+.guide_inner1>ul>li:nth-child(2){margin:0 30px;}
+.guide_inner1>ul>li>p{font:18px 'SDMiSaeng';
+					  color:#fff;
+					  text-align:center;
+					  margin-top:15px;
+					 }
+
+.guide_inner1>ul>li:nth-child(1)>img
+{animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s infinite;
+ -webkit-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s infinite;
+ -moz-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s infinite;
+ -ms-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s infinite;
+ -o-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s infinite;
+}
+.guide_inner1>ul>li:nth-child(2)>img
+{animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.75s infinite;
+ -webkit-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.75s infinite;
+ -moz-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.75s infinite;
+ -ms-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.75s infinite;
+ -o-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.75s infinite;
+}
+.guide_inner1>ul>li:nth-child(3)>img
+{animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s infinite;
+ -webkit-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s infinite;
+ -moz-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s infinite;
+ -ms-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s infinite;
+ -o-animation:bounceAction 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s infinite;
+}
+@keyframes bounceAction{
+	0%,20%,50%,80%,100%
+		{transform:translateY(0);
+		 -webkit-transform:translateY(0);
+		 -moz-transform:translateY(0);
+		 -ms-transform:translateY(0);
+		 -o-transform:translateY(0);
+		}
+	40%{transform:translateY(-10px);
+		-webkit-transform:translateY(-10px);
+		-moz-transform:translateY(-10px);
+		-ms-transform:translateY(-10px);
+		-o-transform:translateY(-10px);
+		}
+	60%{transform:translateY(-5px);
+		-webkit-transform:translateY(-5px);
+		-moz-transform:translateY(-5px);
+		-ms-transform:translateY(-5px);
+		-o-transform:translateY(-5px);
+		}
+}
+-webkit-@keyframes bounceAction{
+	0%,20%,50%,80%,100%
+		{transform:translateY(0);
+		 -webkit-transform:translateY(0);
+		 -moz-transform:translateY(0);
+		 -ms-transform:translateY(0);
+		 -o-transform:translateY(0);
+		}
+	40%{transform:translateY(-10px);
+		-webkit-transform:translateY(-10px);
+		-moz-transform:translateY(-10px);
+		-ms-transform:translateY(-10px);
+		-o-transform:translateY(-10px);
+		}
+	60%{transform:translateY(-5px);
+		-webkit-transform:translateY(-5px);
+		-moz-transform:translateY(-5px);
+		-ms-transform:translateY(-5px);
+		-o-transform:translateY(-5px);
+		}
+}
+-moz-@keyframes bounceAction{
+	0%,20%,50%,80%,100%
+		{transform:translateY(0);
+		 -webkit-transform:translateY(0);
+		 -moz-transform:translateY(0);
+		 -ms-transform:translateY(0);
+		 -o-transform:translateY(0);
+		}
+	40%{transform:translateY(-10px);
+		-webkit-transform:translateY(-10px);
+		-moz-transform:translateY(-10px);
+		-ms-transform:translateY(-10px);
+		-o-transform:translateY(-10px);
+		}
+	60%{transform:translateY(-5px);
+		-webkit-transform:translateY(-5px);
+		-moz-transform:translateY(-5px);
+		-ms-transform:translateY(-5px);
+		-o-transform:translateY(-5px);
+		}
+}
+-ms-@keyframes bounceAction{
+	0%,20%,50%,80%,100%
+		{transform:translateY(0);
+		 -webkit-transform:translateY(0);
+		 -moz-transform:translateY(0);
+		 -ms-transform:translateY(0);
+		 -o-transform:translateY(0);
+		}
+	40%{transform:translateY(-10px);
+		-webkit-transform:translateY(-10px);
+		-moz-transform:translateY(-10px);
+		-ms-transform:translateY(-10px);
+		-o-transform:translateY(-10px);
+		}
+	60%{transform:translateY(-5px);
+		-webkit-transform:translateY(-5px);
+		-moz-transform:translateY(-5px);
+		-ms-transform:translateY(-5px);
+		-o-transform:translateY(-5px);
+		}
+}
+-o-@keyframes bounceAction{
+	0%,20%,50%,80%,100%
+		{transform:translateY(0);
+		 -webkit-transform:translateY(0);
+		 -moz-transform:translateY(0);
+		 -ms-transform:translateY(0);
+		 -o-transform:translateY(0);
+		}
+	40%{transform:translateY(-10px);
+		-webkit-transform:translateY(-10px);
+		-moz-transform:translateY(-10px);
+		-ms-transform:translateY(-10px);
+		-o-transform:translateY(-10px);
+		}
+	60%{transform:translateY(-5px);
+		-webkit-transform:translateY(-5px);
+		-moz-transform:translateY(-5px);
+		-ms-transform:translateY(-5px);
+		-o-transform:translateY(-5px);
+		}
+}
+
+
+
+@media screen and (min-width:1024px) and (max-width:1440px){
+.profile_info1_1 .profile_filter
+				{width:100%; height:100%;
+				 background:url(../image/profile/pj3_10cm.png)no-repeat center top;
+				 background-size:cover;
+				  -webkit-background-size:cover;
+				  -moz-background-size:cover;
+				  -ms-background-size:cover;
+				  -o-background-size:cover;
+				 position:absolute;
+				 z-index:0;
+				 filter:blur(10px) brightness(1.2);
+				 -webkit-filter:blur(10px) brightness(1.2);
+				 -moz-filter:blur(10px) brightness(1.2);
+				 -ms-filter:blur(10px) brightness(1.2);
+				 -o-filter:blur(10px) brightness(1.2);
+				}
+.profile_info1_1 .pics1{width:100%; height:100vh;
+			  background:url(../image/profile/pj3_10cm.png)no-repeat center top;
+			  background-size:cover;
+			  -webkit-background-size:cover;
+			  -moz-background-size:cover;
+			  -ms-background-size:cover;
+			  -o-background-size:cover;
+			  position:absolute;
+			  z-index:1;
+			 }
+
+#basic_info{position:absolute;
+			top:0; right:0;
+			opacity:0;
+			background:rgba(32,12,0,0.5);
+			width:45%;
+			padding:1.2% 0; 
+			border-radius:100px 0 0 100px;
+			-webkit-border-radius:100px 0 0 100px;
+			-moz-border-radius:100px 0 0 100px;
+			-ms-border-radius:100px 0 0 100px;
+			-o-border-radius:100px 0 0 100px;
+			transition:right 0.5s 0.5s;
+			-webkit-transition:right 0.5s 0.5s;
+			-moz-transition:right 0.5s 0.5s;
+			-ms-transition:right 0.5s 0.5s;
+			o-transition:right 0.5s 0.5s;
+			}
+#basic_info>li{overflow:hidden;
+			   padding:0.5% 0 0.5% 8%;
+			  }
+
+#basic_info>li>span,
+#basic_info>li>p{display:inline-block;
+				 color:#fff;
+				
+				 }
+#basic_info>li>span{width:70px;
+					margin-right:15px;
+					text-align:right;
+					font:bold 1em/1.2 'YiSunShinDotumM'
+					}
+#basic_info>li>p{font:bold 1.4em/1.2 'YiSunShinDotumM'}
+
+.profile_info1_2 .pics2{width:80%; height:80%;
+			  background:url(../image/profile/pj3_10cm_americano.png)no-repeat center top;
+			  background-size:contain;
+			  -webkit-background-size:contain;
+			  -moz-background-size:contain;
+			  -ms-background-size:contain;
+			  -o-background-size:contain;
+			  position:absolute;
+			  top:150px; left:50%;
+			  z-index:1;
+			  transform:translateX(-50%);
+			  -webkit-transform:translateX(-50%);
+			  -moz-transform:translateX(-50%);
+			  -ms-transform:translateX(-50%);
+			  -o-transform:translateX(-50%);
+			 }
+.profile_info2_2 div{position:absolute;
+					 left:50%; 
+					 transform:translateX(-50%);
+					-webkit-transform:translateX(-50%);
+					-moz-transform:translateX(-50%);
+					-ms-transform:translateX(-50%);
+					-o-transform:translateX(-50%);
+					background:rgba(0,0,0,0.5);
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:4% 3%;
+					margin-top:-200%;
+					width:46%;
+					}
+.profile_info2_2 h3{width:100%;
+				  text-align:center;
+				  margin:30px 0;
+				  font:bold 1.6em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_2 p{font:1.2em/1.4 'YiSunShinDotumM';				
+				 width:fit-content;
+				 width:-webkit-fit-content;
+				 width:-moz-fit-content;
+				 width:-ms-fit-content;
+				 width:-o-fit-content;
+				 margin:0 auto;
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+				 -webkit-transition:right 0.5s 0.5s;
+				 -moz-transition:right 0.5s 0.5s;
+				 -ms-transition:right 0.5s 0.5s;
+				 -o-transition:right 0.5s 0.5s;
+				}
+
+.profile_info1_3 .pics3{width:50%; height:100vh;
+			  background:url(../image/profile/pj3_profile1.png)no-repeat center top;
+			  background-size:cover;
+			  -webkit-background-size:cover;
+			  -moz-background-size:cover;
+			  -ms-background-size:cover;
+			  -o-background-size:cover;
+			  position:absolute;
+			  top:0; right:-100%;
+			  z-index:1;
+			  opacity:0;
+			 }
+.profile_info2_3 {left:-100%;
+				  opacity:0;				  
+				 }
+.profile_info2_3 ul{position:absolute;
+					left:25%;
+					transform:translateX(-50%);
+					-webkit-transform:translateX(-50%);
+					-moz-transform:translateX(-50%);
+					-ms-transform:translateX(-50%);
+					-o-transform:translateX(-50%);
+					/*background:rgba(170,180,188,0.5);*/
+					background:rgba(49,61,94,0.5);
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:4% 3%;
+					margin-top:-200px;
+					}
+.profile_info2_3 h3{width:100%;
+				  margin:0 0 30px 0;
+				  text-align:center;
+				  font:bold 1.6em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_3 li{font:1.2em/1.4 'YiSunShinDotumM';
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+				 -webkit-transition:right 0.5s 0.5s;
+				 -moz-transition:right 0.5s 0.5s;
+				 -ms-transition:right 0.5s 0.5s;
+				 -o-transition:right 0.5s 0.5s;
+				}
+
+.profile_info1_4 .pics4{width:50%; height:100vh;
+			  background:url(../image/profile/pj3_10cm_4.4.jpg)no-repeat center center;
+			  background-size:cover;
+			  -webkit-background-size:cover;
+			  -moz-background-size:cover;
+			  -ms-background-size:cover;
+			  -o-background-size:cover;
+			  position:absolute;
+			  top:0;
+			  z-index:1;
+			  left:-100%;
+			  opacity:0;
+			 }
+.profile_info2_4 {right:100%;
+				  opacity:0;
+				 }
+.profile_info2_4 ul{position:absolute;
+					top:-50%; right:25%;
+					transform:translateX(50%);
+					-webkit-transform:translateX(50%);
+					-moz-transform:translateX(50%);
+					-ms-transform:translateX(50%);
+					-o-transform:translateX(50%);
+					background:rgba(255,255,255,0.5);
+					border-radius:50px;
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:4% 3%;
+					}
+.profile_info2_4 h3{width:100%;
+				  margin:0 0 30px 0;
+				  text-align:center;
+				  font:bold 1.6em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_4 li{font:1.2em/1.4 'YiSunShinDotumM';
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+					-webkit-transition:right 0.5s 0.5s;
+					-moz-transition:right 0.5s 0.5s;
+					-ms-transition:right 0.5s 0.5s;
+					-o-transition:right 0.5s 0.5s;
+				}
+
+
+.profile_info1_5 .pics5{width:100%; height:100vh;
+			  position:absolute;
+			  z-index:30;
+			 }
+.pics5 img{float:left;
+		   width:40%; height:auto;
+		   display:block;
+		   vertical-align:top;
+		   position:absolute;		   
+		   z-index:100;
+		   }
+.pics5 img:nth-of-type(1){left:0; top:-100%;}
+.pics5 img:nth-of-type(2){left:40%; top:-100%;}
+.pics5 img:nth-of-type(3){left:20%; bottom:-100%;}
+.pics5 img:nth-of-type(4){left:60%; bottom:-100%;}
+.profile_info2_5{margin-top:-200%;
+				 height:0vh !important;
+				 z-index:0;				 
+				}
+.profile_info2_5 ul{position:absolute;
+					left:50%; top:75px;
+					transform:translateX(-50%);
+					-webkit-transform:translateX(-50%);
+					-moz-transform:translateX(-50%);
+					-ms-transform:translateX(-50%);
+					-o-transform:translateX(-50%);
+					background:rgba(210,170,170,0.5);
+					border-radius:50px;
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:1.5% 3% 4%;
+					z-index:0;
+					width:47%;
+					}
+
+.profile_info2_5 h3{width:100%;
+				  text-align:center;
+				  margin:30px 0;
+				  font:bold 1.6em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_5 li{font:1.2em/1.4 'YiSunShinDotumM';
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+				 -webkit-transition:right 0.5s 0.5s;
+				 -moz-transition:right 0.5s 0.5s;
+				 -ms-transition:right 0.5s 0.5s;
+				 -o-transition:right 0.5s 0.5s;
+				}
+.profile_info1_5.swiper-slide-active img:nth-of-type(1)
+		{animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-webkit-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-moz-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-ms-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-o-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;}
+.profile_info1_5.swiper-slide-active img:nth-of-type(2)
+		{animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-webkit-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-moz-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-ms-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-o-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;}
+
+
+}
+
+@media screen and (min-width:1024px) and (max-width:1279px){
+.pics5 img{float:left;
+		   width:47%; height:auto;
+		   display:block;
+		   vertical-align:top;
+		   position:absolute;		   
+		   z-index:100;
+		   }
+.pics5 img:nth-of-type(1){left:0; top:-100%;}
+.pics5 img:nth-of-type(2){left:47%; top:-100%;}
+.pics5 img:nth-of-type(3){left:6%; bottom:-100%;}
+.pics5 img:nth-of-type(4){left:53%; bottom:-100%;}
+.profile_info2_5{margin-top:-200%;
+				 height:0vh !important;
+				 z-index:0;				 
+				}
+.profile_info2_5 ul{position:absolute;
+					left:50%; top:60px;
+					transform:translateX(-50%);
+					-webkit-transform:translateX(-50%);
+					-moz-transform:translateX(-50%);
+					-ms-transform:translateX(-50%);
+					-o-transform:translateX(-50%);
+					background:rgba(210,170,170,0.5);
+					border-radius:50px;
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:1.5% 3% 4%;
+					z-index:0;
+					width:57%;
+					}
+
+.profile_info2_5 h3{width:100%;
+				  text-align:center;
+				  margin:30px 0;
+				  font:bold 1.6em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_5 li{font:1.2em/1.4 'YiSunShinDotumM';
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+				 -webkit-transition:right 0.5s 0.5s;
+				 -moz-transition:right 0.5s 0.5s;
+				 -ms-transition:right 0.5s 0.5s;
+				 -o-transition:right 0.5s 0.5s;
+				}
+.profile_info1_5.swiper-slide-active img:nth-of-type(1)
+		{animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-webkit-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-moz-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-ms-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-o-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;}
+.profile_info1_5.swiper-slide-active img:nth-of-type(2)
+		{animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-webkit-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-moz-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-ms-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-o-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;}
+
+}
+
+@media screen and (min-width:961px) and (max-width:1023px){
+.profile_info1_1 .profile_filter
+				{width:100%; height:100%;
+				 background:url(../image/profile/pj3_10cm.png)no-repeat center top;
+				 background-size:cover;
+				  -webkit-background-size:cover;
+				  -moz-background-size:cover;
+				  -ms-background-size:cover;
+				  -o-background-size:cover;
+				 position:absolute;
+				 z-index:0;
+				 filter:blur(10px) brightness(1.2);
+				 -webkit-filter:blur(10px) brightness(1.2);
+				 -moz-filter:blur(10px) brightness(1.2);
+				 -ms-filter:blur(10px) brightness(1.2);
+				 -o-filter:blur(10px) brightness(1.2);
+				}
+.profile_info1_1 .pics1{width:100%; height:100vh;
+			  background:url(../image/profile/pj3_10cm.png)no-repeat center top;
+			  background-size:cover;
+			  -webkit-background-size:cover;
+			  -moz-background-size:cover;
+			  -ms-background-size:cover;
+			  -o-background-size:cover;
+			  position:absolute;
+			  z-index:1;
+			 }
+
+#basic_info{position:absolute;
+			top:0; right:0;
+			opacity:0;
+			background:rgba(32,12,0,0.5);
+			width:45%;
+			padding:1.2% 0; 
+			border-radius:100px 0 0 100px;
+			-webkit-border-radius:100px 0 0 100px;
+			-moz-border-radius:100px 0 0 100px;
+			-ms-border-radius:100px 0 0 100px;
+			-o-border-radius:100px 0 0 100px;
+			transition:right 0.5s 0.5s;
+			-webkit-transition:right 0.5s 0.5s;
+			-moz-transition:right 0.5s 0.5s;
+			-ms-transition:right 0.5s 0.5s;
+			o-transition:right 0.5s 0.5s;
+			width:50%;
+			}
+#basic_info>li{overflow:hidden;
+			   padding:0.5% 0 0.5% 8%;
+			  }
+
+#basic_info>li>span,
+#basic_info>li>p{display:inline-block;
+				 color:#fff;
+				
+				 }
+#basic_info>li>span{width:70px;
+					margin-right:15px;
+					text-align:right;
+					font:bold 1.2em/1.2 'YiSunShinDotumM'
+					}
+#basic_info>li>p{font:bold 1.6em/1.2 'YiSunShinDotumM'}
+
+.profile_info1_2 .pics2{width:80%; height:80%;
+			  background:url(../image/profile/pj3_10cm_americano.png)no-repeat center top;
+			  background-size:contain;
+			  -webkit-background-size:contain;
+			  -moz-background-size:contain;
+			  -ms-background-size:contain;
+			  -o-background-size:contain;
+			  position:absolute;
+			  top:150px; left:50%;
+			  z-index:1;
+			  transform:translateX(-50%);
+			  -webkit-transform:translateX(-50%);
+			  -moz-transform:translateX(-50%);
+			  -ms-transform:translateX(-50%);
+			  -o-transform:translateX(-50%);
+			 }
+.profile_info2_2 div{position:absolute;
+					 left:50%; 
+					 transform:translateX(-50%);
+					-webkit-transform:translateX(-50%);
+					-moz-transform:translateX(-50%);
+					-ms-transform:translateX(-50%);
+					-o-transform:translateX(-50%);
+					background:rgba(0,0,0,0.5);
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:4% 3%;
+					margin-top:-200%;
+					width:60%;
+					}
+.profile_info2_2 h3{width:100%;
+				  text-align:center;
+				  margin:30px 0;
+				  font:bold 1.6em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_2 p{font:1.2em/1.4 'YiSunShinDotumM';				
+				 width:fit-content;
+				 width:-webkit-fit-content;
+				 width:-moz-fit-content;
+				 width:-ms-fit-content;
+				 width:-o-fit-content;
+				 margin:0 auto;
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+				 -webkit-transition:right 0.5s 0.5s;
+				 -moz-transition:right 0.5s 0.5s;
+				 -ms-transition:right 0.5s 0.5s;
+				 -o-transition:right 0.5s 0.5s;
+				}
+
+.profile_info1_3 .pics3{width:50%; height:100vh;
+			  background:url(../image/profile/pj3_profile1.png)no-repeat center top;
+			  background-size:cover;
+			  -webkit-background-size:cover;
+			  -moz-background-size:cover;
+			  -ms-background-size:cover;
+			  -o-background-size:cover;
+			  position:absolute;
+			  top:0; right:-100%;
+			  z-index:1;
+			  opacity:0;
+			 }
+.profile_info2_3 {left:-100%;
+				  opacity:0;				  
+				 }
+.profile_info2_3 ul{position:absolute;
+					left:25%;
+					transform:translateX(-50%);
+					-webkit-transform:translateX(-50%);
+					-moz-transform:translateX(-50%);
+					-ms-transform:translateX(-50%);
+					-o-transform:translateX(-50%);
+					/*background:rgba(170,180,188,0.5);*/
+					background:rgba(49,61,94,0.5);
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:4% 3%;
+					margin-top:-200px;
+					}
+.profile_info2_3 h3{width:100%;
+				  margin:0 0 30px 0;
+				  text-align:center;
+				  font:bold 1.6em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_3 li{font:1.2em/1.4 'YiSunShinDotumM';
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+				 -webkit-transition:right 0.5s 0.5s;
+				 -moz-transition:right 0.5s 0.5s;
+				 -ms-transition:right 0.5s 0.5s;
+				 -o-transition:right 0.5s 0.5s;
+				}
+
+.profile_info1_4 .pics4{width:50%; height:100vh;
+			  background:url(../image/profile/pj3_10cm_4.4.jpg)no-repeat center center;
+			  background-size:cover;
+			  -webkit-background-size:cover;
+			  -moz-background-size:cover;
+			  -ms-background-size:cover;
+			  -o-background-size:cover;
+			  position:absolute;
+			  top:0;
+			  z-index:1;
+			  left:-100%;
+			  opacity:0;
+			 }
+.profile_info2_4 {right:100%;
+				  opacity:0;
+				 }
+.profile_info2_4 ul{position:absolute;
+					top:-50%; right:25%;
+					transform:translateX(50%);
+					-webkit-transform:translateX(50%);
+					-moz-transform:translateX(50%);
+					-ms-transform:translateX(50%);
+					-o-transform:translateX(50%);
+					background:rgba(255,255,255,0.5);
+					border-radius:50px;
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:4% 3%;
+					}
+.profile_info2_4 h3{width:100%;
+				  margin:0 0 30px 0;
+				  text-align:center;
+				  font:bold 1.6em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_4 li{font:1.2em/1.4 'YiSunShinDotumM';
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+					-webkit-transition:right 0.5s 0.5s;
+					-moz-transition:right 0.5s 0.5s;
+					-ms-transition:right 0.5s 0.5s;
+					-o-transition:right 0.5s 0.5s;
+				}
+
+
+.profile_info1_5 .pics5{width:100%; height:100vh;
+			  position:absolute;
+			  z-index:30;
+			 }
+.pics5 img{float:left;
+		   width:40%; height:auto;
+		   display:block;
+		   vertical-align:top;
+		   position:absolute;		   
+		   z-index:100;
+		   }
+.pics5 img:nth-of-type(1){left:0; top:-100%;}
+.pics5 img:nth-of-type(2){left:40%; top:-100%;}
+.pics5 img:nth-of-type(3){left:20%; bottom:-100%;}
+.pics5 img:nth-of-type(4){left:60%; bottom:-100%;}
+.profile_info2_5{margin-top:-200%;
+				 height:0vh !important;
+				 z-index:0;				 
+				}
+.profile_info2_5 ul{position:absolute;
+					left:50%; top:100px;
+					transform:translateX(-50%);
+					-webkit-transform:translateX(-50%);
+					-moz-transform:translateX(-50%);
+					-ms-transform:translateX(-50%);
+					-o-transform:translateX(-50%);
+					background:rgba(210,170,170,0.5);
+					border-radius:50px;
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:1.5% 3% 4%;
+					z-index:0;
+					width:55%;
+					}
+
+.profile_info2_5 h3{width:100%;
+				  text-align:center;
+				  margin:30px 0;
+				  font:bold 1.6em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_5 li{font:1.1em/1.4 'YiSunShinDotumM';
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+				 -webkit-transition:right 0.5s 0.5s;
+				 -moz-transition:right 0.5s 0.5s;
+				 -ms-transition:right 0.5s 0.5s;
+				 -o-transition:right 0.5s 0.5s;
+				}
+.profile_info1_5.swiper-slide-active img:nth-of-type(1)
+		{animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-webkit-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-moz-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-ms-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-o-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;}
+.profile_info1_5.swiper-slide-active img:nth-of-type(2)
+		{animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-webkit-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-moz-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-ms-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-o-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;}
+
+}
+
+
+@media screen and (min-width:768px) and (max-width:960px){
+.profile_info1_1 .profile_filter
+				{width:100%; height:100%;
+				 background:url(../image/profile/pj3_10cm.png)no-repeat center top;
+				 background-size:cover;
+				  -webkit-background-size:cover;
+				  -moz-background-size:cover;
+				  -ms-background-size:cover;
+				  -o-background-size:cover;
+				 position:absolute;
+				 z-index:0;
+				 filter:blur(10px) brightness(1.2);
+				 -webkit-filter:blur(10px) brightness(1.2);
+				 -moz-filter:blur(10px) brightness(1.2);
+				 -ms-filter:blur(10px) brightness(1.2);
+				 -o-filter:blur(10px) brightness(1.2);
+				}
+.profile_info1_1 .pics1{width:100%; height:100vh;
+			  background:url(../image/profile/pj3_10cm.png)no-repeat center top;
+			  background-size:cover;
+			  -webkit-background-size:cover;
+			  -moz-background-size:cover;
+			  -ms-background-size:cover;
+			  -o-background-size:cover;
+			  position:absolute;
+			  z-index:1;
+			 }
+
+#basic_info{position:absolute;
+			top:0; right:0;
+			opacity:0;
+			background:rgba(32,12,0,0.5);
+			width:45%;
+			padding:1.2% 0; 
+			border-radius:100px 0 0 100px;
+			-webkit-border-radius:100px 0 0 100px;
+			-moz-border-radius:100px 0 0 100px;
+			-ms-border-radius:100px 0 0 100px;
+			-o-border-radius:100px 0 0 100px;
+			transition:right 0.5s 0.5s;
+			-webkit-transition:right 0.5s 0.5s;
+			-moz-transition:right 0.5s 0.5s;
+			-ms-transition:right 0.5s 0.5s;
+			o-transition:right 0.5s 0.5s;
+			width:50%;
+			}
+#basic_info>li{overflow:hidden;
+			   padding:0.5% 0 0.5% 8%;
+			  }
+
+#basic_info>li>span,
+#basic_info>li>p{display:inline-block;
+				 color:#fff;
+				
+				 }
+#basic_info>li>span{width:70px;
+					margin-right:15px;
+					text-align:right;
+					font:bold 1.3em/1.2 'YiSunShinDotumM'
+					}
+#basic_info>li>p{font:bold 1.6em/1.2 'YiSunShinDotumM'}
+
+.profile_info1_2 .pics2{width:80%; height:80%;
+			  background:url(../image/profile/pj3_10cm_americano.png)no-repeat center top;
+			  background-size:contain;
+			  -webkit-background-size:contain;
+			  -moz-background-size:contain;
+			  -ms-background-size:contain;
+			  -o-background-size:contain;
+			  position:absolute;
+			  top:150px; left:50%;
+			  z-index:1;
+			  transform:translateX(-50%);
+			  -webkit-transform:translateX(-50%);
+			  -moz-transform:translateX(-50%);
+			  -ms-transform:translateX(-50%);
+			  -o-transform:translateX(-50%);
+			 }
+.profile_info2_2 div{position:absolute;
+					 left:50%; 
+					 transform:translateX(-50%);
+					-webkit-transform:translateX(-50%);
+					-moz-transform:translateX(-50%);
+					-ms-transform:translateX(-50%);
+					-o-transform:translateX(-50%);
+					background:rgba(0,0,0,0.5);
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:4% 3%;
+					margin-top:-200%;
+					width:60%;
+					}
+.profile_info2_2 h3{width:100%;
+				  text-align:center;
+				  margin:30px 0;
+				  font:bold 1.6em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_2 p{font:1.3em/1.4 'YiSunShinDotumM';				
+				 width:fit-content;
+				 width:-webkit-fit-content;
+				 width:-moz-fit-content;
+				 width:-ms-fit-content;
+				 width:-o-fit-content;
+				 margin:0 auto;
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+				 -webkit-transition:right 0.5s 0.5s;
+				 -moz-transition:right 0.5s 0.5s;
+				 -ms-transition:right 0.5s 0.5s;
+				 -o-transition:right 0.5s 0.5s;
+				}
+
+.profile_info1_3 .pics3{width:50%; height:100vh;
+			  background:url(../image/profile/pj3_profile1.png)no-repeat center top;
+			  background-size:cover;
+			  -webkit-background-size:cover;
+			  -moz-background-size:cover;
+			  -ms-background-size:cover;
+			  -o-background-size:cover;
+			  position:absolute;
+			  top:0; right:-100%;
+			  z-index:1;
+			  opacity:0;
+			 }
+.profile_info2_3 {left:-100%;
+				  opacity:0;				  
+				 }
+.profile_info2_3 ul{position:absolute;
+					left:30%; top:-50px;
+					/*transform:translateX(-50%);
+					-webkit-transform:translateX(-50%);
+					-moz-transform:translateX(-50%);
+					-ms-transform:translateX(-50%);
+					-o-transform:translateX(-50%);
+					background:rgba(170,180,188,0.5);*/
+					background:rgba(34,46,79,0.6);
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:4% 3%;
+					
+					}
+.profile_info2_3 h3{width:100%;
+				  margin:0 0 30px 0;
+				  text-align:center;
+				  font:bold 1.6em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_3 li{font:1.3em/1.4 'YiSunShinDotumM';
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+				 -webkit-transition:right 0.5s 0.5s;
+				 -moz-transition:right 0.5s 0.5s;
+				 -ms-transition:right 0.5s 0.5s;
+				 -o-transition:right 0.5s 0.5s;
+				}
+
+.profile_info1_4 .pics4{width:50%; height:100vh;
+			  background:url(../image/profile/pj3_10cm_4.4.jpg)no-repeat center center;
+			  background-size:cover;
+			  -webkit-background-size:cover;
+			  -moz-background-size:cover;
+			  -ms-background-size:cover;
+			  -o-background-size:cover;
+			  position:absolute;
+			  top:0;
+			  z-index:1;
+			  left:-100%;
+			  opacity:0;
+			 }
+.profile_info2_4 {right:100%;
+				  opacity:0;
+				 }
+.profile_info2_4 ul{position:absolute;
+					top:150px; right:30%;
+					background:rgba(255,255,255,0.6);
+					border-radius:50px;
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:4% 3%;
+					}
+.profile_info2_4 h3{width:100%;
+				  margin:0 0 30px 0;
+				  text-align:center;
+				  font:bold 1.6em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_4 li{font:1.3em/1.4 'YiSunShinDotumM';
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+					-webkit-transition:right 0.5s 0.5s;
+					-moz-transition:right 0.5s 0.5s;
+					-ms-transition:right 0.5s 0.5s;
+					-o-transition:right 0.5s 0.5s;
+				}
+
+
+.profile_info1_5 .pics5{width:100%; height:100vh;
+			  position:absolute;
+			  z-index:30;
+			 }
+.pics5 img{float:left;
+		   width:50%; height:auto;
+		   display:block;
+		   vertical-align:top;
+		   position:absolute;		   
+		   z-index:100;
+		   }
+.pics5 img:nth-of-type(1){left:0; top:-100%;}
+.pics5 img:nth-of-type(2){left:50%; top:-100%;}
+.pics5 img:nth-of-type(3){left:0; bottom:-100%;}
+.pics5 img:nth-of-type(4){left:50%; bottom:-100%;}
+.profile_info2_5{margin-top:-200%;
+				 height:0vh !important;
+				 z-index:0;				 
+				}
+.profile_info2_5 ul{position:absolute;
+					left:50%; top:50px;
+					transform:translateX(-50%);
+					-webkit-transform:translateX(-50%);
+					-moz-transform:translateX(-50%);
+					-ms-transform:translateX(-50%);
+					-o-transform:translateX(-50%);
+					background:rgba(210,170,170,0.5);
+					border-radius:50px;
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:1.5% 3% 4%;
+					z-index:0;
+					width:62%;
+					}
+
+.profile_info2_5 h3{width:100%;
+				  text-align:center;
+				  margin:30px 0;
+				  font:bold 1.6em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_5 li{font:1.2em/1.4 'YiSunShinDotumM';
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+				 -webkit-transition:right 0.5s 0.5s;
+				 -moz-transition:right 0.5s 0.5s;
+				 -ms-transition:right 0.5s 0.5s;
+				 -o-transition:right 0.5s 0.5s;
+				}
+.profile_info1_5.swiper-slide-active img:nth-of-type(1)
+		{animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-webkit-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-moz-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-ms-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-o-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;}
+.profile_info1_5.swiper-slide-active img:nth-of-type(2)
+		{animation:basicActionBottom 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-webkit-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-moz-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-ms-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-o-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;}
+
+}
+
+@media screen and (min-width:550px) and (max-width:960px){
+.profile_info1_1 .profile_filter
+				{width:100%; height:100%;
+				 background:url(../image/profile/pj3_10cm.png)no-repeat center top;
+				 background-size:cover;
+				  -webkit-background-size:cover;
+				  -moz-background-size:cover;
+				  -ms-background-size:cover;
+				  -o-background-size:cover;
+				 position:absolute;
+				 z-index:0;
+				 filter:blur(10px) brightness(1.2);
+				 -webkit-filter:blur(10px) brightness(1.2);
+				 -moz-filter:blur(10px) brightness(1.2);
+				 -ms-filter:blur(10px) brightness(1.2);
+				 -o-filter:blur(10px) brightness(1.2);
+				}
+.profile_info1_1 .pics1{width:100%; height:100vh;
+			  background:url(../image/profile/pj3_10cm.png)no-repeat center top;
+			  background-size:cover;
+			  -webkit-background-size:cover;
+			  -moz-background-size:cover;
+			  -ms-background-size:cover;
+			  -o-background-size:cover;
+			  position:absolute;
+			  z-index:1;
+			 }
+
+#basic_info{position:absolute;
+			top:0; right:0;
+			opacity:0;
+			background:rgba(32,12,0,0.5);
+			width:45%;
+			padding:1.2% 0; 
+			border-radius:100px 0 0 100px;
+			-webkit-border-radius:80px 0 0 80px;
+			-moz-border-radius:80px 0 0 80px;
+			-ms-border-radius:80px 0 0 80px;
+			-o-border-radius:80px 0 0 80px;
+			transition:right 0.5s 0.5s;
+			-webkit-transition:right 0.5s 0.5s;
+			-moz-transition:right 0.5s 0.5s;
+			-ms-transition:right 0.5s 0.5s;
+			o-transition:right 0.5s 0.5s;
+			width:55%;
+			}
+#basic_info>li{overflow:hidden;
+			   padding:0.5% 0 0.5% 8%;
+			  }
+
+#basic_info>li>span,
+#basic_info>li>p{display:inline-block;
+				 color:#fff;
+				
+				 }
+#basic_info>li>span{width:70px;
+					margin-right:15px;
+					text-align:right;
+					font:bold 1.6em/1.2 'YiSunShinDotumM'
+					}
+#basic_info>li>p{font:bold 2em/1.2 'YiSunShinDotumM'}
+
+.profile_info1_2 .pics2{width:100%; height:100%;
+			  background:url(../image/profile/pj3_10cm_americano.png)no-repeat center top;
+			  background-size:contain;
+			  -webkit-background-size:contain;
+			  -moz-background-size:contain;
+			  -ms-background-size:contain;
+			  -o-background-size:contain;
+			  position:absolute;
+			  top:150px; left:50%;
+			  z-index:1;
+			  transform:translateX(-50%);
+			  -webkit-transform:translateX(-50%);
+			  -moz-transform:translateX(-50%);
+			  -ms-transform:translateX(-50%);
+			  -o-transform:translateX(-50%);
+			 }
+.profile_info2_2 div{position:absolute;
+					 left:50%; top:50px;
+					 transform:translateX(-50%);
+					-webkit-transform:translateX(-50%);
+					-moz-transform:translateX(-50%);
+					-ms-transform:translateX(-50%);
+					-o-transform:translateX(-50%);
+					background:rgba(0,0,0,0.5);
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:4% 3%;
+					margin-top:-200%;
+					width:60%;
+					}
+.profile_info2_2 h3{width:100%;
+				  text-align:center;
+				  margin:30px 0;
+				  font:bold 2em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_2 p{font:1.8em/1.4 'YiSunShinDotumM';				
+				 width:fit-content;
+				 width:-webkit-fit-content;
+				 width:-moz-fit-content;
+				 width:-ms-fit-content;
+				 width:-o-fit-content;
+				 margin:0 auto;
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+				 -webkit-transition:right 0.5s 0.5s;
+				 -moz-transition:right 0.5s 0.5s;
+				 -ms-transition:right 0.5s 0.5s;
+				 -o-transition:right 0.5s 0.5s;
+				}
+
+.profile_info1_3 .pics3{width:100%; height:100vh;
+			  background:url(../image/profile/pj3_profile1.png)no-repeat center top;
+			  background-size:cover;
+			  -webkit-background-size:cover;
+			  -moz-background-size:cover;
+			  -ms-background-size:cover;
+			  -o-background-size:cover;
+			  position:absolute;
+			  top:0; right:-100%;
+			  z-index:1;
+			  opacity:0;
+			 }
+.profile_info2_3 {left:-100%;
+				  opacity:0;				  
+				 }
+.profile_info2_3 ul{position:absolute;
+					left:40%; top:250px;
+					/*transform:translateX(-50%);
+					-webkit-transform:translateX(-50%);
+					-moz-transform:translateX(-50%);
+					-ms-transform:translateX(-50%);
+					-o-transform:translateX(-50%);
+					background:rgba(170,180,188,0.5);*/
+					background:rgba(34,46,79,0.6);
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:4% 3%;
+					
+					}
+.profile_info2_3 h3{width:100%;
+				  margin:0 0 30px 0;
+				  text-align:center;
+				  font:bold 2em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_3 li{font:1.8em/1.4 'YiSunShinDotumM';
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+				 -webkit-transition:right 0.5s 0.5s;
+				 -moz-transition:right 0.5s 0.5s;
+				 -ms-transition:right 0.5s 0.5s;
+				 -o-transition:right 0.5s 0.5s;
+				}
+
+.profile_info1_4 .pics4{width:100%; height:100vh;
+			  background:url(../image/profile/pj3_10cm_4.4.jpg)no-repeat center center;
+			  background-size:cover;
+			  -webkit-background-size:cover;
+			  -moz-background-size:cover;
+			  -ms-background-size:cover;
+			  -o-background-size:cover;
+			  position:absolute;
+			  top:0;
+			  z-index:1;
+			  left:-100%;
+			  opacity:0;
+			 }
+.profile_info2_4 {right:100%;
+				  opacity:0;
+				 }
+.profile_info2_4 ul{position:absolute;
+					top:-250px; right:30%;
+					background:rgba(255,255,255,0.6);
+					border-radius:50px;
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:4% 3%;
+					}
+.profile_info2_4 h3{width:100%;
+				  margin:0 0 30px 0;
+				  text-align:center;
+				  font:bold 1.6em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_4 li{font:1.3em/1.4 'YiSunShinDotumM';
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+					-webkit-transition:right 0.5s 0.5s;
+					-moz-transition:right 0.5s 0.5s;
+					-ms-transition:right 0.5s 0.5s;
+					-o-transition:right 0.5s 0.5s;
+				}
+
+
+.profile_info1_5 .pics5{width:100%; height:100vh;
+			  position:absolute;
+			  z-index:30;
+			 }
+.pics5 img{float:left;
+		   width:50%; height:auto;
+		   display:block;
+		   vertical-align:top;
+		   position:absolute;		   
+		   z-index:100;
+		   }
+.pics5 img:nth-of-type(1){left:0; top:-100%;}
+.pics5 img:nth-of-type(2){left:50%; top:-100%;}
+.pics5 img:nth-of-type(3){left:0; bottom:-100%;}
+.pics5 img:nth-of-type(4){left:50%; bottom:-100%;}
+.profile_info2_5{margin-top:-200%;
+				 height:0vh !important;
+				 z-index:0;				 
+				}
+.profile_info2_5 ul{position:absolute;
+					left:50%; top:50px;
+					transform:translateX(-50%);
+					-webkit-transform:translateX(-50%);
+					-moz-transform:translateX(-50%);
+					-ms-transform:translateX(-50%);
+					-o-transform:translateX(-50%);
+					background:rgba(210,170,170,0.5);
+					border-radius:50px;
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:1.5% 3% 4%;
+					z-index:0;
+					width:62%;
+					}
+
+.profile_info2_5 h3{width:100%;
+				  text-align:center;
+				  margin:30px 0;
+				  font:bold 1.6em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_5 li{font:1.2em/1.4 'YiSunShinDotumM';
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+				 -webkit-transition:right 0.5s 0.5s;
+				 -moz-transition:right 0.5s 0.5s;
+				 -ms-transition:right 0.5s 0.5s;
+				 -o-transition:right 0.5s 0.5s;
+				}
+.profile_info1_5.swiper-slide-active img:nth-of-type(1)
+		{animation:basicActionTop3 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-webkit-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-moz-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-ms-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-o-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;}
+.profile_info1_5.swiper-slide-active img:nth-of-type(2)
+		{animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-webkit-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-moz-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-ms-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-o-animation:basicActionTop 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;}
+
+}
+
+
+
+@media screen and (min-width:320px) and (max-width:550px){
+.profile_info1_1 .profile_filter
+				{width:100%; height:100%;
+				 background:url(../image/profile/pj3_10cm.png)no-repeat center top;
+				 background-size:cover;
+				  -webkit-background-size:cover;
+				  -moz-background-size:cover;
+				  -ms-background-size:cover;
+				  -o-background-size:cover;
+				 position:absolute;
+				 z-index:0;
+				 filter:blur(10px) brightness(1.2);
+				 -webkit-filter:blur(10px) brightness(1.2);
+				 -moz-filter:blur(10px) brightness(1.2);
+				 -ms-filter:blur(10px) brightness(1.2);
+				 -o-filter:blur(10px) brightness(1.2);
+				}
+.profile_info1_1 .pics1{width:100%; height:100vh;
+			  background:url(../image/profile/pj3_10cm.png)no-repeat center top;
+			  background-size:cover;
+			  -webkit-background-size:cover;
+			  -moz-background-size:cover;
+			  -ms-background-size:cover;
+			  -o-background-size:cover;
+			  position:absolute;
+			  z-index:1;
+			 }
+
+#basic_info{position:absolute;
+			top:50px; right:0;
+			opacity:0;
+			background:rgba(32,12,0,0.5);
+			width:45%;
+			padding:1.2% 0; 
+			border-radius:100px 0 0 100px;
+			-webkit-border-radius:80px 0 0 80px;
+			-moz-border-radius:80px 0 0 80px;
+			-ms-border-radius:80px 0 0 80px;
+			-o-border-radius:80px 0 0 80px;
+			transition:right 0.5s 0.5s;
+			-webkit-transition:right 0.5s 0.5s;
+			-moz-transition:right 0.5s 0.5s;
+			-ms-transition:right 0.5s 0.5s;
+			o-transition:right 0.5s 0.5s;
+			width:75%;
+			}
+#basic_info>li{overflow:hidden;
+			   padding:1% 0 1% 8%;
+			  }
+
+#basic_info>li>span,
+#basic_info>li>p{display:inline-block;
+				 color:#fff;
+				
+				 }
+#basic_info>li>span{width:60px;
+					margin-right:15px;
+					text-align:right;
+					font:bold 1.4em/1 'YiSunShinDotumM'
+					}
+#basic_info>li>p{font:bold 1.6em/1 'YiSunShinDotumM'}
+
+.profile_info1_2 .pics2{width:100%; height:100%;
+			  background:url(../image/profile/pj3_10cm_americano.png)no-repeat center top;
+			  background-size:contain;
+			  -webkit-background-size:contain;
+			  -moz-background-size:contain;
+			  -ms-background-size:contain;
+			  -o-background-size:contain;
+			  position:absolute;
+			  top:150px; left:50%;
+			  z-index:1;
+			  transform:translateX(-50%);
+			  -webkit-transform:translateX(-50%);
+			  -moz-transform:translateX(-50%);
+			  -ms-transform:translateX(-50%);
+			  -o-transform:translateX(-50%);
+			 }
+.profile_info2_2 div{position:absolute;
+					 left:50%; top:-10px;
+					 transform:translateX(-50%);
+					-webkit-transform:translateX(-50%);
+					-moz-transform:translateX(-50%);
+					-ms-transform:translateX(-50%);
+					-o-transform:translateX(-50%);
+					background:rgba(0,0,0,0.5);
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:1% 4% 5%;					
+					width:85%;
+					}
+.profile_info2_2 h3{width:100%;
+				  text-align:center;
+				  margin:15px 0;
+				  font:bold 2em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_2 p{font:1.5em/1.4 'YiSunShinDotumM';				
+				 width:fit-content;
+				 width:-webkit-fit-content;
+				 width:-moz-fit-content;
+				 width:-ms-fit-content;
+				 width:-o-fit-content;
+				 margin:0 auto;
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+				 -webkit-transition:right 0.5s 0.5s;
+				 -moz-transition:right 0.5s 0.5s;
+				 -ms-transition:right 0.5s 0.5s;
+				 -o-transition:right 0.5s 0.5s;
+				}
+
+.profile_info1_3 .pics3{width:100%; height:100vh;
+			  background:url(../image/profile/pj3_profile1.png)no-repeat center top;
+			  background-size:cover;
+			  -webkit-background-size:cover;
+			  -moz-background-size:cover;
+			  -ms-background-size:cover;
+			  -o-background-size:cover;
+			  position:absolute;
+			  top:0; right:-100%;
+			  z-index:1;
+			  opacity:0;
+			 }
+.profile_info2_3 {left:-100%;
+				  opacity:0;				  
+				 }
+.profile_info2_3 ul{position:absolute;
+					left:45%; top:220px;
+					/*transform:translateX(-50%);
+					-webkit-transform:translateX(-50%);
+					-moz-transform:translateX(-50%);
+					-ms-transform:translateX(-50%);
+					-o-transform:translateX(-50%);
+					background:rgba(170,180,188,0.5);*/
+					background:rgba(34,46,79,0.6);
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:4% 6% 6%;
+					width:80%;
+					}
+.profile_info2_3 h3{width:100%;
+				  margin:0 0 15px 0;
+				  text-align:center;
+				  font:bold 2em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_3 li{font:1.5em/1.4 'YiSunShinDotumM';
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+				 -webkit-transition:right 0.5s 0.5s;
+				 -moz-transition:right 0.5s 0.5s;
+				 -ms-transition:right 0.5s 0.5s;
+				 -o-transition:right 0.5s 0.5s;
+				 padding-left:2%;
+				 box-sizing:border-box;
+				 -webkit-box-sizing:border-box;
+				 -moz-box-sizing:border-box;
+				 -ms-box-sizing:border-box;
+				 -o-box-sizing:border-box;
+				}
+
+.profile_info1_4 .pics4{width:100%; height:100vh;
+			  background:url(../image/profile/pj3_10cm_4.4.jpg)no-repeat center center;
+			  background-size:cover;
+			  -webkit-background-size:cover;
+			  -moz-background-size:cover;
+			  -ms-background-size:cover;
+			  -o-background-size:cover;
+			  position:absolute;
+			  top:0;
+			  z-index:1;
+			  left:-100%;
+			  opacity:0;
+			 }
+.profile_info2_4 {right:100%;
+				  opacity:0;
+				 }
+.profile_info2_4 ul{position:absolute;
+					top:70px; right:35%;
+					background:rgba(255,255,255,0.6);
+					border-radius:50px;
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:4% 6%;
+					width:60%;
+					}
+.profile_info2_4 h3{width:100%;
+				  margin:0 0 15px 0;
+				  text-align:center;
+				  font:bold 2em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_4 li{font:1.5em/1.4 'YiSunShinDotumM';
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+					-webkit-transition:right 0.5s 0.5s;
+					-moz-transition:right 0.5s 0.5s;
+					-ms-transition:right 0.5s 0.5s;
+					-o-transition:right 0.5s 0.5s;
+				}
+
+
+.profile_info1_5 .pics5{width:100%; height:100vh;
+			  position:absolute;
+			  z-index:30;
+			 }
+.pics5 img{float:left;
+		   width:50%; height:auto;
+		   display:block;
+		   vertical-align:top;
+		   position:absolute;		   
+		   z-index:100;
+		   }
+.pics5 img:nth-of-type(1){left:0; top:-100%;}
+.pics5 img:nth-of-type(2){left:50%; top:-100%;}
+.pics5 img:nth-of-type(3){left:0; bottom:-100%;}
+.pics5 img:nth-of-type(4){left:50%; bottom:-100%;}
+.profile_info2_5{margin-top:-200%;
+				 height:0vh !important;
+				 z-index:0;				 
+				}
+.profile_info2_5 ul{position:absolute;
+					left:50%; top:-20px;
+					transform:translateX(-50%);
+					-webkit-transform:translateX(-50%);
+					-moz-transform:translateX(-50%);
+					-ms-transform:translateX(-50%);
+					-o-transform:translateX(-50%);
+					background:rgba(210,170,170,0.5);
+					border-radius:50px;
+					border-radius:50px;
+					-webkit-border-radius:50px;
+					-moz-border-radius:50px;
+					-ms-border-radius:50px;
+					-o-border-radius:50px;
+					padding:1.5% 3% 4%;
+					z-index:0;
+					width:90%;
+					}
+
+.profile_info2_5 h3{width:100%;
+				  text-align:center;
+				  margin:30px 0;
+				  font:bold 2em 'YiSunShinDotumM';
+				  color:#fff;
+				  text-shadow:1px 1px 3px #000;
+				 }
+.profile_info2_5 li{font:1.5em/1.4 'YiSunShinDotumM';
+				 color:#fff;
+				 text-shadow:1px 1px 3px #000;
+				 transition:margin 0.5s 0.5s;
+				 -webkit-transition:right 0.5s 0.5s;
+				 -moz-transition:right 0.5s 0.5s;
+				 -ms-transition:right 0.5s 0.5s;
+				 -o-transition:right 0.5s 0.5s;
+				}
+.profile_info1_5.swiper-slide-active img:nth-of-type(1)
+		{animation:basicActionTop4 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-webkit-animation:basicActionTop4 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-moz-animation:basicActionTop4 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-ms-animation:basicActionTop4 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;
+		-o-animation:basicActionTop4 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.3s;}
+.profile_info1_5.swiper-slide-active img:nth-of-type(2)
+		{animation:basicActionTop4 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-webkit-animation:basicActionTop4 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-moz-animation:basicActionTop4 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-ms-animation:basicActionTop4 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;
+		-o-animation:basicActionTop4 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.5s;}
+.profile_info1_5.swiper-slide-active img:nth-of-type(3)
+		{animation:basicActionBottom2 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.7s;;
+		-webkit-animation:basicActionBottom2 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.7s;
+		-moz-animation:basicActionBottom2 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.7s;
+		-ms-animation:basicActionBottom2 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.7s;
+		-o-animation:basicActionBottom2 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.7s;}
+.profile_info1_5.swiper-slide-active img:nth-of-type(4)
+		{animation:basicActionBottom2 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.9s;
+		-webkit-animation:basicActionBottom2 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.9s
+		-moz-animation:basicActionBottom2 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.9s
+		-ms-animation:basicActionBottom2 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.9s
+		-o-animation:basicActionBottom2 0.5s cubic-bezier(.51,.92,.24,1.15) forwards 0.9s}
+.guide_txt{position:absolute;
+		left: 50%; bottom:160px;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		font:18px 'SDMiSaeng';
+		color:#ffffff;
+		}
+}

@@ -1,0 +1,861 @@
+@charset "UTF-8";
+
+
+@media screen and (min-width:1024px){
+#discography_back
+	{position:fixed;
+	 left:0; top:0;
+	 width:100%; height:100vh;
+	 background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-image:-webkit-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-image:-moz-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-image:-ms-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-image:-o-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-position:center top, center top;
+	 background-repeat:no-repeat, no-repeat;
+	 background-attachment:scroll;
+	 background-size:cover;
+	 z-index:0;
+	 }
+
+.tap_box{height:30px;
+		 margin-bottom:30px;
+		  position:absolute;
+		  left:50%; top:150px;
+		  transform:translateX(-50%);
+		  -webkit-transform:translateX(-50%);
+		  -moz-transform:translateX(-50%);
+		  -ms-transform:translateX(-50%);
+		  -o-transform:translateX(-50%);
+		  z-index:2;
+		 }
+.tap_box>li{float:left;
+			margin-right:60px;
+			}
+.tap_box>li:nth-last-child(1){margin-right:0;}
+
+.tap_box>li>label
+				{font:1.4em 'YiSunShinDotumM';
+				 color:#cccccc;
+				 display:block;
+				 padding:0 10px;
+				 width:100%; height:100%;
+				 text-align:center;
+				 transition:background 0.5s,color 0.5s;
+				 -webkit-transition:background 0.5s,color 0.5s;
+				 -moz-transition:background 0.5s,color 0.5s;
+				 -ms-transition:background 0.5s,color 0.5s;
+				 -o-transition:background 0.5s,color 0.5s;
+				 border-radius:20px;
+				 -webkit-border-radius:20px;
+				 -moz-border-radius:20px;
+				 -ms-border-radius:20px;
+				 -o-border-radius:20px;
+				}
+.tap_box>li>label:hover
+				{background:rgba(0,0,0,0.3);
+				 color:#fff;
+				 }
+
+
+#discography_container{display:flex;
+					   display:-webkit-box;
+					   display:-webkit-flex;
+					   display:-moz-box;
+					   display:-ms-flexbox;
+					   flex-flow:row wrap;
+					   -webkit-flex-flow:row wrap;
+					   -moz-flex-flow:row wrap;
+					   -ms-flex-flow:row wrap;
+					   -o-flex-flow:row wrap;
+					   justify-content:space-between;
+					   -webkit-justify-content:space-between;
+					   -moz-justify-content:space-between;
+					   transform-style:preserve-3d;
+					   -webkit-transform-style:preserve-3d;
+					   -moz-transform-style:preserve-3d;
+					   -ms-transform-style:preserve-3d;
+					   -o-transform-style:preserve-3d;
+					   padding-top:30px;
+					   margin-bottom:30%;
+					   }
+.discography_album{
+				   margin-bottom:4%;
+				   position:relative;
+				   overflow:hidden;
+				   perspective:300px;
+				   -webkit-perspective:300px;
+				   -moz-perspective:300px;
+				   -ms-perspective:300px;
+				   -o-perspective:300px;
+				   transform-origin:bottom;
+				   -webkit-transform-origin:bottom;
+				   -moz-transform-origin:bottom;
+				   -ms-transform-origin:bottom;
+				   -o-transform-origin:bottom;
+				   transition:transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				   -webkit-transition:-webkit-transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				   -moz-transition:-moz-transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				   -ms-transition:-ms-transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				   -o-transition:-o-transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+					}
+
+.discography_album_img,
+.discography_album_name{position:absolute;
+					   left:0; top:0;
+					   }
+
+.discography_album_img{display:block;
+					   width:100%; height:auto;
+					   vertical-align:top;
+					   z-index:2;
+					   }
+.discography_album_name{background:rgba(0,0,0,0.35);
+						opacity:0;
+						transition:opacity 1s;
+						-webkit-transition:opacity 1s;
+						-moz-transition:opacity 1s;
+						-ms-transition:opacity 1s;
+						-o-transition:opacity 1s;
+						width:100%; height:100%;
+						z-index:1;
+						}
+
+.discography_album_name p{text-align:center;
+						  color:#fff;
+						  font:1.8em 'Cmbr';
+						  width:100%; height:100%;
+						  filter:blur(1px);
+						  -webkit-filter:blur(1px);
+						  -moz-filter:blur(1px);
+						  -ms-filter:blur(1px);
+						  -o-filter:blur(1px);
+						  transition:all 1s;
+						  -webkit-transition:all 1s;
+						  -moz-transition:all 1s;
+						  -ms-transition:all 1s;
+						  -o-transition:all 1s;
+						  margin-top:10px;
+						 }
+
+.discography_album:hover{box-shadow:0 -3px 10px 3px rgba(0,0,0,0.5);
+						 
+						}
+.discography_album:hover .discography_album_name
+						  {opacity:1;
+						   z-index:3;
+						  }
+.discography_album:hover .discography_album_name p
+						  {filter:blur(0);
+						  -webkit-filter:blur(0);
+						  -moz-filter:blur(0);
+						  -ms-filter:blur(0);
+						  -o-filter:blur(0);
+						  margin-top:0;
+						  }
+
+.discography_album{display:none;}
+
+
+#album_all:checked+input+input+input+ul+
+#discography_container .discography_album,
+#album_regular:checked+input+input+ul+
+#discography_container .album_regular,
+#album_ep:checked+input+ul+
+#discography_container .album_ep,
+#album_solo:checked+ul+
+#discography_container .album_solo{display:block;}
+
+#album_ep:checked+input+ul+
+#discography_container{justify-content:center;
+					   -webkit-justify-content:center;
+					   -moz-justify-content:center;}
+#album_ep:checked+input+ul+
+#discography_container .album_ep{margin-right:3%;}
+#album_ep:checked+input+ul+
+#discography_container .album_ep:nth-last-type(1)
+								{margin-right:0;}
+
+
+#album_all:checked+input+input+input+ul label[for="album_all"],
+#album_regular:checked+input+input+ul label[for="album_regular"],
+#album_ep:checked+input+ul label[for="album_ep"],
+#album_solo:checked+ul label[for="album_solo"]{background:rgba(0,0,0,0.3);
+				 color:#fff;}
+.showOpacity{margin-top:0; opacity:1;}
+.hideOpacity{margin-top:40px; opacity:0;}
+}
+
+@media screen and (min-width:768px) and (max-width:1023px){
+#discography_back
+	{position:fixed;
+	 left:0; top:0;
+	 width:100%; height:100vh;
+	 background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-image:-webkit-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-image:-moz-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-image:-ms-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-image:-o-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-position:center top, center top;
+	 background-repeat:no-repeat, no-repeat;
+	 background-attachment:scroll;
+	 background-size:cover;
+	 z-index:0;
+	 }
+
+.tap_box{height:30px;
+		 width:fit-content;
+		 width:-webkit-fit-content;
+		 width:-moz-fit-content;
+		 width:-ms-fit-content;
+		 width:-o-fit-content;
+		 margin-bottom:30px;
+		  position:absolute;
+		  left:50%; top:150px;
+		  transform:translateX(-50%);
+		  -webkit-transform:translateX(-50%);
+		  -moz-transform:translateX(-50%);
+		  -ms-transform:translateX(-50%);
+		  -o-transform:translateX(-50%);
+		  z-index:2;
+		}
+.tap_box>li{float:left;
+			margin-right:60px;
+			}
+.tap_box>li:nth-last-child(1){margin-right:0;}
+
+.tap_box>li>label
+				{font:1.4em 'YiSunShinDotumM';
+				 color:#cccccc;
+				 display:block;
+				 padding:0 10px;
+				 width:100%; height:100%;
+				 text-align:center;
+				 transition:background 0.5s,color 0.5s;
+				 -webkit-transition:background 0.5s,color 0.5s;
+				 -moz-transition:background 0.5s,color 0.5s;
+				 -ms-transition:background 0.5s,color 0.5s;
+				 -o-transition:background 0.5s,color 0.5s;
+				 border-radius:20px;
+				 -webkit-border-radius:20px;
+				 -moz-border-radius:20px;
+				 -ms-border-radius:20px;
+				 -o-border-radius:20px;
+				}
+.tap_box>li>label:hover
+				{background:rgba(0,0,0,0.3);
+				 color:#fff;
+				 }
+
+
+#discography_container{display:flex;
+					   display:-webkit-box;
+					   display:-webkit-flex;
+					   display:-moz-box;
+					   display:-ms-flexbox;
+					   flex-flow:row wrap;
+					   -webkit-flex-flow:row wrap;
+					   -moz-flex-flow:row wrap;
+					   -ms-flex-flow:row wrap;
+					   -o-flex-flow:row wrap;
+					   justify-content:space-between;
+					   -webkit-justify-content:space-between;
+					   -moz-justify-content:space-between;
+					   transform-style:preserve-3d;
+					   -webkit-transform-style:preserve-3d;
+					   -moz-transform-style:preserve-3d;
+					   -ms-transform-style:preserve-3d;
+					   -o-transform-style:preserve-3d;
+					   padding-top:30px;
+					   margin-bottom:30%;
+					   }
+.discography_album{
+				   margin-bottom:4%;
+				   position:relative;
+				   overflow:hidden;
+				   perspective:300px;
+				   -webkit-perspective:300px;
+				   -moz-perspective:300px;
+				   -ms-perspective:300px;
+				   -o-perspective:300px;
+				   transform-origin:bottom;
+				   -webkit-transform-origin:bottom;
+				   -moz-transform-origin:bottom;
+				   -ms-transform-origin:bottom;
+				   -o-transform-origin:bottom;
+				   transition:transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				   -webkit-transition:-webkit-transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				   -moz-transition:-moz-transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				   -ms-transition:-ms-transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				   -o-transition:-o-transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+					}
+
+.discography_album_img,
+.discography_album_name{position:absolute;
+					   left:0; top:0;
+					   }
+
+.discography_album_img{display:block;
+					   width:100%; height:auto;
+					   vertical-align:top;
+					   z-index:2;
+					   }
+.discography_album_name{background:rgba(0,0,0,0.35);
+						opacity:0;
+						transition:opacity 1s;
+						-webkit-transition:opacity 1s;
+						-moz-transition:opacity 1s;
+						-ms-transition:opacity 1s;
+						-o-transition:opacity 1s;
+						width:100%; height:100%;
+						z-index:1;
+						}
+
+.discography_album_name p{text-align:center;
+						  color:#fff;
+						  font:1.8em 'Cmbr';
+						  width:100%; height:100%;
+						  transition:all 1s;
+						  -webkit-transition:all 1s;
+						  -moz-transition:all 1s;
+						  -ms-transition:all 1s;
+						  -o-transition:all 1s;
+						  margin-top:10px;
+						 }
+
+.discography_album:hover{box-shadow:0 -3px 10px 3px rgba(0,0,0,0.5);
+						}
+.discography_album:hover .discography_album_name
+						  {opacity:1;
+						   z-index:3;
+						  }
+.discography_album:hover .discography_album_name p
+						  {margin-top:0;}
+
+.discography_album{display:none;}
+
+
+#album_all:checked+input+input+input+ul+
+#discography_container .discography_album,
+#album_regular:checked+input+input+ul+
+#discography_container .album_regular,
+#album_ep:checked+input+ul+
+#discography_container .album_ep,
+#album_solo:checked+ul+
+#discography_container .album_solo{display:block;}
+
+#album_ep:checked+input+ul+
+#discography_container{justify-content:center;
+					   -webkit-justify-content:center;
+					   -moz-justify-content:center;}
+#album_ep:checked+input+ul+
+#discography_container .album_ep{margin-right:3%;}
+#album_ep:checked+input+ul+
+#discography_container .album_ep:nth-last-type(1)
+								{margin-right:0;}
+
+
+#album_all:checked+input+input+input+ul label[for="album_all"],
+#album_regular:checked+input+input+ul label[for="album_regular"],
+#album_ep:checked+input+ul label[for="album_ep"],
+#album_solo:checked+ul label[for="album_solo"]{background:rgba(0,0,0,0.3);
+				 color:#fff;}
+.showOpacity{margin-top:0; opacity:1;}
+.hideOpacity{margin-top:40px; opacity:0;}
+}
+
+@media screen and (min-width:768px) and (max-width:960px){
+.tap_box>li>label
+				{font:1.5em 'YiSunShinDotumM';
+				 color:#cccccc;
+				 display:block;
+				 padding:0 10px;
+				 width:100%; height:100%;
+				 text-align:center;
+				 transition:background 0.5s,color 0.5s;
+				 -webkit-transition:background 0.5s,color 0.5s;
+				 -moz-transition:background 0.5s,color 0.5s;
+				 -ms-transition:background 0.5s,color 0.5s;
+				 -o-transition:background 0.5s,color 0.5s;
+				 border-radius:20px;
+				 -webkit-border-radius:20px;
+				 -moz-border-radius:20px;
+				 -ms-border-radius:20px;
+				 -o-border-radius:20px;
+				}
+.discography_album{width:27%;}
+.discography_album_name p{text-align:center;
+						  color:#fff;
+						  font:2.1em 'Cmbr';
+						  width:100%; height:100%;
+						  transition:all 1s;
+						  -webkit-transition:all 1s;
+						  -moz-transition:all 1s;
+						  -ms-transition:all 1s;
+						  -o-transition:all 1s;
+						  margin-top:10px;
+						 }
+
+
+
+}
+
+
+@media screen and (min-width:550px) and (max-width:767px){
+#discography_back
+	{position:fixed;
+	 left:0; top:0;
+	 width:100%; height:100vh;
+	 background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-image:-webkit-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-image:-moz-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-image:-ms-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-image:-o-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-position:center top, center top;
+	 background-repeat:no-repeat, no-repeat;
+	 background-attachment:scroll;
+	 background-size:cover;
+	 z-index:0;
+	 }
+
+.tap_box{height:30px;
+		 width:fit-content;
+		 width:-webkit-fit-content;
+		 width:-moz-fit-content;
+		 width:-ms-fit-content;
+		 width:-o-fit-content;
+		 position:absolute;
+		  left:50%; top:150px;
+		  transform:translateX(-50%);
+		  -webkit-transform:translateX(-50%);
+		  -moz-transform:translateX(-50%);
+		  -ms-transform:translateX(-50%);
+		  -o-transform:translateX(-50%);
+		  z-index:2;
+		 }
+.tap_box>li{float:left;
+			margin-right:30px;
+			}
+
+.tap_box>li:nth-last-child(1){margin-right:0;}
+
+.tap_box>li>label
+				{font:2em 'YiSunShinDotumM';
+				 color:#cccccc;
+				 display:block;
+				 padding:0 10px;
+				 width:100%; height:100%;
+				 text-align:center;
+				 transition:background 0.5s,color 0.5s;
+				 -webkit-transition:background 0.5s,color 0.5s;
+				 -moz-transition:background 0.5s,color 0.5s;
+				 -ms-transition:background 0.5s,color 0.5s;
+				 -o-transition:background 0.5s,color 0.5s;
+				 border-radius:20px;
+				 -webkit-border-radius:20px;
+				 -moz-border-radius:20px;
+				 -ms-border-radius:20px;
+				 -o-border-radius:20px;
+				}
+.tap_box>li>label:hover
+				{background:rgba(0,0,0,0.3);
+				 color:#fff;
+				 }
+
+
+#discography_container{display:flex;
+					   display:-webkit-box;
+					   display:-webkit-flex;
+					   display:-moz-box;
+					   display:-ms-flexbox;
+					   flex-flow:row wrap;
+					   -webkit-flex-flow:row wrap;
+					   -moz-flex-flow:row wrap;
+					   -ms-flex-flow:row wrap;
+					   -o-flex-flow:row wrap;
+					   justify-content:space-between;
+					   -webkit-justify-content:space-between;
+					   -moz-justify-content:space-between;
+					   transform-style:preserve-3d;
+					   -webkit-transform-style:preserve-3d;
+					   -moz-transform-style:preserve-3d;
+					   -ms-transform-style:preserve-3d;
+					   -o-transform-style:preserve-3d;
+					   padding-top:50px;
+					   margin-bottom:30%;
+					   }
+
+.discography_album{width:30%;
+				   
+				   margin-bottom:4%;
+				   position:relative;
+				   overflow:hidden;
+				   perspective:300px;
+				   -webkit-perspective:300px;
+				   -moz-perspective:300px;
+				   -ms-perspective:300px;
+				   -o-perspective:300px;
+				   transform-origin:bottom;
+				   -webkit-transform-origin:bottom;
+				   -moz-transform-origin:bottom;
+				   -ms-transform-origin:bottom;
+				   -o-transform-origin:bottom;
+				   transition:transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				   -webkit-transition:-webkit-transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				   -moz-transition:-moz-transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				   -ms-transition:-ms-transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				   -o-transition:-o-transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+					}
+
+.discography_album_img,
+.discography_album_name{position:absolute;
+					   left:0; top:0;
+					   }
+
+.discography_album_img{display:block;
+					   width:100%; height:auto;
+					   vertical-align:top;
+					   z-index:2;
+					   }
+.discography_album_name{background:rgba(0,0,0,0.35);
+						opacity:0;
+						transition:opacity 1s;
+						-webkit-transition:opacity 1s;
+						-moz-transition:opacity 1s;
+						-ms-transition:opacity 1s;
+						-o-transition:opacity 1s;
+						width:100%; height:100%;
+						z-index:1;
+						}
+
+.discography_album_name p{text-align:center;
+						  color:#fff;
+						  font:1.8em 'Cmbr';
+						  width:100%; height:100%;
+						  transition:all 1s;
+						  -webkit-transition:all 1s;
+						  -moz-transition:all 1s;
+						  -ms-transition:all 1s;
+						  -o-transition:all 1s;
+						  margin-top:10px;
+						 }
+
+.discography_album:hover{box-shadow:0 -3px 10px 3px rgba(0,0,0,0.5);
+						}
+.discography_album:hover .discography_album_name
+						  {opacity:1;
+						   z-index:3;
+						  }
+.discography_album:hover .discography_album_name p
+						  {
+						  margin-top:0;
+						  }
+
+.discography_album{display:none;}
+
+
+#album_all:checked+input+input+input+ul+
+#discography_container .discography_album,
+#album_regular:checked+input+input+ul+
+#discography_container .album_regular,
+#album_ep:checked+input+ul+
+#discography_container .album_ep,
+#album_solo:checked+ul+
+#discography_container .album_solo{display:block;}
+
+#album_ep:checked+input+ul+
+#discography_container{justify-content:center;
+					   -webkit-justify-content:center;
+					   -moz-justify-content:center;}
+#album_ep:checked+input+ul+
+#discography_container .album_ep{margin-right:3%;}
+#album_ep:checked+input+ul+
+#discography_container .album_ep:nth-last-type(1)
+								{margin-right:0;}
+
+
+#album_all:checked+input+input+input+ul label[for="album_all"],
+#album_regular:checked+input+input+ul label[for="album_regular"],
+#album_ep:checked+input+ul label[for="album_ep"],
+#album_solo:checked+ul label[for="album_solo"]{background:rgba(0,0,0,0.3);
+				 color:#fff;}
+.showOpacity{margin-top:0; opacity:1;}
+.hideOpacity{margin-top:40px; opacity:0;}
+
+
+}
+
+
+
+@media screen and (min-width:320px) and (max-width:549px){
+/*#discography_back
+	{position:fixed;
+	 left:0; top:0;
+	 width:100%;
+	 background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-image:-webkit-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-image:-moz-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-image:-ms-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-image:-o-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-position:center top, center top;
+	 background-repeat:no-repeat, no-repeat;
+	 background-attachment:scroll;
+	 background-size:cover;
+	 z-index:-10;
+	}
+	
+ios에서 오류나는 복합 요소(가능성)
+1. transition
+
+ 1) 대상 지정을 all로 할 경우 -> opacity 등으로 구체적으로 작성
+ 2) 깜빡거림 : 해당 요소에 아래 스타일 지정
+ -> -webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	-webkit-perspective:1000;
+
+2. z-index
+ 1) 음수 값을 지정하면 오류 0부터 사용
+
+3. transform
+ 1) 회전, 크기, 기울기 등등 주변 공간을 잡아먹는 현상이 보이면
+    이녀석이 원인일 수 있음
+
+
+*/
+#discography_back{position:fixed;
+	 left:0; top:0;
+	 width:100%; height:100vh;
+	 background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-image:-webkit-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-image:-moz-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-image:-ms-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-image:-o-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				url(../image/discography/a4.4.jpg);
+	 background-position:center top, center top;
+	 background-repeat:no-repeat, no-repeat;
+	 background-attachment:scroll;
+	 background-size:cover;
+	 z-index:0;
+	 }
+.tap_box{height:30px;
+		  width:95%;
+		  margin-bottom:30px;
+		  position:absolute;
+		  left:50%; top:150px;
+		  transform:translateX(-50%);
+		  -webkit-transform:translateX(-50%);
+		  -moz-transform:translateX(-50%);
+		  -ms-transform:translateX(-50%);
+		  -o-transform:translateX(-50%);
+		  z-index:2;
+		 }
+.tap_box>li{text-align:center;
+			height:100%;
+			line-height:30px;
+			}
+
+
+.tap_box>li>label
+				{font:2em/30px 'YiSunShinDotumM';
+				 color:#cccccc;
+				 display:block;				
+				 width:100%;				 
+				 height:100%;
+				 text-align:center;
+				 transition:background 0.5s,color 0.5s;
+				 -webkit-transition:background 0.5s,color 0.5s;
+				 -moz-transition:background 0.5s,color 0.5s;
+				 -ms-transition:background 0.5s,color 0.5s;
+				 -o-transition:background 0.5s,color 0.5s;
+				 border-radius:20px;
+				 -webkit-border-radius:20px;
+				 -moz-border-radius:20px;
+				 -ms-border-radius:20px;
+				 -o-border-radius:20px;
+				 border-bottom:1px solid #888888;
+				 background:black;
+				 -webkit-backface-visibility: hidden;
+				}
+.tap_box>li>label:hover
+				{background:rgba(0,0,0,0.3);
+				 color:#fff;
+				 }
+
+
+#discography_container{display:flex;
+					   display:-webkit-box;
+					   display:-webkit-flex;
+					   display:-moz-box;
+					   display:-ms-flexbox;
+					   flex-flow:row wrap;
+					   -webkit-flex-flow:row wrap;
+					   -moz-flex-flow:row wrap;
+					   -ms-flex-flow:row wrap;
+					   -o-flex-flow:row wrap;
+					   justify-content:space-between;
+					   -webkit-justify-content:space-between;
+					   -moz-justify-content:space-between;
+					   transform-style:preserve-3d;
+					   -webkit-transform-style:preserve-3d;
+					   -moz-transform-style:preserve-3d;
+					   -ms-transform-style:preserve-3d;
+					   -o-transform-style:preserve-3d;
+					   padding-top:60px;
+					   padding-bottom:30%;
+					   /*position: absolute;
+						top: 210px;
+						left: 50%;
+						width: 95%;
+						transform: translateX(-50%);
+						-webkit-transform: translateX(-50%);
+						-moz-transform: translateX(-50%);
+						-ms-transform: translateX(-50%);
+						-o-transform: translateX(-50%);*/
+					   }
+.discography_album{width:48.5%;
+				   /*background:green;*/
+				   margin-bottom:4%;
+				   position:relative;
+				   overflow:hidden;
+				   perspective:300px;
+				   -webkit-perspective:300px;
+				   -moz-perspective:300px;
+				   -ms-perspective:300px;
+				   -o-perspective:300px;
+				   
+				   transition:transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				   -webkit-transition:-webkit-transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				   -moz-transition:-moz-transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				   -ms-transition:-ms-transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				   -o-transition:-o-transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				   -webkit-backface-visibility: hidden;
+				   -webkit-transform-style: preserve-3d;
+					
+					}
+
+.discography_album_img,
+.discography_album_name{position:absolute;
+					   left:0; top:0;
+					   -webkit-backface-visibility: hidden;
+					   -webkit-transform-style: preserve-3d;
+					   }
+
+.discography_album_img{display:block;
+					   width:100%; height:auto;
+					   vertical-align:top;
+					   transition:transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				       -webkit-transition:-webkit-transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				       -moz-transition:-moz-transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				       -ms-transition:-ms-transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				       -o-transition:-o-transform 1s,box-shadow 1s,opacity 1s,margin 1s;;
+				       -webkit-backface-visibility: hidden;
+				       -webkit-transform-style: preserve-3d;
+					   z-index:2;
+					   }
+.discography_album_name{background:rgba(0,0,0,0.35);
+						opacity:0;
+						transition:opacity 1s;
+						-webkit-transition:opacity 1s;
+						-moz-transition:opacity 1s;
+						-ms-transition:opacity 1s;
+						-o-transition:opacity 1s;
+						width:100%; height:100%;
+						-webkit-backface-visibility: hidden;
+						-webkit-transform-style: preserve-3d;
+						z-index:1;
+						}
+
+.discography_album_name p{text-align:center;
+						  color:#fff;
+						  font:2.4em 'Cmbr';
+						  width:100%; height:100%;
+						  transition:margin 1s;
+						  -webkit-transition:margin 1s;
+						  -moz-transition:margin 1s;
+						  -ms-transition:margin 1s;
+						  -o-transition:margin 1s;
+						  margin-top:10px;
+						  -webkit-backface-visibility: hidden;
+						  -webkit-transform-style: preserve-3d;
+						 }
+
+.discography_album:hover{box-shadow:0 -3px 10px 3px rgba(0,0,0,0.5);
+						}
+/*.discography_album:hover .discography_album_img
+						{transform:rotateX(-5deg);
+						 -webkit-transform:rotateX(-5deg);
+						 -moz-transform:rotateX(-5deg);
+						 -ms-transform:rotateX(-5deg);
+						 -o-transform:rotateX(-5deg);
+						 transform-origin:bottom;
+						-webkit-transform-origin:bottom;
+						-moz-transform-origin:bottom;
+						-ms-transform-origin:bottom;
+						-o-transform-origin:bottom;
+						-webkit-backface-visibility: hidden;
+						-webkit-transform-style: preserve-3d;
+						 }*/
+
+.discography_album:hover .discography_album_name
+						  {opacity:1;
+						  -webkit-backface-visibility: hidden;
+						  -webkit-transform-style: preserve-3d;
+						  z-index:3;
+						  }
+.discography_album:hover .discography_album_name p
+						  {
+						  margin-top:0;
+						   -webkit-backface-visibility: hidden;
+						  -webkit-transform-style: preserve-3d;
+						  }
+
+.discography_album{display:none;}
+
+
+#album_all:checked+input+input+input+ul+
+#discography_container .discography_album,
+#album_regular:checked+input+input+ul+
+#discography_container .album_regular,
+#album_ep:checked+input+ul+
+#discography_container .album_ep,
+#album_solo:checked+ul+
+#discography_container .album_solo{display:block;}
+
+
+
+#album_all:checked+input+input+input+ul label[for="album_all"],
+#album_regular:checked+input+input+ul label[for="album_regular"],
+#album_ep:checked+input+ul label[for="album_ep"],
+#album_solo:checked+ul label[for="album_solo"]
+				{background:rgba(0,0,0,0.3);
+				 color:#fff;
+				 opacity:1;				 
+				}
+
+.showOpacity{margin-top:0; opacity:1;}
+.hideOpacity{margin-top:40px; opacity:0;}
+}

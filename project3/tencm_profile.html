@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!--[if IE 6]><html class="no-js old ie6"><![endif]-->
+<!--[if IE 7]><html class="no-js old ie7"><![endif]-->
+<!--[if IE 8]><html class="no-js old ie8"><![endif]-->
+<!--[if IE 9]><html class="no-js modern ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]>
+<html class="no-js modern">
+<![endif]-->
+ <head>
+  <title> profile </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/grid.css">
+  <link rel="stylesheet" type="text/css" href="css/pj3_common.css">
+  <link rel="stylesheet" type="text/css" href="css/pj3_profile.css">
+  <link rel="stylesheet" type="text/css" href="css/pj3_swiper.min.css">
+
+  <!--[if lt IE 9]>
+	<script src="js/html5shiv.js">
+	</script>
+	
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+	</script>
+  <![endif]-->
+
+  <!--[if lt IE 9]><script src="js/CFInstall.min.js"></script>
+	<script>window.attachEvent("onload",function(){CFInstall.check
+	({mode:"overlay"})});</script>
+  <![endif]-->
+
+  <!--[if IE 6]><script src="js/DD_belatedPNG.min.js"></script>
+	<script>DD_belatedPNG.fix('.png_bg, img');</script>
+  <![endif]-->
+	
+
+ <script src="js/modernizr.min.js"></script>
+ <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+ <script src="js/pj3_swiper.min.js"></script>
+ <script src="js/pj3_profile.js"></script>
+ <script src="js/pj3_common.js"></script>
+ <script>
+ 	
+ </script>
+ </head>
+
+ <body id="pj3_profile">
+	<header id="main_header">
+		<h1>
+			<a href="tencm_intro.html" class="unprevent">
+				<img src="images/pj3_logo.svg" alt="십제곱센치로고">
+			</a>
+		</h1>
+		<h2 id="page_title">
+			PROFILE
+		</h2>
+		<ul id="header_buttons">
+			<li id="g_search">
+				<input type="checkbox" name="g_search_bnt" id="g_search_bnt">
+				<label for="g_search_bnt">
+					<img src="images/pj3_search.svg" alt="search">
+				</label>
+				<form method="get" id="g_search_box">
+					<input type="search" placeholder="무엇을 찾으시나요?" autofocus>
+					<input type="submit" value="search">
+				</form>
+			</li>
+			<li id="langs">
+				<label>
+					KR
+				</label>
+				<ol>
+					<li><a href="#">KR</a></li>
+					<li><a href="#">ENG</a></li>
+					<li><a href="#">CHI</a></li>
+					<li><a href="#">JPN</a></li>
+				</ol>
+			</li>
+			<li id="right_gnb">
+				<input type="checkbox" name="gnb_bnt" id="gnb_bnt">
+				<label for="gnb_bnt">
+					<img src="images/gnb_button.svg" alt="gnb_button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</label>
+				<div id="gnb_box">
+					<label for="gnb_bnt">
+						<span></span>
+						<span></span>		
+					</label>
+					<ul>
+						<li><a href="tencm_intro.html" class="unprevent">HOME</a></li>
+						<li><a href="tencm_profile.html" class="unprevent">PROFILE</a></li>
+						<li><a href="tencm_discography.html" class="unprevent">DISCOGRAPHY</a></li>
+						<li><a href="tencm_gallery.html" class="unprevent">GALLERY</a></li>
+						<li><a href="tencm_news_notice.html" class="unprevent">NEWS&NOTICE</a></li>
+						<li><a href="#">COMMUNITY</a></li>
+						<li><a href="tencm_concert.html" class="unprevent">CONCERT</a></li>
+						<li><a href="#">SCHEDULE</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</header>
+	
+	<input type="checkbox" name="guide_screen" id="guide_screen" checked>
+	<label for="guide_screen" id="guide_page">
+		<div class="guide_inner1">
+			<ul>
+				<li>
+					<img src="images/pj3_mousewheel.svg" alt="wheelicon">
+					<p>휠을 사용해보세요!</p>
+				</li>
+				<li>
+					<img src="images/pj3_mosuepointer.svg" alt="pointericon">
+					<p>이미지를 드래그!</p>
+				</li>
+				<li>
+					<img src="images/pj3_keyboard.svg" alt="keyboard">
+					<p>방향키를 눌러요!</p>
+				</li>
+			</ul>
+		</div>
+		<p class="guide_txt">클릭하면 창이 사라집니다!</p>
+	</label>	
+
+	<section id="profile_content">
+		<section id="profile_bg">
+		</section>
+		<section id="profile_content_top" class="swiper-container1">
+			<div class="swiper-wrapper">
+				<div class="profile_info1_1 swiper-slide">
+					<div class="pics pics1"></div>
+					
+				</div>
+				<div class="profile_info1_2 swiper-slide">
+					<div class="pics pics2"></div>
+				</div>
+				<div class="profile_info1_3 swiper-slide">
+					<div class="pics pics3"></div>
+				</div>
+				<div class="profile_info1_4 swiper-slide">
+					<div class="pics pics4"></div>
+				</div>
+				<div class="profile_info1_5 swiper-slide">
+					<div class="pics pics5">
+						<img src="image/profile/collabo1.png" alt="collabo_album">
+						<img src="image/profile/collabo2.jpg" alt="collabo_album">
+						<img src="image/profile/collabo3.jpg" alt="collabo_album">
+						<img src="image/profile/collabo4.jpg" alt="collabo_album">
+					</div>
+				</div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination1"></div>
+		</section>
+
+		<section id="profile_content_bottom" class="swiper-container2" >
+			<div class="swiper-wrapper">
+				<div class="profile_info2_1 swiper-slide">
+					<ul id="basic_info">
+						<li>
+							<span>이름</span>
+							<p>권정열</p>	
+						</li>
+						<li>
+							<span>생일</span>
+							<p>1983.3.1</p>
+						</li>
+						<li>
+							<span>키</span>
+							<p>170cm</p>
+						</li>
+						<li>
+							<span>소속</span>
+							<p>10cm,매직스트로베리사운드</p>
+						</li>
+						<li>
+							<span>포지션</span>
+							<p>보컬 젬베</p>
+						</li>
+						<li>
+							<span>배우자</span>
+							<p>김윤주</p>
+						</li>
+					</ul>
+				</div>
+				<div class="profile_info2_2 swiper-slide">
+					<div>
+						<h3>인디 음악에 빛을 밝혀준 1세대 밴드</h3>
+						<p>
+							&lt;아메리카노&gt; 신드롬을 일으키며 혜성처럼 등장한 ‘십센치’,<br>
+							그들만의 문화였던 인디 음악을 모두의 문화로 이끌고<br>
+							특유의 찌질 감성끼지 인정받으며 당당히 아티스트로 이름을 올렸다<br>
+							2010년 첫 EP 앨범 발매 후 어느덧 데뷔 10년차!<br>
+							봄,여름,가을,겨울 사랑받는 십센치의 매력은 무엇일까?  
+						</p>
+					</div>
+				</div>
+				<div class="profile_info2_3 swiper-slide">					
+					<ul>
+						<h3>수상경력</h3>
+						<li>
+							2016
+							제8회 멜론뮤직어워드
+							뮤직스타일상 포크블루스 부문
+						</li>
+						<li>
+							2015
+							제7회 멜론뮤직어워드
+							뮤직스타일상 포크 부문
+						</li>
+						<li>
+							2011
+							제8회 한국대중음악상
+							최우수 팝 노래 부문
+						</li>
+						<li>
+							2010
+							Mnet 아시안 뮤직 어워드
+							올해의 발견상
+						</li>
+					</ul>				
+				</div>
+				<div class="profile_info2_4 swiper-slide">					
+					<ul>
+						<h3>최근활동</h3>
+						<li>
+							ALBUM 4.4 
+							&lt;방안에 모기가 있어&gt;
+						</li>
+						<li>
+							tvN 호텔델루나 OST
+							&lt;나의 어깨에 기대어요&gt;
+						</li>
+						<li>
+							1020 콘서트
+						</li>
+						<li>
+							유희열의 스케치북 
+							10주년 프로젝트
+							&lt;Jenga&gt;, &lt;좋아(JOAH)&gt;
+						</li>
+					</ul>	
+				</div>
+				
+			
+			<div class="profile_info2_5 swiper-slide">					
+					<ul>
+						<h3>피쳐링 & 콜라보</h3>
+						<li>
+							2018 하상욱 &lt;다 정한 이별&gt; | 용준형 &lt;소나기&gt;
+						</li>
+						<li>
+							2016 소란 &lt;너를 보네&gt;
+						</li>
+						<li>
+							2015 윤아 &lt;덕수궁 돌담길의 봄&gt; | 소유 &lt;어깨&gt; | 현아 &lt;내 집에서 나가&gt; | 하하 &lt;Beautiful Girl&gt;
+						</li>
+						<li>
+							2013 오렌지캬라멜 &lt;안아줘요&gt; | 라 벤타나 &lt;빨간풍선&gt;
+						</li>
+						<li>
+							2012 별 &lt;귀여워&gt; | 폴라로이드 피아노  &lt;생수에게&gt; | 버벌진트 &lt;굿모닝&gt;
+						</li>
+						<li>
+							2011 소란 &lt;미쳤나봐&gt; | 유지원 &lt;화이트 크리스마스&gt; | 우주히피 &lt;우리&gt; | 리쌍  &lt;TV를 껐네&gt;
+						</li>
+						<li>
+							2010 불나방스타쏘세지클럽 &lt;알앤비&gt; |  소란 &lt;너에게&gt; | 바비킴  &lt;Empty&gt;
+						</li>
+					</ul>	
+				</div>
+				
+			</div>
+
+			<!-- Add Pagination -->
+			<div class="swiper-pagination2"></div>
+		</section>
+	</section>
+
+	<footer id="main_footer">
+		<h3 id="company_link">
+			<a href="http://www.msbsound.com" class="unprevent" target="_blank">
+				<img src="images/msb_logo.svg" alt="magicstrawberrysound" title="10cm 소속사, 매직스트로베리사운드">
+			</a>
+		</h3>
+
+		<ul id="sns_link">
+			<li>
+				<a href="http://club.cyworld.com/tencentimeter" class="unprevent" target="_blank">
+					<img src="images/pj3_cyworld.svg" alt="cyworld" title="10cm 싸이클럽">
+				</a>
+			</li>
+			<li>
+				<a href="https://channels.vlive.tv/FAC8D/video" class="unprevent" target="_blank">
+					<img src="images/pj3_vlive.svg" alt="vlive"
+					title="10cm 공식 VLIVE">
+				</a>
+			</li>
+			<li>
+				<a href="https://www.facebook.com/tencentimeter/" class="unprevent" target="_blank">
+					<img src="images/pj3_facebook.svg" alt="facebook" title="10cm 공식 페북">
+				</a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/hi990103/?hl=ta" class="unprevent" target="_blank">
+					<img src="images/pj3_instar.svg" alt="instargram" title="권정열 인스타그램">
+				</a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/channel/UCRmShE13u8THvf_ptRVktRg" class="unprevent" target="_blank">
+					<img src="images/pj3_youtube.svg" alt="youtube" title="10cm 공식 유투브">
+				</a>
+			</li>
+			<li>
+				<a href="https://twitter.com/10centimeter" class="unprevent" target="_blank">
+					<img src="images/pj3_twitter.svg" alt="twitter" title="권정열 트위터">
+				</a>
+			</li>
+		</ul>
+	</footer>
+
+	<script>
+	var galleryTop = new Swiper('.swiper-container1', {
+	  parallax: true,
+	  mousewheel: true,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+	  keyboard: {
+        enabled: true,
+      },
+	  navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+	  pagination: {
+        el: '.swiper-pagination1',
+        clickable: true,
+      },
+    });
+	var galleryTop = new Swiper('.swiper-container2', {
+	  parallax: true,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      //loop: true,
+	  navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+	  pagination: {
+        el: '.swiper-pagination2',
+        clickable: true,
+      },
+    });
+  </script>
+ </body>
+</html>
+
+<!--gif 넣기!
+after 나 before로 gif 넣고 none 했다가 hover 했을때만 보이게하는거지
+다른 title click 했을 때 영상 재생 중단 하기
+-->

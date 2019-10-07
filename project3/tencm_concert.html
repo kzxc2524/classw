@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!--[if IE 6]><html class="no-js old ie6"><![endif]-->
+<!--[if IE 7]><html class="no-js old ie7"><![endif]-->
+<!--[if IE 8]><html class="no-js old ie8"><![endif]-->
+<!--[if IE 9]><html class="no-js modern ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]>
+<html class="no-js modern">
+<![endif]-->
+ <head>
+  <title> 10cm_concert </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/grid.css">
+  <link rel="stylesheet" type="text/css" href="css/pj3_common.css">
+  <link rel="stylesheet" type="text/css" href="css/pj3_concert.css">
+
+  <!--[if lt IE 9]>
+	<script src="js/html5shiv.js">
+	</script>
+	
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+	</script>
+  <![endif]-->
+
+  <!--[if lt IE 9]><script src="js/CFInstall.min.js"></script>
+	<script>window.attachEvent("onload",function(){CFInstall.check
+	({mode:"overlay"})});</script>
+  <![endif]-->
+
+  <!--[if IE 6]><script src="js/DD_belatedPNG.min.js"></script>
+	<script>DD_belatedPNG.fix('.png_bg, img');</script>
+  <![endif]-->
+	
+
+ <script src="js/modernizr.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+ <script src="js/pj3_concert.js"></script>
+ <script src="js/pj3_common.js"></script>
+ <script>
+ 	
+ </script>
+ </head>
+
+ <body id="pj3_concert">
+	<header id="main_header">
+		<h1>
+			<a href="tencm_intro.html" class="unprevent">
+				<img src="images/pj3_logo.svg" alt="십제곱센치로고">
+			</a>
+		</h1>
+		<h2 id="page_title">
+			CONCERT
+		</h2>
+		<ul id="header_buttons">
+			<li id="g_search">
+				<input type="checkbox" name="g_search_bnt" id="g_search_bnt">
+				<label for="g_search_bnt">
+					<img src="images/pj3_search.svg" alt="search">
+				</label>
+				<form method="get" id="g_search_box">
+					<input type="search" placeholder="무엇을 찾으시나요?" autofocus>
+					<input type="submit" value="search">
+				</form>
+			</li>
+			<li id="langs">
+				<label>
+					KR
+				</label>
+				<ol>
+					<li><a href="#">KR</a></li>
+					<li><a href="#">ENG</a></li>
+					<li><a href="#">CHI</a></li>
+					<li><a href="#">JPN</a></li>
+				</ol>
+			</li>
+			<li id="right_gnb">
+				<input type="checkbox" name="gnb_bnt" id="gnb_bnt">
+				<label for="gnb_bnt">
+					<img src="images/gnb_button.svg" alt="gnb_button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</label>
+				<div id="gnb_box">
+					<label for="gnb_bnt">
+						<span></span>
+						<span></span>		
+					</label>
+					<ul>
+						<li><a href="tencm_intro.html" class="unprevent">HOME</a></li>
+						<li><a href="tencm_profile.html" class="unprevent">PROFILE</a></li>
+						<li><a href="tencm_discography.html" class="unprevent">DISCOGRAPHY</a></li>
+						<li><a href="tencm_gallery.html" class="unprevent">GALLERY</a></li>
+						<li><a href="tencm_news_notice.html" class="unprevent">NEWS&NOTICE</a></li>
+						<li><a href="#">COMMUNITY</a></li>
+						<li><a href="tencm_concert.html" class="unprevent">CONCERT</a></li>
+						<li><a href="#">SCHEDULE</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</header>
+	
+	<div id="concert_back">
+	</div>
+	
+	<input type="radio" name="concert_tap" id="concert_tap_present" checked>
+	<input type="radio" name="concert_tap" id="concert_tap_before">
+	<ul id="concert_tap_box" class="tap_box">
+		<li>
+			<label for="concert_tap_present">PROSEEDING</label>
+		</li>
+		<li>
+			<label for="concert_tap_before">LAST</label>
+		</li>
+	</ul>
+	<section id="concert_present" class="concert_container">
+		<ul class="concert_content concert_content1">
+			<li>
+				<p class="concert_date">
+					7~8 SEPTEMBER
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					2019 MELODY FOREST CAMP
+					<span class="concert_place">JARA ISLAND</span>
+				</p>
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					21 SEPTEMBER
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					2019 JOYOLPARK FESTIVAL
+					<span class="concert_place">OLYMPIC STADIUM</span>
+				</p>
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					5 OCTOBER
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					10cm X SORAN CONCERT
+					<span class="concert_place">Kyungpook National University<br>MAIN Auditorium</span>
+				</p>
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					9 OCTOBER
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					HOLLYS COFFEE FESTIVAL 2019
+					<span class="concert_place">NANJI HANGANG PARK</span>
+				</p>
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					12 OCTOBER
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					REDCON MUSIC FESTIVAL 2019
+					<span class="concert_place">IKSAN PUBLIC PLAYGROUND</span>
+				</p>
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					25 OCTOBER
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					10cm X SORAN CONCERT
+					<span class="concert_place">GWANGJU CULTURE & ARTS CENTER</span>
+				</p>
+				<p class="concert_ticket">
+					<a href="http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?MN=Y&GroupCode=19012025&strGroupCode=19012025" class="unprevent" target="_blank">
+						<img src="images/ticket_point.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					25 OCTOBER
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					10cm X YUN DDANDDAN CONCERT
+					<span class="concert_place">Changwon Seongsan Art Hall<br>Grand Theater</span>
+				</p>
+				<p class="concert_ticket">
+					<a href="http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?MN=Y&GroupCode=19011873&strGroupCode=19011873" class="unprevent" target="_blank">
+						<img src="images/ticket_point.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+		</ul>
+	</section>
+	<section id="concert_before" class="concert_container">
+		<ul class="concert_content concert_content2">
+			<li>
+				<p class="concert_date">
+					31 AUGUST
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					SEONGNAM ART CENTER 2019 PICNIC CONCERT
+					<span class="concert_place">MORAN MULTIPURPOSE<br>PUBLIC PARKING LOT</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					15~18 AUGUST
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					2019 SUMMER CONCERT [1020] (WEEK 2)
+					<span class="concert_place">EWHA GIRLS' HIGH SCHOOL<br>100TH ANNIVERSARY MEMORIAL HALL HWAAM HALL</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					8~11 AUGUST
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					2019 SUMMER CONCERT [1020] (WEEK 1)
+					<span class="concert_place">EWHA GIRLS' HIGH SCHOOL<br>100TH ANNIVERSARY MEMORIAL HALL HWAAM HALL</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					4 AUGUST
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					2019 JEONJU ULTIMATE MUSIC FESTIVAL JUMF
+					<span class="concert_place">JEONJU STADIUM 
+				</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					24 JULY
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					ULSAN SUMMER FESTIVAL
+					<span class="concert_place">
+					ULSAN SPORTS COMPLEX<br>AUXILIARY STADIUM
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					21 JULY
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					GREEN PLUGGED EAST SEA
+					<span class="concert_place">
+					NEAR BY EAST SEA MANGSANG BEACH
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					20 JULY
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					URBAN MUSIC FESTIVAL 2019 IN DAEGU 
+					<span class="concert_place">
+					EXCO 1F, HALL 2
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					16 JULY
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					2019 GWANGJU WORLD SWIMMING CHAMPIONSHIPS 'SEOUL DAY' EVENT
+					<span class="concert_place">
+					NAMSAN UNIVERSITY FRIENDSHIP GARDEN
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					30 JUNE
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					THE STATION 
+					<span class="concert_place">
+					OLYMPIC STADIUM OLYMPIC HALL
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					16 JUNE
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					SEOUL PARK MUSIC FESTIVAL 2019
+					<span class="concert_place">
+					OLYMPIC PARK
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					15 JUNE
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					SEONGNAM PARK CONCERT
+					<span class="concert_place">
+					SEONGNAM CENTRAL PARK<br>OUTDOOR CONCERT HALL 
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					8 JUNE
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					MUJU FILM FESTIVAL 2019
+					<span class="concert_place">MUJU FILM FESTIVAL</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					25 MAY
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					SEOUL ROSE FESTIVAL 
+					<span class="concert_place">
+					CHINA SPORTS PARK 
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					12 MAY
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					BML 2019
+					<span class="concert_place">OLYMPIC PARK 
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					6 MAY
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					FESTIVAL FOR SINGLE 2019
+					<span class="concert_place">
+					DOCK IN FRONT OF<br>YEOUIDO ELAND CRUISE 
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					6 APRIL
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					2019 LOVESOME-EVERY MOMENT WAS YOU
+					<span class="concert_place">
+					YONSEI UNIVERSITY OPEN-AIR THEATER 
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					22 MARCH
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					INDIE FESTA 1 &lt;10cm & DAYBREAK&gt;
+					<span class="concert_place">
+					Uijeongbu Arts Center Grand Theater
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					16 MARCH
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					GALAXY FAN PARTY [DAEGU]
+					<span class="concert_place">
+					BILLY WORKS
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					15 MARCH
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					GALAXY FAN PARTY [DAEJEON]
+					<span class="concert_place">
+					longD
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					8 MARCH
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					GALAXY FAN PARTY [SEOUL]
+					<span class="concert_place">
+					BLUE SQUARE
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					2 MARCH
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					GALAXY FAN PARTY [GWANGJU]
+					<span class="concert_place">CO BOC</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					28 FEBRUARY
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					GALAXY FAN PARTY [BUSAN]
+					<span class="concert_place">
+					GEMSTONE
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					26 JANUARY
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					10cm WINTER CONCERT [4.2] BUSAN
+					<span class="concert_place">
+					SOHYANG THEATER SHINHAN CARD HALL
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					17~20 JANUARY
+					<span class="concert_year">2019</span>
+				</p>
+				<p class="concert_title">
+					10cm WINTER CONCERT [4.2] SEOUL
+					<span class="concert_place">
+					BLUE SQUARE iMARKET HALL
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					9 DECEMBER
+					<span class="concert_year">2018</span>
+				</p>
+				<p class="concert_title">
+					2018 10cm X SUN WOO JUNG AH CONCERT
+					<span class="concert_place">
+					INCHEON CULTURE & ARTS CENTER
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					1 DECEMBER
+					<span class="concert_year">2018</span>
+				</p>
+				<p class="concert_title">
+					INDIE STAGE 10cm X SORAN
+					<span class="concert_place">
+					GRAND PERFORMANCE HALL OF<br>MODERN ART MUSEUM
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					17 NOVEMBER
+					<span class="concert_year">2018</span>
+				</p>
+				<p class="concert_title">
+					YOUTH ARENA 2018 SEOUL
+					<span class="concert_place">
+					GOCHEOK SKY DOME
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					10 NOVEMBER
+					<span class="concert_year">2018</span>
+				</p>
+				<p class="concert_title">
+					10cm X SOSUBIN CONCERT
+					<span class="concert_place">GIMHAE WEALTH CULTURE CENTER<br>HANUI HALL
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					27 OCTOBER
+					<span class="concert_year">2018</span>
+				</p>
+				<p class="concert_title">
+					2018 HAPPY ALLIANCE DAY
+					<span class="concert_place">BUSAN CINEMA CENTER<br>OUTDOOR THEATER 
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					13 OCTOBER
+					<span class="concert_year">2018</span>
+				</p>
+				<p class="concert_title">
+					10cm X SOSUBIN CONCERT INDIE & FAN US DAY
+
+					<span class="concert_place">YEOJU SEJONG GUGAKDANG</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					7 OCTOBER
+					<span class="concert_year">2018</span>
+				</p>
+				<p class="concert_title">
+					GWANGJU MILLENNIAL FESTIVAL
+					<span class="concert_place">NATIONAL ASIAN CULTURE HALL SKY FIELD 
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					6 OCTOBER
+					<span class="concert_year">2018</span>
+				</p>
+				<p class="concert_title">
+					YOUTH ARENA
+					<span class="concert_place">INCHEON MUNHAK STADIUM 
+					</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+			<li>
+				<p class="concert_date">
+					29 SEPTEMBER
+					<span class="concert_year">2018</span>
+				</p>
+				<p class="concert_title">
+					2018 ZANDARI FESTIVAL 
+					<span class="concert_place">HONGDAE SANGSANGMADANG<br>OUTDOOR STAGE</span>
+				</p>	
+				<p class="concert_ticket">
+					<a href="#">
+						<img src="images/ticket_gray.svg" alt="ticket_reserve">
+					</a>
+				</p>
+			</li>
+		</ul>
+	</section>
+
+
+	<footer id="main_footer">
+		<h3 id="company_link">
+			<a href="http://www.msbsound.com" class="unprevent" target="_blank">
+				<img src="images/msb_logo.svg" alt="magicstrawberrysound" title="10cm 소속사, 매직스트로베리사운드">
+			</a>
+		</h3>
+
+		<ul id="sns_link">
+			<li>
+				<a href="http://club.cyworld.com/tencentimeter" class="unprevent" target="_blank">
+					<img src="images/pj3_cyworld.svg" alt="cyworld" title="10cm 싸이클럽">
+				</a>
+			</li>
+			<li>
+				<a href="https://channels.vlive.tv/FAC8D/video" class="unprevent" target="_blank">
+					<img src="images/pj3_vlive.svg" alt="vlive"
+					title="10cm 공식 VLIVE">
+				</a>
+			</li>
+			<li>
+				<a href="https://www.facebook.com/tencentimeter/" class="unprevent" target="_blank">
+					<img src="images/pj3_facebook.svg" alt="facebook" title="10cm 공식 페북">
+				</a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/hi990103/?hl=ta" class="unprevent" target="_blank">
+					<img src="images/pj3_instar.svg" alt="instargram" title="권정열 인스타그램">
+				</a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/channel/UCRmShE13u8THvf_ptRVktRg" class="unprevent" target="_blank">
+					<img src="images/pj3_youtube.svg" alt="youtube" title="10cm 공식 유투브">
+				</a>
+			</li>
+			<li>
+				<a href="https://twitter.com/10centimeter"  class="unprevent" target="_blank">
+					<img src="images/pj3_twitter.svg" alt="twitter" title="권정열 트위터">
+				</a>
+			</li>
+		</ul>
+	</footer>	 
+ </body>
+</html>

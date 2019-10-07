@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!--[if IE 6]><html class="no-js old ie6"><![endif]-->
+<!--[if IE 7]><html class="no-js old ie7"><![endif]-->
+<!--[if IE 8]><html class="no-js old ie8"><![endif]-->
+<!--[if IE 9]><html class="no-js modern ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]>
+<html class="no-js modern">
+<![endif]-->
+ <head>
+  <title> gallery </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/grid.css">
+  <link rel="stylesheet" type="text/css" href="css/pj3_common.css">
+  <link rel="stylesheet" type="text/css" href="css/pj3_gallery.css">
+  <link rel="stylesheet" type="text/css" href="css/pj3_swiper.min.css">
+
+  <!--[if lt IE 9]>
+	<script src="js/html5shiv.js">
+	</script>
+	
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+	</script>
+  <![endif]-->
+
+  <!--[if lt IE 9]><script src="js/CFInstall.min.js"></script>
+	<script>window.attachEvent("onload",function(){CFInstall.check
+	({mode:"overlay"})});</script>
+  <![endif]-->
+
+  <!--[if IE 6]><script src="js/DD_belatedPNG.min.js"></script>
+	<script>DD_belatedPNG.fix('.png_bg, img');</script>
+  <![endif]-->
+	
+
+ <script src="js/modernizr.min.js"></script>
+ <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+ <script src="js/pj3_swiper.min.js"></script>
+ <script src="js/pj3_gallery.js"></script>
+ <script src="js/pj3_common.js"></script>
+ <script>
+ 	
+ </script>
+ </head>
+
+ <body id="pj3_gallery">
+	<header id="main_header">
+		<h1>
+			<a href="tencm_intro.html" class="unprevent">
+				<img src="images/pj3_logo.svg" alt="십제곱센치로고">
+			</a>
+		</h1>
+		<h2 id="page_title">
+			GALLERY
+		</h2>
+		<ul id="header_buttons">
+			<li id="g_search">
+				<input type="checkbox" name="g_search_bnt" id="g_search_bnt">
+				<label for="g_search_bnt">
+					<img src="images/pj3_search.svg" alt="search">
+				</label>
+				<form method="get" id="g_search_box">
+					<input type="search" placeholder="무엇을 찾으시나요?" autofocus>
+					<input type="submit" value="search">
+				</form>
+			</li>
+			<li id="langs">
+				<label>
+					KR
+				</label>
+				<ol>
+					<li><a href="#">KR</a></li>
+					<li><a href="#">ENG</a></li>
+					<li><a href="#">CHI</a></li>
+					<li><a href="#">JPN</a></li>
+				</ol>
+			</li>
+			<li id="right_gnb">
+				<input type="checkbox" name="gnb_bnt" id="gnb_bnt">
+				<label for="gnb_bnt">
+					<img src="images/gnb_button.svg" alt="gnb_button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</label>
+				<div id="gnb_box">
+					<label for="gnb_bnt">
+						<span></span>
+						<span></span>		
+					</label>
+					<ul>
+						<li><a href="tencm_intro.html" class="unprevent">HOME</a></li>
+						<li><a href="tencm_profile.html" class="unprevent">PROFILE</a></li>
+						<li><a href="tencm_discography.html" class="unprevent">DISCOGRAPHY</a></li>
+						<li><a href="tencm_gallery.html" class="unprevent">GALLERY</a></li>
+						<li><a href="tencm_news_notice.html" class="unprevent">NEWS&NOTICE</a></li>
+						<li><a href="#">COMMUNITY</a></li>
+						<li><a href="tencm_concert.html" class="unprevent">CONCERT</a></li>
+						<li><a href="#">SCHEDULE</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</header>
+	<input type="checkbox" name="guide_screen" id="guide_screen" checked>
+	<label for="guide_screen" id="guide_page" class="gallery_container">
+		<div class="guide_inner1">
+			<ul>
+				<li>
+					<img src="images/pj3_mousewheel.svg" alt="wheelicon">
+					<p>휠을 사용해보세요!</p>
+				</li>
+				<li>
+					<img src="images/pj3_mosuepointer.svg" alt="pointericon">
+					<p>이미지를 드래그!</p>
+				</li>
+				<li>
+					<img src="images/pj3_keyboard.svg" alt="keyboard">
+					<p>방향키를 눌러요!</p>
+				</li>
+			</ul>
+		</div>
+		<div class="guide_inner2">
+			<div>
+				<img src="images/pj3_pic.svg" alt="picicon">
+				<img src="images/pj3_mosuepointer.svg" alt="pointericon">
+				<p>이미지를 클릭해보세요!</p>
+			</div>
+		</div>
+		<p class="guide_txt">클릭하면 창이 사라집니다!</p>
+	</label>
+	<input type="radio" name="gallery_tap" id="gallery_photo" checked>
+	<input type="radio" name="gallery_tap" id="gallery_video">
+	<ul id="gallery_tap_box" class="tap_box">
+		<li>
+			<label for="gallery_photo">PHOTO</label>
+		</li>
+		<li>
+			<label for="gallery_video">VIDEO</label>
+		</li>
+	</ul>
+
+	<section id="photo_container" class="gallery_container">
+		<section id="gallery_big_img" class="gallery_big swiper-container1 gallery-top">
+			<section class="swiper-wrapper">
+				<div class="swiper-slide gallery1">
+					<div class="big_img_filter big_img_filter1">
+					</div>
+					<div class="big_img_contain big_img_contain1">
+					</div>
+				</div>
+				<div class="swiper-slide gallery2">
+					<div class="big_img_filter big_img_filter2">
+					</div>
+					<div class="big_img_contain big_img_contain2">
+					</div>
+				</div>
+				<div class="swiper-slide gallery3">
+					<div class="big_img_filter big_img_filter3">
+					</div>
+					<div class="big_img_contain big_img_contain3">
+					</div>
+				</div>
+				<div class="swiper-slide gallery4">
+					<div class="big_img_filter big_img_filter4">
+					</div>
+					<div class="big_img_contain big_img_contain4">
+					</div>
+				</div>
+				<div class="swiper-slide gallery5">
+					<div class="big_img_filter big_img_filter5">
+					</div>
+					<div class="big_img_contain big_img_contain5">
+					</div>
+				</div>
+				<div class="swiper-slide gallery6">
+					<div class="big_img_filter big_img_filter6">
+					</div>
+					<div class="big_img_contain big_img_contain6">
+					</div>
+				</div>
+				<div class="swiper-slide gallery7">
+					<div class="big_img_filter big_img_filter7">
+					</div>
+					<div class="big_img_contain big_img_contain7">
+					</div>
+				</div>
+				<div class="swiper-slide gallery8">
+					<div class="big_img_filter big_img_filter8">
+					</div>
+					<div class="big_img_contain big_img_contain8">
+					</div>
+				</div>
+				<div class="swiper-slide gallery9">
+					<div class="big_img_filter big_img_filter9">
+					</div>
+					<div class="big_img_contain big_img_contain9">
+					</div>
+				</div>
+				<div class="swiper-slide gallery10">
+					<div class="big_img_filter big_img_filter10">
+					</div>
+					<div class="big_img_contain big_img_contain10">
+					</div>
+				</div>
+				<div class="swiper-slide gallery11">
+					<div class="big_img_filter big_img_filter11">
+					</div>
+					<div class="big_img_contain big_img_contain11">
+					</div>
+				</div>
+				<div class="swiper-slide gallery12">
+					<div class="big_img_filter big_img_filter12">
+					</div>
+					<div class="big_img_contain big_img_contain12">
+					</div>
+				</div>
+				<div class="swiper-slide gallery13">
+					<div class="big_img_filter big_img_filter13">
+					</div>
+					<div class="big_img_contain big_img_contain13">
+					</div>
+				</div>
+				<div class="swiper-slide gallery14">
+					<div class="big_img_filter big_img_filter14">
+					</div>
+					<div class="big_img_contain big_img_contain14">
+					</div>
+				</div>
+				<div class="swiper-slide gallery15">
+					<div class="big_img_filter big_img_filter15">
+					</div>
+					<div class="big_img_contain big_img_contain15">
+					</div>
+				</div>
+				<div class="swiper-slide gallery16">
+					<div class="big_img_filter big_img_filter16">
+					</div>
+					<div class="big_img_contain big_img_contain16">
+					</div>
+				</div>
+				<div class="swiper-slide gallery17">
+					<div class="big_img_filter big_img_filter17">
+					</div>
+					<div class="big_img_contain big_img_contain17">
+					</div>
+				</div>
+				<div class="swiper-slide gallery18">
+					<div class="big_img_filter big_img_filter18">
+					</div>
+					<div class="big_img_contain big_img_contain18">
+					</div>
+				</div>
+				<div class="swiper-slide gallery19">
+					<div class="big_img_filter big_img_filter19">
+					</div>
+					<div class="big_img_contain big_img_contain19">
+					</div>
+				</div>
+				<div class="swiper-slide gallery20">
+					<div class="big_img_filter big_img_filter20">
+					</div>
+					<div class="big_img_contain big_img_contain20">
+					</div>
+				</div>
+				<div class="swiper-slide gallery21">
+					<div class="big_img_filter big_img_filter21">
+					</div>
+					<div class="big_img_contain big_img_contain21">
+					</div>
+				</div>
+				<div class="swiper-slide gallery22">
+					<div class="big_img_filter big_img_filter22">
+					</div>
+					<div class="big_img_contain big_img_contain22">
+					</div>
+				</div>
+				<div class="swiper-slide gallery23">
+					<div class="big_img_filter big_img_filter23">
+					</div>
+					<div class="big_img_contain big_img_contain23">
+					</div>
+				</div>
+				<div class="swiper-slide gallery24">
+					<div class="big_img_filter big_img_filter24">
+					</div>
+					<div class="big_img_contain big_img_contain24">
+					</div>
+				</div>
+			</section>
+			
+		</section>
+		<div class="swiper-pagination swiper-pagination1 photo"></div>
+	</section>
+
+	<section id="video_container" class="gallery_container">
+		<section id="gallery_big_video" class="gallery_big swiper-container2">
+			<section class="swiper-wrapper">
+				<div class="swiper-slide gallery1">					
+					<iframe class="big_video_contain big_video_contain1" src="https://www.youtube.com/embed/hKT4ipHSxoU?start=40" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery2">
+					<iframe class="big_video_contain big_video_contain2" src="https://www.youtube.com/embed/C8YS4ethUBY" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery3">
+					<iframe class="big_video_contain big_video_contain3" src="https://www.youtube.com/embed/JfN2MtAutwk" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery4">
+					<iframe class="big_video_contain big_video_contain4" src="https://www.youtube.com/embed/DXynAumVRRk" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery5">
+					<iframe class="big_video_contain big_video_contain5" src="https://www.youtube.com/embed/vIFPN2j4_TY" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery6">
+					<iframe class="big_video_contain big_video_contain6" src="https://www.youtube.com/embed/1AHGxN-wZbA" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery7">
+					<iframe class="big_video_contain big_video_contain7" src="https://www.youtube.com/embed/8fCWqbrmmyc" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery8">
+					<iframe class="big_video_contain big_video_contain8"  src="https://www.youtube.com/embed/paHi8zVBgtU" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery9">
+					<iframe class="big_video_contain big_video_contain9"  src="https://www.youtube.com/embed/HFDE4W-dkbo" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery10">
+					<iframe class="big_video_contain big_video_contain10"  src="https://www.youtube.com/embed/lw9NVlN7Jgk" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery11">
+					<iframe class="big_video_contain big_video_contain11"  src="https://www.youtube.com/embed/OKJa83gQIDs" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery12">
+					<iframe class="big_video_contain big_video_contain12"  src="https://www.youtube.com/embed/KCF1eH6H-cg" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery13">
+					<iframe class="big_video_contain big_video_contain13" src="https://www.youtube.com/embed/VYI3rnTC2L4" style="border:0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery14">
+					<iframe class="big_video_contain big_video_contain15" src="https://www.youtube.com/embed/dkQrUBp_Tn0" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery15">
+					<iframe class="big_video_contain big_video_contain15" src="https://www.youtube.com/embed/Ru0oBSTuvM8" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery16">
+					<iframe class="big_video_contain big_video_contain16" src="https://www.youtube.com/embed/M_wMXUlll_I" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery17">
+					<iframe class="big_video_contain big_video_contain17" src="https://www.youtube.com/embed/QmTkqPHNrbU" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery18">
+					<iframe class="big_video_contain big_video_contain18" src="https://www.youtube.com/embed/yy1_EiRkSI4" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery19">
+					<iframe class="big_video_contain big_video_contain19" src="https://www.youtube.com/embed/TJnLkr0T6oU" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery20">
+					<iframe class="big_video_contain big_video_contain20" src="https://www.youtube.com/embed/36PL4CUYW4o" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery21">
+					<iframe class="big_video_contain big_video_contain21" src="https://www.youtube.com/embed/kNXyI49zd_8" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery22">
+					<iframe class="big_video_contain big_video_contain22" src="https://www.youtube.com/embed/1FVySfPnLIU" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery23">
+					<iframe class="big_video_contain big_video_contain23" src="https://www.youtube.com/embed/Z77fwKCv2Wc" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide gallery24">
+					<iframe class="big_video_contain big_video_contain24" src="https://www.youtube.com/embed/mrLf4FYSuM8" style="border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</section>			
+		</section>
+		<div class="swiper-pagination swiper-pagination2 video"></div>
+	</section>
+
+	<footer id="main_footer">
+		<h3 id="company_link">
+			<a href="http://www.msbsound.com" class="unprevent" target="_blank">
+				<img src="images/msb_logo.svg" alt="magicstrawberrysound" title="10cm 소속사, 매직스트로베리사운드">
+			</a>
+		</h3>
+
+		<ul id="sns_link">
+			<li>
+				<a href="http://club.cyworld.com/tencentimeter" class="unprevent" target="_blank">
+					<img src="images/pj3_cyworld.svg" alt="cyworld" title="10cm 싸이클럽">
+				</a>
+			</li>
+			<li>
+				<a href="https://channels.vlive.tv/FAC8D/video" class="unprevent" target="_blank">
+					<img src="images/pj3_vlive.svg" alt="vlive"
+					title="10cm 공식 VLIVE">
+				</a>
+			</li>
+			<li>
+				<a href="https://www.facebook.com/tencentimeter/" class="unprevent" target="_blank">
+					<img src="images/pj3_facebook.svg" alt="facebook" title="10cm 공식 페북">
+				</a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/hi990103/?hl=ta" class="unprevent" target="_blank">
+					<img src="images/pj3_instar.svg" alt="instargram" title="권정열 인스타그램">
+				</a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/channel/UCRmShE13u8THvf_ptRVktRg" class="unprevent" target="_blank">
+					<img src="images/pj3_youtube.svg" alt="youtube" title="10cm 공식 유투브">
+				</a>
+			</li>
+			<li>
+				<a href="https://twitter.com/10centimeter" class="unprevent" target="_blank">
+					<img src="images/pj3_twitter.svg" alt="twitter" title="권정열 트위터">
+				</a>
+			</li>
+		</ul>
+	</footer>
+
+	<script>
+   var galleryTop = new Swiper('.swiper-container1', {
+	  parallax: true,
+	  direction: 'vertical',
+	  mousewheel: true,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+	  loopedSlides: 5,
+	  keyboard: {
+        enabled: true,
+      },
+	  navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+	  thumbs: {
+        swiper: galleryThumbs,
+      },
+	  pagination: {
+        el: '.swiper-pagination1',
+        clickable: true,
+		parallax: true,
+      },
+    });
+
+	var galleryTop = new Swiper('.swiper-container2', {
+	  parallax: true,
+	  direction: 'vertical',
+	  mousewheel: true,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+	  loopedSlides: 5,
+	  keyboard: {
+        enabled: true,
+      },
+	  navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+	  thumbs: {
+        swiper: galleryThumbs,
+      },
+	  pagination: {
+        el: '.swiper-pagination2',
+        clickable: true,
+		parallax: true,
+      },
+    });
+
+	var galleryThumbs = new Swiper('.gallery-thumbs', {
+	  slidesPerView: 3,
+	  direction: 'vertical',
+	  slidesPerGroup: 3,
+      slidesPerColumn: 3,
+      spaceBetween: 0,
+	  parallax: true,
+	  mousewheel: true,
+	  loopedSlides: 5,
+      /*thumbs: {
+        swiper: galleryThumbs,
+      },*/
+	  watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+    });
+  </script>
+ </body>
+</html>
+
+<!--gif 넣기!
+after 나 before로 gif 넣고 none 했다가 hover 했을때만 보이게하는거지
+다른 title click 했을 때 영상 재생 중단 하기
+-->
