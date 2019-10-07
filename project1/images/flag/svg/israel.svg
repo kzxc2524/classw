@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="480px" height="480px" viewBox="90 0 480 480" enable-background="new 90 0 480 480" xml:space="preserve">
+<desc>Flag of Israel</desc>
+<g>
+	<defs>
+		<circle id="SVGID_1_" cx="330" cy="240" r="240"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<rect x="0" clip-path="url(#SVGID_2_)" fill="#FFFFFF" width="660" height="480"/>
+	<rect x="0" y="45" clip-path="url(#SVGID_2_)" fill="#0038B8" width="660" height="75"/>
+	<rect x="0" y="360" clip-path="url(#SVGID_2_)" fill="#0038B8" width="660" height="75"/>
+	<g transform="translate(110,80)" clip-path="url(#SVGID_2_)">
+		<polygon id="triangle" fill-opacity="0" stroke="#0038B8" stroke-width="5.5" points="330,152.577 254.289,283.711 
+			405.71,283.711 		"/>
+	</g>
+	<g transform="translate(110,80) rotate(180)" clip-path="url(#SVGID_2_)">
+		<polygon id="triangle_1_" fill-opacity="0" stroke="#0038B8" stroke-width="5.5" points="330,327.423 405.71,196.289 
+			254.289,196.289 		"/>
+	</g>
+</g>
+</svg>
