@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>join</title>
+  <link rel="stylesheet" type="text/css" href="css/join_login.css" media="all">
+ </head>
+
+ <body>
+	<div class="join_wrap join_login">
+		<form>
+			<h2>회원가입</h2>
+			<div id="join_left">
+				<div>
+					<label for="user_name">이름</label>
+					<input type="text" id="user_name" placeholder="이름을 입력해주세요." required>
+				</div>
+				<div>
+					<label for="user_pw">비밀번호</label>
+					<input type="text" id="user_pw" placeholder="8~12자리의 영문 및 숫자" required>
+				</div>
+			</div><!--join_left end-->
+			<div id="join_right">
+				<div>
+					<label for="user_email">이메일</label>
+					<input type="email" id="user_email" placeholder="ID@example.com" required>
+				</div>
+				<div>
+					<label for="user_pw_confirm">비밀번호 확인</label>
+					<input type="password" id="user_pw_confirm" placeholder="비밀번호를 다시 입력해주세요." required>
+				</div>
+			</div><!--join_right end-->
+			<div id="join_place">
+				<label for="interest_place">관심여행지</label>
+				<ul>
+					<li>
+						<input type="search" placeholder="관심여행지1" autocomplete>
+						<input type="image" src="images/btn_search.png" alt="검색하기버튼">
+					</li>
+					<li>
+						<input type="search" placeholder="관심여행지2" autocomplete>
+						<input type="image" src="images/btn_search.png" alt="검색하기버튼">
+					</li>
+					<li>
+						<input type="search" placeholder="관심여행지3" autocomplete>
+						<input type="image" src="images/btn_search.png" alt="검색하기버튼">
+					</li>
+				</ul>
+			</div><!--join_place end-->
+			<div id="join_agree">
+				<div id="agree_all_terms">
+					<input type="checkbox" name="agree_all" id="agree_all">
+					<label for="agree_all">아래 약관에 모두 동의합니다.</label>
+				</div>
+				<div id="agree_left">
+					<ul>
+						<li>
+							<input type="checkbox" name="agree1" id="agree1" required>
+							<label for="agree1"><a href="#">회원가입 및 운영약관 (필수)</a></label>
+						</li>
+						<li>
+							<input type="checkbox" name="agree2" id="agree2" required>
+							<label for="agree2"><a href="#">위치정보 이용약관 (필수)</a></label>
+						</li>
+						<li>	
+							<input type="checkbox" name="agree3" id="agree3" required>
+							<label for="agree3"><a href="#">개인정보 수집 및 이용 (필수)</a></label>
+						</li>
+					</ul>
+				</div><!--agree_left end-->
+				<div id="agree_right">
+							<ul>
+						<li>
+							<input type="checkbox" name="agree4" id="agree4">
+							<label for="agree4">추천 상품, 이벤트 및 마케팅 정보 수신 동의 (선택)</label>
+							<ul>
+								<li>
+									<input type="checkbox" name="agree5" id="agree5">
+									<label for="agree5">이메일</label>
+								</li>
+								<li>
+									<input type="checkbox" name="agree6" id="agree6">
+									<label for="agree6">SMS</label>
+								</li>
+								<li>
+									<input type="checkbox" name="agree7" id="agree7">
+									<label for="agree7">푸시</label>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div><!--agree_right end-->
+			</div><!--join_agree end-->
+			<div id="join_btn">
+				<input type="reset" value="다시 쓰기">
+				<input type="submit" value="회원가입">
+			</div><!--join_btn end-->
+		</form>
+		<div id="sns">
+			<h2>SNS로 로그인하기</h2>
+			<ul>
+				<li>
+					<a href="http://www.naver.com">
+						<img src="images/naver.png" alt="네이버로고">
+						<span>Naver</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.kakaotalk.com">
+						<img src="images/kakao.png" alt="카카오톡로고">
+						<span>Kakao</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.facebook.com">
+						<img src="images/Facebook.png" alt="페이스북로고">
+						<span>Facebook</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.google.com">
+						<img src="images/Google.png" alt="구글로고">
+						<span>Google</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://line.me/ko/">
+						<img src="images/Line.png" alt="라인로고">
+						<span>Line</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.twitter.com">
+						<img src="images/Twitter.png" alt="트위터로고">
+						<span>Twitter</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.wechat.com">
+						<img src="images/Wechat.png" alt="위챗로고">
+						<span>Wechat</span>
+					</a>
+				</li>
+			</ul>
+		</div><!--sns end-->
+	</div><!--join_wrap end-->
+ </body>
+</html>

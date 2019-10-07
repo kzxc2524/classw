@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <title> login </title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/join_login.css" media="all">
+
+ </head>
+
+ <body id="login">
+	<div class="login_wrap join_login">
+		<form method="post" action="">
+			<h2>로그인</h2>
+			<div>
+				<label for="user_id"><img src="images/login_icon.svg" alt="login_icon"><input type="text" id="user_id" placeholder="todaysaway@naver.com" required></label>
+				
+			</div>
+			<div>
+				<label for="user_password"><img src="images/password_icon.svg" alt="password_icon"><input type="password" id="user_password" placeholder="8~12자리의 영문 및 숫자" min="8" maxlength="12" required></label>				
+			</div>			
+			<div>
+				<label for="save_email"><input type="checkbox" id="save_email"> 로그인 정보 저장</label>
+				<a href="#">비밀번호 찾기</a>
+			</div>
+			<div>
+				<input type="submit" id="login_submit" value="로그인">
+			</div>
+		</form>
+
+		<div id="sns">
+			<h2>SNS로 로그인하기</h2>
+			<ul>
+				<li>
+					<a href="http://www.naver.com">
+						<img src="images/naver.png" alt="네이버로고">
+						<span>Naver</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.kakaotalk.com">
+						<img src="images/kakao.png" alt="카카오톡로고">
+						<span>Kakao</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.facebook.com">
+						<img src="images/Facebook.png" alt="페이스북로고">
+						<span>Facebook</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.google.com">
+						<img src="images/Google.png" alt="구글로고">
+						<span>Google</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://line.me/ko/">
+						<img src="images/Line.png" alt="라인로고">
+						<span>Line</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.twitter.com">
+						<img src="images/Twitter.png" alt="트위터로고">
+						<span>Twitter</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.wechat.com">
+						<img src="images/Wechat.png" alt="위챗로고">
+						<span>Wechat</span>
+					</a>
+				</li>
+			</ul>
+		</div><!--sns end-->
+	</div><!--join_wrap end-->
+ </body>
+</html>

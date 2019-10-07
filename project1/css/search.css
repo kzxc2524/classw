@@ -1,0 +1,380 @@
+@charset "UTF-8";
+
+#search{position:relative;
+		height:540px;
+		}
+#slide_view{width:1600px;
+			margin:0 auto;
+			position:absolute;
+			left:50%; top:0;
+			transform:translateX(-50%);		
+			   }
+
+#search>div{position:absolute;
+			left:50%; top:0;
+			transform:translateX(-50%)
+			}
+
+.search_sub_hotel{background:url(../image/trip/place/korea/gj/anap.jpg)no-repeat center center;}
+.search_sub_air{background:url(../image/wings.jpg)no-repeat center -429px;}
+
+#search_main_tap{width:1500px;
+				 height:56px;
+				 vertical-align:bottom;
+				 margin:0 auto;
+				/*margin-top:108px;*/
+				}
+#search_main_tap>label{display:inline-block;					   
+					   font-size:18px;
+					   padding:16px 44px;
+					   margin-right:5px;
+					   float:left;
+					   border-radius:5px 5px 0 0;
+					   -webkit-border-radius:5px 5px 0 0;
+					   -moz-border-radius:5px 5px 0 0;
+					   -ms-border-radius:5px 5px 0 0;
+					   -o-border-radius:5px 5px 0 0;
+					  }
+
+#search_main_tap>label{background:rgba(0,0,0,0.3);
+					   color:#fff;					   
+					  }
+
+#search_main_tap>label>span{display:inline-block;
+							width:18px;
+							height:18px;
+							margin-right:10px;}
+#search_main_tap>label[for="search_hotel"]>span{background:url(../images/search_tap_icon.png)no-repeat 0px center;}
+#search_main_tap>label[for="search_air"]>span{background:url(../images/search_tap_icon.png)no-repeat -24px center;;}
+#search_main_tap>label[for="search_airtel"]>span{background:url(../images/search_tap_icon.png)no-repeat -47px center;}
+#search_main_tap>label[for="search_rent"]>span{background:url(../images/search_tap_icon.png)no-repeat -70px center;;}
+#search_main_tap>label[for="search_train"]>span{background:url(../images/search_tap_icon.png)no-repeat -93px center;;}
+
+/*search tap----------------------------------------------------------- 끝*/
+
+#search>div>input{display:none;}
+
+.search_main_all{width:1500px;
+				 overflow:hidden;
+				 margin:-1px auto;
+				 /*margin-bottom:108px;*/
+				 background:rgba(0,0,0,0.5);
+				 display:none;
+				}
+
+.search_main_all>ul{margin:26px 16px 24px;
+					height:88px;
+					background:#fff;
+					}
+.search_main_all>ul>li{position:relative;
+					height:88px;					
+					float:left;
+					border-right:1px solid #000;
+					overflow:hidden;
+					}
+
+
+.search_main_all>ul>li:last-child{border-right:0;}
+
+.search_main_all>ul>li>label{position:absolute;
+						  left:10px; top:10px;
+						 }
+.search_main_all>ul>li>img{position:absolute;
+						  left:-34px; top:35px;
+						 }
+
+.search_main_all>ul>li>input,.search_main_all>ul>li>select
+														{display:inline-block;
+														 margin-left:10px;			
+														 border:0;	
+														 font:normal 16px "jeju gothic";
+														 }
+
+.search_main_all select{outline:0;}
+.search_main_all input{outline:0;}
+														
+
+.search_main_all>ul>li:nth-last-child(-n+4){width:12.3%;}
+#gongo>li:nth-last-child(3),#goaway>li:nth-last-child(3){width:24.6%;}
+
+.search_main_all>ul>li>input[name="intime"],.search_main_all>ul>li>input[name="outtime"]
+										{width:82%;											   
+										  margin-top:37px;
+										  padding:10px;
+										 }
+
+.search_main_all>ul>li>input[name="adult"]{width:30%;
+										   padding:10px 5px;
+										   margin-top:40px;
+										  }
+.search_main_all>ul>li>input[name="kid"]{width:40%;
+										 padding:10px 5px;
+										 margin-top:40px;
+										 }
+.search_main_all>ul>li>input[name="room"],.search_main_all>ul>li>select[name="seat"]
+										{width:50%;
+										  padding:10px 5px;
+										  margin-top:40px;
+										 }
+
+
+
+
+
+.search_main_all>ol{margin-left:16px;
+					float:left;
+					 }
+.search_main_all>ol>li{float:left;}
+
+.search_main_all>ol>li>label{margin-right:20px;
+							 color:#fff;
+							 vertical-align:top;
+							}
+
+.search_main_all>ol>li>input{margin-right:5px;}
+.search_main_all>div.search_submit{clear:both;
+					 float:right;
+					 margin:0 16px 17px 0;
+					 }
+
+.search_main_all>div.search_submit>input[type="submit"]{width:360px;
+										  height:61px;
+										  background:#e62851;							  
+										  text-align:center;							   
+										  border-radius:10px;
+										  -webkit-border-radius:10px;
+										  -moz-border-radius:10px;
+										  -ms-border-radius:10px;
+										  -o-border-radius:10px;
+										  border:0;
+										  font:normal 30px/61px "jeju gothic";
+										  color:#fff;
+										 }
+
+.search_main_all>ul>li>input.write{width:90%;
+								   padding:10px;
+								   height:60px;
+								   margin-top:28px;
+								  }
+
+
+/*search 공통 부분 끝------------------------------------------------------------------*/
+
+.search_main_hotel>ul>li:first-child{width:50%;}
+.search_main_hotel>ol>li:last-child{clear:both;
+								  margin-top:24px;
+								 }
+
+/*search 호텔 부분 끝------------------------------------------------------------------*/
+
+.search_main_air>ol>li:nth-last-child(3){clear:both;}
+.search_main_airtel>ol>li:nth-last-child(-n+3){float:left;
+										    margin-top:24px;
+								           }
+
+.search_main_air>ul>li:first-child,.search_main_air>ul>li:nth-child(2){width:25%;}'
+
+
+
+.search_main_air>ul>li:first-child{border-right:0;}
+
+
+.search_main_air>label{display:inline-block;
+					   margin:14px 20px 0;
+					   padding:10px 5px 0; 
+					   color:#bebfc2;					   
+					  }
+.search_main_air>label:first-of-type{margin-left:16px;}
+
+
+
+.search_main_onlyair>#gongo{margin:26px 16px 24px;}
+
+.search_main_onlyair>#gongo>ul{overflow:hidden;
+							   
+							   width:1468px; height:60px;
+							   margin-bottom:20px;
+							  }
+
+.search_main_onlyair>#gongo>ul>li{float:left;
+								  position:relative;
+								  height:40px;
+								  border-right:1px solid #000;
+								  padding:10px;
+								  background:#fff;
+								  }
+
+.search_main_onlyair>#gongo>ul>li:first-child,.search_main_onlyair>#gongo>ul>li:nth-child(3),
+.search_main_onlyair>#gongo>ul>li:nth-child(4){width:23%;}
+
+.search_main_onlyair>#gongo>ul>li:nth-child(5),.search_main_onlyair>#gongo>ul>li:nth-child(6){width:10%;}
+
+.search_main_onlyair>#gongo>ul>li:nth-child(n+1):nth-child(-n+2),
+.search_main_onlyair>#gongo>ul>li:nth-child(6){border-right:0;}
+
+.search_main_onlyair>#gongo>ul>li>label{position:absolute;
+										left:10px; top:10px;
+										color:#606060;
+										font-size:14px;
+										}
+
+.search_main_onlyair>#gongo>ul>li>input,.search_main_onlyair>#gongo>ul>li>select{height:30px; margin-top:13px;
+																				 color:#757575;
+																				 
+																				}
+
+.search_main_onlyair>#gongo>ul>li>input,
+.search_main_onlyair>#gongo>ul>li>select,
+.search_main_onlyair>#gongo>ul>li>label{display:inline-block;
+											 border:0;
+											 font-family:"jeju gothic";
+											 }
+
+.search_main_onlyair>#gongo>ul>li>input[type="search"]{width:100%;}
+
+.search_main_onlyair>#gongo>ul>li>input[type="text"]{width:48%;}
+
+.search_main_onlyair>#gongo>ul>li>img[alt="round"]{margin-top:19px;}
+
+img[alt="add_air"]{display:inline-block;
+					width:25px; height:25px;
+					float:left;
+					margin-right:10px;
+					}
+
+img[alt="close_air"]{display:inline-block;
+					width:25px; height:25px;
+					float:left;
+					margin-right:10px;
+					margin-top:8px;
+					}
+
+.search_main_onlyair>#gongo>ul>li>label[for="add_lines1"],
+.search_main_onlyair>#gongo>ul>li>label[for="add_lines2"]{display:inline-block;
+														float:left;
+														line-height:42px;
+														width:150px;
+														height:60px;
+														color:#fff;
+														}
+
+.search_main_onlyair>#gongo>div>label[for="add_lines1"],
+.search_main_onlyair>#gongo>div>label[for="add_lines2"]{display:block;
+														float:left;
+														line-height:27px;
+														margin-right:20px;
+														color:#fff;
+														}
+
+.search_main_onlyair>#gongo>div>label[for="add_lines2"]{display:none;}
+										
+
+.search_main_onlyair>#gongo>ul:nth-of-type(n+3)>li:nth-child(5){background:none;
+																border:0;
+																}
+
+.search_main_onlyair>#gongo>ul:nth-of-type(n+3){display:none;}
+
+input#add_lines1:checked ~ .search_main_onlyair>div#gongo>ul.add_lines1{display:block;}
+input#add_lines1:checked ~ .search_main_onlyair>#gongo>div>label[for="add_lines2"]{display:block;}
+input#add_lines1:checked ~ .search_main_onlyair>#gongo>div>label[for="add_lines1"]{display:none;}
+
+input#add_lines2:checked ~ .search_main_onlyair>div#gongo>ul.add_lines2{display:block;}
+input#add_lines2:checked ~ .search_main_onlyair>#gongo>div>label[for="add_lines2"]{display:none;}
+
+.search_main_onlyair>#gongo>ol{clear:both;}
+
+
+#goback,#goaway,#gongo{display:none;}
+
+input#goback_tap:checked ~ .search_main_air>#goback{display:block;}
+input#goaway_tap:checked ~ .search_main_air>#goaway{display:block;}
+input#gongo_tap:checked ~ .search_main_air>#gongo{display:block;}
+input#goback_tap:checked ~ .search_main_air>label[for="goback_tap"]{color:#fff;
+											   border-bottom:2px solid #fff;
+											  }
+input#goaway_tap:checked ~ .search_main_air>label[for="goaway_tap"]{color:#fff;
+											   border-bottom:2px solid #fff;
+											  }
+input#gongo_tap:checked ~ .search_main_air>label[for="gongo_tap"]{color:#fff;
+											   border-bottom:2px solid #fff;
+											  }
+
+/*search 에어&에어텔 부분 끝------------------------------------------------------------------*/
+
+.search_main_rentrain>div>ul{margin:26px 16px 24px;
+						height:88px;
+						background:#fff;}
+.search_main_rentrain>div>ul{overflow:hidden;}
+.search_main_rentrain>div>ul>li{float:left;
+							border-right:1px solid #000;
+							height:68px;
+							padding:10px;
+							position:relative;
+							}
+.search_main_rentrain>div>ul>li:nth-child(-n+2),.search_main_rentrain>div>ul>li:last-child{border-right:0;}
+.search_main_rentrain>div>ul>li:first-child,.search_main_rentrain>div>ul>li:nth-child(3){width:22%}
+
+.search_main_rentrain>div>ul>li:nth-last-child(n+2):nth-last-child(-n+3){width:17%}
+
+.search_main_rentrain>div>ul>li>img{margin-top:38px;}
+.search_main_rentrain>div>ul>li>label{display:inline-block;
+								 position:absolute;
+								 left:10px; top:10px;
+								 font:normal 16px "jeju gothic";
+								 }
+
+.search_main_rentrain>div>ul>li>input,
+.search_main_rentrain>div>ul>li>select{display:inline-block;
+								  border:0;
+								  font:normal 16px "jeju gothic";
+								 }
+
+.search_main_rentrain>div>ul>li>input[type="search"]{width:100%;
+												 height:40px;
+												 margin-top:27px;
+												}
+
+.search_main_rentrain>div>ul>li>input[type="date"],
+.search_main_rentrain>div>ul>li>input[type="time"]{margin-top:40px;}
+
+.search_main_rentrain>div>ul>li>select{margin-top:41px;}
+/*search rent 부분 끝----------------------------------------------------------------------*/
+
+.search_main_train>div>ol{margin:24px 0 0 16px;}
+.search_main_train>div>ol>li>label{display:inline-block;
+								   margin-right:10px;
+								  }
+
+.search_main_train>div>ul>li:nth-last-child(1){width:11%;}
+
+.search_main_train>div>ul>li>input#tadult,
+.search_main_train>div>ul>li>input#tkid{margin-top:40px; width:48%}
+
+
+
+
+/*search train 부분 끝------------------------------------------------------------------------------------------------------------------------------*/
+input#search_hotel:checked~.search_main_hotel{display:block;}
+input#search_air:checked~.search_main_onlyair{display:block;}
+input#search_airtel:checked~.search_main_airtel{display:block;}
+input#search_rent:checked~.search_main_rent{display:block;}
+input#search_train:checked~.search_main_train{display:block;}
+
+input#search_hotel:checked ~ #search_main_tap>label[for="search_hotel"]{background:rgba(0,0,0,0.5);
+																	  color:#fff;
+																	 }
+input#search_air:checked ~ #search_main_tap>label[for="search_air"]{background:rgba(0,0,0,0.5);
+																	  color:#fff;
+																	 }
+input#search_airtel:checked ~ #search_main_tap>label[for="search_airtel"]{background:rgba(0,0,0,0.5);
+																	  color:#fff;
+																	  }
+input#search_rent:checked ~ #search_main_tap>label[for="search_rent"]{background:rgba(0,0,0,0.5);
+																	  color:#fff;
+																	 }
+input#search_train:checked ~ #search_main_tap>label[for="search_train"]{background:rgba(0,0,0,0.5);
+																	  color:#fff;
+																	 }
+
+

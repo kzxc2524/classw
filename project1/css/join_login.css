@@ -1,0 +1,268 @@
+@charset "UTF-8";
+@import url('http://fonts.googleapis.com/earlyaccess/jejugothic.css');
+@import url('https://fonts.googleapis.com/css?family=Jua&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;	
+}
+a, a:link {
+	text-decoration: none;
+	color: #000;
+}
+ol, ul {
+	list-style: none;
+}
+body {
+	font-family: 'Jeju Gothic', 'Nanum Gothic', 'Nanum Gothic Coding', 'Noto Sans KR'; 
+}
+/*모달 부분 시작 -----------------------------------------------------------------------*/
+
+input#login_pop,input#join_pop{display:none;}
+
+div#login,div#join{position:fixed;
+				  left:0; top:0;
+				  width:100%; height:100%;
+				  z-index:100;
+				  display:none;
+				  }
+
+.join_login{position:absolute;
+					  left:50%; top:50%;
+					  transform:translate(-50%,-50%);
+					  z-index:2;
+					  background:#fff;
+					 }	
+
+.join_login>label[for="login_pop"],
+.join_login>label[for="join_pop"]{position:absolute;
+								  right:0; top:0;
+								  transform:translate(40%,-40%);
+								  z-index:1;
+								  }
+
+
+div#login>label[for="login_pop"],
+div#join>label[for="join_pop"]{position:absolute;
+								left:0; top:0;
+								width:100%; height:100%;
+								background:rgba(0,0,0,0.8);
+								z-index:1;
+								}
+
+input#login_pop:checked ~ div#login{display:block;}
+input#join_pop:checked ~ div#join{display:block;}
+
+
+
+
+
+/* 모달 부분 ↑-----------------------------------------------------------------*/
+.join_login{
+	width: 980px;
+	margin: 0 auto;
+	border: 1px solid #e6e6e6;
+}
+
+.join_login h2{
+	font-family: "jua";
+	font-size: 36px;
+	color: #02b4cd;
+	font-weight: normal;
+	text-align: center;
+	border-bottom: 1px solid #60615a;
+	padding: 20px 0 10px 0;
+	margin: 20px 0;
+}
+.join_login>form {
+	width: 700px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.join_login>.sns {
+	width: 700px;
+	margin: 35px auto 55px;
+	clear: both;
+}
+.join_login>.sns>ul {
+	overflow: hidden;
+	width: 564px;
+	margin: 0 auto;
+}
+.join_login>.sns>ul>li {
+	float: left;
+	width: 72px;
+	height: 73px;
+	margin-right: 10px;
+	text-align: center;
+}
+.join_login>.sns>ul>li>a>img {
+	width: 40px;
+}
+.join_login>.sns>ul>li>a>span {
+	font-size: 16px;
+	color: #60615a;
+	font-family: 'Noto Sans KR';
+}
+.join_login>.sns>ul>li:last-child {
+	margin: 0;
+}
+
+
+/*공통 부분 끝------------------------------------------------*/
+.join_wrap>form>#join_left {
+	float: left;
+}
+.join_wrap>form>#join_left input[type="text"],
+.join_wrap>form>#join_left input[type="password"],
+.join_wrap>form>#join_right input[type="password"],
+.join_wrap>form>#join_right input[type="email"] {
+	width: 320px;
+	height: 35px;
+	margin: 5px 0 10px 0;
+	text-indent: 14px;
+	font-size: 14px;
+	font-family: "Jeju Gothic";
+}
+.join_wrap>form>#join_right {
+	float: right;
+}
+.join_wrap>form>#join_left input,
+.join_wrap>form>#join_left label,
+.join_wrap>form>#join_right input,
+.join_wrap>form>#join_right label {
+	display: block;
+}
+.join_wrap>form>#join_place {
+	clear: both;
+}
+.join_wrap>form>#join_place>ul {
+	margin: 5px 0 30px 0;
+	overflow: hidden;
+}
+.join_wrap>form>#join_place>ul>li {
+	float: left;
+}
+.join_wrap>form>#join_place>ul>li:nth-child(2) {
+	margin: 0 38px;
+}
+.join_wrap>form>#join_place>ul>li>input[type="search"] {
+	width: 168px;
+	height: 35px;
+	text-indent: 14px;
+	font-size: 14px;
+	font-family: "Jeju Gothic";
+}
+.join_wrap>form>#join_place>ul>li>input[type="image"] {
+	margin-bottom: -14px;
+}
+.join_wrap>form>#join_agree {
+	margin-bottom: 20px;
+    overflow: hidden;
+}
+.join_wrap>form>#join_agree>#agree_all_terms{
+	text-align: center;
+	border-bottom: 1px solid #60615a;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+.join_wrap>form>#join_agree li {
+	line-height: 24px;
+}
+.join_wrap>form>#join_agree>#agree_left,
+.join_wrap>form>#join_agree>#agree_right {
+	float: left;
+	width: 350px;
+}
+.join_wrap>form>#join_agree>#agree_left a {
+	text-decoration: underline;
+}
+.join_wrap>form>#join_agree>#agree_right>ul>li>ul>li {
+	float: left;
+	margin-right: 30px;
+}
+.join_wrap>form>#join_btn {
+	width: 485px;
+	margin: 20px auto 0;
+	overflow: hidden;
+}
+.join_wrap>form input[type="submit"] {
+	width: 200px;
+	height: 40px;
+	font-size: 20px;
+	line-height: 40px;
+	font-family: "Jeju Gothic";
+	background: #02b4cd;
+	color: #fff;
+	border: 0;
+	border-radius: 5px;
+}
+.join_wrap>form input[type="reset"] {
+	width: 200px;
+	height: 40px;
+	font-size: 20px;
+	line-height: 40px;
+	font-family: "Jeju Gothic";
+	background: #60615a;
+	color: #fff;
+	border: 0;
+	border-radius: 5px;
+	margin-right: 80px;
+}
+/*회원가입 부분 끝------------------------------------------------*/
+.login_wrap>form>div{width:500px;
+				     margin:0 auto;	 
+					}
+
+.login_wrap>form>div:not(:nth-of-type(3))>label{width:478px; height:28px;
+												margin-bottom:20px;
+												}
+.login_wrap>form>div:nth-of-type(-n+2)>label{border:1px solid #828282;
+											 padding:5px 10px;
+											border-radius:5px;
+										  -webkit-border-radius:5px;
+										  -moz-border-radius:5px;
+										  -ms-border-radius:5px;
+										  -o-border-radius:5px;
+											
+											}
+.login_wrap>form>div:nth-of-type(-n+2)>label>input{vertical-align:12px;
+												   font-size:14px;
+												   width:420px;
+												  }
+
+.login_wrap>form>div:nth-of-type(3){font-size:16px;
+								    margin-bottom:20px;
+								   overflow:hidden;
+								   }
+.login_wrap>form>div:nth-of-type(3)>label{float:left;}
+.login_wrap>form>div:nth-of-type(3)>label>input{vertical-align:middle;}
+.login_wrap>form>div:nth-of-type(3)>a{float:right;}
+
+.login_wrap>form>div:nth-of-type(4)>input{width:500px; height:50px;
+										  border:0;
+										  font-size:28px;
+										  background:#02b4cd;
+										  color:#fff;
+										  border-radius:5px;
+										  -webkit-border-radius:5px;
+										  -moz-border-radius:5px;
+										  -ms-border-radius:5px;
+										  -o-border-radius:5px;
+										 }
+
+.login_wrap>form>div>a,
+.login_wrap>form>div>label,
+.login_wrap>form>div>label>input,
+.login_wrap>form>div>label>img{display:inline-block;
+							   font-family:"jeju gothic";	
+								}
+
+.login_wrap>form>div>label>img{margin-right:10px;}
+.login_wrap>form>div>label>input{border:0;
+						   outline:0;
+						    }
+/*로그인 부분 끝------------------------------------------------*/
+
+form input[type="text"],input[type="text"],input[type="password"]{font-family:"Noto Sans KR" !important;}

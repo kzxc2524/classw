@@ -1,0 +1,429 @@
+@charset "UTF-8";
+
+
+
+#mkt_back{width:100%;
+		 background:#f0f8fc;
+		 margin-bottom:30px;
+		 }
+
+#mkt_contents{width:1500px;
+			 margin:0 auto;
+		    }
+
+
+#contents>h2,#contents>span{display:inline-block;
+							margin:0 5px 30px;
+							font-weight:bold;
+							font-family:"Jua";
+							}
+
+
+#contents>h2:nth-of-type(2){margin-top:58px;}
+#contents>.main_layout{overflow:hidden;}
+#contents>.main_layout>ul{width:375px;
+						   float:left;
+						  }
+			
+				
+#contents>.main_layout>ul>li{background:#02b4cd;
+							 border-top:1px solid #fff;
+							 position:relative;
+							 }
+#contents>.main_layout>ul>li:first-child{height:96px;
+											line-height:96px;
+											border-top:0;
+											}
+#contents>.main_layout>ul>li:not(:first-child){height:91px;
+												  line-height:91px;	
+												  }
+
+#contents>.main_layout>ul>li>label{display:block;
+									width:100%;
+									height:100%;
+									color:#000;
+									text-align:center;
+									font-size:18px;
+									}
+
+#contents>.main_layout>ul>li>label>img{position:absolute;
+									  left:51px; top:40%;
+									  transform:translateY(-50%);
+									  display:none;
+									 }
+#contents .main_layout>ul>li>label>span{display:inline-block;}
+
+#contents .main_layout>ul>li:nth-child(-n+3)>label>span
+,.main_layout>ul>li:nth-last-child(2)>label>span{width:35px;}
+
+#contents .main_layout>ul>li:nth-child(n+4):nth-child(-n+5)>label>span{width:8px;}
+#contents .main_layout>ul>li:nth-last-child(1)>label>span,
+.main_layout>ul>li:nth-last-child(3)>label>span{width:10px;}
+
+/*.recommend{position:relative;}
+.recommend>a{display:inline-block;
+			 width:inherit;
+			 height:inherit;
+			 text-align:center;
+			 position:relative;
+			 color:#fff;
+			 font-weight:300;
+			 line-height:30px;			 
+			 transition-property:background-color;
+			 transition-duration:0.5s;
+			 display:none;
+			}
+
+.recommend>a>span{position:absolute;
+				  left:50%; top:50%;
+				  transform:translate(-50%,-50%);
+				  display:none;
+				 }
+
+.recommend:hover a{display:inline-block;
+				  background:rgba(0,0,0,0.5);
+				  }
+.recommend:hover span{display:inline-block;}
+
+
+.recommend>a>span>span{font-size:18px;}*/
+
+
+.recommend{position:relative;		   
+		  }
+.recommend>.backs{width:inherit;
+				 height:inherit;
+				 transition-property:background-color;
+				 transition-duration:0.5s;
+				 -webkit-transition-property:background-color;
+				 -webkit-transition-duration:0.5s;
+			     }
+.recommend>.backs>a>span{position:absolute;
+						left:0; top:35%;
+						text-align:center;
+						width:inherit;
+						height:inherit;
+						display:none;					 
+						}
+.recommend>.backs>a>span>span{font-size:18px;}
+
+
+.recommend>.backs>a{width:inherit;
+					height:inherit;				   
+					color:#fff;
+					font-weight:300;
+					line-height:30px;
+					display:inline-block;
+					}
+
+
+.recommend>.backs:hover{background:rgba(0,0,0,0.5);						
+						}
+.recommend>.backs:hover span{display:inline-block;}
+
+
+.recommend_right{float:right;}
+.recommend_left{float:left;}
+
+.rec_1115740{width:1115px; height:740px;}
+.rec_1115520{width:1115px; height:520px;}
+.rec_750520{width:750px; height:520px;}
+.rec_1115210{width:1115px; height:210px;}
+
+.rec_1115220{width:1115px; height:220px;}
+.rec_1115510{width:1115px; height:510px;}
+.rec_725510{width:725px; height:510px;}
+
+
+.recommend1{width:370px; height:265px; background:red;}
+.recommend2{width:370px; height:265px; background:orange;}
+.recommend3{width:354px; height:520px; background:yellow;}
+.recommend4{width:750px; height:245px; 
+			margin-top:10px;
+			background:green;}
+.recommend5{width:505px; height:210px;
+			margin-top:10px;
+			background:blue;}
+.recommend6{width:600px; height:210px;
+			margin-top:10px;
+			background:purple;}
+.recommend7{width:550px; height:220px;
+			background:red;}
+.recommend8{width:555px; height:220px;
+			background:orange;}
+.recommend9{width:370px; height:265px;
+			margin-top:10px;
+			background:yellow;}
+.recommend10{width:345px; height:265px;
+			margin-top:10px;
+			background:green;}
+.recommend11{width:380px; height:510px; background:blue;
+			margin-top:10px;
+			}
+.recommend12{width:725px; height:235px;
+			 margin-top:10px;
+			 background:purple;}
+
+.recommend1_pla_all{background:url(../image/trip/place/1/fuk1.jpg)no-repeat center center;}
+.recommend2_pla_all{background:url(../image/trip/place/2/jj.jpg)no-repeat center center;}
+.recommend3_pla_all{background:url(../image/trip/place/3/ilsh.png)no-repeat center center;}
+.recommend4_pla_all{background:url(../image/trip/place/4/swiss.jpg)no-repeat center center;}
+.recommend5_pla_all{background:url(../image/trip/place/5/calif.jpg)no-repeat center center;}
+.recommend6_pla_all{background:url(../image/trip/place/6/hk.jpg)no-repeat center top;}
+
+.recommend1_pla_kor{background:url(../image/trip/place/1/su.jpg)no-repeat center center;}
+.recommend2_pla_kor{background:url(../image/trip/place/2/jj.jpg)no-repeat center center;}
+.recommend3_pla_kor{background:url(../image/trip/place/3/ys.jpg)no-repeat center center;}
+.recommend4_pla_kor{background:url(../image/trip/place/4/bs.jpg)no-repeat center center;}
+.recommend5_pla_kor{background:url(../image/trip/place/5/anap.jpg)no-repeat center center;}
+.recommend6_pla_kor{background:url(../image/trip/place/6/gw.jpg)no-repeat center bottom;}
+
+.recommend1_pla_jpn{background:url(../image/trip/place/1/osa_caatle.jpg)no-repeat center center;}
+.recommend2_pla_jpn{background:url(../image/trip/place/2/kyoto.jpg)no-repeat center center;}
+.recommend3_pla_jpn{background:url(../image/trip/place/3/tyo.jpg)no-repeat center center;}
+.recommend4_pla_jpn{background:url(../image/trip/place/4/oki2.jpg)no-repeat center center;}
+.recommend5_pla_jpn{background:url(../image/trip/place/5/gaja.jpg)no-repeat center center;}
+.recommend6_pla_jpn{background:url(../image/trip/place/6/fuk.jpg)no-repeat center center;}
+
+.recommend1_pla_chn{background:url(../image/trip/place/1/taipei.jpg)no-repeat center center;}
+.recommend2_pla_chn{background:url(../image/trip/place/2/chd.jpg)no-repeat center center;}
+.recommend3_pla_chn{background:url(../image/trip/place/3/ilsh.png)no-repeat center center;}
+.recommend4_pla_chn{background:url(../image/trip/place/4/xia.jpg)no-repeat center -80px;}
+.recommend5_pla_chn{background:url(../image/trip/place/5/bj.jpg)no-repeat center center;}
+.recommend6_pla_chn{background:url(../image/trip/place/6/hwang.jpg)no-repeat center center;}
+
+.recommend1_pla_sea{background:url(../image/trip/place/1/cosamui.jpg)no-repeat center center;}
+.recommend2_pla_sea{background:url(../image/trip/place/2/indonesia.jpg)no-repeat center center;}
+.recommend3_pla_sea{background:url(../image/trip/place/3/singapol.jpg)no-repeat center center;}
+.recommend4_pla_sea{background:url(../image/trip/place/4/cotakinabalu.jpg)no-repeat right center;}
+.recommend5_pla_sea{background:url(../image/trip/place/5/brunai.jpg)no-repeat center -25px;}
+.recommend6_pla_sea{background:url(../image/trip/place/6/natrang.jpg)no-repeat center center;}
+
+.recommend1_pla_ame{background:url(../image/trip/place/1/sanfran.jpg)no-repeat center center;}
+.recommend2_pla_ame{background:url(../image/trip/place/2/mexi.jpg)no-repeat center center;}
+.recommend3_pla_ame{background:url(../image/trip/place/3/braz.jpg)no-repeat center center;}
+.recommend4_pla_ame{background:url(../image/trip/place/4/hawai.jpg)no-repeat center center;}
+.recommend5_pla_ame{background:url(../image/trip/place/5/calif.jpg)no-repeat center center;}
+.recommend6_pla_ame{background:url(../image/trip/place/6/chil.jpg)no-repeat center -150px;}
+
+.recommend1_pla_eu{background:url(../image/trip/place/1/spain.jpg)no-repeat center center;}
+.recommend2_pla_eu{background:url(../image/trip/place/2/italy.jpg)no-repeat center center;}
+.recommend3_pla_eu{background:url(../image/trip/place/3/russia.jpg)no-repeat -380px center;}
+.recommend4_pla_eu{background:url(../image/trip/place/4/swiss.jpg)no-repeat center center;}
+.recommend5_pla_eu{background:url(../image/trip/place/5/che.jpg)no-repeat center -100px;}
+.recommend6_pla_eu{background:url(../image/trip/place/6/eng.jpg)no-repeat center -15px;}
+
+.recommend1_pla_south{background:url(../image/trip/place/1/nz.jpg)no-repeat center center;}
+.recommend2_pla_south{background:url(../image/trip/place/2/tht.jpg)no-repeat center center;}
+.recommend3_pla_south{background:url(../image/trip/place/3/plw.jpg)no-repeat center center;}
+.recommend4_pla_south{background:url(../image/trip/place/4/cyp.jpg)no-repeat center center;}
+.recommend5_pla_south{background:url(../image/trip/place/5/aust.jpg)no-repeat center center;}
+.recommend6_pla_south{background:url(../image/trip/place/6/guam.jpg)no-repeat center center;}
+
+
+
+
+
+
+
+
+.recommend7_ac_all{background:url(../image/trip/activity/7/tour.jpg)no-repeat center -70px;}
+.recommend8_ac_all{background:url(../image/trip/activity/8/lm.jpg)no-repeat center top;}
+.recommend9_ac_all{background:url(../image/trip/activity/9/dyp.png)no-repeat center bottom;}
+.recommend10_ac_all{background:url(../image/trip/activity/10/nzcr.jpg)no-repeat center center;}
+.recommend11_ac_all{background:url(../image/trip/activity/11/bdc.jpg)no-repeat center center;}
+.recommend12_ac_all{background:url(../image/trip/activity/12/okichura.jpg)no-repeat center center;}
+
+.recommend7_ac_kor{background:url(../image/trip/activity/7/schcn.jpg)no-repeat center -80px;}
+.recommend8_ac_kor{background:url(../image/trip/activity/8/jjsea.jpg)no-repeat center center;}
+.recommend9_ac_kor{background:url(../image/trip/activity/9/dyp.png)no-repeat center center;}
+.recommend10_ac_kor{background:url(../image/trip/activity/10/schrail.jpg)no-repeat center center;}
+.recommend11_ac_kor{background:url(../image/trip/activity/11/bls.jpg)no-repeat center center;}
+.recommend12_ac_kor{background:url(../image/trip/activity/12/slg.jpg)no-repeat center bottom;}
+
+.recommend7_ac_jpn{background:url(../image/trip/activity/7/fuk.jpg)no-repeat center top;}
+.recommend8_ac_jpn{background:url(../image/trip/activity/8/ogc.jpg)no-repeat center bottom;}
+.recommend9_ac_jpn{background:url(../image/trip/activity/9/dya.jpg)no-repeat center center;}
+.recommend10_ac_jpn{background:url(../image/trip/activity/10/duni.jpg)no-repeat center center;}
+.recommend11_ac_jpn{background:url(../image/trip/activity/11/dd.jpg)no-repeat center center;}
+.recommend12_ac_jpn{background:url(../image/trip/activity/12/okichura.jpg)no-repeat center center;}
+
+.recommend7_ac_chn{background:url(../image/trip/activity/7/tour.jpg)no-repeat center -70px;}
+.recommend8_ac_chn{background:url(../image/trip/activity/8/giant.jpg)no-repeat center -60px;}
+.recommend9_ac_chn{background:url(../image/trip/activity/9/castle.jpg)no-repeat center center;}
+.recommend10_ac_chn{background:url(../image/trip/activity/10/canyoning.jpg)no-repeat center center;}
+.recommend11_ac_chn{background:url(../image/trip/activity/11/flower.jpg)no-repeat center center;}
+.recommend12_ac_chn{background:url(../image/trip/activity/12/sh.jpg)no-repeat center -120px;}
+
+.recommend7_ac_sea{background:url(../image/trip/activity/7/tcrv.jpg)no-repeat center center;}
+.recommend8_ac_sea{background:url(../image/trip/activity/8/vpkmk.jpg)no-repeat center center;}
+.recommend9_ac_sea{background:url(../image/trip/activity/9/lbc.jpg)no-repeat center center;}
+.recommend10_ac_sea{background:url(../image/trip/activity/10/mct.jpg)no-repeat center center;}
+.recommend11_ac_sea{background:url(../image/trip/activity/11/bdc.jpg)no-repeat center center;}
+.recommend12_ac_sea{background:url(../image/trip/activity/12/bs.jpg)no-repeat center -130px;}
+
+.recommend7_ac_ame{background:url(../image/trip/activity/7/chilemarvel.jpg)no-repeat center bottom;}
+.recommend8_ac_ame{background:url(../image/trip/activity/8/cndnagr.jpg)no-repeat center -100px;}
+.recommend9_ac_ame{background:url(../image/trip/activity/9/usaht.jpg)no-repeat center center;}
+.recommend10_ac_ame{background:url(../image/trip/activity/10/usafarmspring.jpg)no-repeat center center;}
+.recommend11_ac_ame{background:url(../image/trip/activity/11/milkdesert.jpg)no-repeat center center;}
+.recommend12_ac_ame{background:url(../image/trip/activity/12/usacebu.jpg)no-repeat center bottom;}
+
+.recommend7_ac_eu{background:url(../image/trip/activity/7/chd.jpg)no-repeat center center;}
+.recommend8_ac_eu{background:url(../image/trip/activity/8/lm.jpg)no-repeat center top;}
+.recommend9_ac_eu{background:url(../image/trip/activity/9/auw.jpg)no-repeat center center;}
+.recommend10_ac_eu{background:url(../image/trip/activity/10/pl.jpg)no-repeat center center;}
+.recommend11_ac_eu{background:url(../image/trip/activity/11/sp.jpg)no-repeat right center;}
+.recommend12_ac_eu{background:url(../image/trip/activity/12/ss.jpg)no-repeat center center;}
+
+.recommend7_ac_south{background:url(../image/trip/activity/7/ht.jpg)no-repeat center center;}
+.recommend8_ac_south{background:url(../image/trip/activity/8/brbr.jpg)no-repeat center center;}
+.recommend9_ac_south{background:url(../image/trip/activity/9/wlltu.jpg)no-repeat center center;}
+.recommend10_ac_south{background:url(../image/trip/activity/10/nzcr.jpg)no-repeat center center;}
+.recommend11_ac_south{background:url(../image/trip/activity/11/cypps.jpg)no-repeat -60px center;}
+.recommend12_ac_south{background:url(../image/trip/activity/12/plw.jpg)no-repeat center -170px;}
+
+
+
+#contents>input{display:none;}
+
+.main_reco{display:none;}
+
+input#recommend_pl_all:checked ~ .main_layout>.main_pl_all{display:block;}
+input#recommend_pl_kor:checked ~ .main_layout>.main_pl_kor{display:block;}
+input#recommend_pl_jpn:checked ~ .main_layout>.main_pl_jpn{display:block;}
+input#recommend_pl_chn:checked ~ .main_layout>.main_pl_chn{display:block;}
+input#recommend_pl_sea:checked ~ .main_layout>.main_pl_sea{display:block;}
+input#recommend_pl_america:checked ~ .main_layout>.main_pl_ame{display:block;}
+input#recommend_pl_eu:checked ~ .main_layout>.main_pl_eu{display:block;}
+input#recommend_pl_south:checked ~ .main_layout>.main_pl_south{display:block;}
+input#recommend_ac_all:checked ~ .main_layout>.main_ac_all{display:block;}
+input#recommend_ac_kor:checked ~ .main_layout>.main_ac_kor{display:block;}
+input#recommend_ac_jpn:checked ~ .main_layout>.main_ac_jpn{display:block;}
+input#recommend_ac_chn:checked ~ .main_layout>.main_ac_chn{display:block;}
+input#recommend_ac_sea:checked ~ .main_layout>.main_ac_sea{display:block;}
+input#recommend_ac_america:checked ~ .main_layout>.main_ac_ame{display:block;}
+input#recommend_ac_eu:checked ~ .main_layout>.main_ac_eu{display:block;}
+input#recommend_ac_south:checked ~ .main_layout>.main_ac_south{display:block;}
+
+#contents>.main_layout>ul>li:hover label{font-size:24px;	color:#fff;}
+
+input#recommend_pl_all:checked ~ .main_layout>ul>li>label[for="recommend_pl_all"]{font-size:24px;
+																					  color:#fff;
+																					 }
+input#recommend_pl_kor:checked ~ .main_layout>ul>li>label[for="recommend_pl_kor"]{font-size:24px;
+																					  color:#fff;
+																					 }
+input#recommend_pl_jpn:checked ~ .main_layout>ul>li>label[for="recommend_pl_jpn"]{font-size:24px;
+																					  color:#fff;
+																					 }
+input#recommend_pl_chn:checked ~ .main_layout>ul>li>label[for="recommend_pl_chn"]{font-size:24px;
+																					  color:#fff;
+																					 }
+input#recommend_pl_sea:checked ~ .main_layout>ul>li>label[for="recommend_pl_sea"]{font-size:24px;
+																					  color:#fff;
+																					 }
+input#recommend_pl_america:checked ~ .main_layout>ul>li>label[for="recommend_pl_america"]{font-size:24px;
+																					  color:#fff;
+																					 }
+input#recommend_pl_eu:checked ~ .main_layout>ul>li>label[for="recommend_pl_eu"]{font-size:24px;
+																					  color:#fff;
+																					 }
+input#recommend_pl_south:checked ~ .main_layout>ul>li>label[for="recommend_pl_south"]{font-size:24px;
+																					  color:#fff;
+																					 }
+input#recommend_ac_all:checked ~ .main_layout>ul>li>label[for="recommend_ac_all"]{font-size:24px;
+																					  color:#fff;
+																					 }
+input#recommend_ac_kor:checked ~ .main_layout>ul>li>label[for="recommend_ac_kor"]{font-size:24px;
+																					  color:#fff;
+																					 }
+input#recommend_ac_jpn:checked ~ .main_layout>ul>li>label[for="recommend_ac_jpn"]{font-size:24px;
+																					  color:#fff;
+																					 }
+input#recommend_ac_chn:checked ~ .main_layout>ul>li>label[for="recommend_ac_chn"]{font-size:24px;
+																					  color:#fff;
+																					 }
+input#recommend_ac_sea:checked ~ .main_layout>ul>li>label[for="recommend_ac_sea"]{font-size:24px;
+																					  color:#fff;
+																					 }
+input#recommend_ac_america:checked ~ .main_layout>ul>li>label[for="recommend_ac_america"]{font-size:24px;
+																					  color:#fff;
+																					 }
+input#recommend_ac_eu:checked ~ .main_layout>ul>li>label[for="recommend_ac_eu"]{font-size:24px;
+																					  color:#fff;
+																					 }
+input#recommend_ac_south:checked ~ .main_layout>ul>li>label[for="recommend_ac_south"]{font-size:24px;
+																					  color:#fff;
+																					 }
+
+
+input#recommend_pl_all:checked ~ .main_layout>ul>li>label>img[alt="chch_pl_all"]{display:block;}
+input#recommend_pl_kor:checked ~ .main_layout>ul>li>label>img[alt="chch_pl_kor"]{display:block;}
+input#recommend_pl_jpn:checked ~ .main_layout>ul>li>label>img[alt="chch_pl_jpn"]{display:block;}
+input#recommend_pl_chn:checked ~ .main_layout>ul>li>label>img[alt="chch_pl_chn"]{display:block;}
+input#recommend_pl_sea:checked ~ .main_layout>ul>li>label>img[alt="chch_pl_sea"]{display:block;}
+input#recommend_pl_america:checked ~ .main_layout>ul>li>label>img[alt="chch_pl_ame"]{display:block;}
+input#recommend_pl_eu:checked ~ .main_layout>ul>li>label>img[alt="chch_pl_eu"]{display:block;}
+input#recommend_pl_south:checked ~ .main_layout>ul>li>label>img[alt="chch_pl_south"]{display:block;}
+input#recommend_ac_all:checked ~ .main_layout>ul>li>label>img[alt="chch_ac_all"]{display:block;}
+input#recommend_ac_kor:checked ~ .main_layout>ul>li>label>img[alt="chch_ac_kor"]{display:block;}
+input#recommend_ac_jpn:checked ~ .main_layout>ul>li>label>img[alt="chch_ac_jpn"]{display:block;}
+input#recommend_ac_chn:checked ~ .main_layout>ul>li>label>img[alt="chch_ac_chn"]{display:block;}
+input#recommend_ac_sea:checked ~ .main_layout>ul>li>label>img[alt="chch_ac_sea"]{display:block;}
+input#recommend_ac_america:checked ~ .main_layout>ul>li>label>img[alt="chch_ac_ame"]{display:block;}
+input#recommend_ac_eu:checked ~ .main_layout>ul>li>label>img[alt="chch_ac_eu"]{display:block;}
+input#recommend_ac_south:checked ~ .main_layout>ul>li>label>img[alt="chch_ac_south"]{display:block;}
+
+
+form#mailing_service{width:1500px;
+					 height:86px;
+					 padding:10px 0;
+					 margin:65px auto;
+					 background:#f0f8fc;
+					}
+form#mailing_service>img{display:inline-block;
+						 float:left;
+						 margin:18px 20px;
+						}
+form#mailing_service>p{float:left;
+					   font-size:22px;
+					   margin:18px 0;
+					   line-height:28px
+					  }
+form#mailing_service>div{float:right;
+						 margin:10px 20px 0 0;
+						 
+						}
+form#mailing_service>div>input[type="email"]{display:inline-block;
+											width:450px; height:30px;
+											border:1px solid #828282;
+											padding:7px 10px;
+											font-size:20px;
+											border-radius:5px;
+											-webkit-border-radius:5px;
+											-moz-border-radius:5px;
+											-ms-border-radius:5px;
+											-p-border-radius:5px;
+											margin-right:10px;
+											vertical-align:1px;
+											}
+form#mailing_service>div>input[type="submit"]{display:inline-block;
+										     background:#e62851;
+											 width:146px; height:46px;
+											 color:#fff;
+											 font-size:20px;
+											 border:0;
+											 border-radius:5px;
+											-webkit-border-radius:5px;
+											-moz-border-radius:5px;
+											-ms-border-radius:5px;
+											-p-border-radius:5px;
+											margin-right:10px;
+											 }
+form#mailing_service>div>p{font-size:12px;
+						   margin-top:10px;
+						  }
+form#mailing_service>div>p>a{text-decoration:underline;
+							 color:blue;
+							}

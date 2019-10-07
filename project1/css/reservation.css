@@ -1,0 +1,201 @@
+@charset "UTF-8";
+
+#contents>p:first-of-type{
+	text-align: right;
+	height: 65px;
+	line-height: 65px;
+}
+#contents>p:first-of-type>a {
+	color: #02b4cd;
+}
+
+#reservation table{border-collapse:collapse;}
+
+#reservation_check>h2,#reservation_detail>h2{color:#02b4cd;
+										   font-weight:normal;
+										   margin-bottom:36px;
+										  }
+
+
+#contents>input{display:none;}
+
+
+#reservation_check{text-align:center;}
+#reservation_check>div{width:100%;
+					   margin:0 auto;
+					   
+					   }
+#reservation_check>div>ul{width:1500px;
+					   margin:0 auto;
+					   background:#e62851;
+					   border-radius:5px;
+					   -webkit-border-radius:5px;
+					   -moz-border-radius:5px;
+					   -ms-border-radius:5px;
+					   -o-border-radius:5px;
+					   overflow:hidden;
+					   }
+
+#reservation_check>div>ul>li{float:left;
+							border-right:1px solid #fff;
+							width:16.6%
+							}
+#reservation_check>div>ul>li:last-child{border-right:0;}
+#reservation_check label{cursor:pointer;}
+#reservation_check>div>ul>li>label{display:inline-block;
+								   width:100%; padding:11px 0;
+								   text-align:center;
+								   font-size:20px;
+								   color:#fff;
+								   }
+#reservation_check>div>ul>li>label>span{display:inline-block;
+										width:18px;  height:18px;
+										vertical-align:-2px;
+										}
+#reservation_check>div>ul>li:nth-child(2)>label>span{background:url(../images/search_tap_icon.png)no-repeat 0 center;}
+#reservation_check>div>ul>li:nth-child(3)>label>span{background:url(../images/search_tap_icon.png)no-repeat -24px center;}
+#reservation_check>div>ul>li:nth-child(4)>label>span{background:url(../images/search_tap_icon.png)no-repeat -70px center;}
+#reservation_check>div>ul>li:nth-child(5)>label>span{background:url(../images/search_tap_icon.png)no-repeat -93px center;}
+
+#reservation_check>div{width:100%;
+					   margin:0 auto;
+					   text-align:center;
+					   background:#f5fbfe;
+					   padding-bottom:52px;
+					   }
+#reservation_check>div>input[type="month"]{display:inline-block;
+										   border:0;
+										   outline:0;
+										   font:normal 20px "jeju gothic";
+											padding-left:70px;
+											margin:20px;
+											background:none;
+										  }
+#reservation_calendar>table{margin:0 29px;
+							background:#fff;
+							}
+#reservation_calendar>table>tbody>tr>td{width:206px; height:84px;
+										position:relative;
+										font-weight:bold;
+										}
+#reservation_calendar>table>tbody>tr>td>label{display:inline-block;
+											  width:100%; height:100%;}
+
+#reservation_calendar>table>tbody>tr>td>label>span{position:absolute;
+												   left:5px; top:5px;	
+													}
+#reservation_calendar>table>tbody>tr>td:first-child{color:#e62851;}
+#reservation_calendar>table>tbody>tr:nth-child(3)>td:nth-child(5){color:#e62851;}
+#reservation_calendar>table>tbody>tr>td:last-child{color:#02b4cd;}
+
+
+.inner_table{position:absolute;
+			 left:30px; top:5px;
+			 table-layout:fixed;
+			 width:170px;
+			 text-align:left;			 
+			 overflow: hidden;
+			 text-overflow:ellipsis;
+			 }
+
+.inner_table>tbody>tr>th,
+.inner_table>tbody>tr>td{
+				font-size:14px;
+				font-weight: normal;
+				color: #000;
+				white-space:nowrap;
+				text-align:left;
+				text-overflow:ellipsis;				
+				}
+				
+.inner_table>tbody>tr>th>img{display:inline-block;
+							 margin-right:5px;}
+
+
+.inner_table>tbody{text-overflow:ellipsis;}
+
+
+#reservation_detail{text-align:center;
+					width:1500px;
+					overflow:hidden;
+					}
+dl{float:left;
+   }
+dl>dt{padding:10.5px 0;
+	  font-size:18px;
+	  background:#afe1fa;
+	  }
+dl>dd{border-bottom:1px solid #e0e0e0;
+		display:none;
+		}
+#reservation_detail dl:not(:nth-of-type(3))>dd{padding:36px 0;}
+.detail_col1,.detail_col7{width:5%;}
+
+.detail_col2,.detail_col4{width:10%;}
+.detail_col5,.detail_col6{width:10%;}
+.detail_col3{width:50%;}
+
+.detail_col3>dd{height:90px;
+				
+				}
+.detail_col3>dd>p{text-align:left;
+					padding:15px 20px;}
+
+.detail_col3>dd>img{display:inline-block;
+					vertical-align:-4px;}
+
+#reservation_detail dl>dd>span{display:inline-block;}
+
+#reservation_detail .airtime{color:#e62851;
+							 margin-bottom:5px;
+							}
+
+#reservation_detail .haddress,.acimform
+								{color:#9d9d9d;
+								margin:5px 0;}
+
+
+
+.inner_table>tbody>tr{display:none;}
+
+
+input#reserve_tap_all:checked ~ #reservation_check>div>#reservation_calendar>#august8>tbody>tr>td>label>.inner_table>tbody>.reserve_all_list,
+input#reserve_tap_hotel:checked ~ #reservation_check>div>#reservation_calendar>#august8>tbody>tr>td>label>.inner_table>tbody>.reserve_hotel_list,
+input#reserve_tap_air:checked ~ #reservation_check>div>#reservation_calendar>#august8>tbody>tr>td>label>.inner_table>tbody>.reserve_air_list,
+input#reserve_tap_rent:checked ~ #reservation_check>div>#reservation_calendar>#august8>tbody>tr>td>label>.inner_table>tbody>.reserve_rent_list,
+input#reserve_tap_train:checked ~ #reservation_check>div>#reservation_calendar>#august8>tbody>tr>td>label>.inner_table>tbody>.reserve_train_list,
+input#reserve_tap_aso:checked ~ #reservation_check>div>#reservation_calendar>#august8>tbody>tr>td>label>.inner_table>tbody>.reserve_aso_list{display:inline-block;}
+
+input#no1:checked ~ #reservation_detail>dl>.detail_no1,
+input#no2:checked ~ #reservation_detail>dl>.detail_no2,
+input#no3:checked ~ #reservation_detail>dl>.detail_no3,
+input#no4:checked ~ #reservation_detail>dl>.detail_no4,
+input#no5:checked ~ #reservation_detail>dl>.detail_no5,
+input#no6:checked ~ #reservation_detail>dl>.detail_no6,
+input#no7:checked ~ #reservation_detail>dl>.detail_no7,
+input#no8:checked ~ #reservation_detail>dl>.detail_no8,
+input#no9:checked ~ #reservation_detail>dl>.detail_no9,
+input#no10:checked ~ #reservation_detail>dl>.detail_no10,
+input#no11:checked ~ #reservation_detail>dl>.detail_no11,
+input#no12:checked ~ #reservation_detail>dl>.detail_no12,
+input#no13:checked ~ #reservation_detail>dl>.detail_no13,
+input#no14:checked ~ #reservation_detail>dl>.detail_no14,
+input#no15:checked ~ #reservation_detail>dl>.detail_no15,
+input#no16:checked ~ #reservation_detail>dl>.detail_no16,
+input#no17:checked ~ #reservation_detail>dl>.detail_no17,
+input#no18:checked ~ #reservation_detail>dl>.detail_no18,
+input#no19:checked ~ #reservation_detail>dl>.detail_no19,
+input#no20:checked ~ #reservation_detail>dl>.detail_no20,
+input#no21:checked ~ #reservation_detail>dl>.detail_no21,
+input#no22:checked ~ #reservation_detail>dl>.detail_no22,
+input#no23:checked ~ #reservation_detail>dl>.detail_no23,
+input#no24:checked ~ #reservation_detail>dl>.detail_no24,
+input#no25:checked ~ #reservation_detail>dl>.detail_no25,
+input#no26:checked ~ #reservation_detail>dl>.detail_no26,
+input#no27:checked ~ #reservation_detail>dl>.detail_no27,
+input#no28:checked ~ #reservation_detail>dl>.detail_no28,
+input#no29:checked ~ #reservation_detail>dl>.detail_no29,
+input#no30:checked ~ #reservation_detail>dl>.detail_no30,
+input#no31:checked ~ #reservation_detail>dl>.detail_no31{display:block;}
+
+

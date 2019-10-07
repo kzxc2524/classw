@@ -1,0 +1,863 @@
+@charset "UTF-8";
+@import url('http://fonts.googleapis.com/earlyaccess/jejugothic.css');
+@import url('https://fonts.googleapis.com/css?family=Jua&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;	
+}
+a, a:link {
+	text-decoration: none;
+	color: #000;
+}
+ol, ul {
+	list-style: none;
+}
+body {
+	font-family: 'Jeju Gothic', 'Nanum Gothic', 'Nanum Gothic Coding', 'Noto Sans KR'; 
+}
+#search_box {
+	width: 100%;
+	height: 112px;
+	background: #f0f8fc;
+}
+#search_box_inner {
+	width: 1500px;
+	padding: 11px 0;
+	margin: 0 auto;
+}
+#search_box_inner > form > ul {
+	width: 1350px;
+	height: 86px;
+	background: #ffffff;
+	border: 1px solid #cccccc;
+	float: left;
+}
+#search_box_inner .search_main_all > ul > li {
+	position: relative;
+	height: 86px;					
+	float: left;
+	border-right: 1px solid #cccccc;
+}
+#search_box_inner .search_main_all>ul>li>input.write {
+	width: 95%;
+	padding: 10px;
+	height: 50px;
+	margin-top: 36px;
+}
+#search_box_inner .search_main_hotel > ul > li:first-child {
+	width: 43%;
+}
+#search_box_inner .search_main_all > ul > li:nth-last-child(-n+4) {
+	width:14%;
+}
+#search_box_inner .search_main_all > ul > li:last-child {
+	border-right: 0;
+}
+#search_box_inner .search_main_all>ul>li>label {
+	position:absolute;
+	left:10px;
+	top:10px;
+}
+#search_box_inner .search_main_all>ul>li input[type="date"] {
+	width:82%;											   
+	margin-top:37px;
+	padding:10px;
+}
+#search_box_inner .search_main_all>ul>li>input[name="adult"] {
+	width:30%;
+	padding:10px 5px;
+	margin-top:40px;
+}
+#search_box_inner .search_main_all>ul>li>input[name="kid"] {
+	width:40%;
+	padding:10px 5px;
+	margin-top:40px;
+}
+#search_box_inner .search_main_all>ul>li>input[name="room"] {
+	width:50%;
+	padding:10px 5px;
+	margin-top:40px;
+}
+#search_box_inner .search_main_all>ul>li>input,
+#search_box_inner .search_main_all>ul>li>select {
+	display: inline-block;
+	margin-left: 10px;														 													 
+	border: 0;														 
+	font: normal 16px "jeju gothic";
+	outline: 0;														
+}
+#search_box_inner .search_main_all > ul > li > label {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+#search_box_inner > form > div > input[type="submit"] {
+	float: right;
+	width: 120px;
+	height: 88px;
+	background: #e62851;
+	border: none;
+	border-radius: 3px;
+	color: #ffffff;
+	font-family: 'Jeju Gothic';
+	font-size: 30px;
+}
+#detail_hotel #hotel_title {
+	margin-bottom: 65px;
+}
+#detail_hotel h2 {
+	font-family: "Jeju Gothic";
+}
+#detail_hotel #hotel_name>h2>img {
+	margin: 0 0 3px 10px;
+}
+#detail_hotel #hotel_name p {
+	color: #60615a;
+	font-size: 16px;
+	line-height: 22px;
+}
+#detail_hotel #contents>p {
+	text-align: right;
+	height: 65px;
+	line-height: 65px;
+}
+#detail_hotel #contents>p>a {
+	color: #02b4cd;
+}
+#detail_hotel #hotel_title {
+	overflow: hidden;
+}
+#detail_hotel #hotel_name {
+	float: left;
+}
+#detail_hotel #title_btn {
+	float: right;
+}
+#detail_hotel #title_btn>a {
+	display: inline-block;
+	margin-left: 15px;
+}
+#detail_hotel #hotel_summary {
+	margin-bottom: 60px;
+	overflow: hidden;
+}
+#detail_hotel #hotel_summary>#hotel_gallery {
+	width: 1500px;
+	height: 497px;
+}
+#detail_hotel #hotel_summary>#hotel_gallery>div>div>div>img,
+#detail_hotel .executive_gallery>div>img,
+#detail_hotel .suite_gallery>div>img {
+	width: 850px;
+}
+#detail_hotel #hotel_summary>#hotel_gallery>div>div>div>p {
+	margin-top: 10px;
+	text-align: right;
+}
+#detail_hotel #hotel_summary>#hotel_gallery>.photo1 {
+	width: 620px;
+	height: 388px;
+	position: relative;
+	float: left;
+}
+#detail_hotel #hotel_summary>#hotel_gallery>.photo2 {
+	width: 335px;
+	height: 388px;
+	position: relative;
+	float: left;
+	margin: 0 10px;
+}
+#detail_hotel #hotel_summary>#hotel_gallery>.photo3 {
+	width: 525px;
+	height: 388px;
+	position: relative;
+	float: left;
+}
+#detail_hotel #hotel_summary>#hotel_gallery>.photo_bottom {
+	margin: 10px 10px 0 0;
+	width: 141px;
+	height: 99px;
+	float: left;
+	position: relative;
+}
+#detail_hotel #hotel_summary>#hotel_gallery>.photo13 {
+	margin-right: 0;
+}
+#detail_hotel #hotel_gallery>div>input,
+#detail_hotel #filter_second input,
+#detail_hotel table>caption,
+#detail_hotel input[name="room_ex"],
+#detail_hotel input[name="room_su"],
+#detail_hotel input[id="detail_executive"],
+#detail_hotel input[id="detail_suite"],
+#detail_hotel input[id="executive_photo"],
+#detail_hotel input[id="suite_photo"],
+#detail_hotel #review_list_more,
+#detail_hotel input[id="review_more"],
+#detail_hotel input[id="review_more"]:checked ~ label[for="review_more"]{
+	display: none;
+}
+#detail_hotel #hotel_gallery>div>label {
+	cursor: pointer;
+}
+#detail_hotel input[name="image_more"]:checked + label > img {
+	background: rgba(0,0,0,.7);
+	opacity: 1;
+}
+#detail_hotel input[name="image_more"]:checked ~ div,
+#detail_hotel input[id="review_more"]:checked ~ #review_list_more {
+	display: block;
+}
+#detail_hotel input[name="image_more"] + label + div {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+}
+#detail_hotel input[name="image_more"] + label + div > div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	z-index: 2;
+	padding: 40px;
+}
+#detail_hotel input[name="image_more"] + label + div > div > label {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	top: 0%;
+	right: 0%;
+	background: url('images/close.png')no-repeat 0 0;
+	transform: translate(40%, -40%);
+	z-index: 4;
+}
+#detail_hotel input[name="image_more"] + label + div > label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.4);
+	z-index: 1;
+}
+#detail_hotel #hotel_intro {
+	width: 730px;
+    height: 190px;
+    background: #f0f8fc;
+    padding: 30px;
+    line-height: 28px;
+    margin-top: 30px;
+	border-radius: 5px;
+	float: left;
+	font-size: 14px;
+}
+#detail_hotel #review_summary {
+	width: 315px;
+	height: 250px;
+	float: left;
+	margin: 30px 10px 0 10px;
+}
+#detail_hotel #review_summary>#total {
+	height: 159px;
+	background: url('images/review_bg.png')no-repeat 0 0;
+	text-align: center;
+	padding: 20px;
+}
+#detail_hotel #review_summary>#total>p {
+	line-height: 36px;
+}
+#detail_hotel #review_summary>#total>p:first-of-type {
+	font-size: 24px;
+	color: #e62851;
+}
+#detail_hotel #review_summary>#total>p>img {
+	width: 25px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+#detail_hotel #review_summary>#review_count {
+	background: #a6c37f;
+	width: 312px;
+	height: 41px;
+	border-radius: 3px;
+	margin-top: 9px;
+	text-align: center;
+	line-height: 43px;
+}
+#detail_hotel #review_summary>#review_count>img {
+	height: 16px;
+	margin-right: 15px;
+	margin-bottom: -3px;
+}
+#detail_hotel #hotel_map {
+	float: left;
+	width: 375px;
+	height: 250px;
+	position: relative;
+	overflow: hidden;
+	margin-top: 30px;
+}
+#detail_hotel .cover {
+	background-color: rgba(0,0,0,.2);
+	width: 375px;
+	height: 250px;
+	opacity: 0;
+	position: absolute;
+}
+#detail_hotel .cover:hover {
+	opacity: 1;
+}
+#detail_hotel #filter_first {
+	width: 1500px;
+	height: 52px;
+	border-radius: 5px;
+	background: #d4e8f2;
+}
+#detail_hotel #filter_first>ul {
+	overflow: hidden;
+}
+#detail_hotel #filter_first>ul>li {
+	float: left;
+	margin: 8px 10px;
+}
+#detail_hotel #filter_first>ul>li>ul>li {
+	float: left;
+}
+#detail_hotel #filter_first>ul>li>ul>li>input {
+	border: 0;
+}
+#detail_hotel #filter_first>ul>li:nth-child(1) {
+	width: 285px;
+	height: 36px;
+	background: #fff;
+	padding-left: 50px;
+	position: relative;
+	margin-left: 20px;
+}
+#detail_hotel #filter_first>ul>li img{
+	width: 20px;
+	position: absolute;
+	top: 9px;
+	left: 20px;
+}
+#detail_hotel #filter_first>ul>li:nth-child(1)>ul>li> input {
+	font-family: "Jeju Gothic";
+	margin-top: 8px;
+	outline: 0;
+}
+#detail_hotel #filter_first>ul>li:nth-child(1)>ul>li> input:nth-of-type(1) {
+	margin-right: 10px;
+}
+#detail_hotel #filter_first>ul>li:nth-child(2) {
+	width: 220px;
+	height: 36px;
+	background: #fff;
+	position: relative;
+	padding-left: 50px
+}
+#detail_hotel #filter_first>ul>li:nth-child(2)>ul>li {
+	width: 80px;
+	margin: 9px;
+}
+#detail_hotel #filter_first>ul>li:nth-child(2)>ul>li input {
+	font-family: "Jeju Gothic";
+	outline: 0;
+	width: 90px;
+}
+#detail_hotel #filter_first>ul>li:nth-child(3) {
+	width: 120px;
+	height: 36px;
+	background: #fff;
+	padding-left: 50px;
+	position: relative;
+}
+#detail_hotel #filter_first>ul>li:nth-child(3) input {
+	font-family: "Jeju Gothic";
+	margin: 10px;
+	outline: 0;
+	width: 80px;
+}
+#detail_hotel #filter_first>ul>li> input {
+	border: 0;
+}
+#detail_hotel #filter_first>ul>li:last-child input{
+	width: 58px;
+	height: 36px;
+	border-radius: 5px;
+	background: #02b4cd;
+	color: #fff;
+	font-size: 20px;
+	font-family: "Jeju Gothic";
+}
+#detail_hotel #filter_second>ul {
+	overflow: hidden;
+	height: 44px;
+}
+#detail_hotel #filter_second>ul>li {
+	float: left;
+	margin-right: 10px;
+}
+#detail_hotel #filter_second>ul>li>label {
+	background: #d4e8f2;
+	border: 2px solid #d4e8f2;
+	border-radius: 15px;
+	font-size: 14px;
+	padding: 5px 10px;
+	line-height: 44px;
+}
+#detail_hotel #filter_second>ul>li>label:hover {
+	background: #fff;
+	border: 2px solid #02b4cd;
+	border-radius: 15px;
+}
+#detail_hotel #filter_second>ul>li>input:checked ~ label {
+	background: #02b4cd;
+	border: 2px solid #02b4cd;
+	color: #fff;
+}
+#detail_hotel .room_executive {
+	width: 1500px;
+	height: 636px;
+	border-collapse: collapse;
+}
+#detail_hotel .room_suite {
+	margin-top: 20px;
+	width: 1500px;
+	height: 430px;
+	border-collapse: collapse;
+}
+#detail_hotel table img {
+	margin-bottom: -3px;
+}
+#detail_hotel table>thead {
+	background: #02b4cd;
+	color: #fff;
+	text-align: left;
+}
+#detail_hotel table>thead>tr>th {
+	padding: 5px;
+}
+#detail_hotel table>tbody>tr:nth-of-type(1)>td:nth-of-type(1) {
+	border-left: 8px solid #f0f8fc;
+	width: 344px;
+}
+#detail_hotel .cell_inner>p>img {
+	margin-right: 10px;
+}
+#detail_hotel table>tbody>tr:nth-of-type(1)>td:nth-of-type(2),
+#detail_hotel table>tbody>tr:nth-of-type(2)>td:nth-of-type(1),
+#detail_hotel table>tbody>tr:nth-of-type(3)>td:nth-of-type(1),
+#detail_hotel table>tbody>tr:nth-of-type(1)>td:nth-of-type(3),
+#detail_hotel table>tbody>tr:nth-of-type(2)>td:nth-of-type(2),
+#detail_hotel table>tbody>tr:nth-of-type(3)>td:nth-of-type(2) {
+	width: 236px;
+}
+#detail_hotel table>tbody>tr:nth-of-type(1)>td:nth-of-type(4),
+#detail_hotel table>tbody>tr:nth-of-type(2)>td:nth-of-type(3),
+#detail_hotel table>tbody>tr:nth-of-type(3)>td:nth-of-type(3) {
+	width: 446px;
+}
+#detail_hotel table>tbody>tr {
+	height: 198px;
+	vertical-align: top;
+}
+#detail_hotel .font_color {
+	color: #e62851;
+}
+#detail_hotel .font_color2 {
+	color: #a6c37f;
+}
+#detail_hotel .room_price {
+	text-align: right;
+	font-size: 34px;
+	color: #e62851;
+}
+#detail_hotel .include_tax {
+	font-size: 14px;
+	color: #888888;
+	text-align: right;
+	line-height: 22px;
+}
+#detail_hotel .lowest_price {
+	font-size: 14px;
+	background: #a6c37f;
+	color: #fff;
+	padding: 3px 5px;
+	border-radius: 5px;
+	text-align: right;
+	display: inline-block;
+	float: right;
+}
+#detail_hotel .room_last {
+	color: #e62851;
+	font-size: 14px;
+	text-align: right;
+}
+#detail_hotel .book_btn1 {
+	width: 190px;
+	height: 60px;
+	background: #e62851;
+	border-radius: 10px;
+	border: 3px solid #e62851;
+	text-align: center;
+	font-size: 24px;
+	margin-top: 10px;
+}
+#detail_hotel .book_btn1 a {
+	color: #fff;
+    line-height: 42px;
+	padding: 11px 62px 28px;
+	letter-spacing: 10px; 
+}
+#detail_hotel .book_btn2 {
+	width: 190px;
+	height: 20px;
+	background: #fff;
+	border-radius: 0 0 10px 10px;
+	border: 3px solid #e62851;
+	font-size: 14px;
+	margin-top: -26px;
+	text-align: center;
+	overflow: hidden;
+}
+#detail_hotel .book_btn2 a {
+	color: #e62851;
+	line-height: 24px;
+	letter-spacing: 5px; 
+}
+#detail_hotel .price_info {
+	position: relative;
+	width: 214px;
+	height: 200px;
+}
+#detail_hotel .aver_price1 {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+#detail_hotel .aver_price2 {
+	position: absolute;
+	bottom: 6px;
+	right: 10px;
+}
+#detail_hotel table>tbody>tr>td:last-of-type {
+	border-right: 8px solid #f0f8fc;
+}
+#detail_hotel table>tbody>tr>td {
+	border: 4px solid #f0f8fc;
+	border-top: 0;
+}
+#detail_hotel table>tbody>tr>td>.cell_inner {
+	padding: 10px 20px;
+	line-height: 24px;
+}
+#detail_hotel label[for="detail_executive"],
+#detail_hotel label[for="detail_suite"] {
+	color: #02b4cd;
+	text-decoration: underline;
+	cursor: pointer;
+}
+#detail_hotel label[for="detail_executive"] + div > div > ul,
+#detail_hotel label[for="detail_suite"] + div > div > ul {
+	overflow: hidden;
+}
+#detail_hotel label[for="detail_executive"] + div > div > ul > li,
+#detail_hotel label[for="detail_suite"] + div > div > ul > li {
+	margin-top: 20px;
+	width: 200px;
+	float: left;
+}
+#detail_hotel label[for="detail_executive"] + div > div > ul > li > ul > li,
+#detail_hotel label[for="detail_suite"] + div > div > ul > li > ul > li {
+	margin-left: 20px;
+}
+#detail_hotel label[for="detail_executive"] + div > div>img,
+#detail_hotel label[for="detail_suite"] + div > div>img {
+	margin: 0 150px 30px;
+}
+#detail_hotel label[for="executive_photo"],
+#detail_hotel label[for="suite_photo"] {
+	cursor: pointer;
+	color: #02b4cd;
+	text-decoration: underline;
+	font-size: 24px;
+}
+#detail_hotel input[id="detail_executive"]:checked + label + div,
+#detail_hotel input[id="detail_suite"]:checked + label + div,
+#detail_hotel input[id="executive_photo"]:checked + label + div,
+#detail_hotel input[id="suite_photo"]:checked + label + div {
+	display: block;
+}
+#detail_hotel input[id="detail_executive"] + label + div,
+#detail_hotel input[id="detail_suite"] + label + div,
+#detail_hotel input[id="executive_photo"] + label + div,
+#detail_hotel input[id="suite_photo"] + label + div {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+}
+#detail_hotel input[id="detail_executive"] + label + div > div,
+#detail_hotel input[id="detail_suite"] + label + div > div,
+#detail_hotel input[id="executive_photo"] + label + div > div,
+#detail_hotel input[id="suite_photo"] + label + div > div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	z-index: 2;
+	padding: 40px;
+	border-radius: 20px;
+}
+#detail_hotel input[id="detail_executive"] + label + div > div,
+#detail_hotel input[id="detail_suite"] + label + div > div {
+	width: 800px;
+	height: 670px;
+}
+#detail_hotel input[id="executive_photo"] + label + div > div,
+#detail_hotel input[id="suite_photo"] + label + div > div {
+	padding: 60px 60px 40px 60px;
+}
+#detail_hotel .ex_photo,
+#detail_hotel .su_photo {
+	display: none;
+}
+#detail_hotel .btn {
+	margin-top: 20px;
+	text-align: center;
+}
+#detail_hotel label[for*="room_ex"],
+#detail_hotel label[for*="room_su"] {
+	display: inline-block;
+	margin: 0 5px;
+}
+#detail_hotel input[id="room_ex1"]:checked ~ .ex_photo1,
+#detail_hotel input[id="room_ex2"]:checked ~ .ex_photo2,
+#detail_hotel input[id="room_ex3"]:checked ~ .ex_photo3,
+#detail_hotel input[id="room_ex4"]:checked ~ .ex_photo4,
+#detail_hotel input[id="room_ex5"]:checked ~ .ex_photo5,
+#detail_hotel input[id="room_ex6"]:checked ~ .ex_photo6,
+#detail_hotel input[id="room_su1"]:checked ~ .su_photo1,
+#detail_hotel input[id="room_su2"]:checked ~ .su_photo2,
+#detail_hotel input[id="room_su3"]:checked ~ .su_photo3,
+#detail_hotel input[id="room_su4"]:checked ~ .su_photo4,
+#detail_hotel input[id="room_su5"]:checked ~ .su_photo5,
+#detail_hotel input[id="room_su6"]:checked ~ .su_photo6 {
+	display: block;
+}
+#detail_hotel input[id="detail_executive"] + label + div > div > label,
+#detail_hotel input[id="detail_suite"] + label + div > div > label,
+#detail_hotel input[id="executive_photo"] + label + div > div > label,
+#detail_hotel input[id="suite_photo"] + label + div > div > label{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	top: 0%;
+	right: 0%;
+	background: url('images/close.png')no-repeat 0 0;
+	transform: translate(40%, -40%);
+	z-index: 4;
+}
+#detail_hotel input[id="detail_executive"] + label + div > label,
+#detail_hotel input[id="detail_suite"] + label + div > label,
+#detail_hotel input[id="executive_photo"] + label + div > label,
+#detail_hotel input[id="suite_photo"] + label + div > label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.4);
+	z-index: 1;
+}
+#detail_hotel #hotel_info {
+	width: 1500px;
+	background: #f0f8fc;
+	margin: 65px 0;
+	overflow: hidden;
+}
+#detail_hotel #hotel_review, 
+#detail_hotel #hotel_info>div {
+	padding: 20px;
+}
+#detail_hotel #hotel_info>div h3,
+#detail_hotel #hotel_review h3 {
+	color: #02b4cd;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+#detail_hotel #hotel_info>div>#hotel_introduction>div {
+	background: #fff;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+#detail_hotel #hotel_info>div>#hotel_introduction>div span{
+	margin: 0 20px 16px 0;
+	font-weight: bold;
+	display: inline-block;
+}
+#detail_hotel #hotel_info>div>#hotel_introduction>div p {
+	line-height: 24px;
+}
+#detail_hotel .near_info {
+	background: #fff;
+	width: 480px;
+	height: 136px;
+	float: left;
+	position: relative;
+}
+#detail_hotel .near_info>div {
+	padding: 10px 20px;
+	line-height: 30px;
+}
+#detail_hotel .near_info>div>img:first-of-type {
+	position: absolute;
+	top: 14px;
+	left: 18px;
+}
+#detail_hotel .near_info>div>img:nth-of-type(2) {
+	position: absolute;
+	top: 72px;
+	left: 18px;
+}
+#detail_hotel .info_center {
+	margin: 0 10px;
+}
+#detail_hotel .near_info>div>.info_left{
+	float: left;
+	position: absolute;
+	top: 10px;
+	left: 50px;
+}
+#detail_hotel .near_info>div>.info_right {
+	float: right;
+}
+#detail_hotel #hotel_sv {
+	clear: both;
+	padding-top: 20px;
+}
+#detail_hotel #hotel_sv .sv_list {
+	background: #fff;
+	padding: 20px;
+}
+#detail_hotel #hotel_sv .sv_list>span {
+	width: 350px;
+	display: inline-block;
+	line-height: 30px;
+}
+#detail_hotel #hotel_sv .sv_list>span img {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	margin-bottom: -3px;
+}
+#detail_hotel #hotel_review {
+	overflow: hidden;
+	margin-top: 65px;
+	background: #f0f8fc;
+}
+#detail_hotel #review_score_total {
+	width: 200px;
+	height: 200px;
+	margin-right: 10px;
+	background: #fff;
+	text-align: center;
+	float: left;
+}
+#detail_hotel #review_score_single {
+	background: #fff;
+    width: 1050px;
+    height: 160px;
+    float: left;
+    padding: 20px 100px;
+}
+#detail_hotel #review_score_single>div {
+	width: 450px;
+	height:50px;
+	float: left;
+	margin-bottom: 10px;
+}
+#detail_hotel #review_score_single>div>img {
+	margin-top: 5px;
+}
+#detail_hotel #review_score_single>div:nth-of-type(2n+1) {
+	margin-right: 150px;
+}
+#detail_hotel #review_score_single>div>p>span:nth-of-type(2n) {
+	float: right;
+}
+#detail_hotel #hotel_review .score_big {
+	background: #e62851;
+	border-radius: 20px 20px 0 20px;
+	display: inline-block;
+	color: #fff;
+	font-size: 50px;
+	padding: 15px 10px;
+	margin-bottom: 10px;
+	margin-top: 45px;
+}
+#detail_hotel #hotel_review .score_big+p {
+	font-size: 24px;
+	color: #e62851;
+}
+#detail_hotel #hotel_review .user_review {
+	width: 1420px;
+	background: #fff;
+	position: relative;
+	margin-top: 20px;
+	float: left;
+	padding: 20px;
+}
+#detail_hotel #hotel_review .user_score {
+	position: absolute;
+	top: 28px;
+	left: 20px;
+}
+#detail_hotel #hotel_review .user_score span {
+	padding: 10px;
+	border-radius: 10px 10px 0 10px;
+	background: #e62851;
+	color: #fff;
+}
+#detail_hotel #hotel_review .user_comment {
+	margin-left: 70px;
+	line-height: 25px;
+}
+#detail_hotel #hotel_review .user_comment img {
+	width: 16px;
+	margin-bottom: -2px;
+}
+#detail_hotel #hotel_review .user_comment>.comment_title {
+	color: #e62851;
+	font-size: 20px;
+}
+#detail_hotel #hotel_review .user_comment>.comment_date {
+	color: #60615a;
+	font-size: 12px;
+	margin-bottom: 15px;
+}
+#detail_hotel #hotel_review .user_info {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	font-size: 14px;
+	color: #999999;
+}
+#detail_hotel #hotel_review #review_bottom {
+	clear: both;
+}
+#detail_hotel #hotel_review #review_bottom label {
+	float: right;
+	margin-top: 20px;
+}
+

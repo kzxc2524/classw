@@ -1,0 +1,452 @@
+@charset "UTF-8";
+
+*{margin:0; padding:0;}
+ol,ul{list-style-type:none;}
+a{text-decoration:none;}
+
+
+#sub_contents{float:left;
+			  width:1140px;
+			 }
+#contents>p:first-of-type{
+	text-align: right;
+	height: 65px;
+	line-height: 65px;
+}
+#contents>p:first-of-type>a {
+	color: #02b4cd;
+}
+/*sub_side 시작 --------------------------------------------------------------------------------*/
+#sub_side{width:360px;		  
+		  float:left;
+		  }
+
+#sub_side>h2{font-size:22px;
+			 margin-bottom:22px;
+			 float:left;			 
+			 }
+
+#sub_side>ul>li{width:320px;
+			    height:80px;
+				border:1px solid #bae5f7;
+				background:#f3fafd;				
+				clear:both;
+				position:relative;
+				margin-bottom:20px;
+			   }
+#sub_side>ul>li>a>.thumbnail{float:left;
+						    width:80px;
+							height:80px;
+							margin-right:5px;
+							}
+#sub_side>ul>li:hover{border:1px solid #e62851;}
+#sub_side>ul>li>a{color:#000;}
+#sub_side>ul>li>a>h3{font-size:16px;
+				   font-weight:normal;
+				   margin-top:5px;				   
+				  }
+#sub_side>ul>li>a>p:first-of-type{color:#0000cc;
+								font-size:16px;
+								}
+
+#sub_side>ul>li>a>p:first-of-type>span{color:#000;
+									 font-size:14px;
+									}
+
+#sub_side>ul>li>a>p:nth-of-type(2){position:absolute;
+								  right:5px; bottom:5px;
+								  color:#e62851;
+								  font-weight:bold; font-size:18px;
+								}
+
+#sub_side_plus{display:none;}
+#sub_side>input[type="checkbox"]{display:none;}
+#sub_side>input[type="checkbox"]:checked ~ #sub_side_plus{display:block;}
+#sub_side>label{display:inline-block;
+				float:right;
+				width:16px; height:16px;
+				background:url(../images/more.png)no-repeat center top;
+				padding:1px;
+				margin:5px 40px 0 0;}
+#sub_side>input[type="checkbox"]:checked ~ label[for="plus_minus"]{background:url(../images/more.png)no-repeat center bottom;}
+
+/*sub_air의 sub_side 시작-----------------------------------------------------------------------------------*/
+
+#sub_air #sub_side>ul>li>a>p:first-of-type{font-size:10px;
+										  color:#000;
+										  font-weight:bold;
+										  margin:5px 0;
+ 										 }
+#sub_air #sub_side>ul>li>a>div{float:left;}
+#sub_air #sub_side>ul>li>a>img[alt="round"]{float:left; margin:7px 10px;
+											width:17px; height:9px;
+											}
+#sub_air #sub_side>ul>li>a>div>h3{font-size:12px;
+								  color:#02b4cd;
+								 }
+#sub_air #sub_side>ul>li>a>div>p{font-size:10px;}
+#sub_air #sub_side>ul>li>a>div>p:first-of-type{color:#828282;
+											   margin-bottom:2px;
+											  }
+#sub_air #sub_side>ul>li>a>p:nth-last-of-type(1){font-size:14px;
+										position:absolute;
+										right:5px; bottom:5px;
+										}
+#sub_air #sub_side>ul>li>a>p:nth-last-of-type(1)>span{font-size:8px;
+											
+											}
+
+
+/*sub_contents 시작 --------------------------------------------------------------------------------*/
+
+
+
+#sub_lists>ol{float:left;
+			  border:1px solid #000;
+			  width:1138px;
+			  margin:22px 0;
+			 }
+
+#sub_lists>ol>li{float:left;
+				 border-left:1px solid #000;
+				 text-align:center;
+				}
+
+
+
+
+#sub_lists>ol>li:first-child{border-left:0;}
+
+#sub_lists>ol>li>label{display:inline-block;
+					   padding:5px 0;
+					   font-size:18px;
+					   line-height:24px;
+					   width:100%;
+						}
+
+#sub_lists>input[type="radio"]{display:none;}
+#sub_lists>div>ul{clear:both;}
+
+#sub_hotel #sub_lists>ol>li{width:12.424%;}
+#sub_air #sub_lists>ol>li{width:14.2%;}
+
+/*sub_list tap 부분 끝-------------------------------------------------------------------------------------------*/
+
+#sub_lists>div>ul>li{position:relative;
+				 border:1px solid #bae5f7;
+				 background:#f3fafd;
+				 overflow:hidden;
+				 padding:10px;
+				 margin-bottom:20px;
+				}
+#sub_lists .thumbnail_list{float:left;
+								 margin-right:10px;
+								 width:180px; height:180px;
+								}
+#sub_lists>div>ul>li>h3{float:left;
+					margin-right:10px;
+					}
+
+#sub_lists>div>ul>li>div:first-of-type>ol>li{float:left;
+											 width:16px;
+											 height:16px;
+											 margin-right:10px;
+											 
+											}
+#sub_lists>div>ul>li>div:first-of-type>ol>li>a{display:inline-block;
+											   width:inherit;
+											   height:inherit;
+												}
+#sub_lists>div>ul>li>div:first-of-type>ol>li>a>img{display:inline-block;
+													width:inherit;
+													height:inherit;}
+
+
+#sub_lists>div>ul>li>div:first-of-type>ol>li>span{width: 100px;
+													position: absolute;
+													background: rgba(0,0,0,0.7);
+													color: #ffffff;
+													text-align: center;
+													padding: 5px;
+													border-radius: 10px;
+													z-index: 1;
+													font-size: 12px;
+													visibility:hidden;
+													}
+#sub_lists>div>ul>li>div:first-of-type>ol>li:hover span{visibility:visible;}
+
+#sub_lists>div>ul>li>div:first-of-type>ol>li:hover ~ span{display:block;}
+
+#sub_lists .list_point{position:absolute;
+					   right:10px; bottom:10px;
+				      }
+
+#sub_lists .list_point>p{text-align:center;
+					   height:36px;
+					   line-height:36px;
+					  }
+#sub_lists .list_point p:first-of-type{color:#e62851;
+									  font-size:31px;
+									  }
+
+#sub_lists>div>ul>li:hover{border:1px solid #e62851;}
+
+/*sub_list 공통 부분 끝-----------------------------------------------------------------------------------------------*/
+
+
+#sub_hotel #sub_lists>div>ul>li>p:first-of-type{font-size:14px;
+									 margin-top:10px;
+								     }
+#sub_hotel  #sub_lists>div>ul>li>p:first-of-type>span{border-left:1px solid #000;
+									  padding:0 6px;
+									  }
+#sub_hotel #sub_lists>div>ul>li>p:first-of-type>span:nth-of-type(2){border-bottom:1px dotted #828282;
+												       color:#828282;
+												  }
+#sub_hotel  #sub_lists>div>ul>li>p:nth-of-type(2){margin-top:15px;
+								 width:65px; height:30px;
+								 border:1px solid #a6c37f;
+								 border-radius:50px;
+								 -webkit-border-radius:50px;
+								 -ms-border-radius:50px;
+								 -moz-border-radius:50px;
+								 -o-border-radius:50px;
+								 text-align:center;
+								 line-height:32px;
+								 background:#a6c37f;
+								 float:left;
+								 color:#576f38;
+								  font-size:12px;
+								}
+#sub_hotel  #sub_lists>div>ul>li>p:nth-of-type(2)>span{font-size:20px;
+									   color:#fff;
+									  }
+#sub_hotel  #sub_lists>div>ul>li>span:first-of-type{display:inline-block;
+										margin:21px 0 0 10px;
+										font-size:20px; 
+										}
+#sub_hotel  #sub_lists>div>ul>li>span:nth-of-type(2){font-size:14px;
+										 color:#c0c0c0;
+										}
+
+
+#sub_hotel  #sub_lists>div>ul>li>div:first-of-type{margin-top:20px;}
+#sub_hotel  #sub_lists>div>ul>li>div:first-of-type>p{margin-bottom:10px;}
+
+
+#sub_hotel  #sub_lists>div>ul>li>div.list_point>p>a{color:#fff;
+						background:#e62851;
+						display:inline-block;
+						width:150px;
+					    height:36px;
+						font-size:20px;
+					   }
+
+
+#sub_hotel #sub_lists>div>ul>li>div:first-of-type>p{color:#576f38;}
+
+
+
+/*sub_list 호텔 부분 끝------------------------------------------------------------------*/
+#sub_air #sub_lists>div>ul>li>a{display:inline-block;
+							    width:100%;
+								height:100%;
+							    }
+#sub_air #sub_lists>div>ul>li>a>div{float:left;
+								  margin-top:40px;
+								  }
+#sub_air #sub_lists>div>ul>li>a>img[alt="round"]{float:left;
+											   display:inline-block;
+											   margin:55px 50px 0;
+											  }
+#sub_air #sub_lists>div>ul>li>a>div>h3{font-size:20px;
+									 color:#02b4cd;
+									}
+
+#sub_air #sub_lists>div>ul>li>a>p{color:#000;}
+#sub_air #sub_lists>div>ul>li>a>div:not(.list_point)>p:first-of-type{margin-top:5px;
+																	color:#828282;
+																	}
+#sub_air #sub_lists>div>ul>li>a>div:not(.list_point)>p:nth-of-type(2){margin-top:20px;
+																	  font-size:18px;
+																	  color:#000;
+																	  }
+
+
+#sub_air .list_point>p>span{font-size:16px;}
+
+
+
+
+
+.sub_list_all{display:none;}
+#sub_list_tap_korea:checked ~ div>.sub_list_korea{display:block;}
+#sub_list_tap_osaka:checked ~ div>.sub_list_osaka{display:block;}
+#sub_list_tap_fukuoka:checked ~ div>.sub_list_fukuoka{display:block;}
+#sub_list_tap_okinawa:checked ~ div>.sub_list_okinawa{display:block;}
+#sub_list_tap_shanghai:checked ~ div>.sub_list_shanghai{display:block;}
+#sub_list_tap_taipei:checked ~ div>.sub_list_taipei{display:block;}
+#sub_list_tap_hongkong:checked ~ div>.sub_list_hongkong{display:block;}
+#sub_list_tap_macau:checked ~ div>.sub_list_macau{display:block;}
+
+#sub_list_tap_seoul:checked ~ div>.sub_list_seoul{display:block;}
+#sub_list_tap_jeju:checked ~ div>.sub_list_jeju{display:block;}
+#sub_list_tap_gimhea:checked ~ div>.sub_list_gimhea{display:block;}
+#sub_list_tap_cheongju:checked ~ div>.sub_list_cheongju{display:block;}
+#sub_list_tap_deagu:checked ~ div>.sub_list_deagu{display:block;}
+#sub_list_tap_yangyang:checked ~ div>.sub_list_yangyang{display:block;}
+#sub_list_tap_muan:checked ~ div>.sub_list_muan{display:block;}
+
+
+
+input#sub_list_tap_korea:checked ~ ol>li>label[for="sub_list_tap_korea"]{background:#02b4cd;
+														 color:#fff;}
+
+input#sub_list_tap_osaka:checked ~ ol>li>label[for="sub_list_tap_osaka"]{background:#02b4cd;
+														 color:#fff;}
+input#sub_list_tap_fukuoka:checked ~ ol>li>label[for="sub_list_tap_fukuoka"]{background:#02b4cd;
+														 color:#fff;}
+input#sub_list_tap_okinawa:checked ~ ol>li>label[for="sub_list_tap_okinawa"]{background:#02b4cd;
+														 color:#fff;}
+input#sub_list_tap_shanghai:checked ~ ol>li>label[for="sub_list_tap_shanghai"]{background:#02b4cd;
+														 color:#fff;}
+input#sub_list_tap_taipei:checked ~ ol>li>label[for="sub_list_tap_taipei"]{background:#02b4cd;
+														 color:#fff;}
+input#sub_list_tap_hongkong:checked ~ ol>li>label[for="sub_list_tap_hongkong"]{background:#02b4cd;
+														 color:#fff;}
+input#sub_list_tap_macau:checked ~ ol>li>label[for="sub_list_tap_macau"]{background:#02b4cd;
+														 color:#fff;}
+
+input#sub_list_tap_seoul:checked ~ ol>li>label[for="sub_list_tap_seoul"]{background:#02b4cd;
+														 color:#fff;}
+input#sub_list_tap_jeju:checked ~ ol>li>label[for="sub_list_tap_jeju"]{background:#02b4cd;
+														 color:#fff;}
+input#sub_list_tap_gimhea:checked ~ ol>li>label[for="sub_list_tap_gimhea"]{background:#02b4cd;
+														 color:#fff;}
+input#sub_list_tap_cheongju:checked ~ ol>li>label[for="sub_list_tap_cheongju"]{background:#02b4cd;
+														 color:#fff;}
+input#sub_list_tap_deagu:checked ~ ol>li>label[for="sub_list_tap_deagu"]{background:#02b4cd;
+														 color:#fff;}
+input#sub_list_tap_yangyang:checked ~ ol>li>label[for="sub_list_tap_yangyang"]{background:#02b4cd;
+														 color:#fff;}
+input#sub_list_tap_muan:checked ~ ol>li>label[for="sub_list_tap_muan"]{background:#02b4cd;
+														 color:#fff;}
+
+
+
+
+
+
+
+#sub_lists>ol>li>label:hover{background:#02b4cd;
+							 color:#fff;
+							}
+#sub_lists>.plusplus{margin-bottom:65px;
+					 float:right;						
+					 
+					 
+					   }
+#sub_lists>.plusplus>a{display:inline-block;
+					   color:#fff;
+					   background:#02b4cd;
+					   padding:5px 10px;
+					   border-radius:25px;
+					   -webkit-border-radius:25px;
+					   -moz-border-radius:25px;
+					   -o-border-radius:25px;
+					   -ms-border-radius:25px;
+						}
+
+
+/*sub_contents>sub_lists 끝 sub_recommend 시작-----------------------------------------------------*/
+
+#sub_recommend{clear:both;}
+#sub_recommend>h2{margin-bottom:22px;}
+
+.recommend13{width:340px; height:405px;
+			float:left;
+			background:url(../image/trip/place/america/alaska2.jpg)no-repeat center center;
+			margin-right:10px;
+			}
+
+.sub_recommend>div:nth-of-type(2){float:right;}
+
+.recommend14{width:390px; height:195px;
+			float:left;
+			background:url(../image/trip/place/japan/sapporo/odori.jpg)no-repeat center center;
+			margin-bottom:10px;}
+.recommend15{width:390px; height:195px;
+			float:right;
+			background:url(../image/trip/place/europe/russia1.jpg)no-repeat center center;
+			margin-bottom:10px;
+			}
+.recommend16{width:500px; height:200px;
+			float:left;
+			background:url(../image/trip/place/oceania/nz.jpg)no-repeat center center;
+			}
+.recommend17{width:280px; height:200px;
+			float:right;
+			background:url(../image/trip/place/europe/swiss1.jpg)no-repeat center center;
+			}
+
+.recommend18{width:340px; height:405px;
+			float:left;
+			background:url(../image/trip/place/japan/sapporo/sap.jpg)no-repeat center center;
+			margin-right:10px;
+			}
+.recommend19{width:390px; height:195px;
+			float:left;
+			background:url(../image/trip/place/europe/bld.jpg)no-repeat center center;
+			margin-bottom:10px;}
+.recommend20{width:390px; height:195px;
+			float:right;
+			background:url(../image/trip/place/chinese/taipei/gwf.jpg)no-repeat center center;
+			margin-bottom:10px;
+			}
+.recommend21{width:500px; height:200px;
+			float:left;
+			background:url(../image/trip/place/oceania/guam.jpg)no-repeat center center;
+			}
+.recommend22{width:280px; height:200px;
+			float:right;
+			background:url(../image/trip/place/chinese/xiamen/grw.jpg)no-repeat center center;
+			}
+
+
+.recommend{position:relative;		   
+		  }
+
+.recommend>.backs{width:inherit;
+				 height:inherit;
+				 transition-property:background-color;
+				 transition-duration:0.5s;
+				 -webkit-transition-property:background-color;
+				 -webkit-transition-duration:0.5s;
+			     }
+.recommend>.backs>a>span{position:absolute;
+						left:0; top:35%;
+						text-align:center;
+						width:inherit;
+						height:inherit;
+						display:none;					 
+						}
+.recommend>.backs>a>span>span{font-size:18px;}
+
+
+.recommend>.backs>a{width:inherit;
+					height:inherit;				   
+					color:#fff;
+					font-weight:300;
+					line-height:30px;
+					display:inline-block;
+					}
+
+
+.recommend>.backs:hover{background:rgba(0,0,0,0.5);						
+						}
+.recommend>.backs:hover span{display:inline-block;}
+
+
+
+
+

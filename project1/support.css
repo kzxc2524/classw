@@ -1,0 +1,341 @@
+@charset "UTF-8";
+@import url('http://fonts.googleapis.com/earlyaccess/jejugothic.css');
+@import url('https://fonts.googleapis.com/css?family=Jua&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;	
+}
+a, a:link {
+	text-decoration: none;
+	color: #000;
+}
+ol, ul {
+	list-style: none;
+}
+body {
+	font-family: 'Jeju Gothic', 'Nanum Gothic', 'Nanum Gothic Coding', 'Noto Sans KR'; 
+}
+
+#support>#upper_contents {
+	width: 100%;
+	height: 564px;
+	background: url('images/support_bg.jpg')no-repeat 50% 0;
+}
+#support #upper_contents>#search_support>p {
+	text-align: center;
+	font-size: 36px;
+	color: #02b4cd;
+	font-family: 'jua';
+	padding-top: 112px;
+	margin-bottom: 10px;
+}
+#support #upper_contents>#search_support>form {
+	text-align: center;
+    padding-bottom: 40px;
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+}
+#support #upper_contents>#search_support>form>img {
+    position: absolute;
+    top: 9px;
+    left: 20px;
+    width: 40px;
+}
+#support #upper_contents>#search_support>form>input[type="search"] {
+	width: 675px;
+	height: 60px;
+	margin-right: 20px;
+	font-size: 20px;
+	font-family: 'Jeju Gothic';
+	padding-left: 70px;
+	outline: none;
+	border-radius: 5px;
+	border: 1px solid #60615a;
+}
+#support #upper_contents>#search_support>form>input[type="submit"] {
+	width: 100px;
+	height: 60px;
+	font-size: 20px;
+	font-family: 'Jeju Gothic';
+	background: #02b4cd;
+	border-radius: 5px;
+	color: #fff;
+	border: 0;
+}
+#support #connect_support {
+	width: 650px;
+	height: 230px;
+	margin: 12px auto;
+	background: rgba(0,0,0,.5);
+	border-radius: 20px;
+	padding: 20px 30px;
+	overflow: hidden;
+}
+#support h2{
+	font-size: 36px;
+	margin-bottom: 10px;
+	font-weight: normal;
+}
+#support h2+p {
+	margin-bottom: 8px;
+}
+#support #connect_support>h2 {
+	color: #fff;
+	line-height: 40px;
+	font-weight: normal;
+}
+#support #connect_support p {
+	color: #fff;
+}
+#support #connect_support>.callnumber_korea,
+#support #connect_support>.callnumber_abroad {
+	width: 325px;
+	float: left;
+}
+#support #connect_support>.country {
+	font-size: 20px;
+}
+#support #connect_support>p>img {
+	width: 32px;
+	margin-bottom: -4px;
+}
+#support #connect_support>.callnumber {
+	font-size: 14px;
+	line-height: 24px;
+}
+#support #connect_support>.callnumber>p:first-of-type:before {
+	content: '';
+    width: 3px;
+    height: 14px;
+    background: #02b4cd;
+    display: inline-block;
+    margin-right: 5px;
+	margin-bottom: -3px;
+}
+#support #connect_support>.callnumber>.call_number {
+	font-size: 36px;
+	line-height: 50px;
+}
+#support #connect_support>.number_more {
+	font-size: 18px;
+	text-align: right;
+}
+#support #connect_support>.number_more>a {
+	color: #fff;
+}
+#support #connect_support>.number_more>a>img {
+	margin-bottom: -2px;
+	margin-left: 5px;
+}
+#support #contents>p {
+	text-align: right;
+	height: 65px;
+	line-height: 65px;
+}
+#support #contents>p>a {
+	color: #02b4cd;
+}
+#support #side_qa>form>ul {
+	margin-right: 65px;
+	float: left;
+}
+#support #side_qa img {
+	width: 30px;
+	height: 30px;
+	margin-bottom: -6px;
+	margin-right: 12px;
+}
+#support #side_qa>form>ul>li>label,
+#support #side_qa>form>ul>li>a {
+	display: inline-block;
+	width: 400px;
+	height: 90px;
+	color: #fff;
+	background: #e62851;
+	margin-bottom: 10px;
+	font-size: 30px;
+	text-align: center;
+	line-height: 93px;
+	border-radius: 5px;
+}
+#support #contents_qa {
+	min-height: 552px;
+}
+#support #contents_qa,
+#support #contents_one {
+	width: 1035px;
+	float: left;
+}
+#support #contents>input,
+#support #contents_qa input,
+#support .qna_list,
+#support .qna_list_more,
+#support #contents_qa,
+#support #contents_one,
+#support .qna_list>input:checked ~ label {
+	display: none;
+}
+#support #contents_qa>ul {
+	overflow: hidden;
+	border: 1px solid #eeeeee;
+	margin: 20px 0;
+}
+#support #contents_qa>ul>li {
+	float: left;
+}
+#support #contents_qa>ul>li>label {
+	display: block;
+	padding: 0 39px;
+	height: 36px;
+	border-right: 1px solid #eeeeee;
+	line-height: 36px;
+	text-align: center;
+}
+#support #contents_qa>ul>li:last-child>label {
+	border: 0;
+}
+#support #contents_qa input[id="faq_tab_hotel"]:checked ~ ul>li>label[for="faq_tab_hotel"],
+#support #contents_qa input[id="faq_tab_air"]:checked ~ ul>li>label[for="faq_tab_air"],
+#support #contents_qa input[id="faq_tab_rentacar"]:checked ~ ul>li>label[for="faq_tab_rentacar"],
+#support #contents_qa input[id="faq_tab_train"]:checked ~ ul>li>label[for="faq_tab_train"],
+#support #contents_qa input[id="faq_tab_book"]:checked ~ ul>li>label[for="faq_tab_book"],
+#support #contents_qa input[id="faq_tab_cancel"]:checked ~ ul>li>label[for="faq_tab_cancel"],
+#support #contents_qa input[id="faq_tab_etc"]:checked ~ ul>li>label[for="faq_tab_etc"],
+#support #contents_qa input[id="faq_tab_account"]:checked ~ ul>li>label[for="faq_tab_account"] {
+	color: #fff;
+	background: #e62851;
+}
+#support #contents>input[id="help_menu1"]:checked ~ #contents_qa,
+#support #contents>input[id="help_menu2"]:checked ~ #contents_one,
+#support #contents_qa>input[id="faq_tab_hotel"]:checked ~ .qna_hotel,
+#support #contents_qa input[id="faq_tab_air"]:checked ~ .qna_air,
+#support #contents_qa input[id="faq_tab_hotel"]:checked ~ .qna_hotel,
+#support #contents_qa input[id="faq_tab_rentacar"]:checked ~ .qna_rentacar,
+#support #contents_qa input[id="faq_tab_train"]:checked ~ .qna_train,
+#support #contents_qa input[id="faq_tab_book"]:checked ~ .qna_book,
+#support #contents_qa input[id="faq_tab_cancel"]:checked ~ .qna_cancel,
+#support #contents_qa input[id="faq_tab_etc"]:checked ~ .qna_etc,
+#support #contents_qa input[id="faq_tab_account"]:checked ~ .qna_account,
+#support .qna_list>input:checked ~ div,
+#support .qna_list>ul>li>input:checked ~ div,
+#support .qna_list_more>ul>li>input:checked ~ div {
+	display: block;
+}
+#support .qna_list>ul>li>input:checked ~ label,
+#support .qna_list_more>ul>li>input:checked ~ label{
+	border: 1px solid #e62851;
+	border-radius: 20px 20px 0 0;
+	border-bottom: 0;
+	color: #e62851;
+}
+#support .qna_list>ul>li>input:checked ~ label>span,
+#support .qna_list_more>ul>li>input:checked ~ label>span{
+	background-position: 0 -22px;
+}
+#support .qna_list>ul>li,
+#support .qna_list_more>ul>li {
+	margin-bottom: 20px;
+}
+#support .qna_list_more>ul>li:last-child {
+	margin-bottom: 0;
+}
+#support .qna_list_more + label {
+	margin-top: 20px;
+}
+#support .qna_list>ul>li>label,
+#support .qna_list_more>ul>li>label {
+	display: block;
+    border: 1px solid #d1d1d1;
+    border-radius: 20px;
+    height: 20px;
+    padding: 20px;
+	position: relative;
+	font-size: 18px;
+}
+#support .qna_list>ul>li>label:hover,
+#support .qna_list_more>ul>li>label:hover {
+	border: 1px solid #e62851;
+	cursor: pointer;
+}
+#support .qna_list_more+label {
+	display: block;
+	text-align: right;
+}
+#support .qna_list_more+label>img {
+	margin-left: 5px;
+    margin-bottom: -3px;
+}
+#support .qna_list>ul>li>input+label>span,
+#support .qna_list_more>ul>li>input+label>span {
+	position: absolute;
+	top: 44%;
+	right: 20px;
+	width: 16px;
+	height: 16px;
+	background: url('images/more4.png')no-repeat 0 0;
+	display: inline-block;
+}
+#support .qna_list>ul>li>input+label+div,
+#support .qna_list_more>ul>li>input+label+div {
+	display: none;
+	overflow: hidden;
+	border: 1px solid #e62851;
+	border-top: 0;
+	border-radius: 0 0 20px 20px;
+	margin-top: -40px;
+	padding-top: 40px;
+}
+#support .qna_list>ul>li>input+label+div>p,
+#support .qna_list_more>ul>li>input+label+div>p {
+	display: inline-block;
+	padding: 20px 40px;
+	line-height: 26px;
+}
+#support #contents_one input[type="text"] {
+	width: 1011px;
+	height: 40px;
+	margin-bottom: 20px;
+	padding: 5px;
+	text-indent: 20px;
+	font-size: 20px;
+	font-family: 'Jeju Gothic';
+	outline: none;
+}
+#support #contents_one textarea {
+	width: 973px;
+	height: 300px;
+	padding: 30px;
+	font-family: 'Jeju Gothic';
+	outline: none;
+	margin-bottom: 40px;
+}
+#support #contents_one #btn_inquiry {
+	overflow: hidden;
+	width: 520px;
+	margin: 0 auto;
+}
+#support #contents_one input[type="reset"] {
+	float: left;
+	margin-right: 20px;
+	width: 250px;
+	height: 50px;
+	color: #fff;
+	border: 0;
+	background: #60615a;
+	font-family: "Jeju Gothic";
+	font-size: 20px;
+	border-radius: 5px;
+}
+#support #contents_one input[type="submit"] {
+	float: left;
+	width: 250px;
+	height: 50px;
+	color: #fff;
+	border: 0;
+	background: #02b4cd;
+	font-family: "Jeju Gothic";
+	font-size: 20px;
+	border-radius: 5px;
+}

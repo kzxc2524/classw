@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+
+#search_sub_hotel{min-width:1500px;
+				  max-width:100%;
+				  height:540px;
+				  margin:0 auto;
+				  background:url(../image/trip/city/korea/gj/anap.jpg)no-repeat center center;				  
+				  overflow:hidden;
+				 }
+
+#search_main_tap{width:1500px;
+				 height:56px;
+				 vertical-align:bottom;
+				 margin:108px auto 0;
+				}
+#search_main_tap>label{display:inline-block;					   
+					   font-size:18px;
+					   padding:16px 44px;
+					   margin-right:5px;
+					   float:left;
+					   border-radius:5px 5px 0 0;
+					   -webkit-border-radius:5px 5px 0 0;
+					   -moz-border-radius:5px 5px 0 0;
+					   -ms-border-radius:5px 5px 0 0;
+					   -o-border-radius:5px 5px 0 0;
+					  }
+
+#search_main_tap>label{background:rgba(0,0,0,0.3);
+					   color:#fff;					   
+					  }
+
+#search_main_tap>label>span{display:inline-block;
+							width:18px;
+							height:18px;
+							margin-right:10px;}
+#search_main_tap>label[for="search_hotel"]>span{background:url(../images/search_tap_icon.png)no-repeat 0px center;}
+#search_main_tap>label[for="search_air"]>span{;}
+#search_main_tap>label[for="search_airtel"]>span{background:url(../images/search_tap_icon.png)no-repeat -47px center;}
+#search_main_tap>label[for="search_rent"]>span{;}
+#search_main_tap>label[for="search_train"]>span{;}
+
+
+#search_sub_hotel>input{display:none;}
+
+.search_main_all{width:1500px;
+				 overflow:hidden;
+				 margin:-1px auto;
+				 margin-bottom:108px;
+				 background:rgba(0,0,0,0.5);				 
+				}
+.search_main_all>ul{margin:26px 16px 24px;
+					height:88px;
+					background:#fff;
+					}
+.search_main_all>ul>li{position:relative;
+					height:88px;					
+					float:left;
+					border-right:1px solid #000;
+					}
+.search_main_all>ul>li:last-child{border-right:0;}
+
+.search_main_all>ul>li>label{position:absolute;
+						  left:10px; top:10px;
+						 }
+.search_main_all>ul>li>img{position:absolute;
+						  left:-34px; top:35px;
+						 }
+
+.search_main_all>ul>li>input,.search_main_all>ul>li>select
+														{display:inline-block;
+														 margin-left:10px;														 													 
+														 border:0;														 
+														 font:normal 16px "jeju gothic";
+														 outline:0;														
+														}
+
+
+.search_main_hotel>ul>li:first-child{width:50%;}
+
+.search_main_all>ul>li:nth-last-child(-n+4){width:12.3%;}
+
+.search_main_all>ul>li input[type="date"]{width:82%;											   
+										  margin-top:37px;
+										  padding:10px;
+										 }
+
+.search_main_all>ul>li>input[name="adult"]{width:30%;
+										   padding:10px 5px;
+										   margin-top:40px;
+										  }
+.search_main_all>ul>li>input[name="kid"]{width:40%;
+										 padding:10px 5px;
+										 margin-top:40px;
+										 }
+.search_main_all>ul>li>input[name="room"]{width:50%;
+										  padding:10px 5px;
+										  margin-top:40px;
+										 }
+.search_main_all>ol{margin-left:16px;
+					float:left;
+					 }
+.search_main_all>ol>li{float:left;}
+
+.search_main_hotel>ol>li:last-child{clear:both;
+								  margin-top:24px;
+								 }
+.search_main_airtel>ol>li:nth-last-child(3){clear:both;}
+.search_main_airtel>ol>li:nth-last-child(-n+3){float:left;
+										    margin-top:24px;
+								           }
+								            
+
+.search_main_all>ol>li>label{margin-right:20px;
+							 color:#fff;
+							 vertical-align:top;
+							}
+
+.search_main_all>ol>li>input{margin-right:5px;}
+.search_main_all>div{clear:both;
+					 float:right;
+					 margin:0 16px 17px 0;
+					 }
+
+.search_main_all>div>input[type="submit"]{width:360px;
+											 height:61px;
+											 background:#e62851;							  
+											 text-align:center;							   
+											 border-radius:10px;
+											 -webkit-border-radius:10px;
+											 -moz-border-radius:10px;
+											 -ms-border-radius:10px;
+											 -o-border-radius:10px;
+											 border:0;
+											 font:normal 30px/61px "jeju gothic";
+											 color:#fff;
+											 
+											}
+
+.search_main_all>ul>li>input.write{width:95%;
+								   padding:10px;
+								   height:60px;
+								   margin-top:28px;
+								  }
+
+.search_main_airtel>ul>li:first-child,.search_main_airtel>ul>li:nth-child(2){width:25%;}
+
+.search_main_airtel>ul>li:first-child{border-right:0;}
+
+
+.search_main_all{display:none;}
+
+input#search_hotel:checked~.search_main_hotel{display:block;}
+input#search_air:checked~.search_main_air{display:block;}
+input#search_airtel:checked~.search_main_airtel{display:block;}
+input#search_rent:checked~.search_main_rent{display:block;}
+input#search_train:checked~.search_main_train{display:block;}
+
+input#search_hotel:checked ~ #search_main_tap>label[for="search_hotel"]{background:rgba(0,0,0,0.5);
+																	  color:#fff;
+																	 }
+input#search_air:checked ~ #search_main_tap>label[for="search_air"]{background:rgba(0,0,0,0.5);
+																	  color:#fff;
+																	 }
+input#search_airtel:checked ~ #search_main_tap>label[for="search_airtel"]{background:rgba(0,0,0,0.5);
+																	  color:#fff;
+																	  }
+input#search_rent:checked ~ #search_main_tap>label[for="search_rent"]{background:rgba(0,0,0,0.5);
+																	  color:#fff;
+																	 }
+input#search_train:checked ~ #search_main_tap>label[for="search_train"]{background:rgba(0,0,0,0.5);
+																	  color:#fff;
+																	 }

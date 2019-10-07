@@ -1,0 +1,2512 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <title> main </title>
+  <meta charset="UTF-8">
+  <script src="js/jquery-2.0.1.min.js"></script>
+  
+  
+  <link rel="stylesheet" type="text/css" href="css/header_n_footer.css" media="all">
+  <link rel="stylesheet" type="text/css" href="css/search.css" media="all">
+  <link rel="stylesheet" type="text/css" href="css/main.css" media="all">
+ <link rel="stylesheet" type="text/css" href="css/join_login.css" media="all">
+
+<script>
+       $(document).ready(function () {
+            var length = $("#slide_view li").length
+            var width = 1600
+            var height = 540
+
+            $("#slide_view").css({ width: width, height: height, overflow: "hidden" })
+            $("#slide_view ul").css({ width: width * length })
+            $("#slide_view li").css({ width: width, height: height, float: "left" })
+            
+            var moveTo = function (index) {
+                
+                index = index || 0
+                index = index % length
+                
+                $("#slide_view ul").animate({
+                    marginLeft: -width * index
+                })
+           }
+
+            for (var i = 0; i < length; i++) {
+                (function (i) {
+                   })(i) }
+
+            var currentIndex = 0
+            setInterval(function () {
+                currentIndex += 1
+                moveTo(currentIndex)
+            }, 1000 * 6)
+            moveTo(0)
+        })
+    </script>
+
+
+
+ </head>
+
+ <body id="main">
+ <input type="checkbox" id="login_pop" name="pop_up1">
+ <input type="checkbox" id="join_pop" name="pop_up2">
+ <div id="login">
+	<label for="login_pop"></label>
+	<div class="login_wrap join_login">
+		<label for="login_pop"><img src="images/close.png" alt="close" title="닫기"></label>
+		<form method="post">
+			<h2>로그인</h2>
+			<div>
+				<label for="user_id"><img src="images/login_icon.svg" alt="login_icon"><input type="text" id="user_id" placeholder="todaysaway@naver.com" required></label>
+				
+			</div>
+			<div>
+				<label for="user_password"><img src="images/password_icon.svg" alt="password_icon"><input type="password" id="user_password" placeholder="8~12자리의 영문 및 숫자" min="8" maxlength="12" required></label>				
+			</div>			
+			<div>
+				<label for="save_email"><input type="checkbox" id="save_email"> 로그인 정보 저장</label>
+				<a href="#">비밀번호 찾기</a>
+			</div>
+			<div>
+				<input type="submit" id="login_submit" value="로그인">
+			</div>
+		</form>
+
+		<div class="sns">
+			<h2>SNS로 로그인하기</h2>
+			<ul>
+				<li>
+					<a href="http://www.naver.com">
+						<img src="images/naver.png" alt="네이버로고">
+						<span>Naver</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.kakaotalk.com">
+						<img src="images/kakao.png" alt="카카오톡로고">
+						<span>Kakao</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.facebook.com">
+						<img src="images/facebook.png" alt="페이스북로고">
+						<span>Facebook</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.google.com">
+						<img src="images/google.png" alt="구글로고">
+						<span>Google</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://line.me/ko/">
+						<img src="images/line.png" alt="라인로고">
+						<span>Line</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.twitter.com">
+						<img src="images/twitter.png" alt="트위터로고">
+						<span>Twitter</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.wechat.com">
+						<img src="images/wechat.png" alt="위챗로고">
+						<span>Wechat</span>
+					</a>
+				</li>
+			</ul>
+		</div><!--sns end-->
+	</div><!--login_wrap end-->
+</div>
+
+  <div id="join">
+	 <label for="join_pop"></label>
+ 	<div class="join_wrap join_login">
+		<label for="join_pop"><img src="images/close.png" alt="close" title="닫기"></label>
+		<form method="post">		
+			<h2>회원가입</h2>
+			<div id="join_left">
+				<div>
+					<label for="user_name">이름</label>
+					<input type="text" id="user_name" placeholder="이름을 입력해주세요." required>
+				</div>
+				<div>
+					<label for="user_pw">비밀번호</label>
+					<input type="text" id="user_pw" placeholder="8~12자리의 영문 및 숫자" required>
+				</div>
+			</div><!--join_left end-->
+			<div id="join_right">
+				<div>
+					<label for="user_email">이메일</label>
+					<input type="email" id="user_email" placeholder="ID@example.com" required>
+				</div>
+				<div>
+					<label for="user_pw_confirm">비밀번호 확인</label>
+					<input type="password" id="user_pw_confirm" placeholder="비밀번호를 다시 입력해주세요." required>
+				</div>
+			</div><!--join_right end-->
+			<div id="join_place">
+				<label>관심여행지</label>
+				<ul>
+					<li>
+						<input type="search" name="interest_place" placeholder="관심여행지1" autocomplete>
+						<input type="image" src="images/btn_search.png" alt="검색하기버튼">
+					</li>
+					<li>
+						<input type="search" placeholder="관심여행지2" autocomplete>
+						<input type="image" src="images/btn_search.png" alt="검색하기버튼">
+					</li>
+					<li>
+						<input type="search" placeholder="관심여행지3" autocomplete>
+						<input type="image" src="images/btn_search.png" alt="검색하기버튼">
+					</li>
+				</ul>
+			</div><!--join_place end-->
+			<div id="join_agree">
+				<div id="agree_all_terms">
+					<input type="checkbox" name="agree_all" id="agree_all">
+					<label for="agree_all">아래 약관에 모두 동의합니다.</label>
+				</div>
+				<div id="agree_left">
+					<ul>
+						<li>
+							<input type="checkbox" name="agree1" id="agree1" required>
+							<label for="agree1"><a href="#">회원가입 및 운영약관 (필수)</a></label>
+						</li>
+						<li>
+							<input type="checkbox" name="agree2" id="agree2" required>
+							<label for="agree2"><a href="#">위치정보 이용약관 (필수)</a></label>
+						</li>
+						<li>	
+							<input type="checkbox" name="agree3" id="agree3" required>
+							<label for="agree3"><a href="#">개인정보 수집 및 이용 (필수)</a></label>
+						</li>
+					</ul>
+				</div><!--agree_left end-->
+				<div id="agree_right">
+							<ul>
+						<li>
+							<input type="checkbox" name="agree4" id="agree4">
+							<label for="agree4">추천 상품, 이벤트 및 마케팅 정보 수신 동의 (선택)</label>
+							<ul>
+								<li>
+									<input type="checkbox" name="agree5" id="agree5">
+									<label for="agree5">이메일</label>
+								</li>
+								<li>
+									<input type="checkbox" name="agree6" id="agree6">
+									<label for="agree6">SMS</label>
+								</li>
+								<li>
+									<input type="checkbox" name="agree7" id="agree7">
+									<label for="agree7">푸시</label>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div><!--agree_right end-->
+			</div><!--join_agree end-->
+			<div id="join_btn">
+				<input type="reset" value="다시 쓰기">
+				<input type="submit" value="회원가입">
+			</div><!--join_btn end-->
+		</form>
+		<div class="sns">
+			<h2>SNS로 로그인하기</h2>
+			<ul>
+				<li>
+					<a href="http://www.naver.com">
+						<img src="images/naver.png" alt="네이버로고">
+						<span>Naver</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.kakaotalk.com">
+						<img src="images/kakao.png" alt="카카오톡로고">
+						<span>Kakao</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.facebook.com">
+						<img src="images/facebook.png" alt="페이스북로고">
+						<span>Facebook</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.google.com">
+						<img src="images/google.png" alt="구글로고">
+						<span>Google</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://line.me/ko/">
+						<img src="images/line.png" alt="라인로고">
+						<span>Line</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.twitter.com">
+						<img src="images/twitter.png" alt="트위터로고">
+						<span>Twitter</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.wechat.com">
+						<img src="images/wechat.png" alt="위챗로고">
+						<span>Wechat</span>
+					</a>
+				</li>
+			</ul>
+		</div><!--sns end-->
+	</div><!--join_wrap end-->
+ </div>
+
+
+  <div id="wrap">
+	<div id="header">
+		<div id="header_inner">
+			<h1><a href="main.html"><img src="images/logo_h55.png" alt="오늘의 여행 로고"></a></h1>
+			<div id="nav_top">
+				<ul>
+					<li><a href="#">검색기록</a></li>
+					<li><a href="support.html">고객센터</a></li>
+					<li><a href="reservation.html">예약확인</a></li>
+					<li><a href="#"><label for="login_pop">로그인</label></a>
+						<ol>
+							<li><label for="login_pop">로그인</label></li>
+							<li><label for="join_pop">회원가입</label></li>
+						</ol>
+					</li>
+					<li><a href="#"><img src="images/flag/svg/south_korea.svg" alt="태극기">KR</a>
+						<div class="langs_select top_langs_select">
+							<h2>언어선택</h2>
+							<ol>
+								<li><a href="#"><img src="images/flag/svg/south_korea.svg" alt="태극기">한국어</a></li>
+								<li><a href="#"><img src="images/flag/svg/germany.svg" alt="독일">Deutsch</a></li>
+								<li><a href="#"><img src="images/flag/svg/denmark.svg" alt="덴마크">Dansk</a></li>
+								<li><a href="#"><img src="images/flag/svg/poland.svg" alt="폴란드">Polski</a></li>
+								<li><a href="#"><img src="images/flag/svg/italy.svg" alt="이탈리아">Italiano</a></li>
+								<li><a href="#"><img src="images/flag/svg/norway.svg" alt="노르웨이">Norsk</a></li>
+								<li><a href="#"><img src="images/flag/svg/sweden.svg" alt="스웨덴">Svenska</a></li>
+								<li><a href="#"><img src="images/flag/svg/netherlands.svg" alt="네덜란드">네덜란드어(Dutch)</a></li>
+							</ol>
+							<ol>
+								<li><a href="#"><img src="images/flag/svg/united-states.svg" alt="USA">English(USA)</a></li>
+								<li><a href="#"><img src="images/flag/svg/uk.svg" alt="UK">English(UK)</a></li>
+								<li><a href="#"><img src="images/flag/svg/hong_kong.svg" alt="홍콩">English(Hong Kong)</a></li>
+								<li><a href="#"><img src="images/flag/svg/singapore.svg" alt="싱가폴">English(Singapore)</a></li>
+								<li><a href="#"><img src="images/flag/svg/australia.svg" alt="호주">English(Australia)</a></li>
+								<li><a href="#"><img src="images/flag/svg/malaysia.svg" alt="말레이시아">English(Malaysia)</a></li>
+								<li><a href="#"><img src="images/flag/svg/israel.svg" alt="이스라엘">English(Israel)</a></li>
+								<li><a href="#"><img src="images/flag/svg/uae.svg" alt="아랍에미레이트">English(UAE)</a></li>
+							</ol>
+							<ol>
+								<li><a href="#"><img src="images/flag/svg/china.svg" alt="중국">관화(<span>官話</span>)</a></li>
+								<li><a href="#"><img src="images/flag/svg/china.svg" alt="중국">우어(<span>吳語</span>)</a></li>
+								<li><a href="#"><img src="images/flag/svg/india.svg" alt="인도">힌디어(हिन्दी)</a></li>
+								<li><a href="#"><img src="images/flag/svg/india.svg" alt="인도">우르두어(اُردوُ)</a></li>
+								<li><a href="#"><img src="images/flag/svg/the_arab_league.svg" alt="아압연맹">아랍어(العربية)</a></li>
+								<li><a href="#"><img src="images/flag/svg/turkey.svg" alt="터키">터키어(Türkçe)</a></li>
+								<li><a href="#"><img src="images/flag/svg/vietnam.svg" alt="베트남">베트남어(Tiếng Việt)</a></li>
+								<li><a href="#"><img src="images/flag/svg/greece.svg" alt="그리스">그리스어(ελληνικά)</a></li>
+							</ol>
+							<ol>
+								<li><a href="#"><img src="images/flag/svg/japan.svg" alt="일본">일본어</a></li>
+								<li><a href="#"><img src="images/flag/svg/russia.svg" alt="러시아">러시아어</a></li>
+								<li><a href="#"><img src="images/flag/svg/mongolia.svg" alt="">몽골어(Монгол хэл)</a></li>
+								<li><a href="#"><img src="images/flag/svg/france.svg" alt="프랑스">프랑스어(اُردوُ)</a></li>
+								<li><a href="#"><img src="images/flag/svg/thailand.svg" alt="태국">태국어(ภาษาไทย)</a></li>
+								<li><a href="#"><img src="images/flag/svg/spain.svg" alt="스페인">스페인어(Español)</a></li>
+								<li><a href="#"><img src="images/flag/svg/portugal.svg" alt="포르투갈">포르투갈어(Português)</a></li>
+								<li><a href="#"><img src="images/flag/svg/brazil.svg" alt="브라질">브라질어(Português)</a></li>		
+							</ol>
+						</div>
+					</li>
+					<li><a href="#">KRW</a>					
+						<div class="currency_select top_currency_select">
+							<h2>통화 선택</h2>
+							<ol>
+								<li><a href="#"><span>KRW</span> 대한민국 원 </a></li>
+								<li><a href="#"><span>JPY</span> 일본 엔</a></li>
+								<li><a href="#"><span>CNY</span> 중국 위안</a></li>
+								<li><a href="#"><span>HKD</span> 홍콩 달러</a></li>
+								<li><a href="#"><span>TWD</span> 대만 달러</a></li>
+								<li><a href="#"><span>AUD</span> 호주 달러</a></li>
+								<li><a href="#"><span>NZD</span> 뉴질랜드 달러</a></li>
+								<li><a href="#"><span>RUB</span> 러시아 루블</a></li>
+							</ol>
+							<ol>
+								<li><a href="#"><span>USD</span> 미국 달러</a></li>
+								<li><a href="#"><span>CAD</span> 캐나다 달러</a></li>
+								<li><a href="#"><span>EUR</span> 유로</a></li>
+								<li><a href="#"><span>GBP</span> 영국 파운드</a></li>
+								<li><a href="#"><span>CHF</span> 스위스 프랑</a></li>
+								<li><a href="#"><span>CZK</span> 체코 코루나</a></li>
+								<li><a href="#"><span>SEK</span> 스웨덴 크로나</a></li>
+								<li><a href="#"><span>PLN</span> 폴란드 즐로티</a></li>
+							</ol>
+							<ol>
+								<li><a href="#"><span>SGD</span> 싱가폴 달러</a></li>
+								<li><a href="#"><span>TRY</span> 터키 리라</a></li>
+								<li><a href="#"><span>VND</span> 베트남 동</a></li>
+								<li><a href="#"><span>PHP</span> 필리핀 페소</a></li>
+								<li><a href="#"><span>MYR</span> 말레이시아 링깃</a></li>
+								<li><a href="#"><span>THB</span> 태국 바트</a></li>
+								<li><a href="#"><span>IDR</span> 인도네시아 루피아</a></li>
+								<li><a href="#"><span>INR</span> 인도 루피</a></li>
+							</ol>
+							<ol>
+								<li><a href="#"><span>ILS</span> 이스라엘 신셰켈</a></li>
+								<li><a href="#"><span>MXN</span> 멕시코 페소</a></li>
+								<li><a href="#"><span>BRL</span> 브라질 레알</a></li>
+							</ol>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="nav_main">
+			<ul>
+					<li><a href="sub_hotel.html">호텔</a></li>
+					<li><a href="sub_air.html">항공권</a></li>
+					<li><a href="#">에어텔</a></li>
+					<li><a href="#">렌터카</a></li>
+					<li><a href="#">기차표</a></li>
+					<li><a href="#">더보기▼</a>
+						<ol>
+							<li><a href="#">여행준비</a></li>
+							<li><a href="#">공항픽업</a></li>
+							<li><a href="#">액티비티</a></li>
+						</ol>
+					</li>
+				</ul>
+		</div>
+	</div><!--header-->
+
+	<div id="search" class="search_sub search_sub_main">
+		<div id="slide_view">
+			<ul>
+				<li>
+					<a href="#">
+						<img src="images/main_slide/main_slide_summer.png" alt="main_slide" title="여름 맞이 이벤트">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/main_slide/main_slide_korean.png" alt="main_slide" title="한인 민박 검색 지원">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/main_slide/main_slide_coupon.png" alt="main_slide" title="쿠폰 이벤트">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/main_slide/main_slide_sns.png" alt="main_slide" title="SNS 알람 서비스">
+					</a>
+				</li>
+				<li>
+					<a href="support.html">
+						<img src="images/main_slide/main_slide_surpport.png" alt="main_slide" title="24시간 고객지원">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/main_slide/main_slide_card.png" alt="main_slide" title="제휴 카드 할인">
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div>
+			<input type="radio" id="search_hotel" name="search" checked="checked">
+			<input type="radio" id="search_air" name="search">
+			<input type="radio" id="search_airtel" name="search">
+			<input type="radio" id="search_rent" name="search">
+			<input type="radio" id="search_train" name="search">
+
+			<input type="radio" id="goback_tap" name="airinner" checked="checked">
+			<input type="radio" id="goaway_tap" name="airinner">
+			<input type="radio" id="gongo_tap" name="airinner">
+			
+			<input type="checkbox" id="add_lines1" name="add_lines1">
+			<input type="checkbox" id="add_lines2" name="add_lines2">
+
+			<div id="search_main_tap">
+				<label for="search_hotel"><span></span>호텔</label>
+				<label for="search_air"><span></span>항공권</label>
+				<label for="search_airtel"><span></span>에어텔</label>
+				<label for="search_rent"><span></span>렌터카</label>
+				<label for="search_train"><span></span>기차표</label>
+			</div>		
+			
+			<form method="get" class="search_main_hotel search_main_all">
+				<ul>	
+					<li>
+						<label for="hs">어디로 떠날까요?</label>
+						<input type="search" id="hs" name="hs" class="write" placeholder="도시, 호텔 이름, 공항, 랜드마크등 으로 검색" autocomplete="on" required>
+					</li>
+					<li>
+						<label for="hintime">체크인</label>
+						<input type="date" id="hintime" name="intime" class="intime"  value="2019-08-15" min="2019-08-15" max="2020-06-15" required>
+					</li>
+					<li>
+						<label for="houttime">체크아웃</label>
+						<input type="date" id="houttime" name="outtime" class="outtime" value="2019-08-16" min="2019-08-15"  max="2020-08-15" required>
+					</li>
+					<li>
+						<label>여행객</label>
+						<input type="text"  id="hadult" name="adult" class="adult"  list="hadults" placeholder="성인" required>
+						<datalist id="hadults">						
+							<option value="1" selected>1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>						
+						</datalist>
+						<input type="text"  id="hkid" name="kid" class="kid" list="hkids" placeholder="미성년">
+						<datalist id="hkids">						
+							<option value="1" selected>1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>						
+						</datalist>
+					</li>
+					<li>
+						<label for="hroom">객실수</label>
+						<input type="text"  id="hroom" name="room" class="rooms" list="hrooms" placeholder="1" required>
+						<datalist size="1" id="hrooms">						
+							<option value="1" selected>1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>						
+						</datalist>
+					</li>
+				</ul>
+				<ol>
+					<li>					
+						<input type="checkbox" id="kr_house2" name="kr_house">
+						<label for="kr_house2">한인민박</label>
+					</li>
+					<li>
+						<input type="checkbox" id="business_j" name="business">
+						<label for="business_j">출장</label>
+					</li>
+					<li>
+						<label>호텔등급</label>
+						<input type="radio" id="rank2" name="rank">
+						<label for="rank2">≤2<img src="images/star1.png" alt="rank"></label>
+						<input type="radio" id="rank3" name="rank">
+						<label for="rank3">3<img src="images/star1.png" alt="rank"></label>
+						<input type="radio" id="rank4" name="rank">
+						<label for="rank4">4<img src="images/star1.png" alt="rank"></label>
+						<input type="radio" id="rank5" name="rank">
+						<label for="rank5">5<img src="images/star1.png" alt="rank"></label>					
+					</li>				
+				</ol>
+				<div class="search_submit">
+					<input type="submit" value="검&emsp;&nbsp;색" >
+				</div>
+			</form>
+
+
+			<form method="get" class="search_main_air search_main_onlyair search_main_all">			
+				<label for="goback_tap">왕복</label>
+				<label for="goaway_tap">편도</label>
+				<label for="gongo_tap">다구간</label>
+
+				<ul id="goback">	
+					<li>
+						<label for="asp1">출발지</label>
+						<input type="search" id="asp1" name="sp" class="write" placeholder="출발지" autocomplete="on" required>	
+					</li>				
+					<li>
+						<img src="images/round_arrow.png" alt="왕복화살표">
+						<label for="aep1">도착지</label>
+						<input type="search" id="aep1" class="write" name="ep" placeholder="도착지" autocomplete="on" required>
+					</li>
+					<li>
+						<label for="aintime1">가는날</label>
+						<input type="date" id="aintime1" name="intime" class="intime" value="2019-08-15" min="2019-08-15" max="2020-08-15" required>
+					</li>
+					<li>
+						<label for="aouttime">오는날</label>
+						<input type="date" id="aouttime" name="outtime" class="outtime" value="2019-08-16" min="2019-08-15"  max="2020-08-15" required>
+					</li>
+					<li>
+						<label>여행객</label>
+						<input type="text"  id="aadult1" name="adult" class="adult" list="aadults1" placeholder="성인" required>
+						<datalist id="aadults1">						
+							<option value="1" selected>1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>						
+						</datalist>
+						<input type="text"  id="akid1" name="kid" class="kid" list="akids1" placeholder="어린이">
+						<datalist id="akids1">						
+							<option value="1" selected>1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>						
+						</datalist>
+					</li>
+					<li>
+						<label for="aseat">좌석 등급</label>
+						<select id="aseat" name="seat" class="room seat" required>
+							<option value="eco" selected>이코노미</option>
+							<option value="busi">비즈니스</option>
+							<option value="first">퍼스트</option>												
+						</select>
+					</li>
+				</ul>
+
+
+				<ul id="goaway">	
+					<li>
+						<label for="asp2">출발지</label>
+						<input type="search" id="asp2" name="sp" class="write" placeholder="도시,공항,나라 등으로 검색" autocomplete="on" required>	
+					</li>				
+					<li>
+						<img src="images/round_arrow.png" alt="왕복화살표">
+						<label for="aep2">도착지</label>
+						<input type="search" id="aep2" class="write" name="ep" placeholder="도시,공항,나라 등으로 검색" autocomplete="on" required>
+					</li>
+					<li>
+						<label for="aintime2">가는날</label>
+						<input type="date" id="aintime2" name="intime" class="outtime" value="2019-08-15" min="2019-08-15" max="2020-08-15" required>
+					</li>				
+					<li>
+						<label>여행객</label>
+						<input type="text"  id="aadult2" name="adult" class="adult" list="aadults2" placeholder="성인" required>
+						<datalist id="aadults2">						
+							<option value="1" selected>1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>						
+						</datalist>
+						<input type="text"  id="akid2" name="kid" class="kid" list="akids2" placeholder="어린이">
+						<datalist id="akids2">						
+							<option value="1" selected>1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>						
+						</datalist>
+					</li>
+					<li>
+						<label for="aseat1">좌석 등급</label>
+						<select id="aseat1" name="seat" class="room seat" required>
+							<option value="eco" selected>이코노미</option>
+							<option value="busi">비즈니스</option>
+							<option value="first">퍼스트</option>												
+						</select>
+					</li>
+				</ul>
+				
+				<div id="gongo">
+					<ul>
+						<li>
+							<label for="asp3">출발지</label>
+							<input type="search" id="asp3" name="sp" class="write" placeholder="출발지" autocomplete="on" required>	
+						</li>
+						<li>
+							<img src="images/round_arrow.png" alt="round">
+						</li>
+						<li>
+							<label for="aep3">도착지</label>
+							<input type="search" id="aep3"  class="write" name="ep" placeholder="도착지" autocomplete="on" required>
+						</li>
+						<li>
+							<label for="aintime3">가는날</label>
+								<input type="date" id="aintime3" name="intime" class="outtime" value="2019-08-15" min="2019-08-15" max="2020-08-15" required>
+							
+						</li>				
+						<li>
+							<label>여행객</label>
+								<input type="text"  id="aadult3" name="adult" class="adult" list="aadults3" placeholder="성인" required>
+								<datalist id="aadults3">						
+									<option value="1" selected>1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>						
+								</datalist>
+								<input type="text"  id="akid3" name="kid" class="kid" list="akids3" placeholder="어린이">
+								<datalist id="akids3">						
+									<option value="1" selected>1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>						
+								</datalist>
+							
+						</li>
+						<li>
+							<label for="aseat2">좌석 등급</label>
+							<select id="aseat2" name="seat" class="room seat" required>
+								<option value="eco" selected>이코노미</option>
+								<option value="busi">비즈니스</option>
+								<option value="first">퍼스트</option>												
+							</select>
+						</li>
+					</ul>
+
+					<ul>
+						<li>
+							<label for="asp4">출발지</label>
+							<input type="search" id="asp4" name="sp" class="write" placeholder="출발지" autocomplete="on" required>	
+						</li>
+						<li>
+							<img src="images/round_arrow.png" alt="round">
+						</li>
+						<li>
+							<label for="aep4">도착지</label>
+							<input type="search" id="aep4" class="write" name="ep" placeholder="도착지" autocomplete="on" required>
+						</li>
+						<li>
+							<label for="aintime4">가는날</label>
+							<input type="date" id="aintime4" name="intime" class="outtime" value="2019-08-15" min="2019-08-15" max="2020-08-15" required>
+						</li>					
+					</ul>
+
+					<ul class="add_lines1">
+						<li>
+							<label for="asp5">출발지</label>
+							<input type="search" id="asp5" name="sp" class="write" placeholder="출발지" autocomplete="on" required>	
+						</li>
+						<li>
+							<img src="images/round_arrow.png" alt="round">
+						</li>
+						<li>
+							<label for="aep5">도착지</label>
+							<input type="search" id="aep5" class="write" name="ep" placeholder="도착지" autocomplete="on" required>
+						</li>
+						<li>
+							<label for="aintime5">가는날</label>
+							<input type="date" id="aintime5" name="intime" class="outtime" value="2019-08-15" min="2019-08-15" max="2020-08-15" required>
+						</li>
+						<li>
+							<label for="add_lines1"><img src="images/close_air_white.png" alt="close_air"> 구간 삭제</label>
+						</li>
+					</ul>
+
+					<ul class="add_lines2">
+						<li>
+							<label for="asp6">출발지</label>
+							<input type="search" id="asp6" name="sp" class="write" placeholder="출발지" autocomplete="on" required>	
+						</li>
+						<li>
+							<img src="images/round_arrow.png" alt="round">
+						</li>
+						<li>
+							<label for="aep6">도착지</label>
+							<input type="search" id="aep6" class="write" name="ep" placeholder="도착지" autocomplete="on" required>
+						</li>
+						<li>
+							<label for="aintime6">가는날</label>
+							<input type="date" id="aintime6" name="intime" class="outtime" value="2019-08-15" min="2019-08-15" max="2020-08-15" required>
+						</li>
+						<li>
+							<label for="add_lines2"><img src="images/close_air_white.png"  alt="close_air"> 구간 삭제</label>
+						</li>
+					</ul>
+					<div class="air_add_labels">
+						<label for="add_lines1"><img src="images/add_air_white.png" alt="add_air"> 구간 추가</label>
+						<label for="add_lines2"><img src="images/add_air_white.png" alt="add_air"> 구간 추가</label>
+					</div>
+				</div>
+
+				<ol>
+					<li>					
+						<input type="checkbox" id="dr1" name="dr">
+						<label for="dr1">직항만</label>
+					</li>
+					<li>
+						<input type="checkbox" id="business1" name="business">
+						<label for="business1">무료수하물 가능</label>
+					</li>
+					
+				</ol>
+				<div class="search_submit">
+					<input type="submit" value="검&emsp;&nbsp;색" >
+				</div>
+			</form>
+
+
+
+			<form method="get" class="search_main_air search_main_airtel search_main_all">
+				<ul>	
+					<li>
+						<label for="ahsp">출발지</label>
+						<input type="search" id="ahsp" name="sp" class="write" placeholder="도시,공항,나라 등으로 검색" autocomplete="on" required>					
+					</li>				
+					<li>
+						<img src="images/round_arrow.png" alt="왕복화살표">
+						<label for="ahep">도착지</label>
+						<input type="search" id="ahep" class="write" name="ep" placeholder="도시,공항,나라 등으로 검색" autocomplete="on" required>
+					</li>
+					<li>
+						<label for="ahintime">가는날</label>
+						<input type="date" id="ahintime" name="intime" class="intime" value="2019-08-15" min="2019-08-15" max="2020-08-15" required>
+					</li>
+					<li>
+						<label for="ahouttime">오는날</label>
+						<input type="date" id="ahouttime" name="outtime" class="outtime" value="2019-08-16" min="2019-08-15"  max="2020-08-15" required>
+					</li>
+					<li>
+						<label>여행객</label>
+						<input type="text"  id="ahadult" name="adult" class="adult" list="ahadults" placeholder="성인" required>
+						<datalist id="ahadults">						
+							<option value="1" selected>1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>						
+						</datalist>
+						<input type="text"  id="ahkid" name="kid" class="kid" list="ahkids" placeholder="미성년">
+						<datalist id="ahkids">						
+							<option value="1" selected>1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>						
+						</datalist>
+					</li>
+					<li>
+						<label for="ahroom">객실수</label>
+						<input type="text"  id="ahroom" name="room" class="room" list="ahrooms" placeholder="1" required>
+						<datalist size="1" id="ahrooms">						
+							<option value="1" selected>1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>						
+						</datalist>
+					</li>
+				</ul>
+				<ol>
+					<li>					
+						<input type="checkbox" id="kr_house1" name="kr_house">
+						<label for="kr_house1">한인민박</label>
+					</li>
+					<li>
+						<input type="checkbox" id="business_i" name="business">
+						<label for="business_i">출장</label>
+					</li>
+					<li>
+						<label>|&emsp;호텔등급</label>
+						<input type="radio" id="hrank2" name="rank">
+						<label for="hrank2">≤2<img src="images/star1.png" alt="rank"></label>
+						<input type="radio" id="hrank3" name="rank">
+						<label for="hrank3">3<img src="images/star1.png" alt="rank"></label>
+						<input type="radio" id="hrank4" name="rank">
+						<label for="hrank4">4<img src="images/star1.png" alt="rank"></label>
+						<input type="radio" id="hrank5" name="rank">
+						<label for="hrank5">5<img src="images/star1.png" alt="rank"></label>					
+					</li>
+					<li>					
+						<input type="checkbox" id="dr2" name="dr">
+						<label for="dr2">직항만</label>
+					</li>
+					<li>
+						<input type="checkbox" id="business2" name="business">
+						<label for="business2">무료수하물 가능</label>
+					</li>
+					<li>
+						<label>|&emsp;좌석등급</label>
+						<input type="radio" id="seat1" name="seat">
+						<label for="seat1">이코노미</label>
+						<input type="radio" id="seat2" name="seat">
+						<label for="seat2">비즈니스</label>
+						<input type="radio" id="seat3" name="seat">
+						<label for="seat3">퍼스트</label>										
+					</li>
+				</ol>
+				<div class="search_submit">
+					<input type="submit" value="검&emsp;&nbsp;색" >
+				</div>
+			</form>
+			
+			<form method="get" class="search_main_rent search_main_rentrain search_main_all">
+				<div>
+					<ul>	
+						<li>
+							<label for="pickup">픽업 장소</label>
+							<input type="search" id="pickup" name="pickup" class="write" placeholder="국가,도시,지역으로 검색" autocomplete="on" required>	
+						</li>
+						<li>
+							<img src="images/round_arrow.png" alt="왕복화살표">
+						</li>
+						<li>
+							<label for="return">반납 장소</label>
+							<input type="search" id="return" class="write" name="return" placeholder="미입력시 픽업 장소에서 반납" autocomplete="on">
+						</li>
+						<li>
+							<label for="pickdate">픽업 일시</label>
+							<input type="date" id="pickdate" name="pickdate" class="pickdate" value="2019-08-15" min="2019-08-15" max="2020-08-15" required>
+							<input type="time" id="picktime" name="picktime" value="10:00">			
+						</li>
+						<li>
+							<label for="returndate">반납 일시</label>
+							<input type="date" id="returndate" name="returndate" class="returndate" value="2019-08-16" min="2019-08-15"  max="2020-08-15" required>
+							<input type="time" id="returntime" name="returntime" value="18:00">
+						</li>
+						<li>
+							<label>운전자 연령</label>
+							<select id="olders" required>						
+								<option value="sophomore">만18세 ~ 24세</option>
+								<option value="junior" selected>만25세 ~ 70세</option>
+								<option value="senior">만70세 ~</option>											
+							</select>					
+						</li>				
+					</ul>
+				</div>
+				
+				<div class="search_submit">
+					<input type="submit" value="검&emsp;&nbsp;색" >
+				</div>
+			</form>
+
+			<form method="get" class="search_main_train search_main_rentrain search_main_all">
+				<div>
+					<ol>
+						<li>
+							<label><input type="radio" id="train_kor" name="train_contury" checked="checked"> 국내</label>
+							<label><input type="radio" id="train_jpn" name="train_contury"> 일본</label>
+							<label><input type="radio" id="train_chn" name="train_contury"> 중국</label>
+							<label><input type="radio" id="train_de" name="train_contury"> 독일</label>
+							<label><input type="radio" id="train_uk" name="train_contury"> 영국</label>
+							<label><input type="radio" id="train_usa" name="train_contury"> 미국</label>
+						</li>
+					</ol>
+					<ul>	
+						<li>
+							<label for="tsp">출발지</label>
+							<input type="search" id="tsp" name="tsp" class="write" placeholder="출발역" autocomplete="on" required>	
+						</li>				
+						<li>
+							<img src="images/round_arrow.png" alt="왕복화살표">
+						</li>
+						<li>
+							<label for="tep">도착지</label>
+							<input type="search" id="tep" class="write" name="tep" placeholder="도착역" autocomplete="on" required>
+						</li>
+						<li>
+							<label for="tintime">가는날</label>
+							<input type="date" id="tintime" name="tintime" class="intime" value="2019-08-15" min="2019-08-15" max="2020-08-15" required>
+							<input type="time" id="treturntime1" name="treturntime" value="08:00">
+						</li>
+						<li>
+							<label for="touttime">오는날</label>
+							<input type="date" id="touttime" name="touttime" class="outtime" value="2019-08-16" min="2019-08-15"  max="2020-08-15" required>
+							<input type="time" id="treturntime2" name="treturntime" value="18:00">
+						</li>
+						<li>
+							<label>여행객</label>
+							<input type="text"  id="tadult" name="tadult" class="adult" list="tadults" placeholder="성인" required>
+							<datalist id="tadults">						
+								<option value="1" selected>1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>						
+							</datalist>
+							<input type="text"  id="tkid" name="tkid" class="kid" list="tkids" placeholder="어린이">
+							<datalist id="tkids">						
+								<option value="1" selected>1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>						
+							</datalist>
+						</li>
+					</ul>
+				</div>
+				<div class="search_submit">
+					<input type="submit" value="검&emsp;&nbsp;색" >
+				</div>
+			</form>
+		</div>
+	</div>
+		
+	
+	<div id="mkt_back">
+		<div id="mkt_contents">
+			<img src="images/main_marketing.png" alt="오늘의 여행의 3가지 포인트">
+		</div>
+	</div>
+	
+	
+
+
+
+	<div id="contents">
+		<input type="radio" id="recommend_pl_all" name="repl" checked="checked">
+		<input type="radio" id="recommend_pl_kor" name="repl">
+		<input type="radio" id="recommend_pl_jpn" name="repl">
+		<input type="radio" id="recommend_pl_chn" name="repl">
+		<input type="radio" id="recommend_pl_sea" name="repl">
+		<input type="radio" id="recommend_pl_america" name="repl">
+		<input type="radio" id="recommend_pl_eu" name="repl">
+		<input type="radio" id="recommend_pl_south" name="repl">
+
+		<input type="radio" id="recommend_ac_all" name="acti" checked="checked">
+		<input type="radio" id="recommend_ac_kor" name="acti">
+		<input type="radio" id="recommend_ac_jpn" name="acti">
+		<input type="radio" id="recommend_ac_chn" name="acti">
+		<input type="radio" id="recommend_ac_sea" name="acti">
+		<input type="radio" id="recommend_ac_america" name="acti">
+		<input type="radio" id="recommend_ac_eu" name="acti">
+		<input type="radio" id="recommend_ac_south" name="acti">
+
+
+		<h2>추천 여행지</h2><span>사람이 많은 곳에는 이유가 있다!</span>
+		<div class="main_layout">
+			<ul>
+				<li>
+					<label for="recommend_pl_all">
+						<img src="images/main_tap_check.png" alt="chch_pl_all">
+						전<span></span>체
+					</label>
+				</li>
+				<li>
+					<label for="recommend_pl_kor">
+						<img src="images/main_tap_check.png" alt="chch_pl_kor">
+						국<span></span>내
+					</label>
+				</li>
+				<li>
+					<label for="recommend_pl_jpn">
+						<img src="images/main_tap_check.png" alt="chch_pl_jpn">
+						일<span></span>본
+					</label>
+				</li>
+				<li>
+					<label for="recommend_pl_chn">
+						<img src="images/main_tap_check.png" alt="chch_pl_chn">
+						중<span></span>화<span></span>권
+					</label>
+				</li>
+				<li>
+					<label for="recommend_pl_sea">
+						<img src="images/main_tap_check.png" alt="chch_pl_sea">
+						동<span></span>남<span></span>아
+					</label>
+				</li>
+				<li>
+					<label for="recommend_pl_america">
+						<img src="images/main_tap_check.png" alt="chch_pl_ame">
+						아메리카
+					</label>
+				</li>
+				<li>
+					<label for="recommend_pl_eu">
+						<img src="images/main_tap_check.png" alt="chch_pl_eu">
+						유<span></span>럽
+					</label>
+				</li>
+				<li>
+					<label for="recommend_pl_south">
+						<img src="images/main_tap_check.png" alt="chch_pl_south">
+						남태평양
+					</label>
+				</li>
+			</ul>
+		
+		
+			<div  class="recommend_right main_reco main_pl_all rec_1115740"><!--1115 740-->
+				<div class="recommend_left rec_1115520"><!--1115 520-->
+					<div class="recommend_left rec_750520"><!--750 520-->
+						<div class="recommend recommend1 recommend1_pla_all recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>후쿠오카</span><br>
+											호텔 : ₩11,900<br>
+											항공권 : ₩100,000
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend2 recommend2_pla_all recommend_right">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>제주도</span><br>
+											호텔 : ₩8,100<br>
+											항공권 : ₩93,500
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend4 recommend4_pla_all recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>스위스</span><br>
+											호텔 : ₩90,500<br>
+											항공권 : ₩947,000
+									</span>
+								</a>						
+							</div>
+						</div>
+					</div>
+					
+					<div class="recommend recommend3 recommend3_pla_all recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>상해</span><br>
+											호텔 : ₩7,000<br>
+											항공권 : ₩244,000
+									</span>
+								</a>						
+						</div>
+					</div>
+				</div>
+				
+				<div class="recommend_left rec_1115210"><!--1115 210-->
+					<div class="recommend recommend5 recommend5_pla_all recommend_left">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>미국 캘리포니아</span><br>
+											호텔 : ₩69,500<br>
+											항공권 : ₩1,402,000
+									</span>
+								</a>						
+						</div>
+					</div>
+					<div class="recommend recommend6 recommend6_pla_all recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>홍콩</span><br>
+											호텔 : ₩7,300<br>
+											항공권 : ₩178,000
+									</span>
+								</a>						
+						</div>
+					</div>
+				</div>
+			</div>
+			<div  class="recommend_right main_reco main_pl_kor rec_1115740"><!--1115 740-->
+				<div class="recommend_left rec_1115520"><!--1115 520-->
+					<div class="recommend_left rec_750520"><!--750 520-->
+						<div class="recommend recommend1 recommend1_pla_kor recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>서울</span><br>
+											호텔 : ₩7,300<br>
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend2 recommend2_pla_kor recommend_right">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>제주도</span><br>
+											호텔 : ₩8,100<br>
+											항공권 : ₩93,500
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend4 recommend4_pla_kor recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>부산</span><br>
+											호텔 : ₩7,300<br>
+											기차표 : ₩42,800<br>
+											항공권 : ₩95,500
+									</span>
+								</a>						
+							</div>
+						</div>
+					</div>
+					
+					<div class="recommend recommend3 recommend3_pla_kor recommend_right">
+						<div class="backs">			
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>여수</span><br>
+											호텔 : ₩13,600<br>
+											기차표 : ₩47,500<br>
+											항공권 : ₩116,000
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+				
+				<div class="recommend_left rec_1115210"><!--1115 210-->
+					<div class="recommend recommend5 recommend5_pla_kor recommend_left">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>경주</span><br>
+											호텔 : ₩9,900<br>
+											기차표 : ₩46,800
+									</span>
+								</a>						
+							</div>
+					</div>
+					<div class="recommend recommend6 recommend6_pla_kor recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>강원도</span><br>
+											호텔 : ₩12,700<br>
+											기차표 : ₩24,800<br>
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+			</div>
+			<div  class="recommend_right main_reco main_pl_jpn rec_1115740"><!--1115 740-->
+				<div class="recommend_left rec_1115520"><!--1115 520-->
+					<div class="recommend_left rec_750520"><!--750 520-->
+						<div class="recommend recommend1 recommend1_pla_jpn recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>오사카</span><br>
+											호텔 : ₩9,700<br>
+											항공권 : ₩180,000
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend2 recommend2_pla_jpn recommend_right">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>교토</span><br>
+											호텔 : ₩8,800<br>
+											항공권 : ₩180,000
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend4 recommend4_pla_jpn recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>오키나와</span><br>
+											호텔 : ₩9,900<br>
+											항공권 : ₩127,000
+									</span>
+								</a>						
+							</div>
+						</div>
+					</div>
+					
+					<div class="recommend recommend3 recommend3_pla_jpn recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>도쿄</span><br>
+											호텔 : ₩13,700<br>
+											항공권 : ₩306,000
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+				
+				<div class="recommend_left rec_1115210"><!--1115 210-->
+					<div class="recommend recommend5 recommend5_pla_jpn recommend_left">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>가나자와</span><br>
+											호텔 : ₩20,500<br>
+											항공권 : ₩450,000(고마츠 공항) -> 버스 이동
+									</span>
+								</a>						
+							</div>
+					</div>
+					<div class="recommend recommend6 recommend6_pla_jpn recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>후쿠오카</span><br>
+											호텔 : ₩11,900<br>
+											항공권 : ₩100,000
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+			</div>
+			<div  class="recommend_right main_reco main_pl_chn rec_1115740"><!--1115 740-->
+				<div class="recommend_left rec_1115520"><!--1115 520-->
+					<div class="recommend_left rec_750520"><!--750 520-->
+						<div class="recommend recommend1 recommend1_pla_chn recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>타이베이</span><br>
+											호텔 : ₩7,300<br>
+											항공권 : ₩317,000
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend2 recommend2_pla_chn recommend_right">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>청도</span><br>
+											호텔 : ₩2,900<br>
+											항공권 : ₩170,000
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend4 recommend4_pla_chn recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>상해</span><br>
+											호텔 : ₩7,000<br>
+											항공권 : ₩244,000
+									</span>
+								</a>						
+							</div>
+						</div>
+					</div>
+					
+					<div class="recommend recommend3 recommend3_pla_chn recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>샤먼</span><br>
+											호텔 : ₩5,100<br>
+											항공권 : ₩294,000
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+				
+				<div class="recommend_left rec_1115210"><!--1115 210-->
+					<div class="recommend recommend5 recommend5_pla_chn recommend_left">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>베이징</span><br>
+											호텔 : ₩7,900<br>
+											항공권 : ₩290,000
+									</span>
+								</a>						
+							</div>
+					</div>
+					<div class="recommend recommend6 recommend6_pla_chn recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>황산</span><br>
+											호텔 : ₩29,200<br>
+											항공권 : ₩467,000
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+			</div>
+			<div  class="recommend_right main_reco main_pl_sea rec_1115740"><!--1115 740-->
+				<div class="recommend_left rec_1115520"><!--1115 520-->
+					<div class="recommend_left rec_750520"><!--750 520-->
+						<div class="recommend recommend1 recommend1_pla_sea recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>태국</span><br>
+											호텔 : ₩7,500<br>
+											항공권 : ₩586,000
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend2 recommend2_pla_sea recommend_right">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>인도네시아</span><br>
+											호텔 : ₩6,400<br>
+											항공권 : ₩536,000
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend4 recommend4_pla_sea recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>말레이시아 코타키나발루</span><br>
+											호텔 : ₩9,900<br>
+											항공권 : ₩298,000
+									</span>
+								</a>						
+							</div>
+						</div>
+					</div>
+					
+					<div class="recommend recommend3 recommend3_pla_sea recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>싱가폴</span><br>
+											호텔 : ₩20,800<br>
+											항공권 : ₩369,000
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+				
+				<div class="recommend_left rec_1115210"><!--1115 210-->
+					<div class="recommend recommend5 recommend5_pla_sea recommend_left">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>브루나이</span><br>
+											호텔 : ₩20,700<br>
+											항공권 : ₩568,000
+									</span>
+								</a>						
+							</div>
+					</div>
+					<div class="recommend recommend6 recommend6_pla_sea recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>베트남</span><br>
+											호텔 : ₩10,500<br>
+											항공권 : ₩298,000
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+			</div>
+			<div  class="recommend_right main_reco main_pl_ame rec_1115740"><!--1115 740-->
+				<div class="recommend_left rec_1115520"><!--1115 520-->
+					<div class="recommend_left rec_750520"><!--750 520-->
+						<div class="recommend recommend1 recommend1_pla_ame recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>미국 샌프란시스코</span><br>
+											호텔 : ₩78,500<br>
+											항공권 : ₩900,000
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend2 recommend2_pla_ame recommend_right">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>멕시코</span><br>
+											호텔 : ₩12,500<br>
+											항공권 : ₩1,457,000
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend4 recommend4_pla_ame recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>하와이</span><br>
+											호텔 : ₩30,400<br>
+											항공권 : ₩1,180,000
+									</span>
+								</a>						
+							</div>
+						</div>
+					</div>
+					
+					<div class="recommend recommend3 recommend3_pla_ame recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>브라질</span><br>
+											호텔 : ₩18,400<br>
+											항공권 : ₩1,606,000
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+				
+				<div class="recommend_left rec_1115210"><!--1115 210-->
+					<div class="recommend recommend5 recommend5_pla_ame recommend_left">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>미국 캘리포니아</span><br>
+											호텔 : ₩69,500<br>
+											항공권 : ₩1,402,000
+									</span>
+								</a>						
+							</div>
+					</div>
+					<div class="recommend recommend6 recommend6_pla_ame recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>칠레</span><br>
+											호텔 : ₩11,800<br>
+											항공권 : ₩1,543,500
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+			</div>
+			<div  class="recommend_right main_reco main_pl_eu rec_1115740"><!--1115 740-->
+				<div class="recommend_left rec_1115520"><!--1115 520-->
+					<div class="recommend_left rec_750520"><!--750 520-->
+						<div class="recommend recommend1 recommend1_pla_eu recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>스페인</span><br>
+											호텔 : ₩36,700<br>
+											항공권 : ₩870,000
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend2 recommend2_pla_eu recommend_right">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>이탈리아</span><br>
+											호텔 : ₩36,400<br>
+											항공권 : ₩918,000
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend4 recommend4_pla_eu recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>러시아</span><br>
+											호텔 : ₩5,100<br>
+											항공권 : ₩947,600
+									</span>
+								</a>						
+							</div>
+						</div>
+					</div>
+					
+					<div class="recommend recommend3 recommend3_pla_eu recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>스위스</span><br>
+											호텔 : ₩90,500<br>
+											항공권 : ₩947,000
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+				
+				<div class="recommend_left rec_1115210"><!--1115 210-->
+					<div class="recommend recommend5 recommend5_pla_eu recommend_left">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>체코</span><br>
+											호텔 : ₩25,500<br>
+											항공권 : ₩940,000
+									</span>
+								</a>						
+							</div>
+					</div>
+					<div class="recommend recommend6 recommend6_pla_eu recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>영국</span><br>
+											호텔 : ₩24,500<br>
+											항공권 : ₩1,211,000
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+			</div>
+			<div  class="recommend_right main_reco main_pl_south rec_1115740"><!--1115 740-->
+				<div class="recommend_left rec_1115520"><!--1115 520-->
+					<div class="recommend_left rec_750520"><!--750 520-->
+						<div class="recommend recommend1 recommend1_pla_south  recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>뉴질랜드</span><br>
+											호텔 : ₩22,400<br>
+											항공권 : ₩864,900
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend2 recommend2_pla_south  recommend_right">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>타히티</span><br>
+											호텔 : ₩72,500<br>
+											항공권 : ₩1,988,000
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend4 recommend4_pla_south  recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>사이판</span><br>
+											호텔 : ₩58,500<br>
+											항공권 : ₩242,200
+									</span>
+								</a>						
+							</div>
+						</div>
+					</div>
+					
+					<div class="recommend recommend3 recommend3_pla_south  recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>팔라우</span><br>
+											호텔 : ₩44,500<br>
+											항공권 : ₩861,500
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+				
+				<div class="recommend_left rec_1115210"><!--1115 210-->
+					<div class="recommend recommend5 recommend5_pla_south  recommend_left">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>호주</span><br>
+											호텔 : ₩34,700<br>
+											항공권 : ₩812,000
+									</span>
+								</a>						
+							</div>
+					</div>
+					<div class="recommend recommend6 recommend6_pla_south  recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>괌</span><br>
+											호텔 : ₩63,500<br>
+											항공권 : ₩338,000
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<h2>추천 액티비티</h2><span>여름은 역시 액티비티!</span>
+		<div class="main_layout">
+			<ul>
+				<li>
+					<label for="recommend_ac_all">
+						<img src="images/main_tap_check.png" alt="chch_ac_all">
+						전<span></span>체
+					</label>
+				</li>
+				<li>
+					<label for="recommend_ac_kor">
+						<img src="images/main_tap_check.png" alt="chch_ac_kor">
+						국<span></span>내
+					</label>
+				</li>
+				<li>
+					<label for="recommend_ac_jpn">
+						<img src="images/main_tap_check.png" alt="chch_ac_jpn">
+						일<span></span>본
+					</label>
+				</li>
+				<li>
+					<label for="recommend_ac_chn">
+						<img src="images/main_tap_check.png" alt="chch_ac_chn">
+						중<span></span>화<span></span>권
+					</label>
+				</li>
+				<li>
+					<label for="recommend_ac_sea">
+						<img src="images/main_tap_check.png" alt="chch_ac_sea">
+						동<span></span>남<span></span>아
+					</label>
+				</li>
+				<li>
+					<label for="recommend_ac_america">
+						<img src="images/main_tap_check.png" alt="chch_ac_ame">
+						아메리카
+					</label>
+				</li>
+				<li>
+					<label for="recommend_ac_eu">
+						<img src="images/main_tap_check.png" alt="chch_ac_eu">
+						유<span></span>럽
+					</label>
+				</li>
+				<li>
+					<label for="recommend_ac_south">
+						<img src="images/main_tap_check.png" alt="chch_ac_south">
+						남태평양
+					</label>
+				</li>
+			</ul>
+		
+		
+			<div class="recommend_right main_reco main_ac_all rec_1115740"><!--1115 740-->
+				<div class="recommend_left rec_1115220"><!--1115 220-->
+					<div class="recommend recommend7 recommend7_ac_all recommend_left">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>대만 열기구투어</span><br>
+											투어 : ₩150,000 ~<br>
+											체험 : 1,000 ~(TWD)
+									</span>
+								</a>						
+							</div>
+					</div>
+					<div class="recommend recommend8 recommend8_ac_all recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>영국 이스트엔드 뮤지컬</span><br>
+											₩80,000 ~
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+
+				<div class="recommend_lef rec_1115510t"><!--1115 510-->
+					<div class="recommend_left rec_725510"><!--725 510-->
+						<div class="recommend recommend9 recommend9_ac_all recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>단양 패러글라이딩</span><br>
+											₩55,000<br>
+											고프로 추가 : ₩20,000
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend10 recommend10_ac_all recommend_right">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>뉴질랜드 밀포드사운드 크루즈</span><br>
+													₩22,000 ~
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend12 recommend12_ac_all recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>오키나와 추라우미 수족관</span><br>											
+											성인 : ¥1,850 ~<br>
+											고교생 : ¥1,230 ~<br>
+											초중생 : ¥610 ~
+									</span>
+								</a>						
+							</div>
+						</div>
+					</div>
+					
+					<div class="recommend recommend11 recommend11_ac_all recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>베트남 달랏 캐녀닝</span><br>
+											$25	~										
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+			</div>
+			<div class="recommend_right main_reco main_ac_kor rec_1115740"><!--1115 740-->
+				<div class="recommend_left rec_1115220"><!--1115 220-->
+					<div class="recommend recommend7 recommend7_ac_kor recommend_left">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>삼척 투명카누</span><br>
+											₩11,000(1인)<br>
+											
+									</span>
+								</a>						
+							</div>
+					</div>
+					<div class="recommend recommend8 recommend8_ac_kor recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>제주 씨워킹</span><br>
+											₩39,000<br>
+											
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+
+				<div class="recommend_lef rec_1115510t"><!--1115 510-->
+					<div class="recommend_left rec_725510"><!--725 510-->
+						<div class="recommend recommend9 recommend9_ac_kor recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>단양 패러글라이딩</span><br>
+											₩55,000<br>
+											고프로 추가 : ₩20,000
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend10 recommend10_ac_kor recommend_right">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>삼척 레일바이크</span><br>
+											2인승 : ₩20,000<br>
+											4인승 : ₩44,000
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend12 recommend12_ac_kor recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>통영 루지</span><br>
+											₩14,000<br>										
+									</span>
+								</a>						
+							</div>
+						</div>
+					</div>
+					
+					<div class="recommend recommend11 recommend11_ac_kor recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>보령 스카이바이크</span><br>
+											2인용 : ₩22,000<br>
+											3인용 : ₩26,000<br>
+											4인용 : ₩30,000
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+			</div>
+			<div class="recommend_right main_reco main_ac_jpn rec_1115740"><!--1115 740-->
+				<div class="recommend_left rec_1115220"><!--1115 220-->
+					<div class="recommend recommend7 recommend7_ac_jpn recommend_left">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>후쿠오카 스탠드업 패들보드</span><br>
+											¥5,000 ~
+									</span>
+								</a>						
+							</div>
+					</div>
+					<div class="recommend recommend8 recommend8_ac_jpn recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>오사카 아키바 코카트</span><br>
+											1시간 : ¥4,000<br>
+											2시간 : ¥6,000<br>
+											3시간 : ¥7,000
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+
+				<div class="recommend_lef rec_1115510t"><!--1115 510-->
+					<div class="recommend_left rec_725510"><!--725 510-->
+						<div class="recommend recommend9 recommend9_ac_jpn recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>도쿄 야카타부네</span><br>
+											¥5,000 ~
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend10 recommend10_ac_jpn recommend_right">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>도쿄 유니버셜 스튜디오</span><br>
+											성인  : ¥7,400 ~<br>
+											어린이 : ¥5,100 ~<br>
+											노인 : ¥6,700 ~
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend12 recommend12_ac_jpn recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>오키나와 추라우미 수족관</span><br>											
+											성인 : ¥1,850 ~<br>
+											고교생 : ¥1,230 ~<br>
+											초중생 : ¥610 ~
+									</span>
+								</a>						
+							</div>
+						</div>
+					</div>
+					
+					<div class="recommend recommend11 recommend11_ac_jpn recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>도쿄 디즈니랜드</span><br>
+											¥4.200 ~
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+			</div>
+			<div class="recommend_right main_reco main_ac_chn rec_1115740"><!--1115 740-->
+				<div class="recommend_left rec_1115220"><!--1115 220-->
+					<div class="recommend recommend7 recommend7_ac_chn recommend_left">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>대만 열기구투어</span><br>
+											투어 : ₩150,000 ~<br>
+											체험 : 1,000 ~(TWD)
+									</span>
+								</a>						
+							</div>
+					</div>
+					<div class="recommend recommend8 recommend8_ac_chn recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>만리장성</span><br>
+											입장권 : 40위안(CNY) ~<br>
+											왕복케이블카 : 100위안(CNY)
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+
+				<div class="recommend_lef rec_1115510t"><!--1115 510-->
+					<div class="recommend_left rec_725510"><!--725 510-->
+						<div class="recommend recommend9 recommend9_ac_chn recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>베이징 자금성</span><br>
+											40위안(CNY) ~
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend10 recommend10_ac_chn recommend_right">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>대만 캐녀닝</span><br>
+											₩180,000 ~
+										</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend12 recommend12_ac_chn recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>상해 황포강 유람선</span><br>
+											128위안(CNY) ~
+									</span>
+								</a>						
+							</div>
+						</div>
+					</div>
+					
+					<div class="recommend recommend11 recommend11_ac_chn recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>베이징 이화원</span><br>
+											20위안(CNY)
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+			</div>
+			<div class="recommend_right main_reco main_ac_sea rec_1115740"><!--1115 740-->
+				<div class="recommend_left rec_1115220"><!--1115 220-->
+					<div class="recommend recommend7 recommend7_ac_sea recommend_left">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>태국 크라비</span><br>
+											 ฿500 ~
+									</span>
+								</a>						
+							</div>
+					</div>
+					<div class="recommend recommend8 recommend8_ac_sea recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>베트남 펑키몽키 투어</span><br>
+											$10 ~
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+
+				<div class="recommend_lef rec_1115510t"><!--1115 510-->
+					<div class="recommend_left rec_725510"><!--725 510-->
+						<div class="recommend recommend9 recommend9_ac_sea recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>라오스 방비엥 카약킹</span><br>
+											카약킹 : $10 ~<br>
+											튜빙 : $8 ~
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend10 recommend10_ac_sea recommend_right">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>미얀마 껄로 트레킹</span><br>
+											1박 : $15 ~<br>
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend12 recommend12_ac_sea recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>인도네시아 발리 서핑</span><br>
+											레슨 : $40 ~<br>
+											렌탈 : $5 ~<br>											
+									</span>
+								</a>						
+							</div>
+						</div>
+					</div>
+					
+					<div class="recommend recommend11 recommend11_ac_sea recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>베트남 달랏 캐녀닝</span><br>
+											$25 ~								
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+			</div>
+			<div class="recommend_right main_reco main_ac_ame rec_1115740"><!--1115 740-->
+				<div class="recommend_left rec_1115220"><!--1115 220-->
+					<div class="recommend recommend7 recommend7_ac_ame recommend_left">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>칠레 마블동굴 투어</span><br>
+											₩200,000 ~
+									</span>
+								</a>						
+							</div>
+					</div>
+					<div class="recommend recommend8 recommend8_ac_ame recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>캐나다 나이아가라 투어</span><br>
+											₩30,000 ~
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+
+				<div class="recommend_lef rec_1115510t"><!--1115 510-->
+					<div class="recommend_left rec_725510"><!--725 510-->
+						<div class="recommend recommend9 recommend9_ac_ame recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>미국 그랜드캐년 헬기 투어</span><br>
+											₩450,000 ~
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend10 recommend10_ac_ame recommend_right">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>미국 팜스프링 허머 투어</span><br>
+											호텔 : ₩170,000 ~
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend12 recommend12_ac_ame recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>미국 요세미티 국립공원</span><br>
+											₩180,000 ~
+									</span>
+								</a>						
+							</div>
+						</div>
+					</div>
+					
+					<div class="recommend recommend11 recommend11_ac_ame recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>볼리비아 우유니 소금사막 투어</span><br>
+											₩140,000 ~
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+			</div>
+			<div class="recommend_right main_reco main_ac_eu rec_1115740"><!--1115 740-->
+				<div class="recommend_left rec_1115220"><!--1115 220-->
+					<div class="recommend recommend7 recommend7_ac_eu recommend_left">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>체코 스카이다이빙</span><br>
+											₩180,000 ~											
+									</span>
+								</a>						
+							</div>
+					</div>
+					<div class="recommend recommend8 recommend8_ac_eu recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>영국 이스트엔드 뮤지컬</span><br>
+											₩80,000 ~
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+
+				<div class="recommend_lef rec_1115510t"><!--1115 510-->
+					<div class="recommend_left rec_725510"><!--725 510-->
+						<div class="recommend recommend9 recommend9_ac_eu recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>오스트리아 와이너리 투어</span><br>
+											₩160,000 ~
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend10 recommend10_ac_eu recommend_right">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>프랑스 루브르 가이드 투어</span><br>
+											₩49,000 ~
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend12 recommend12_ac_eu recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>스위스 토보건</span><br>
+											₩13,000 ~
+									</span>
+								</a>						
+							</div>
+						</div>
+					</div>
+					
+					<div class="recommend recommend11 recommend11_ac_eu recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>스위스 패러글라이딩</span><br>
+											₩160,000 ~
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+			</div>
+			<div class="recommend_right main_reco main_ac_south rec_1115740"><!--1115 740-->
+				<div class="recommend_left rec_1115220"><!--1115 220-->
+					<div class="recommend recommend7 recommend7_ac_south recommend_left">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>호주 케인즈 헬리콥터 투어</span><br>
+											₩130,000 ~
+									</span>
+								</a>						
+							</div>
+					</div>
+					<div class="recommend recommend8 recommend8_ac_south recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>타히티 보라보라섬 샤크앤레이</span><br>
+											₩170,000 ~
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+
+				<div class="recommend_lef rec_1115510t"><!--1115 510-->
+					<div class="recommend_left rec_725510"><!--725 510-->
+						<div class="recommend recommend9 recommend9_ac_south recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>호주 울룰루 투어</span><br>
+											₩93,000 ~
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend10 recommend10_ac_south recommend_right">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>뉴질랜드 밀포드사운드 크루즈</span><br>
+													₩22,000 ~
+									</span>
+								</a>						
+							</div>
+						</div>
+						<div class="recommend recommend12 recommend12_ac_south recommend_left">
+							<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>팔라우 블루홀 다이빙</span><br>
+											₩177,000 ~
+									</span>
+								</a>						
+							</div>
+						</div>
+					</div>
+					
+					<div class="recommend recommend11 recommend11_ac_south recommend_right">
+						<div class="backs">													
+								<a href="search_hotel.html" target="_blank">
+									<span>
+										<span>사이판 패러세일링</span><br>
+											₩48,000 ~
+									</span>
+								</a>						
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="mailing_service">
+		<img src="images/mailing_icon.png" alt="alarm_icon">
+		<p>카카오톡 아이디만 입력하면 최저가 알람이 실시간으로!<br>
+		   이제 힘들게 찾아보지 마시고 스마트폰에서 바로 확인하세요.
+		</p>
+		<div>
+			<input type="email" id="mailing" name="mailing" placeholder="ex) todaysaway@naver.com">
+			<input type="submit" id="mailing_submit" name="mailing_submit" value="알림 받기">
+			<p>알림 서비스를 신청하시면 <a href="#">이용약관</a> 및 <a href="#">개인정보 보호정책</a>에 동의하게 됩니다.<p>
+		</div>
+		
+	</form>
+
+	<div id="footer">
+		<div id="footer_top">
+			<div id="footer_left">
+				<ul>
+					<li>
+						<label for="fkr">
+							<img src="images/flag/svg/south_korea.svg" alt="flagkr">
+							KR
+							<img src="images/direct_right.png" alt="click">
+						</label>
+						<input type="checkbox" id="fkr" name="fkr">
+						<div class="langs_select footer_langs_select">
+							<h2>언어선택</h2>
+							<ol>
+								<li><a href="#"><img src="images/flag/svg/south_korea.svg" alt="태극기">한국어</a></li>
+								<li><a href="#"><img src="images/flag/svg/germany.svg" alt="독일">Deutsch</a></li>
+								<li><a href="#"><img src="images/flag/svg/denmark.svg" alt="덴마크">Dansk</a></li>
+								<li><a href="#"><img src="images/flag/svg/poland.svg" alt="폴란드">Polski</a></li>
+								<li><a href="#"><img src="images/flag/svg/italy.svg" alt="이탈리아">Italiano</a></li>
+								<li><a href="#"><img src="images/flag/svg/norway.svg" alt="노르웨이">Norsk</a></li>
+								<li><a href="#"><img src="images/flag/svg/sweden.svg" alt="스웨덴">Svenska</a></li>
+								<li><a href="#"><img src="images/flag/svg/netherlands.svg" alt="네덜란드">네덜란드어(Dutch)</a></li>
+							</ol>
+							<ol>
+								<li><a href="#"><img src="images/flag/svg/united-states.svg" alt="USA">English(USA)</a></li>
+								<li><a href="#"><img src="images/flag/svg/uk.svg" alt="UK">English(UK)</a></li>
+								<li><a href="#"><img src="images/flag/svg/hong_kong.svg" alt="홍콩">English(Hong Kong)</a></li>
+								<li><a href="#"><img src="images/flag/svg/singapore.svg" alt="싱가폴">English(Singapore)</a></li>
+								<li><a href="#"><img src="images/flag/svg/australia.svg" alt="호주">English(Australia)</a></li>
+								<li><a href="#"><img src="images/flag/svg/malaysia.svg" alt="말레이시아">English(Malaysia)</a></li>
+								<li><a href="#"><img src="images/flag/svg/israel.svg" alt="이스라엘">English(Israel)</a></li>
+								<li><a href="#"><img src="images/flag/svg/uae.svg" alt="아랍에미레이트">English(UAE)</a></li>
+							</ol>
+							<ol>
+								<li><a href="#"><img src="images/flag/svg/china.svg" alt="중국">관화(<span>官話</span>)</a></li>
+								<li><a href="#"><img src="images/flag/svg/china.svg" alt="중국">우어(<span>吳語</span>)</a></li>
+								<li><a href="#"><img src="images/flag/svg/india.svg" alt="인도">힌디어(हिन्दी)</a></li>
+								<li><a href="#"><img src="images/flag/svg/india.svg" alt="인도">우르두어(اُردوُ)</a></li>
+								<li><a href="#"><img src="images/flag/svg/the_arab_league.svg" alt="아압연맹">아랍어(العربية)</a></li>
+								<li><a href="#"><img src="images/flag/svg/turkey.svg" alt="터키">터키어(Türkçe)</a></li>
+								<li><a href="#"><img src="images/flag/svg/vietnam.svg" alt="베트남">베트남어(Tiếng Việt)</a></li>
+								<li><a href="#"><img src="images/flag/svg/greece.svg" alt="그리스">그리스어(ελληνικά)</a></li>
+							</ol>
+							<ol>
+								<li><a href="#"><img src="images/flag/svg/japan.svg" alt="일본">일본어</a></li>
+								<li><a href="#"><img src="images/flag/svg/russia.svg" alt="러시아">러시아어</a></li>
+								<li><a href="#"><img src="images/flag/svg/mongolia.svg" alt="">몽골어(Монгол хэл)</a></li>
+								<li><a href="#"><img src="images/flag/svg/france.svg" alt="프랑스">프랑스어(اُردوُ)</a></li>
+								<li><a href="#"><img src="images/flag/svg/thailand.svg" alt="태국">태국어(ภาษาไทย)</a></li>
+								<li><a href="#"><img src="images/flag/svg/spain.svg" alt="스페인">스페인어(Español)</a></li>
+								<li><a href="#"><img src="images/flag/svg/portugal.svg" alt="포르투갈">포르투갈어(Português)</a></li>
+								<li><a href="#"><img src="images/flag/svg/brazil.svg" alt="브라질">브라질어(Português)</a></li>		
+							</ol>
+						</div>
+					</li>
+					<li><a href="https://play.google.com/store" target="_blank"><img src="images/appdown_google.png" alt="구글플레이"></a>	</li>
+					<li>
+						<label for="fkrw">KRW<img src="images/direct_right.png" alt="click"></label>
+						<input type="checkbox" id="fkrw" name="fkrw">
+						<div class="currency_select footer_currency_select">
+							<h2>통화 선택</h2>
+							<ol>
+								<li><a href="#"><span>KRW</span> 대한민국 원 </a></li>
+								<li><a href="#"><span>JPY</span> 일본 엔</a></li>
+								<li><a href="#"><span>CNY</span> 중국 위안</a></li>
+								<li><a href="#"><span>HKD</span> 홍콩 달러</a></li>
+								<li><a href="#"><span>TWD</span> 대만 달러</a></li>
+								<li><a href="#"><span>AUD</span> 호주 달러</a></li>
+								<li><a href="#"><span>NZD</span> 뉴질랜드 달러</a></li>
+								<li><a href="#"><span>RUB</span> 러시아 루블</a></li>
+							</ol>
+							<ol>
+								<li><a href="#"><span>USD</span> 미국 달러</a></li>
+								<li><a href="#"><span>CAD</span> 캐나다 달러</a></li>
+								<li><a href="#"><span>EUR</span> 유로</a></li>
+								<li><a href="#"><span>GBP</span> 영국 파운드</a></li>
+								<li><a href="#"><span>CHF</span> 스위스 프랑</a></li>
+								<li><a href="#"><span>CZK</span> 체코 코루나</a></li>
+								<li><a href="#"><span>SEK</span> 스웨덴 크로나</a></li>
+								<li><a href="#"><span>PLN</span> 폴란드 즐로티</a></li>
+							</ol>
+							<ol>
+								<li><a href="#"><span>SGD</span> 싱가폴 달러</a></li>
+								<li><a href="#"><span>TRY</span> 터키 리라</a></li>
+								<li><a href="#"><span>VND</span> 베트남 동</a></li>
+								<li><a href="#"><span>PHP</span> 필리핀 페소</a></li>
+								<li><a href="#"><span>MYR</span> 말레이시아 링깃</a></li>
+								<li><a href="#"><span>THB</span> 태국 바트</a></li>
+								<li><a href="#"><span>IDR</span> 인도네시아 루피아</a></li>
+								<li><a href="#"><span>INR</span> 인도 루피</a></li>
+							</ol>
+							<ol>
+								<li><a href="#"><span>ILS</span> 이스라엘 신셰켈</a></li>
+								<li><a href="#"><span>MXN</span> 멕시코 페소</a></li>
+								<li><a href="#"><span>BRL</span> 브라질 레알</a></li>
+							</ol>
+						</div>
+					</li>
+					<li><a href="https://www.apple.com/kr/ios/app-store" target="_blank"><img src="images/appdown_apple.png" alt="앱스토어"></a></li>
+				</ul>
+				<ol>
+					<li><a href="http://www.facebook.com" target="_blank"><img src="images/facebook_footer.png" alt="페이스북"></a></li>
+					<li><a href="http://www.instagram.com" target="_blank"><img src="images/insta_footer.png" alt="인스타그램"></a>	</li>
+					<li><a href="http://www.naver.com" target="_blank"><img src="images/naver_footer.png" alt="네이버"></a>	</li>	
+				</ol>
+			</div>
+			<div id="footer_right">
+				<div class="footer_right1 footer_right">
+					<h3>ABOUT</h3>
+					<ul>
+						<li><a href="#">오늘의 여행 소개</a></li>
+						<li><a href="#">채용 정보</a></li>
+						<li><a href="#">사이트맵</a></li>
+					</ul>
+				</div>
+
+				<div class="footer_right2 footer_right">
+					<h3>PARTNERSHIP</h3>
+					<ul>
+						<li><a href="#">숙박시설 관리</a></li>
+						<li><a href="#">항공사 전용</a></li>
+						<li><a href="#">B2B 제휴</a></li>
+						<li><a href="#">광고 관리</a></li>
+					</ul>
+				</div>	
+
+				<div class="footer_right3 footer_right">
+					<h3>HELP</h3>
+					<ul>
+						<li><a href="support.html">고객센터</a></li>
+						<li><a href="support.html">FAQ</a></li>
+						<li><a href="support.html">문의하기</a></li>
+						<li><a href="#">서비스 약관</a></li>
+						<li><a href="#">개인정보 처리방침</a></li>
+					</ul>
+				</div>				
+			</div>			
+		</div>
+
+
+		<div id="footer_bottom">
+			<address>(주)오늘의여행 경기도 안양시 만안구 안양로 336 금강빌딩 8층<br>
+						Copyright © 2019 todaysaway.com Limited. All rights reserved.</address>
+			<p>일반 전화문의 : <span>1670-8208</span> | 일반 이메일문의 : <span>help@todaysaway.com</span> 24시 연중무휴
+			&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;숙박 전화문의 : <span>1670-8208</span> | 숙박 이메일문의 : <span>hotel@todaysaway.com</span> 24시 연중무휴
+			<br>
+			
+			마케팅/제휴 이메일문의 : <span>marketing@todaysaway.com</span> 09:00 ~ 18:00(한국), 주말/공휴일 휴무
+			&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;항공권 전화문의 : <span>1670-8208</span> | 항공권 이메일문의 : <span>flights@todaysaway.com</span>  24시 연중무휴</p>
+		</div>
+	</div>
+  </div> <!--wrap-->
+ </body>
+</html>
