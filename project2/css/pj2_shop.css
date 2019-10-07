@@ -1,0 +1,2492 @@
+@charset "UTF-8";
+
+.ss{position:relative;}
+
+.ss>label
+				   {display:inline-block;
+					position:absolute;
+					right:1px; top:1px;
+					background:url(../images/icon/check.svg)no-repeat center bottom;
+					width:25px; height:25px;
+					background-size:cover;
+					}
+
+.ss>input:checked+label{background:url(../images/icon/check.svg)no-repeat center top;
+					width:25px; height:25px;
+					background-size:cover;}
+
+@media screen and (min-width:961px){
+
+#shop_banner{position:relative;}
+#shop_banner>div
+{background:#501618;
+height:545px;
+/*background-size:contain, cover;
+-webkit-background-size:contain, cover;
+-moz-background-size:contain, cover;
+-ms-background-size:contain, cover;
+-o-background-size:contain, cover;
+background-repeat:no-repeat, repeat;
+background-position:center center,center center;*/
+padding-top:110px;
+box-sizing:border-box;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+-ms-box-sizing:border-box;
+-o-box-sizing:border-box;
+
+}
+
+#shop_banner>div>div>img{display:block;}
+#shop_banner>div>div>p{float:left;}
+
+#shop_banner>div>div>img:nth-of-type(1){float:left;
+										margin-right:115px;
+										width:17%;
+										
+										}
+#shop_banner>div>div>p:nth-of-type(1){font:2.5em "Do Hyeon",sans-serif;
+									  margin-top:30px;
+									  
+									 }
+
+#shop_banner>div>div>img:nth-of-type(2){float:left;
+									    width:68%;
+									    margin-top:-30px;
+									   }
+
+#shop_banner>div>div>p:nth-of-type(2){font:2em "Do Hyeon",sans-serif;
+									  margin-top:30px;
+									 }
+
+#shop_banner>div>div>img:nth-of-type(3){position:absolute;
+										 bottom:50px; right:0;
+										}
+
+
+
+.swiper-container{margin-bottom:60px !important;}
+.swiper-container>h2{margin-bottom:30px;
+					font:2em "Do Hyeon",sans-serif;
+					}
+#shop_content{margin-bottom:60px;}
+#shop_content h2{font:2em "Do Hyeon",sans-serif;
+					}
+
+
+.goods>a>div,
+.swiper-slide>a>div{width:100%;	
+				  height:200px;
+				  line-height:150px; 
+				  margin-bottom:10px;
+				  }
+
+.goods>a,
+.swiper-slide>a{display:block;
+				color:#000;
+				text-align: left;
+				font:1.3em "Do Hyeon",sans-serif;
+				}
+
+.goods>a>p,
+.swiper-slide>a>p{padding:0 5%;
+				  box-sizing:border-box;
+				  -webkit-box-sizing:border-box;
+				  -moz-box-sizing:border-box;
+				  -ms-box-sizing:border-box;
+				  -o-box-sizing:border-box;
+				 }
+
+.goods>a>p:first-of-type,
+.swiper-slide>a>p:first-of-type{margin-bottom:5%;
+							  white-space:nowrap;
+							  text-overflow:ellipsis;
+							  overflow:hidden;
+							  }
+
+.goods>a>p:nth-of-type(2)>span,
+.swiper-slide>a>p:nth-of-type(2)>span{display:inline-block;
+									  margin-left:10px;
+									  color:#fdc010;
+									 }
+
+.goods>a>p:nth-of-type(2)>span>img,
+.swiper-slide>a>p:nth-of-type(2)>span>img{display:inline-block;
+										  margin-left:5px;
+										  width:18px;
+										 }
+
+#all_goods{overflow:scroll;
+		   overflow-style: none;
+		   -webkit-overflow-style: none;
+		   -moz-overflow-style: none;
+		   -ms-overflow-style: none;
+		   -o-overflow-style: none;
+		   }
+
+#all_goods::scrollbar {display:none;}        
+#all_goods::-webkit-scrollbar {display:none;}
+#all_goods::-moz-scrollbar {display:none;}   
+#all_goods::-ms-scrollbar {display:none;}    
+#all_goods::-o-scrollbar {display:none;}     
+
+
+.all_goods{clear:both;}
+.all_goods{display:flex;
+		   display:-webkit-box;
+		   display:-webkit-flex;
+		   display:-moz-box;
+		   display:-ms-flexbox;		   
+		   flex-flow:row wrap;
+		   -webkit-flex-flow:row wrap;
+		   -moz-flex-flow:row wrap;
+		   justify-content:space-between;
+		   -webkit-justify-content:space-between;
+		   -moz-justify-content:space-between;
+		   
+		  }
+
+.goods{margin-bottom:30px;
+		/*display:none;*/
+		margin-top:0 !important;
+		width:23.5%;
+		float:left;		
+		}
+
+#category_box{margin:30px 0;}
+#category_box>ul{overflow:hidden;
+				 background:#03a0ff;
+				}
+#category_box>ul>li{background:#03a0ff;
+					width:12.5%;
+					height:45px;
+					border-right:1px solid #fff;
+					box-sizing:border-box;
+					-webkit-box-sizing:border-box;
+					-moz-box-sizing:border-box;
+					-ms-box-sizing:border-box;
+					-o-box-sizing:border-box;
+					float:left;
+					}
+#category_box>ul>li:last-child{border-right:0;}
+
+#controll_category_box>ul>li>label,
+#category_box>ul>li>label{display:block;
+						  color:#fff;
+						  font:1.4em "Do Hyeon",sans-serif;
+						  text-align:center;
+						  line-height:45px;
+						  box-sizing:border-box;
+						  -webkit-box-sizing:border-box;
+						  -moz-box-sizing:border-box;
+						  -ms-box-sizing:border-box;
+						  -o-box-sizing:border-box;
+						  transition:all ease-out 0.1s;
+						  -webkit-transition:all ease-out 0.1s;
+						  -moz-transition:all ease-out 0.1s;
+						  -ms-transition:all ease-out 0.1s;
+						  -o-transition:all ease-out 0.1s;
+
+						 }
+
+#controll_category_box>ul>li>label{line-height:52px;}
+
+#controll_category_box>ul>li>label:hover,
+#category_box>ul>li>label:hover{font-size:1.6em;}
+
+#shop_controller>ul>li{position:relative;}
+#controll_category_box{width:288%;
+						height:540%;
+						position:absolute;
+						right:75px; top:-10px;
+						background:rgba(3,160,255,0.8);
+						border-radius:15px;
+						-webkit-border-radius:15px;
+						-moz-border-radius:15px;
+						-ms-border-radius:15px;
+						-o-border-radius:15px;
+						}
+#controll_category_box>ul{height:100%;}
+#controll_category_box>ul>li{height:12.5%;
+						 line-height:52px;
+						 border:1px solid #fff;
+						 border-style: solid;
+						 border-image:linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,0.8),rgba(255,255,255,0));
+						 -webkit-border-image:linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,0.8),rgba(255,255,255,0));
+						 -o-border-image:linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,0.8),rgba(255,255,255,0));
+						 border-image-slice: 1;
+						 -webkit-border-slice: 1;
+						 -o-border-slice: 1;
+						 box-sizing:border-box;
+						 -webkit-box-sizing:border-box;
+						 -moz-box-sizing:border-box;
+						 -ms-box-sizing:border-box;
+						 -o-box-sizing:border-box;
+						 }
+
+
+
+
+
+input#category_all:checked+#category_cup+#category_tshirts+#category_note+#category_cardholder+#category_electro+#category_blind+#category_alined+div#category_box>ul>li>label[for="category_all"],
+#category_cup:checked+#category_tshirts+#category_note+#category_cardholder+#category_electro+#category_blind+#category_alined+div#category_box>ul>li>label[for="category_cup"],
+#category_tshirts:checked+#category_note+#category_cardholder+#category_electro+#category_blind+#category_alined+div#category_box>ul>li>label[for="category_tshirts"],
+#category_note:checked+#category_cardholder+#category_electro+#category_blind+#category_alined+div#category_box>ul>li>label[for="category_note"],
+#category_cardholder:checked+#category_electro+#category_blind+#category_alined+div#category_box>ul>li>label[for="category_cardholder"],
+#category_electro:checked+#category_blind+#category_alined+div#category_box>ul>li>label[for="category_electro"],
+#category_blind:checked+#category_alined+div#category_box>ul>li>label[for="category_blind"],
+input#category_alined:checked+div#category_box>ul>li>label[for="category_alined"]
+  {color:#000;
+   font-size:1.6em;
+	}
+/*
+input#category_all:checked
++#category_cup+#category_tshirts+#category_note
++#category_cardholder+#category_electro
++#category_blind+#category_alined
++div#category_box+#all_goods>.all_goods .goods{display:block;}
+
+#category_cup:checked+#category_tshirts+#category_note
++#category_cardholder+#category_electro
++#category_blind+#category_alined
++div#category_box+#all_goods>.all_goods .goods.mg{display:block;}
+
+
+#category_tshirts:checked+#category_note
++#category_cardholder+#category_electro
++#category_blind+#category_alined
++div#category_box+#all_goods>.all_goods .goods.ts{display:block;}
+
+
+#category_note:checked
++#category_cardholder+#category_electro
++#category_blind+#category_alined
++div#category_box+#all_goods>.all_goods .goods.nt{display:block;}
+
+
+#category_cardholder:checked+#category_electro
++#category_blind+#category_alined
++div#category_box+#all_goods>.all_goods .goods.ch{display:block;}
+
+
+#category_electro:checked
++#category_blind+#category_alined
++div#category_box+#all_goods>.all_goods .goods.mp{display:block;}
+
+
+#category_blind:checked+#category_alined
++div#category_box+#all_goods>.all_goods .goods.bd{display:block;}
+
+
+#category_alined:checked
++div#category_box+#all_goods>.all_goods .goods.cd{display:block;}
+*/
+
+
+
+.goods_img{background-size:contain, cover;
+-webkit-background-size:contain, cover;
+-moz-background-size:contain, cover;
+-ms-background-size:contain, cover;
+-o-background-size:contain, cover;
+background-repeat:no-repeat, repeat;
+background-position:center center,center center;
+border:1px solid #c8c8c8;
+box-sizing:border-box;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+-ms-box-sizing:border-box;
+-o-box-sizing:border-box;
+transition:all ease-in 0.1s;
+-webkit-transition:all ease-in 0.1s;
+-moz-transition:all ease-in 0.1s;
+-ms-transition:all ease-in 0.1s;
+-o-transition:all ease-in 0.1s;
+}
+
+.goods>a:hover .goods_img,
+.swiper-slide>a:hover .goods_img{border:5px solid #b01116;}
+
+.goods_img.hj1
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad3.png);
+} 
+.goods_img.hj2
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts1.png);
+} 
+.goods_img.hj3
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind16.png);
+} 
+.goods_img.hj4
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind17.png);
+} 
+.goods_img.hj5
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind13.png);
+} 
+.goods_img.hj6
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler1.png);
+} 
+
+.goods_img.nw1
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug5.png);
+}
+.goods_img.nw2
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad3.png);
+}
+.goods_img.nw3
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind11.png);
+}
+.goods_img.nw4
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind12.png);
+}
+.goods_img.nw5
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts8.png);
+}
+.goods_img.nw6
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts9.png);
+}
+
+
+.goods_img.ig1
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug4.png);
+}
+.goods_img.ig2
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind15.png);
+}
+.goods_img.ig3
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder17.png);
+}
+.goods_img.ig4
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts2.png);
+}
+.goods_img.ig5
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler1.png);
+}
+.goods_img.ig6
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder2.png);
+}
+
+
+.goods_img.all1.mg1
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug5.png);
+}
+.goods_img.all2.mg2
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler1.png);
+}
+.goods_img.all3.mg3
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug1.png);
+}
+.goods_img.all4.mg4
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug2.png);
+}
+.goods_img.all5.mg5
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug3.png);
+}
+.goods_img.all6.mg6
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler3.png);
+}
+.goods_img.all7.mg7
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler2.png);
+}
+.goods_img.all8.mg8
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug7.png);
+}
+.goods_img.all9.mg9
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug8.png);
+}
+.goods_img.all10.mg10
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug9.png);
+}
+.goods_img.all11.mg11
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug4.png);
+}
+.goods_img.all12.mg12
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug6.png);
+}
+.goods_img.all13.mg13
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler4.png);
+}
+.goods_img.all14.mg14
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler5.png);
+}
+.goods_img.all15.mg15
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler6.png);
+}
+.goods_img.all16.mg16
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler7.png);
+}
+.goods_img.all17.mg17
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler8.png);
+}
+.goods_img.all18.mg18
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler9.png);
+}
+
+
+
+
+.goods_img.all19.ts1
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts1.png);
+}
+.goods_img.all20.ts2
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts2.png);
+}
+.goods_img.all21.ts3
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts3.png);
+}
+.goods_img.all22.ts4
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts4.png);
+}
+.goods_img.all23.ts5
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts5.png);
+}
+.goods_img.all24.ts6
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts6.png);
+}
+.goods_img.all25.ts7
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts7.png);
+}
+.goods_img.all26.ts8
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts8.png);
+}
+.goods_img.all27.ts9
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts9.png);
+}
+.goods_img.all28.ts10
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts10.png);
+}
+.goods_img.all29.ts11
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts11.png);
+}
+.goods_img.all30.ts12
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts12.png);
+}
+
+.goods_img.all31.nt1
+{background-color:#fff;
+background-image:url(../image/shop/note/note1.png);
+}
+.goods_img.all32.nt2
+{background-color:#fff;
+background-image:url(../image/shop/note/note2.png);
+}
+.goods_img.all33.nt3
+{background-color:#fff;
+background-image:url(../image/shop/note/note3.png);
+}
+.goods_img.all34.nt4
+{background-color:#fff;
+background-image:url(../image/shop/note/note4.png);
+}
+.goods_img.all35.nt5
+{background-color:#fff;
+background-image:url(../image/shop/note/note5.png);
+}
+.goods_img.all36.nt6
+{background-color:#fff;
+background-image:url(../image/shop/note/note6.png);
+}
+.goods_img.all37.nt7
+{background-color:#fff;
+background-image:url(../image/shop/note/note7.png);
+}
+.goods_img.all38.nt8
+{background-color:#fff;
+background-image:url(../image/shop/note/note8.png);
+}
+.goods_img.all39.nt9
+{background-color:#fff;
+background-image:url(../image/shop/note/note9.png);
+}
+.goods_img.all40.nt10
+{background-color:#fff;
+background-image:url(../image/shop/note/note10.png);
+}
+.goods_img.all41.nt11
+{background-color:#fff;
+background-image:url(../image/shop/note/note11.png);
+}
+.goods_img.all42.nt12
+{background-color:#fff;
+background-image:url(../image/shop/note/note12.png);
+}
+
+.goods_img.all43.ch1
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder18.png);
+}
+.goods_img.all44.ch2
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder17.png);
+}
+.goods_img.all45.ch3
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder16.png);
+}
+.goods_img.all46.ch4
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder15.png);
+}
+.goods_img.all47.ch5
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder14.png);
+}
+.goods_img.all48.ch6
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder13.png);
+}
+.goods_img.all49.ch7
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder12.png);
+}
+.goods_img.all50.ch8
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder11.png);
+}
+.goods_img.all51.ch9
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder10.png);
+}
+.goods_img.all52.ch10
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder9.png);
+}
+.goods_img.all53.ch11
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder8.png);
+}
+.goods_img.all54.ch12
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder7.png);
+}
+.goods_img.all55.ch13
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder6.png);
+}
+.goods_img.all56.ch14
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder5.png);
+}
+.goods_img.all57.ch15
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder4.png);
+}
+.goods_img.all58.ch16
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder3.png);
+}
+.goods_img.all59.ch17
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder2.png);
+}
+.goods_img.all60.ch18
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder1.png);
+}
+
+.goods_img.all61.mp1
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad1.png);
+}
+.goods_img.all62.mp2
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad2.png);
+}
+.goods_img.all63.mp3
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad3.png);
+}
+.goods_img.all64.mp4
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad4.png);
+}
+.goods_img.all65.mp5
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad5.png);
+}
+.goods_img.all66.mp6
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad6.png);
+}
+.goods_img.all67.mp7
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad7.png);
+}
+.goods_img.all68.mp8
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad8.png);
+}
+.goods_img.all69.mp9
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad9.png);
+}
+.goods_img.all70.mp10
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad10.png);
+}
+.goods_img.all71.mp11
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad11.png);
+}
+.goods_img.all72.mp12
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad12.png);
+}
+
+
+.goods_img.all73.bd1
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind1.png);
+}
+.goods_img.all74.bd2
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind2.png);
+}
+.goods_img.all75.bd3
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind3.png);
+}
+.goods_img.all76.bd4
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind4.png);
+}
+.goods_img.all77.bd5
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind5.png);
+}
+.goods_img.all78.bd6
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind6.png);
+}
+.goods_img.all79.bd7
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind7.png);
+}
+.goods_img.all80.bd8
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind8.png);
+}
+.goods_img.all81.bd9
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind9.png);
+}
+.goods_img.all82.bd10
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind10.png);
+}
+.goods_img.all83.bd11
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind11.png);
+}
+.goods_img.all84.bd12
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind12.png);
+}
+.goods_img.all85.bd13
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind13.png);
+}
+.goods_img.all86.bd14
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind14.png);
+}
+.goods_img.all87.bd15
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind15.png);
+}
+.goods_img.all88.bd16
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind16.png);
+}
+.goods_img.all89.bd17
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind17.png);
+}
+.goods_img.all90.bd18
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind18.png);
+}
+.goods_img.all91.bd19
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind19.png);
+}
+.goods_img.all92.bd20
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind20.png);
+}
+.goods_img.all93.bd21
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind21.png);
+}
+.goods_img.all94.bd22
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind22.png);
+}
+.goods_img.all95.bd23
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind23.png);
+}
+.goods_img.all96.bd24
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind24.png);
+}
+.goods_img.all97.bd25
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind25.png);
+}
+.goods_img.all98.bd26
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind26.png);
+}
+.goods_img.all99.bd27
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind27.png);
+}
+
+.goods_img.all100.cd1
+{background-color:#fff;
+background-image:url(../image/shop/card/checkcard.png);
+}
+.goods_img.all101.cd2
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic1.png);
+}
+.goods_img.all102.cd3
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic2.png);
+}
+.goods_img.all103.cd4
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic3.png);
+}
+.goods_img.all104.cd5
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic4.png);
+}
+.goods_img.all105.cd6
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic5.png);
+}
+.goods_img.all106.cd7
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic6.png);
+}
+.goods_img.all107.cd8
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic7.png);
+}
+.goods_img.all108.cd9
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic8.png);
+}
+.goods_img.all109.cd10
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic9.png);
+}
+
+
+
+} /*----------------------------------------------------*/
+
+@media screen and (min-width:1240px){
+#shop_banner{position:relative;}
+#shop_banner>div>div>img:nth-of-type(3){position:absolute;
+										 bottom:50px; right:5%;
+										}
+
+}
+
+
+
+
+@media screen and (min-width:768px) and (max-width:960px){
+
+
+#shop_banner{position:relative;}
+#shop_banner>div
+{background:#501618;
+height:460px;
+/*background-size:contain, cover;
+-webkit-background-size:contain, cover;
+-moz-background-size:contain, cover;
+-ms-background-size:contain, cover;
+-o-background-size:contain, cover;
+background-repeat:no-repeat, repeat;
+background-position:center center,center center;*/
+padding-top:110px;
+box-sizing:border-box;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+-ms-box-sizing:border-box;
+-o-box-sizing:border-box;
+
+}
+
+#shop_banner>div>div>img{display:block;}
+#shop_banner>div>div>p{float:left;}
+
+#shop_banner>div>div>img:nth-of-type(1){float:left;
+										margin-right:60px;
+										width:18%;
+										}
+#shop_banner>div>div>p:nth-of-type(1){font:2.5em "Do Hyeon",sans-serif;
+									  margin-top:30px;
+									 }
+
+#shop_banner>div>div>img:nth-of-type(2){float:left;
+									    width:68%;
+										margin-top:-30px;
+									   }
+
+#shop_banner>div>div>p:nth-of-type(2){font:2em "Do Hyeon",sans-serif;}
+
+#shop_banner>div>div>img:nth-of-type(3){position:absolute;
+										 bottom:50px; right:0.5%;
+										width:25%;
+										margin-top:30px;
+										}
+
+.swiper-container{margin-bottom:60px !important;}
+.swiper-container>h2{margin-bottom:30px;
+					font:2.2em "Do Hyeon",sans-serif;
+					color:#fff;
+					}
+#shop_content h2{font:2.2em "Do Hyeon",sans-serif;
+				color:#fff;
+					}
+
+
+.goods>a>div,
+.swiper-slide>a>div{width:100%;	
+				  height:179px;
+				  line-height:150px; 
+				  margin-bottom:10px;
+				  }
+
+.goods>a,
+.swiper-slide>a{display:block;
+				color:#fff;
+				text-align: left;
+				font:1.3em "Do Hyeon",sans-serif;
+				}
+
+.goods>a>p,
+.swiper-slide>a>p{padding:0 5%;
+				  box-sizing:border-box;
+				  -webkit-box-sizing:border-box;
+				  -moz-box-sizing:border-box;
+				  -ms-box-sizing:border-box;
+				  -o-box-sizing:border-box;
+				 }
+
+.goods>a>p:first-of-type,
+.swiper-slide>a>p:first-of-type{margin-bottom:5%;
+							  white-space:nowrap;
+							  text-overflow:ellipsis;
+							  overflow:hidden;
+							  }
+
+.goods>a>p:nth-of-type(2)>span,
+.swiper-slide>a>p:nth-of-type(2)>span{display:inline-block;
+									  margin-left:10px;
+									  color:#fdc010;
+									  float:right;
+									 }
+
+.goods>a>p:nth-of-type(2)>span>img,
+.swiper-slide>a>p:nth-of-type(2)>span>img{display:inline-block;
+										  margin-left:5px;
+										  width:14px;
+										  vertical-align:middle;
+										 }
+#all_goods{overflow:scroll;
+		   overflow-style: none;
+		   -webkit-overflow-style: none;
+		   -moz-overflow-style: none;
+		   -ms-overflow-style: none;
+		   -o-overflow-style: none;
+		   }
+
+#all_goods::scrollbar {display:none;}        
+#all_goods::-webkit-scrollbar {display:none;}
+#all_goods::-moz-scrollbar {display:none;}   
+#all_goods::-ms-scrollbar {display:none;}    
+#all_goods::-o-scrollbar {display:none;} 
+
+.all_goods{clear:both;}
+.all_goods{display:flex;
+		   display:-webkit-box;
+		   display:-webkit-flex;
+		   display:-moz-box;
+		   display:-ms-flexbox;		   
+		   flex-flow:row wrap;
+		   -webkit-flex-flow:row wrap;
+		   -moz-flex-flow:row wrap;
+		   justify-content:space-between;
+		   -webkit-justify-content:space-between;
+		   -moz-justify-content:space-between;
+		   
+		  }
+
+.goods{margin-bottom:30px;
+		/*display:none;*/
+		margin-top:0 !important;
+		width:23.5%;
+		float:left;		
+		}
+
+#category_box{margin:30px 0;}
+#category_box>ul{overflow:hidden;
+				 background:#03a0ff;
+				}
+#category_box>ul>li{background:#03a0ff;
+					width:12.5%;
+					height:45px;
+					border-right:1px solid #000;
+					box-sizing:border-box;
+					-webkit-box-sizing:border-box;
+					-moz-box-sizing:border-box;
+					-ms-box-sizing:border-box;
+					-o-box-sizing:border-box;
+					float:left;
+					}
+#category_box>ul>li:last-child{border-right:0;}
+#controll_category_box>ul>li>label,
+#category_box>ul>li>label{display:block;
+						  color:#fff;
+						  font:1.4em "Do Hyeon",sans-serif;
+						  text-align:center;
+						  line-height:45px;
+						  box-sizing:border-box;
+						  -webkit-box-sizing:border-box;
+						  -moz-box-sizing:border-box;
+						  -ms-box-sizing:border-box;
+						  -o-box-sizing:border-box;
+						  transition:all ease-out 0.1s;
+						  -webkit-transition:all ease-out 0.1s;
+						  -moz-transition:all ease-out 0.1s;
+						  -ms-transition:all ease-out 0.1s;
+						  -o-transition:all ease-out 0.1s;
+
+						 }
+
+
+
+#controll_category_box>ul>li>label{line-height:40px;}
+
+#controll_category_box>ul>li>label:hover,
+#category_box>ul>li>label:hover{font-size:1.6em;}
+
+#shop_controller>ul>li{position:relative;}
+#controll_category_box{width:288%;
+						height:540%;
+						position:absolute;
+						right:54px; top:-10px;
+						background:rgba(3,160,255,0.8);
+						border-radius:15px;
+						-webkit-border-radius:15px;
+						-moz-border-radius:15px;
+						-ms-border-radius:15px;
+						-o-border-radius:15px;
+						}
+#controll_category_box>ul{height:100%;}
+#controll_category_box>ul>li{height:12.5%;
+						 line-height:52px;
+						 border:1px solid #fff;
+						 border-style: solid;
+						 border-image:linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,0.8),rgba(255,255,255,0));
+						 -webkit-border-image:linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,0.8),rgba(255,255,255,0));
+						 -o-border-image:linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,0.8),rgba(255,255,255,0));
+						 border-image-slice: 1;
+						 -webkit-border-slice: 1;
+						 -o-border-slice: 1;
+						 box-sizing:border-box;
+						 -webkit-box-sizing:border-box;
+						 -moz-box-sizing:border-box;
+						 -ms-box-sizing:border-box;
+						 -o-box-sizing:border-box;
+						 }
+
+
+input#category_all:checked+#category_cup+#category_tshirts+#category_note+#category_cardholder+#category_electro+#category_blind+#category_alined+div#category_box>ul>li>label[for="category_all"],
+#category_cup:checked+#category_tshirts+#category_note+#category_cardholder+#category_electro+#category_blind+#category_alined+div#category_box>ul>li>label[for="category_cup"],
+#category_tshirts:checked+#category_note+#category_cardholder+#category_electro+#category_blind+#category_alined+div#category_box>ul>li>label[for="category_tshirts"],
+#category_note:checked+#category_cardholder+#category_electro+#category_blind+#category_alined+div#category_box>ul>li>label[for="category_note"],
+#category_cardholder:checked+#category_electro+#category_blind+#category_alined+div#category_box>ul>li>label[for="category_cardholder"],
+#category_electro:checked+#category_blind+#category_alined+div#category_box>ul>li>label[for="category_electro"],
+#category_blind:checked+#category_alined+div#category_box>ul>li>label[for="category_blind"],
+input#category_alined:checked+div#category_box>ul>li>label[for="category_alined"]
+  {color:#000;
+   font-size:1.6em;
+	}
+
+
+/*
+input#category_all:checked
++#category_cup+#category_tshirts+#category_note
++#category_cardholder+#category_electro
++#category_blind+#category_alined
++div#category_box+#all_goods>.all_goods .goods{display:block;}
+
+#category_cup:checked+#category_tshirts+#category_note
++#category_cardholder+#category_electro
++#category_blind+#category_alined
++div#category_box+#all_goods>.all_goods .goods.mg{display:block;}
+
+
+#category_tshirts:checked+#category_note
++#category_cardholder+#category_electro
++#category_blind+#category_alined
++div#category_box+#all_goods>.all_goods .goods.ts{display:block;}
+
+
+#category_note:checked
++#category_cardholder+#category_electro
++#category_blind+#category_alined
++div#category_box+#all_goods>.all_goods .goods.nt{display:block;}
+
+
+#category_cardholder:checked+#category_electro
++#category_blind+#category_alined
++div#category_box+#all_goods>.all_goods .goods.ch{display:block;}
+
+
+#category_electro:checked
++#category_blind+#category_alined
++div#category_box+#all_goods>.all_goods .goods.mp{display:block;}
+
+
+#category_blind:checked+#category_alined
++div#category_box+#all_goods>.all_goods .goods.bd{display:block;}
+
+
+#category_alined:checked
++div#category_box+#all_goods>.all_goods .goods.cd{display:block;}
+*/
+
+.goods_img{background-size:contain, cover;
+-webkit-background-size:contain, cover;
+-moz-background-size:contain, cover;
+-ms-background-size:contain, cover;
+-o-background-size:contain, cover;
+background-repeat:no-repeat, repeat;
+background-position:center center,center center;
+border:1px solid #c8c8c8;
+box-sizing:border-box;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+-ms-box-sizing:border-box;
+-o-box-sizing:border-box;
+transition:all ease-in 0.1s;
+-webkit-transition:all ease-in 0.1s;
+-moz-transition:all ease-in 0.1s;
+-ms-transition:all ease-in 0.1s;
+-o-transition:all ease-in 0.1s;
+}
+
+.goods>a:hover .goods_img,
+.swiper-slide>a:hover .goods_img{border:5px solid #b01116;}
+
+.goods_img.hj1
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad3.png);
+} 
+.goods_img.hj2
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts1.png);
+} 
+.goods_img.hj3
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind16.png);
+} 
+.goods_img.hj4
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind17.png);
+} 
+.goods_img.hj5
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind13.png);
+} 
+.goods_img.hj6
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler1.png);
+} 
+
+.goods_img.nw1
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug5.png);
+}
+.goods_img.nw2
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad3.png);
+}
+.goods_img.nw3
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind11.png);
+}
+.goods_img.nw4
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind12.png);
+}
+.goods_img.nw5
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts8.png);
+}
+.goods_img.nw6
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts9.png);
+}
+
+
+.goods_img.ig1
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug4.png);
+}
+.goods_img.ig2
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind15.png);
+}
+.goods_img.ig3
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder17.png);
+}
+.goods_img.ig4
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts2.png);
+}
+.goods_img.ig5
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler1.png);
+}
+.goods_img.ig6
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder2.png);
+}
+
+
+.goods_img.all1.mg1
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug5.png);
+}
+.goods_img.all2.mg2
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler1.png);
+}
+.goods_img.all3.mg3
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug1.png);
+}
+.goods_img.all4.mg4
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug2.png);
+}
+.goods_img.all5.mg5
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug3.png);
+}
+.goods_img.all6.mg6
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler3.png);
+}
+.goods_img.all7.mg7
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler2.png);
+}
+.goods_img.all8.mg8
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug7.png);
+}
+.goods_img.all9.mg9
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug8.png);
+}
+.goods_img.all10.mg10
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug9.png);
+}
+.goods_img.all11.mg11
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug4.png);
+}
+.goods_img.all12.mg12
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug6.png);
+}
+.goods_img.all13.mg13
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler4.png);
+}
+.goods_img.all14.mg14
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler5.png);
+}
+.goods_img.all15.mg15
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler6.png);
+}
+.goods_img.all16.mg16
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler7.png);
+}
+.goods_img.all17.mg17
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler8.png);
+}
+.goods_img.all18.mg18
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler9.png);
+}
+
+
+
+
+.goods_img.all19.ts1
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts1.png);
+}
+.goods_img.all20.ts2
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts2.png);
+}
+.goods_img.all21.ts3
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts3.png);
+}
+.goods_img.all22.ts4
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts4.png);
+}
+.goods_img.all23.ts5
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts5.png);
+}
+.goods_img.all24.ts6
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts6.png);
+}
+.goods_img.all25.ts7
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts7.png);
+}
+.goods_img.all26.ts8
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts8.png);
+}
+.goods_img.all27.ts9
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts9.png);
+}
+.goods_img.all28.ts10
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts10.png);
+}
+.goods_img.all29.ts11
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts11.png);
+}
+.goods_img.all30.ts12
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts12.png);
+}
+
+.goods_img.all31.nt1
+{background-color:#fff;
+background-image:url(../image/shop/note/note1.png);
+}
+.goods_img.all32.nt2
+{background-color:#fff;
+background-image:url(../image/shop/note/note2.png);
+}
+.goods_img.all33.nt3
+{background-color:#fff;
+background-image:url(../image/shop/note/note3.png);
+}
+.goods_img.all34.nt4
+{background-color:#fff;
+background-image:url(../image/shop/note/note4.png);
+}
+.goods_img.all35.nt5
+{background-color:#fff;
+background-image:url(../image/shop/note/note5.png);
+}
+.goods_img.all36.nt6
+{background-color:#fff;
+background-image:url(../image/shop/note/note6.png);
+}
+.goods_img.all37.nt7
+{background-color:#fff;
+background-image:url(../image/shop/note/note7.png);
+}
+.goods_img.all38.nt8
+{background-color:#fff;
+background-image:url(../image/shop/note/note8.png);
+}
+.goods_img.all39.nt9
+{background-color:#fff;
+background-image:url(../image/shop/note/note9.png);
+}
+.goods_img.all40.nt10
+{background-color:#fff;
+background-image:url(../image/shop/note/note10.png);
+}
+.goods_img.all41.nt11
+{background-color:#fff;
+background-image:url(../image/shop/note/note11.png);
+}
+.goods_img.all42.nt12
+{background-color:#fff;
+background-image:url(../image/shop/note/note12.png);
+}
+
+.goods_img.all43.ch1
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder18.png);
+}
+.goods_img.all44.ch2
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder17.png);
+}
+.goods_img.all45.ch3
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder16.png);
+}
+.goods_img.all46.ch4
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder15.png);
+}
+.goods_img.all47.ch5
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder14.png);
+}
+.goods_img.all48.ch6
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder13.png);
+}
+.goods_img.all49.ch7
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder12.png);
+}
+.goods_img.all50.ch8
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder11.png);
+}
+.goods_img.all51.ch9
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder10.png);
+}
+.goods_img.all52.ch10
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder9.png);
+}
+.goods_img.all53.ch11
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder8.png);
+}
+.goods_img.all54.ch12
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder7.png);
+}
+.goods_img.all55.ch13
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder6.png);
+}
+.goods_img.all56.ch14
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder5.png);
+}
+.goods_img.all57.ch15
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder4.png);
+}
+.goods_img.all58.ch16
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder3.png);
+}
+.goods_img.all59.ch17
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder2.png);
+}
+.goods_img.all60.ch18
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder1.png);
+}
+
+.goods_img.all61.mp1
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad1.png);
+}
+.goods_img.all62.mp2
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad2.png);
+}
+.goods_img.all63.mp3
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad3.png);
+}
+.goods_img.all64.mp4
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad4.png);
+}
+.goods_img.all65.mp5
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad5.png);
+}
+.goods_img.all66.mp6
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad6.png);
+}
+.goods_img.all67.mp7
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad7.png);
+}
+.goods_img.all68.mp8
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad8.png);
+}
+.goods_img.all69.mp9
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad9.png);
+}
+.goods_img.all70.mp10
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad10.png);
+}
+.goods_img.all71.mp11
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad11.png);
+}
+.goods_img.all72.mp12
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad12.png);
+}
+
+
+.goods_img.all73.bd1
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind1.png);
+}
+.goods_img.all74.bd2
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind2.png);
+}
+.goods_img.all75.bd3
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind3.png);
+}
+.goods_img.all76.bd4
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind4.png);
+}
+.goods_img.all77.bd5
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind5.png);
+}
+.goods_img.all78.bd6
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind6.png);
+}
+.goods_img.all79.bd7
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind7.png);
+}
+.goods_img.all80.bd8
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind8.png);
+}
+.goods_img.all81.bd9
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind9.png);
+}
+.goods_img.all82.bd10
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind10.png);
+}
+.goods_img.all83.bd11
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind11.png);
+}
+.goods_img.all84.bd12
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind12.png);
+}
+.goods_img.all85.bd13
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind13.png);
+}
+.goods_img.all86.bd14
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind14.png);
+}
+.goods_img.all87.bd15
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind15.png);
+}
+.goods_img.all88.bd16
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind16.png);
+}
+.goods_img.all89.bd17
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind17.png);
+}
+.goods_img.all90.bd18
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind18.png);
+}
+.goods_img.all91.bd19
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind19.png);
+}
+.goods_img.all92.bd20
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind20.png);
+}
+.goods_img.all93.bd21
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind21.png);
+}
+.goods_img.all94.bd22
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind22.png);
+}
+.goods_img.all95.bd23
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind23.png);
+}
+.goods_img.all96.bd24
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind24.png);
+}
+.goods_img.all97.bd25
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind25.png);
+}
+.goods_img.all98.bd26
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind26.png);
+}
+.goods_img.all99.bd27
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind27.png);
+}
+
+.goods_img.all100.cd1
+{background-color:#fff;
+background-image:url(../image/shop/card/checkcard.png);
+}
+.goods_img.all101.cd2
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic1.png);
+}
+.goods_img.all102.cd3
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic2.png);
+}
+.goods_img.all103.cd4
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic3.png);
+}
+.goods_img.all104.cd5
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic4.png);
+}
+.goods_img.all105.cd6
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic5.png);
+}
+.goods_img.all106.cd7
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic6.png);
+}
+.goods_img.all107.cd8
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic7.png);
+}
+.goods_img.all108.cd9
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic8.png);
+}
+.goods_img.all109.cd10
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic9.png);
+}
+
+
+}
+
+
+
+
+@media screen and (max-width:767px){
+
+
+#shop_banner{position:relative;}
+#shop_banner>div
+{background:#501618;
+height:265px;
+/*background-size:contain, cover;
+-webkit-background-size:contain, cover;
+-moz-background-size:contain, cover;
+-ms-background-size:contain, cover;
+-o-background-size:contain, cover;
+background-repeat:no-repeat, repeat;
+background-position:center center,center center;*/
+padding-top:55px;
+box-sizing:border-box;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+-ms-box-sizing:border-box;
+-o-box-sizing:border-box;
+
+}
+
+#shop_banner>div>div>img{display:block;}
+#shop_banner>div>div>p{float:left;}
+
+#shop_banner>div>div>img:nth-of-type(1){float: left;
+										margin-right: 18px;
+										width: 24%;
+										}
+#shop_banner>div>div>p:nth-of-type(1){font:2.5em "Do Hyeon",sans-serif;
+									  margin-top:30px;
+									 }
+
+#shop_banner>div>div>img:nth-of-type(2){float:left;
+									    width:68%;
+										
+									   }
+
+#shop_banner>div>div>p:nth-of-type(2){font:2em "Do Hyeon",sans-serif;
+									  
+									 }
+
+#shop_banner>div>div>img:nth-of-type(3){position:absolute;
+										 bottom:25px; right:5%;
+										width:25%;
+										}
+
+.swiper-container{margin-bottom:60px !important;}
+.swiper-container>h2{margin-bottom:30px;
+					font:2.2em "Do Hyeon",sans-serif;
+					color:#fff;
+					}
+#shop_content h2{font:2.2em "Do Hyeon",sans-serif;
+				color:#fff;
+					}
+
+
+.goods>a>div,
+.swiper-slide>a>div{width:100%;	
+				  height:134px;
+				  line-height:150px; 
+				  margin-bottom:10px;
+				  }
+
+.goods>a,
+.swiper-slide>a{display:block;
+				color:#fff;
+				text-align: left;
+				
+				}
+
+.goods>a>p,
+.swiper-slide>a>p{padding:0 5%;
+				  box-sizing:border-box;
+				  -webkit-box-sizing:border-box;
+				  -moz-box-sizing:border-box;
+				  -ms-box-sizing:border-box;
+				  -o-box-sizing:border-box;
+				 }
+
+.goods>a>p:first-of-type,
+.swiper-slide>a>p:first-of-type{margin-bottom:5%;
+							  white-space:nowrap;
+							  text-overflow:ellipsis;
+							  overflow:hidden;
+							  font:2em "Do Hyeon",sans-serif;
+							  }
+.goods>a>p:nth-of-type(2),
+.swiper-slide>a>p:nth-of-type(2){font:1.6em "Do Hyeon",sans-serif;}
+.goods>a>p:nth-of-type(2)>span,
+.swiper-slide>a>p:nth-of-type(2)>span{display:block;									  
+									  color:#fdc010;
+									  
+									 }
+
+.goods>a>p:nth-of-type(2)>span>img,
+.swiper-slide>a>p:nth-of-type(2)>span>img{display:inline-block;								 
+										  width:10px;
+										  vertical-align:middle;
+										 }
+#all_goods{overflow:scroll;
+		   overflow-style: none;
+		   -webkit-overflow-style: none;
+		   -moz-overflow-style: none;
+		   -ms-overflow-style: none;
+		   -o-overflow-style: none;
+		   }
+
+#all_goods::scrollbar {display:none;}        
+#all_goods::-webkit-scrollbar {display:none;}
+#all_goods::-moz-scrollbar {display:none;}   
+#all_goods::-ms-scrollbar {display:none;}    
+#all_goods::-o-scrollbar {display:none;} 
+
+
+.all_goods{clear:both;}
+.all_goods{display:flex;
+		   display:-webkit-box;
+		   display:-webkit-flex;
+		   display:-moz-box;
+		   display:-ms-flexbox;		   
+		   flex-flow:row wrap;
+		   -webkit-flex-flow:row wrap;
+		   -moz-flex-flow:row wrap;
+		   justify-content:space-between;
+		   -webkit-justify-content:space-between;
+		   -moz-justify-content:space-between;
+		   
+		  }
+
+.goods{margin-bottom:30px;
+		/*display:none;*/
+		margin-top:0 !important;
+		width:32%;
+		float:left;		
+		}
+
+#category_box{margin:30px 0;}
+#category_box>ul{overflow:hidden;
+				 background:#03a0ff;
+				}
+#category_box>ul>li{background:#03a0ff;
+					width:25%;
+					height:24px;
+					border-right:1px solid #000;
+					box-sizing:border-box;
+					-webkit-box-sizing:border-box;
+					-moz-box-sizing:border-box;
+					-ms-box-sizing:border-box;
+					-o-box-sizing:border-box;
+					float:left;
+					}
+#category_box>ul>li:nth-child(-n+4){border-bottom:1px solid #000;}
+#category_box>ul>li:nth-child(4n){border-right:0;}
+#controll_category_box>ul>li>label,
+#category_box>ul>li>label{display:block;
+						  color:#fff;
+						  font:1.8em "Do Hyeon",sans-serif;
+						  text-align:center;
+						  line-height:24px;
+						  box-sizing:border-box;
+						  -webkit-box-sizing:border-box;
+						  -moz-box-sizing:border-box;
+						  -ms-box-sizing:border-box;
+						  -o-box-sizing:border-box;
+						  transition:all ease-out 0.1s;
+						  -webkit-transition:all ease-out 0.1s;
+						  -moz-transition:all ease-out 0.1s;
+						  -ms-transition:all ease-out 0.1s;
+						  -o-transition:all ease-out 0.1s;
+
+						 }
+
+
+
+#controll_category_box>ul>li>label:hover,
+#category_box>ul>li>label:hover{font-size:1.8em;
+								color:#000;
+								}
+
+#controll_category_box>ul>li>label{line-height:50px;}
+
+
+#shop_controller>ul>li{position:relative;}
+#controll_category_box{width:400%;
+						height:400px;
+						position:absolute;
+						top:-400px; left:0;
+						background:rgba(3,160,255,0.9);
+						border-radius:15px;
+						-webkit-border-radius:15px;
+						-moz-border-radius:15px;
+						-ms-border-radius:15px;
+						-o-border-radius:15px;
+						}
+#controll_category_box>ul{height:100%;}
+#controll_category_box>ul>li{height:12.5%;
+						 line-height:52px;
+						 border:1px solid #fff;
+						 border-style: solid;
+						 border-image:linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,0.8),rgba(255,255,255,0));
+						 -webkit-border-image:linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,0.8),rgba(255,255,255,0));
+						 -o-border-image:linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,0.8),rgba(255,255,255,0));
+						 border-image-slice: 1;
+						 -webkit-border-slice: 1;
+						 -o-border-slice: 1;
+						 box-sizing:border-box;
+						 -webkit-box-sizing:border-box;
+						 -moz-box-sizing:border-box;
+						 -ms-box-sizing:border-box;
+						 -o-box-sizing:border-box;
+						 }
+
+
+
+
+
+input#category_all:checked+#category_cup+#category_tshirts+#category_note+#category_cardholder+#category_electro+#category_blind+#category_alined+div#category_box>ul>li>label[for="category_all"],
+#category_cup:checked+#category_tshirts+#category_note+#category_cardholder+#category_electro+#category_blind+#category_alined+div#category_box>ul>li>label[for="category_cup"],
+#category_tshirts:checked+#category_note+#category_cardholder+#category_electro+#category_blind+#category_alined+div#category_box>ul>li>label[for="category_tshirts"],
+#category_note:checked+#category_cardholder+#category_electro+#category_blind+#category_alined+div#category_box>ul>li>label[for="category_note"],
+#category_cardholder:checked+#category_electro+#category_blind+#category_alined+div#category_box>ul>li>label[for="category_cardholder"],
+#category_electro:checked+#category_blind+#category_alined+div#category_box>ul>li>label[for="category_electro"],
+#category_blind:checked+#category_alined+div#category_box>ul>li>label[for="category_blind"],
+input#category_alined:checked+div#category_box>ul>li>label[for="category_alined"]
+  {color:#000;
+   font-size:1.8em;
+	}
+
+/*
+input#category_all:checked
++#category_cup+#category_tshirts+#category_note
++#category_cardholder+#category_electro
++#category_blind+#category_alined
++div#category_box+#all_goods>.all_goods .goods{display:block;}
+
+#category_cup:checked+#category_tshirts+#category_note
++#category_cardholder+#category_electro
++#category_blind+#category_alined
++div#category_box+#all_goods>.all_goods .goods.mg{display:block;}
+
+
+#category_tshirts:checked+#category_note
++#category_cardholder+#category_electro
++#category_blind+#category_alined
++div#category_box+#all_goods>.all_goods .goods.ts{display:block;}
+
+
+#category_note:checked
++#category_cardholder+#category_electro
++#category_blind+#category_alined
++div#category_box+#all_goods>.all_goods .goods.nt{display:block;}
+
+
+#category_cardholder:checked+#category_electro
++#category_blind+#category_alined
++div#category_box+#all_goods>.all_goods .goods.ch{display:block;}
+
+
+#category_electro:checked
++#category_blind+#category_alined
++div#category_box+#all_goods>.all_goods .goods.mp{display:block;}
+
+
+#category_blind:checked+#category_alined
++div#category_box+#all_goods>.all_goods .goods.bd{display:block;}
+
+
+#category_alined:checked
++div#category_box+#all_goods>.all_goods .goods.cd{display:block;}
+*/
+
+
+
+.goods_img{background-size:contain, cover;
+-webkit-background-size:contain, cover;
+-moz-background-size:contain, cover;
+-ms-background-size:contain, cover;
+-o-background-size:contain, cover;
+background-repeat:no-repeat, repeat;
+background-position:center center,center center;
+border:1px solid #c8c8c8;
+box-sizing:border-box;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+-ms-box-sizing:border-box;
+-o-box-sizing:border-box;
+transition:all ease-in 0.1s;
+-webkit-transition:all ease-in 0.1s;
+-moz-transition:all ease-in 0.1s;
+-ms-transition:all ease-in 0.1s;
+-o-transition:all ease-in 0.1s;
+}
+
+.goods>a:hover .goods_img,
+.swiper-slide>a:hover .goods_img{border:5px solid #b01116;}
+
+.goods_img.hj1
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad3.png);
+} 
+.goods_img.hj2
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts1.png);
+} 
+.goods_img.hj3
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind16.png);
+} 
+.goods_img.hj4
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind17.png);
+} 
+.goods_img.hj5
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind13.png);
+} 
+.goods_img.hj6
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler1.png);
+} 
+
+.goods_img.nw1
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug5.png);
+}
+.goods_img.nw2
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad3.png);
+}
+.goods_img.nw3
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind11.png);
+}
+.goods_img.nw4
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind12.png);
+}
+.goods_img.nw5
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts8.png);
+}
+.goods_img.nw6
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts9.png);
+}
+
+
+.goods_img.ig1
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug4.png);
+}
+.goods_img.ig2
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind15.png);
+}
+.goods_img.ig3
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder17.png);
+}
+.goods_img.ig4
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts2.png);
+}
+.goods_img.ig5
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler1.png);
+}
+.goods_img.ig6
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder2.png);
+}
+
+
+.goods_img.all1.mg1
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug5.png);
+}
+.goods_img.all2.mg2
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler1.png);
+}
+.goods_img.all3.mg3
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug1.png);
+}
+.goods_img.all4.mg4
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug2.png);
+}
+.goods_img.all5.mg5
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug3.png);
+}
+.goods_img.all6.mg6
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler3.png);
+}
+.goods_img.all7.mg7
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler2.png);
+}
+.goods_img.all8.mg8
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug7.png);
+}
+.goods_img.all9.mg9
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug8.png);
+}
+.goods_img.all10.mg10
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug9.png);
+}
+.goods_img.all11.mg11
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug4.png);
+}
+.goods_img.all12.mg12
+{background-color:#fff;
+background-image:url(../image/shop/cup/mug6.png);
+}
+.goods_img.all13.mg13
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler4.png);
+}
+.goods_img.all14.mg14
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler5.png);
+}
+.goods_img.all15.mg15
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler6.png);
+}
+.goods_img.all16.mg16
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler7.png);
+}
+.goods_img.all17.mg17
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler8.png);
+}
+.goods_img.all18.mg18
+{background-color:#fff;
+background-image:url(../image/shop/cup/tumbler9.png);
+}
+
+
+
+
+.goods_img.all19.ts1
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts1.png);
+}
+.goods_img.all20.ts2
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts2.png);
+}
+.goods_img.all21.ts3
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts3.png);
+}
+.goods_img.all22.ts4
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts4.png);
+}
+.goods_img.all23.ts5
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts5.png);
+}
+.goods_img.all24.ts6
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts6.png);
+}
+.goods_img.all25.ts7
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts7.png);
+}
+.goods_img.all26.ts8
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts8.png);
+}
+.goods_img.all27.ts9
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts9.png);
+}
+.goods_img.all28.ts10
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts10.png);
+}
+.goods_img.all29.ts11
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts11.png);
+}
+.goods_img.all30.ts12
+{background-color:#fff;
+background-image:url(../image/shop/tshirts/tshirts12.png);
+}
+
+.goods_img.all31.nt1
+{background-color:#fff;
+background-image:url(../image/shop/note/note1.png);
+}
+.goods_img.all32.nt2
+{background-color:#fff;
+background-image:url(../image/shop/note/note2.png);
+}
+.goods_img.all33.nt3
+{background-color:#fff;
+background-image:url(../image/shop/note/note3.png);
+}
+.goods_img.all34.nt4
+{background-color:#fff;
+background-image:url(../image/shop/note/note4.png);
+}
+.goods_img.all35.nt5
+{background-color:#fff;
+background-image:url(../image/shop/note/note5.png);
+}
+.goods_img.all36.nt6
+{background-color:#fff;
+background-image:url(../image/shop/note/note6.png);
+}
+.goods_img.all37.nt7
+{background-color:#fff;
+background-image:url(../image/shop/note/note7.png);
+}
+.goods_img.all38.nt8
+{background-color:#fff;
+background-image:url(../image/shop/note/note8.png);
+}
+.goods_img.all39.nt9
+{background-color:#fff;
+background-image:url(../image/shop/note/note9.png);
+}
+.goods_img.all40.nt10
+{background-color:#fff;
+background-image:url(../image/shop/note/note10.png);
+}
+.goods_img.all41.nt11
+{background-color:#fff;
+background-image:url(../image/shop/note/note11.png);
+}
+.goods_img.all42.nt12
+{background-color:#fff;
+background-image:url(../image/shop/note/note12.png);
+}
+
+.goods_img.all43.ch1
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder18.png);
+}
+.goods_img.all44.ch2
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder17.png);
+}
+.goods_img.all45.ch3
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder16.png);
+}
+.goods_img.all46.ch4
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder15.png);
+}
+.goods_img.all47.ch5
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder14.png);
+}
+.goods_img.all48.ch6
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder13.png);
+}
+.goods_img.all49.ch7
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder12.png);
+}
+.goods_img.all50.ch8
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder11.png);
+}
+.goods_img.all51.ch9
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder10.png);
+}
+.goods_img.all52.ch10
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder9.png);
+}
+.goods_img.all53.ch11
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder8.png);
+}
+.goods_img.all54.ch12
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder7.png);
+}
+.goods_img.all55.ch13
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder6.png);
+}
+.goods_img.all56.ch14
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder5.png);
+}
+.goods_img.all57.ch15
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder4.png);
+}
+.goods_img.all58.ch16
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder3.png);
+}
+.goods_img.all59.ch17
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder2.png);
+}
+.goods_img.all60.ch18
+{background-color:#fff;
+background-image:url(../image/shop/cardholder/cardholder1.png);
+}
+
+.goods_img.all61.mp1
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad1.png);
+}
+.goods_img.all62.mp2
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad2.png);
+}
+.goods_img.all63.mp3
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad3.png);
+}
+.goods_img.all64.mp4
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad4.png);
+}
+.goods_img.all65.mp5
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad5.png);
+}
+.goods_img.all66.mp6
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad6.png);
+}
+.goods_img.all67.mp7
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad7.png);
+}
+.goods_img.all68.mp8
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad8.png);
+}
+.goods_img.all69.mp9
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad9.png);
+}
+.goods_img.all70.mp10
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad10.png);
+}
+.goods_img.all71.mp11
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad11.png);
+}
+.goods_img.all72.mp12
+{background-color:#fff;
+background-image:url(../image/shop/mousepad/mousepad12.png);
+}
+
+
+.goods_img.all73.bd1
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind1.png);
+}
+.goods_img.all74.bd2
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind2.png);
+}
+.goods_img.all75.bd3
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind3.png);
+}
+.goods_img.all76.bd4
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind4.png);
+}
+.goods_img.all77.bd5
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind5.png);
+}
+.goods_img.all78.bd6
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind6.png);
+}
+.goods_img.all79.bd7
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind7.png);
+}
+.goods_img.all80.bd8
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind8.png);
+}
+.goods_img.all81.bd9
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind9.png);
+}
+.goods_img.all82.bd10
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind10.png);
+}
+.goods_img.all83.bd11
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind11.png);
+}
+.goods_img.all84.bd12
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind12.png);
+}
+.goods_img.all85.bd13
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind13.png);
+}
+.goods_img.all86.bd14
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind14.png);
+}
+.goods_img.all87.bd15
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind15.png);
+}
+.goods_img.all88.bd16
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind16.png);
+}
+.goods_img.all89.bd17
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind17.png);
+}
+.goods_img.all90.bd18
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind18.png);
+}
+.goods_img.all91.bd19
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind19.png);
+}
+.goods_img.all92.bd20
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind20.png);
+}
+.goods_img.all93.bd21
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind21.png);
+}
+.goods_img.all94.bd22
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind22.png);
+}
+.goods_img.all95.bd23
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind23.png);
+}
+.goods_img.all96.bd24
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind24.png);
+}
+.goods_img.all97.bd25
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind25.png);
+}
+.goods_img.all98.bd26
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind26.png);
+}
+.goods_img.all99.bd27
+{background-color:#fff;
+background-image:url(../image/shop/blind/blind27.png);
+}
+
+.goods_img.all100.cd1
+{background-color:#fff;
+background-image:url(../image/shop/card/checkcard.png);
+}
+.goods_img.all101.cd2
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic1.png);
+}
+.goods_img.all102.cd3
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic2.png);
+}
+.goods_img.all103.cd4
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic3.png);
+}
+.goods_img.all104.cd5
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic4.png);
+}
+.goods_img.all105.cd6
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic5.png);
+}
+.goods_img.all106.cd7
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic6.png);
+}
+.goods_img.all107.cd8
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic7.png);
+}
+.goods_img.all108.cd9
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic8.png);
+}
+.goods_img.all109.cd10
+{background-color:#fff;
+background-image:url(../image/shop/card/traffic9.png);
+}
+
+
+}
+
+

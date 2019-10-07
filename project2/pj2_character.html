@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!--[if IE 6]><html class="no-js old ie6"><![endif]-->
+<!--[if IE 7]><html class="no-js old ie7"><![endif]-->
+<!--[if IE 8]><html class="no-js old ie8"><![endif]-->
+<!--[if IE 9]><html class="no-js modern ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]>
+<html class="no-js modern">
+<![endif]-->
+
+ <head>
+  <title> All Character </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="css/pj2_header_footer.css">
+  <link rel="stylesheet" type="text/css" href="css/pj2_character.css">
+  <link rel="stylesheet" type="text/css" href="css/pj2_controller.css">
+  <link rel="stylesheet" type="text/css" href="css/grid_1200_12col.css">
+
+ 
+  <!--[if lt IE 9]>
+	<script src="js/html5shiv.js">
+	</script>		
+	
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+	</script>
+  <![endif]-->
+
+  <!--[if lt IE 9]><script src="js/CFInstall.min.js"></script>
+	<script>window.attachEvent("onload",function(){CFInstall.check
+	({mode:"overlay"})});</script>
+  <![endif]-->
+
+  <!--[if IE 6]><script src="js/DD_belatedPNG.min.js"></script>
+	<script>DD_belatedPNG.fix('.png_bg, img');</script>
+  <![endif]-->
+
+  <script src="js/modernizr.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/character.js"></script>
+  <script> // 공통 스크립트
+  		
+
+	$(document).ready(function(){
+				$("a").click(function(e){
+				e.preventDefault();
+				});
+				
+				$(".unprevent").unbind();
+			
+				var windowWidth=$(window).width();
+				var windowHeight=$(window).height();
+			
+				if(windowWidth <= 960){
+					$('#main_gnb').css('height',windowHeight);
+					$('#main_search_box').css('height',windowHeight)
+				}
+				else{
+					$('#main_gnb').css('height',70+"px");
+					$('#main_search_box').css('height',70+'px')
+					}
+
+			$(window).resize(function(){
+				windowWidth=$(window).width();
+				windowHeight=$(window).height();
+				if(windowWidth <= 960){
+					$('#main_gnb').css('height',windowHeight);
+					$('#main_search_box').css('height',windowHeight)
+				}
+				else{
+					$('#main_gnb').css('height',70+"px");
+					$('#main_search_box').css('height',70+'px')
+		
+					}
+			});				
+	
+	
+		$(window).scroll(function(){ 
+		
+					//스크롤의 위치가 상단에서 450보다 크면  
+					 // if($(window).scrollTop() > 450){ 
+		
+				    if(window.pageYOffset >= $('.content').offset().top){  
+			        	$('.controller').addClass('fix');  
+						 }else{  
+				      $('.controller').removeClass('fix'); 
+					}  
+				  }
+
+
+				/*if($('input#gnb_button:checked').val();=true){
+					$('#news_controller').removeClass('fix');
+				}else{
+					$('#news_controller').addClass('fix');
+				}*/
+);
+
+
+
+	 $("#page_select").bind("click",function(){
+		var page = prompt("이동할 페이지를 입력해주세요","1");
+		if(page != null){
+			if(page<=8){
+				$("input:radio[name=character_page]").prop('checked',false);
+				$("#character_page"+page).prop('checked', true);
+				$(".seleted_page").empty();
+				$(".seleted_page").append(page);
+			}else{
+				 alert("이동할 수 없는 페이지 입니다");
+				}			
+		}else{
+			  alert("1페이지로 돌아갑니다");
+			  $('#character_page1').prop("checked",true);
+			}
+		});
+
+		/*if(page<=8){
+			$("input:radio[name=]").prop('checked',false);
+			$("#character_page"+page).prop('checked', true);
+			$(".seleted_page").empty();
+			$(".seleted_page").append(page);
+		}else{
+			alert("이동할 수 없는 페이지 입니다");
+		}
+
+	 });*/
+
+	$("#footer_gnb1").click(function(){
+			$("#footer_gnb2").prop('checked',false);
+			$("#footer_gnb3").prop('checked',false);	
+		});
+			
+
+		$("#footer_gnb2").click(function(){
+			$("#footer_gnb1").prop('checked',false);
+			$("#footer_gnb3").prop('checked',false);	
+		});	
+		
+		$("#footer_gnb3").click(function(){
+			$("#footer_gnb1").prop('checked',false);
+			$("#footer_gnb2").prop('checked',false);	
+		});
+	
+
+
+
+}); //wrapper
+
+
+ 	/*
+	jquery 1.6 버전 이하
+
+$('input:radio[name="fruit"][value="apple"]).attr('checked', 'checked');
+
+
+
+jquery 1.6 버전 이상
+
+$('input:radio[name="fruit"][value="apple"]).prop('checked', true);
+
+
+
+
+
+2. radio 버튼 선택된 값 가져오기
+
+var fruitValue = $('input:radio[name="fruit"]:checked).val();
+
+
+
+출처: https://yangyag.tistory.com/107 [Hello Brother!]
+	*/
+ </script>
+ </head>
+
+ <body id="character">
+  <input type="checkbox" name="gnb_button" id="gnb_button">
+  <input type="checkbox" name="main_search_button" id="main_search_button">
+  <header id="main_header">
+	<div>		
+		<label for="gnb_button">			
+			<span></span>
+			<span></span>
+		</label>
+		<h1><a href="pj2_main.html" class="unprevent"><img src="images/logo.svg" alt="logo"></a></h1>		
+		<nav id="top_gnb">
+			<div><a href="#">Login-in</a></div>
+			<div>
+				<label for="main_search_button">
+					<span>Search</span>
+					<img src="images/icon/search0.svg" alt="icon">
+				</label>
+			</div>
+		</nav>		
+	</div>
+	
+	<form id="main_search_box" method="get">		
+		<div>			
+			<label for="real_search">
+				<img src="images/icon/search.png" alt="icon">
+			</label>	
+			<input type="search" name="real_search" id="real_search" placeholder="검색어를 입력하세요" required>
+			<input type="submit" name="real_search_submit" id="real_search_submit" value="검색">
+			<label for="main_search_button">취소</label>
+		</div>
+	</form>		
+	
+	<nav id="main_gnb">
+		<div id="gnb_header">
+			<h1><a href="pj2_main.html" class="unprevent"><img src="images/logo_black.png" alt="logo"></a></h1>
+		</div>
+		<a href="#" class="skip">
+			로그인
+		</a>
+		<hr class="skip">
+		<ul>
+			<li><a href="#">News</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb main_gnb_inner1">
+							<ol>
+								<li class="col-4"><a href="pj2_news.html" class="unprevent">Article</a></li>
+								<li class="col-4"><a href="#">Notice</a></li>
+								<li class="col-4 last"><a href="#">Event</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner1 clearfix">
+							<h2 >Hot issue</h2>
+							<ol>
+								<li class="col-3">
+									<a href="#">
+										<img src="image/news/important_news1.png" alt="hotissue">
+										<p>와이랩, 드라마 '아스달 연대기' 쿠키영상 제작</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="#">
+										<img src="image/news/important_news2.png" alt="hotissue">
+										<p>테러맨, 릴리아? 샤샤? 레드스완의 등장</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="#">
+										<img src="image/news/important_news3.png" alt="hotissue">
+										<p>슈퍼스트링 첫 크로스오버! '부활대테러' 2020년 연재</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3 last">
+									<a href="#">
+										<img src="image/news/important_news4.png" alt="hotissue">
+										<p>라인게임즈 게임 2020년 출시예정</p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+			<li><a href="pj2_universe.html" class="unprevent">Superstring</a>
+				<div class="row">
+					<div class="row2 flow">
+						
+						<div class="main_gnb_inner main_gnb_inner2 col-6">
+							<h2>Universe</h2>
+							<ol>
+								<li>
+									<a href="pj2_universe.html" class="unprevent">
+										<img src="image/universe/uni_back588.png" alt="universe">
+										<p></p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner2 col-6 last">
+							<h2>Time line</h2>
+							<ol>
+								<li>
+									<a href="#">
+										<img src="image/universe/time588.png" alt="timeline">
+										<p></p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+			<li><a href="#">Character</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-6"><a href="pj2_character.html" class="unprevent">All Character</a></li>
+								<li class="col-6 last"><a href="#">Team&Group</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner3 clearfix">
+							<h2>Key Character</h2>
+							<ol>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character49.png" alt="character">
+											<p class="chname chname1">문수</p>
+											<p class="chname chname2">암행어사</p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character91.png" alt="character">
+											<p class="chname chname1">아지태</p>
+											<p class="chname chname2"></p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="pj2_characterinfo.html" class="unprevent">
+										<figure class="characterbox">
+											<img src="image/character/character57.png" alt="character">
+											<p class="chname chname1">민정우</p>
+											<p class="chname chname2">테러맨</p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character80.png" alt="character">
+											<p class="chname chname1">숙희</p>
+											<p class="chname chname2">수키</p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character63.png" alt="character">
+											<p class="chname chname1">반</p>
+											<p class="chname chname2"></p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2 last">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character106.png" alt="character">
+											<p class="chname chname1">원미호</p>
+											<p class="chname chname2"></p>
+										</figure>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+			<li><a href="#">Webtoon</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-6"><a href="#">Publishing</a></li>
+								<li class="col-6 last"><a href="#">All Webtoon</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner4 clearfix">
+							<h2>Popular Webtoon</h2>
+							<ol>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon010.png" alt="webtoon">
+										<p>테러맨</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon002.png" alt="webtoon">
+										<p>버닝헬</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon005.png" alt="webtoon">
+										<p>신암행어사</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon004.png" alt="webtoon">
+										<p>신석기녀</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon007.png" alt="webtoon">
+										<p>아일랜드</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2 last">
+									<a href="#">
+										<img src="image/webtoon/webtoon003.png" alt="webtoon">
+										<p>부활남</p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+
+			<li><a href="#">Gallery</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-6"><a href="#">Wall Papers</a></li>
+								<li class="col-6 last"><a href="#">Fan Pics</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner5 clearfix">
+							<h2>PR Video</h2>
+							<ol>
+								<li class="col-3">
+									<a href="https://comic-superstring.naver.com/trailer/video/c376c292-4c21-4f80-bd7b-41c20eb30ca5.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/c376c292-4c21-4f80-bd7b-41c20eb30ca5.mp4"
+										poster="image/poster/poster1.jpg">
+										 
+										</video>
+										<p>시네마틱 1차 영상</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="https://comic-superstring.naver.com/trailer/video/d243f35b-674f-4de7-bf56-412a1afa3983.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/d243f35b-674f-4de7-bf56-412a1afa3983.mp4" poster="image/poster/poster4.jpg">
+										
+										</video>
+										<p>신석기녀 프로모션 영상</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="https://comic-superstring.naver.com/trailer/video/f4a30111-9d8e-4652-aadb-1e631dbc8603.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/f4a30111-9d8e-4652-aadb-1e631dbc8603.mp4" poster="image/poster/poster2.jpg">
+									
+										</video>
+										<p>시네마틱 2차 영상</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3 last">
+									<a href="https://comic-superstring.naver.com/trailer/video/9a9ecff4-88f5-4d4d-8a15-50add877de79.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/9a9ecff4-88f5-4d4d-8a15-50add877de79.mp4" poster="image/poster/poster3.jpg">	
+										</video>
+										<p>테러맨 프로모션 영상</p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+			<li><a href="#">Games</a>
+				<div class="row">
+					<div class="row2">
+						<div class="main_gnb_inner main_gnb_inner6">
+							<h2>COMMING SOON 2020</h2>
+							<ol>
+								<li>
+									<a href="https://youtu.be/_4qSTKg3iM8">
+										<video style="width:25%; height:auto;" src="https://youtu.be/_4qSTKg3iM8" poster="image/poster/poster5.jpg">				
+										</video>
+										<p></p>
+										<p></p>
+									</a>
+								</li>						
+							</ol>
+						</div>
+					</div>
+				</div>	
+			</li>
+			
+			<li><a href="pj2_community.html" class="unprevent">Community</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-4"><a href="#">Free Board</a></li>
+								<li class="col-4"><a href="#">Study Board</a></li>
+								<li class="col-4 last"><a href="#">Webtoon Board</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner7 col-6">
+							<h2>Best of Month</h2>
+							<ul class="month_best">
+								<li class="commu_list">
+									<a href="#">										
+										<span>1</span>
+										<p class="subject">백백교 수장은 아지태가 아니고 따로 있다</p>
+										<p class="subject_plus"><span>380</span> 7.1</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>2</span>
+										<p class="subject">파락호 복장 고증오류 같은데</p>
+										<p class="subject_plus"><span>289</span> 7.13</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>3</span>
+										<p class="subject">백백교스케일 진짜 커지넹..</p>
+										<p class="subject_plus"><span>330</span> 7.9</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">										
+										<span>4</span>
+										<p class="subject">하우스키퍼에 등장한 대통령은 분명 아지태일 것이라 예상됨</p>
+										<p class="subject_plus"><span>296</span> 7.8</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>5</span>
+										<p class="subject">석환 능력도 과학적인건 아닌가보네 베로니카처럼</p>
+										<p class="subject_plus"><span>288</span> 7.21</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner7 col-6 last">
+							<h2>Best of Weeks</h2>
+							<ul class="weeks_best">
+								<li class="commu_list">
+									<a href="#">
+										<span>1</span>
+										<p class="subject">지금 부산 센텀시티에서 테러맨 영화 촬영 중임</p>
+										<p class="subject_plus"><span>340</span> 7.31</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>2</span>
+										<p class="subject">작품들 유료화가 솔직히 세계관 홍보에 엄청악재인듯</p>
+										<p class="subject_plus"><span>470</span> 7.29</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>3</span>
+										<p class="subject">이번 미리보기 샤샤 미쳤네</p>
+										<p class="subject_plus"><span>274</span> 7.28</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>4</span>
+										<p class="subject">개인적으로 바라는 신암행어사 엔딩</p>
+										<p class="subject_plus"><span>191</span> 7.30</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>5</span>
+										<p class="subject">테러맨 기적의 논리</p>
+										<p class="subject_plus"><span>139</span> 7.28</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>			
+			</li>
+			
+
+			<li><a href="#">More</a>
+				<div class="row">
+					<div class="sub_gnb row2">
+						<ol>
+							<li class="col-4"><a href="pj2_shop.html" class="unprevent">Shop</a></li>
+							<li class="col-4"><a href="#">SNS</a></li>
+							<li class="col-4 last"><a href="#">Movie/Drama</a></li>
+						</ol>
+					</div>
+				</div>			
+			</li>
+			
+		</ul>
+	</nav>
+  </header>
+
+  
+
+  <section id="character_banner" class="row">
+	<div class="row">	
+		<div class="row2">
+			<h2>Super String Characters</h2>
+			<p>
+				1만년을 준비한 음모인가<br>
+				백인백색 영웅들의 구원인가<br>
+				백의 교리에 맞서 싸우는 슈퍼스트링팀!
+			</p>
+		</div>
+	</div>
+  </section>
+
+  <div id="map_guide">
+	<p><a href="pj2_main.html" class="unprevent">
+		Home <img src="images/icon/guide_arrow.png" alt="guide">
+		</a>
+		<a href="#" class="pj2_character.html">
+	   Character <img src="images/icon/guide_arrow.png" alt="guide">
+	   </a>
+	   <span>All Character</span>
+	 </p>
+  </div>
+
+
+  <section id="key_character" class="characters row2">
+  	<h2>Key Character</h2>
+	<div class="key_character key_character1 col-2 tcol-3 mcol-4">
+		<a href="#">
+			<figure class="characterbox">
+				<img src="image/character/character49.png" alt="character">
+				<p class="chname chname1">문수</p>
+				<p class="chname chname2">암행어사</p>
+			</figure>
+		</a>
+	</div>
+	<div class="key_character key_character2 col-2 tcol-3 mcol-4">
+		<a href="#">
+			<figure class="characterbox">
+				<img src="image/character/character91.png" alt="character">
+				<p class="chname chname1">아지태</p>
+				<p class="chname chname2"></p>
+			</figure>
+		</a>
+	</div>
+	<div class="key_character key_character3 col-2 tcol-3 mcol-4">
+		<a href="pj2_characterinfo.html" class="unprevent">
+			<figure class="characterbox">
+				<img src="image/character/character57.png" alt="character">
+				<p class="chname chname1">민정우</p>
+				<p class="chname chname2">테러맨</p>
+			</figure>
+		</a>
+	</div>
+	<div class="key_character key_character4 col-2 tcol-3 mcol-4">
+		<a href="#">
+			<figure class="characterbox">
+				<img src="image/character/character18.png" alt="character">
+				<p class="chname chname1">김민혁</p>
+				<p class="chname chname2"></p>
+			</figure>
+		</a>
+	</div>
+	<div class="key_character key_character5 col-2 tcol-3 mcol-4">
+		<a href="#">
+			<figure class="characterbox">
+				<img src="image/character/character157.png" alt="character">
+				<p class="chname chname1">코넬리아 보보워셔</p>
+				<p class="chname chname2">천재무기수리공</p>
+			</figure>
+		</a>
+	</div>
+	<div class="key_character key_character6 col-2 tcol-3 mcol-4">
+		<a href="#">
+			<figure class="characterbox">
+				<img src="image/character/character100.png" alt="character">
+				<p class="chname chname1">연하연</p>
+				<p class="chname chname2"></p>
+			</figure>
+		</a>
+	</div>
+	<div class="key_character key_character7 col-2 tcol-3 mcol-4">
+		<a href="#">
+			<figure class="characterbox">
+				<img src="image/character/character80.png" alt="character">
+				<p class="chname chname1">숙희</p>
+				<p class="chname chname2">수키</p>
+			</figure>
+		</a>
+	</div>
+	<div class="key_character key_character8 col-2 tcol-3 mcol-4">
+		<a href="#">
+			<figure class="characterbox">
+				<img src="image/character/character63.png" alt="character">
+				<p class="chname chname1">반</p>
+				<p class="chname chname2"></p>
+			</figure>
+		</a>
+	</div>
+	<div class="key_character key_character9 col-2 tcol-3 mcol-4">
+		<a href="#">
+			<figure class="characterbox">
+				<img src="image/character/character106.png" alt="character">
+				<p class="chname chname1">원미호</p>
+				<p class="chname chname2"></p>
+			</figure>
+		</a>
+	</div>
+	<div class="key_character key_character10 col-2 tcol-3 mcol-4">
+		<a href="#">
+			<figure class="characterbox">
+				<img src="image/character/character77.png" alt="character">
+				<p class="chname chname1">석환</p>
+				<p class="chname chname2"></p>
+			</figure>
+		</a>
+	</div>
+	<div class="key_character key_character11 col-2 tcol-3 mcol-4">
+		<a href="#">
+			<figure class="characterbox">
+				<img src="image/character/character7.png" alt="character">
+				<p class="chname chname1">강하늘</p>
+				<p class="chname chname2">마지막 생존자</p>
+			</figure>
+		</a>
+	</div>
+	<div class="key_character key_character12 col-2 tcol-3 mcol-4">
+		<a href="#">
+			<figure class="characterbox">
+				<img src="image/character/character89.png" alt="character">
+				<p class="chname chname1">신혜율</p>
+				<p class="chname chname2"></p>
+			</figure>
+		</a>
+	</div>
+	
+  </section>
+
+   <div id="character_array_name">
+		<p>가가린			 </p>  <span></span>
+		<p>가르발디		</p>   <span>악에 홀린 성기사</span>
+		<p>강림			</p>   <span></span>
+		<p>강민호			 </p>  <span></span>
+		<p>강성현			 </p>  <span>리딩어</span>
+		<p>강의철			 </p>  <span></span>
+		<p>강하늘			 </p>  <span>마지막 생존자</span>
+		<p>강현			</p>   <span></span>
+		<p>강현 엄마		</p>   <span></span>
+		<p>강희재			 </p>  <span></span>
+		<p>계월향			 </p>  <span></span>
+		<p>구금산			 </p>  <span></span>
+		<p>국다희			 </p>  <span></span>
+		<p>궁탄			</p>   <span></span>
+		<p>권재홍			 </p>  <span>혼내드림 헤드</span>
+		<p>귀신들			 </p>  <span></span>
+		<p>김경사			 </p>  <span></span>
+		<p>김민혁			 </p>  <span></span>
+		<p>김봉춘			 </p>  <span>유디 크리스난디</span>
+		<p>김봉춘 아버지	</p>   <span></span>
+		<p>김성진			 </p>  <span></span>
+		<p>김시영			 </p>  <span></span>
+		<p>김양			</p>   <span></span>
+		<p>김철수			 </p>  <span></span>
+		<p>김철수 부하		</p>   <span></span>
+		<p>김하윤			 </p>  <span></span>
+		<p>김한			</p>   <span></span>
+		<p>나나			</p>   <span></span>
+		<p>나한			</p>   <span></span>
+		<p>네빌			</p>   <span></span>
+		<p>노란눈			 </p>  <span></span>
+		<p>닐암스트롱		</p>   <span>AI</span>
+		<p>도라 프랜시스	</p>   <span></span>
+		<p>도로시			 </p>  <span></span>
+		<p>돌석			</p>   <span></span>
+		<p>디아나			 </p>  <span></span>
+		<p>레드스완		</p>   <span></span>
+		<p>레오니드		</p>   <span></span>
+		<p>루시드 폰 마를레네	 </p>  <span></span>
+		<p>루 엘루스		</p>   <span></span>
+		<p>릴리아			 </p>  <span></span>
+		<p>마리아			 </p>  <span></span>
+		<p>마미아			 </p>  <span></span>
+		<p>말많은매		</p>   <span></span>
+		<p>목영희			 </p>  <span></span>
+		<p>몽룡			</p>   <span></span>
+		<p>묘월			</p>   <span></span>
+		<p>무장			</p>   <span></span>
+		<p>문수			</p>   <span>암행어사</span>
+		<p>미루			</p>   <span></span>
+		<p>미스황			 </p>  <span></span>
+		<p>미스황의 산도	</p>   <span></span>
+		<p>미토			</p>   <span>전 마법전대장</span>
+		<p>미향단			 </p>  <span></span>
+		<p>민석영			 </p>  <span>마스터</span>
+		<p>민수			</p>   <span></span>
+		<p>민정우			 </p>  <span>테러맨</span>
+		<p>바클롭스		</p>   <span></span>
+		<p>박시현			 </p>  <span></span>
+		<p>박유나			 </p>  <span></span>
+		<p>박지우			 </p>  <span></span>
+		<p>박태준			 </p>  <span></span>
+		<p>반			</p>   <span></span>
+		<p>방자			</p>   <span></span>
+		<p>백룡			</p>   <span></span>
+		<p>백문장			 </p>  <span></span>
+		<p>백선우			 </p>  <span></span>
+		<p>백태경			 </p>  <span></span>
+		<p>뱃사람			 </p>  <span></span>
+		<p>베로니카		</p>   <span>친위대</span>
+		<p>변학도			 </p>  <span></span>
+		<p>빌리 아네다워	</p>   <span></span>
+		<p>사무엘			 </p>  <span></span>
+		<p>산도			</p>   <span></span>
+		<p>샤샤			</p>   <span></span>
+		<p>서방 대신		</p>   <span>왕실근위대장</span>
+		<p>석환			</p>   <span>부활자</span>
+		<p>성미나			 </p>  <span></span>
+		<p>수			</p>   <span></span>
+		<p>숙희			</p>   <span>수키</span>
+		<p>순빈 봉씨		</p>   <span></span>
+		<p>순이			</p>   <span></span>
+		<p>슈카			</p>   <span></span>
+		<p>스펠타 제독		</p>   <span></span>
+		<p>시바			</p>   <span>멸망의 신</span>
+		<p>신라 영주		</p>   <span></span>
+		<p>신수			</p>   <span></span>
+		<p>신의철			 </p>  <span></span>
+		<p>신혜율			 </p>  <span></span>
+		<p>아바고론		</p>   <span></span>
+		<p>아지태			 </p>  <span></span>
+		<p>안보영			 </p>  <span></span>
+		<p>안젤리나		</p>   <span></span>
+		<p>안젤리나 엄마	</p>   <span></span>
+		<p>야크			</p>   <span></span>
+		<p>엄태민			 </p>  <span></span>
+		<p>에르빈 중위		</p>   <span></span>
+		<p>에코			</p>   <span></span>
+		<p>연소연			 </p>  <span></span>
+		<p>연하연			 </p>  <span></span>
+		<p>영실			</p>   <span></span>
+		<p>오세정			 </p>  <span></span>
+		<p>요제프 폰 레프	</p>   <span></span>
+		<p>요한			</p>   <span></span>
+		<p>웃는늑대		</p>   <span></span>
+		<p>원미호			 </p>  <span></span>
+		<p>원술			</p>   <span></span>
+		<p>원호진			 </p>  <span></span>
+		<p>원효			</p>   <span></span>
+		<p>유격조 대원		</p>   <span></span>
+		<p>유방자			 </p>  <span></span>
+		<p>유의태			 </p>  <span></span>
+		<p>윤빛나라		</p>   <span></span>
+		<p>윤승아			 </p>  <span></span>
+		<p>을파소			 </p>  <span></span>
+		<p>의사부부		</p>   <span></span>
+		<p>이몽룡			 </p>  <span></span>
+		<p>이민지			 </p>  <span></span>
+		<p>이민혁			 </p>  <span></span>
+		<p>이순경			 </p>  <span></span>
+		<p>이완 소머헐더	</p>   <span>처형인</span>
+		<p>이재신 아버지	</p>   <span></span>
+		<p>이재신			 </p>  <span></span>
+		<p>이재우			 </p>  <span></span>
+		<p>이창욱			 </p>  <span></span>
+		<p>이현성			 </p>  <span>곰벌레</span>
+		<p>인지			</p>   <span></span>
+		<p>임광천			 </p>  <span></span>
+		<p>장덕만			 </p>  <span></span>
+		<p>장태원			 </p>  <span></span>
+		<p>쟝카			</p>   <span></span>
+		<p>전영하			 </p>  <span></span>
+		<p>전우상			 </p>  <span></span>
+		<p>전인완			 </p>  <span></span>
+		<p>정염귀			 </p>  <span></span>
+		<p>정이사오		</p>   <span>치카이</span>
+		<p>조도원			 </p>  <span></span>
+		<p>조시호			 </p>  <span></span>
+		<p>조진호			 </p>  <span></span>
+		<p>종령			</p>   <span></span>
+		<p>중손			</p>   <span></span>
+		<p>쥬			</p>   <span></span>
+		<p>지강윤			 </p>  <span></span>
+		<p>진소희			 </p>  <span></span>
+		<p>진수호			 </p>  <span></span>
+		<p>진순제			 </p>  <span></span>
+		<p>집사			</p>   <span></span>
+		<p>차예린			 </p>  <span></span>
+		<p>철			</p>   <span></span>
+		<p>총사령관		</p>   <span></span>
+		<p>최경이			 </p>  <span></span>
+		<p>카우카			 </p>  <span></span>
+		<p>카타리나<br>폰 바이에른</p>  <span></span>
+		<p>칼리			</p>   <span>피와 죽음의 여신</span>
+		<p>캉타우			 </p>  <span></span>
+		<p>캡틴 맥마흔		</p>   <span></span>
+		<p>코넬리아 보보워셔	</p>   <span>천재무기수리공</span>
+		<p>쾌타천			 </p>  <span>악수의 모체</span>
+		<p>쿠쿠			</p>   <span></span>
+		<p>키라			</p>   <span></span>
+		<p>탄			</p>   <span></span>
+		<p>태유			</p>   <span></span>
+		<p>티아고론		</p>   <span></span>
+		<p>페트로프		</p>   <span></span>
+		<p>페페			</p>   <span></span>
+		<p>평강			</p>   <span></span>
+		<p>표			</p>   <span></span>
+		<p>하미우			 </p>  <span></span>
+		<p>하스티			 </p>  <span></span>
+		<p>하시우			 </p>  <span></span>
+		<p>한가람			 </p>  <span></span>
+		<p>한민현			 </p>  <span></span>
+		<p>한준우			 </p>  <span></span>
+		<p>해명			</p>   <span></span>
+		<p>해모수			 </p>  <span></span>
+		<p>헤르만 크라우처	</p>   <span></span>
+		<p>협시은			 </p>  <span></span>
+		<p>혜율 엄마		</p>   <span></span>
+		<p>홍길동			 </p>  <span></span>
+		<p>휴우키 츠라라	 </p>  <span></span>
+   </div>
+					
+
+
+  <section id="character_content" class="content row2">
+  	<h2>All Character</h2>
+  	<div id="character_controller" class="controller">
+		<ul>
+			<li>
+				<input type="checkbox" name="controll_filtering" id="controll_filtering">
+				<label for="controll_filtering">
+					<img src="images/icon/filter.svg" alt="filter_select">
+					<p>필터</p>
+				</label>
+				<div id="controll_filtering_box" class="">
+					<h3>Filter</h3>
+					<div id="controll_name_filter">
+						<p>이름 <span></span></p>
+						<div>
+							<p><label for="name_filter_g">ㄱ</label></p>
+							<p><label for="name_filter_n">ㄴ</label></p>
+							<p><label for="name_filter_d">ㄷ</label></p>
+							<p><label for="name_filter_r">ㄹ</label></p>
+							<p><label for="name_filter_m">ㅁ</label></p>
+							<p><label for="name_filter_b">ㅂ</label></p>
+							<p><label for="name_filter_s">ㅅ</label></p>
+							<p><label for="name_filter_o">ㅇ</label></p>
+							<p><label for="name_filter_j">ㅈ</label></p>
+							<p><label for="name_filter_c">ㅊ</label></p>
+							<p><label for="name_filter_k">ㅋ</label></p>
+							<p><label for="name_filter_t">ㅌ</label></p>
+							<p><label for="name_filter_p">ㅍ</label></p>
+							<p><label for="name_filter_h">ㅎ</label></p>
+						</div>
+					</div>
+
+					<div id="controll_time_filter">
+						<p>활동시기 <span></span></p>
+						<div>
+							<p><label for="time_filter_ago">1900년대 이전</label></p>
+							<p><label for="time_filter_1900">1900년대</label>	</p>
+							<p><label for="time_filter_2000">2000년대</label>	</p>
+							<p><label for="time_filter_2010">2010년대</label>	</p>
+							<p><label for="time_filter_2020">2020년대</label>	</p>
+							<p><label for="time_filter_x">다른 차원</label></p>
+						</div>
+					</div>
+
+					<div id="controll_sort_filter">
+						<p>계열 <span></span></p>
+						<div>
+							<p><label for="sort_filter_hero">영웅</label></p>
+							<p><label for="sort_filter_villain">빌런</label></p>
+							<p><label for="sort_filter_abnormal">알 수 없음</label></p>
+						</div>
+					</div>
+
+					<p id="controll_filter_reset">
+						reset
+					</p>
+				</div>
+
+			</li>
+			<li>
+				<a href="#" onclick="return false">
+					<img src="images/icon/sort.svg" alt="sort">
+					<p>정렬</p>
+				</a>
+			</li>
+			<li>
+				<input type="checkbox" name="content_search_button" id="content_search_button">
+				<label for="content_search_button">				
+					<img src="images/icon/search.svg" alt="search">
+					<p>검색</p>
+				</label>
+				<form id="character_search_box" method="get" class="content_search_box">	
+					<div>			
+						<label for="content_search">
+							<img src="images/icon/search.svg" alt="icon">
+						</label>	
+						<input type="search" name="content_search" id="content_search" placeholder="캐릭터명을 입력하세요" required>
+						<input type="submit" name="content_search_submit" id="content_search_submit" class="content_search_submit" value="검색">
+						<label for="content_search_button">취소</label>
+					</div>
+				</form>	
+			</li>
+			<li>
+				<a id="page_select" href="#" onclick="return false">
+					<p>PAGE</p>
+					<img src="images/icon/page.svg" alt="page">
+					<p><span class="seleted_page">1</span> / 8</p>
+				</a>
+				<a href="#" onclick="return false">
+				prev
+				</a>
+
+				<a href="#" onclick="return false">
+				next
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<input type="radio" name="character_page" id="character_page1" value="1" checked>
+	<input type="radio" name="character_page" id="character_page2" value="2">
+	<input type="radio" name="character_page" id="character_page3" value="3">
+	<input type="radio" name="character_page" id="character_page4" value="4">
+	<input type="radio" name="character_page" id="character_page5" value="5">
+	<input type="radio" name="character_page" id="character_page6" value="6">
+	<input type="radio" name="character_page" id="character_page7" value="7">
+	<input type="radio" name="character_page" id="character_page8" value="8">
+	
+	<div id="page_num">
+		<div>
+			<p><label for="character_page1">1</label></p>
+			<p><label for="character_page2">2</label></p>
+			<p><label for="character_page3">3</label></p>
+			<p><label for="character_page4">4</label></p>
+			<p><label for="character_page5">5</label></p>
+			<p><label for="character_page6">6</label></p>
+			<p><label for="character_page7">7</label></p>
+			<p><label for="character_page8">8</label></p>
+		</div>
+	</div>
+
+	<input type="radio" name="filter" id="name_filter_g" value="g">
+	<input type="radio" name="filter" id="name_filter_n" value="n">
+	<input type="radio" name="filter" id="name_filter_d" value="d">
+	<input type="radio" name="filter" id="name_filter_r" value="r">
+	<input type="radio" name="filter" id="name_filter_m" value="m">
+	<input type="radio" name="filter" id="name_filter_b" value="b">
+	<input type="radio" name="filter" id="name_filter_s" value="s">
+	<input type="radio" name="filter" id="name_filter_o" value="o">
+	<input type="radio" name="filter" id="name_filter_j" value="j">
+	<input type="radio" name="filter" id="name_filter_c" value="c">
+	<input type="radio" name="filter" id="name_filter_k" value="k">
+	<input type="radio" name="filter" id="name_filter_t" value="t">
+	<input type="radio" name="filter" id="name_filter_p" value="p">
+	<input type="radio" name="filter" id="name_filter_h" value="h">
+													
+	<input type="radio" name="filter" id="time_filter_ago" value="ago">
+	<input type="radio" name="filter" id="time_filter_1900" value="y1900">
+	<input type="radio" name="filter" id="time_filter_2000" value="y2000">
+	<input type="radio" name="filter" id="time_filter_2010" value="y2010">
+	<input type="radio" name="filter" id="time_filter_2020" value="y2020">
+	<input type="radio" name="filter" id="time_filter_x" value="x">
+													
+	<input type="radio" name="filter" id="sort_filter_hero" value="hero">
+	<input type="radio" name="filter" id="sort_filter_villain" value="villain">
+	<input type="radio" name="filter" id="sort_filter_abnormal" value="abnormal">
+
+
+	
+	
+	<div id="filtering_box" class="col-2">
+		<h3>Filter</h3>
+		<div id="name_filter">
+			<p>이름 <span></span></p>
+			<div>
+				<p><label for="name_filter_g">ㄱ</label></p>
+				<p><label for="name_filter_n">ㄴ</label></p>
+				<p><label for="name_filter_d">ㄷ</label></p>
+				<p><label for="name_filter_r">ㄹ</label></p>
+				<p><label for="name_filter_m">ㅁ</label></p>
+				<p><label for="name_filter_b">ㅂ</label></p>
+				<p><label for="name_filter_s">ㅅ</label></p>
+				<p><label for="name_filter_o">ㅇ</label></p>
+				<p><label for="name_filter_j">ㅈ</label></p>
+				<p><label for="name_filter_c">ㅊ</label></p>
+				<p><label for="name_filter_k">ㅋ</label></p>
+				<p><label for="name_filter_t">ㅌ</label></p>
+				<p><label for="name_filter_p">ㅍ</label></p>
+				<p><label for="name_filter_h">ㅎ</label></p>
+			</div>
+		</div>
+
+		<div id="time_filter">
+			<p>활동시기 <span></span></p>
+			<div>
+				<p><label for="time_filter_ago">1900년대 이전</label></p>
+				<p><label for="time_filter_1900">1900년대</label>	</p>
+				<p><label for="time_filter_2000">2000년대</label>	</p>
+				<p><label for="time_filter_2010">2010년대</label>	</p>
+				<p><label for="time_filter_2020">2020년대</label>	</p>
+				<p><label for="time_filter_x">다른 차원</label></p>
+			</div>
+		</div>
+
+		<div id="sort_filter">
+			<p>계열 <span></span></p>
+			<div>
+				<p><label for="sort_filter_hero">영웅</label></p>
+				<p><label for="sort_filter_villain">빌런</label></p>
+				<p><label for="sort_filter_abnormal">알 수 없음</label></p>
+			</div>
+		</div>
+
+		<p id="filter_reset">
+			reset
+		</p>
+	</div>
+
+	<article id="all_character" class="characters">
+		<em id="gagalin">ggggg</em>
+		<div class="all_character"> <!--all_character1 g-->
+			<a href="#">
+				<figure class="characterbox">
+					<img src="image/character/character1.png" alt="character">
+					<p class="chname chname1">가가린</p>
+					<p class="chname chname2"></p>
+				</figure>
+			</a>
+		</div>
+	</article>
+  </section>	
+
+  <div id="goods_banner" class="row">
+  	<div class="row2">
+		<img src="image/banner/character_goods_pr.png" alt="goods_pr">
+		<img src="image/banner/character_goods_pr_txt.png" alt="goods_pr_text">
+	</div>
+  </div>	
+	
+
+	
+		
+		
+		
+		
+		
+	
+
+  <footer id="main_footer" class="row clearfix">
+  	<div>
+	  <nav id="footer_gnb" class="row2">
+		<div>
+			<input type="checkbox" name="footer_gnb1" id="footer_gnb1" class="footer_gnb_button">
+			<h2><label for="footer_gnb1">SITE</label></h2>
+			<ul>
+				<li><a href="pj2_news.html" class="unprevent">News</a></li>
+				<li><a href="pj2_universe.html" class="unprevent">Super String</a></li>
+				<li><a href="pj2_character.html" class="unprevent">Character</a></li>
+				<li><a href="#">Webtoon</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">Games</a></li>
+				<li><a href="pj2_community.html" class="unprevent">Community</a></li>
+			</ul>
+		</div>
+		<div>
+			<input type="checkbox" name="footer_gnb2" id="footer_gnb2" class="footer_gnb_button">
+			<h2><label for="footer_gnb2">ABOUT</label></h2>
+			<ul>
+				<li><a href="#">Creator Note</a></li>
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="#">Advertising</a></li>
+			</ul>
+		</div>
+        <div>
+			<input type="checkbox" name="footer_gnb3" id="footer_gnb3" class="footer_gnb_button">
+			<h2><label for="footer_gnb3">SERVICE CENTER</label></h2>
+			<ul>
+				<li><a href="#">Service Center</a></li>
+				<li><a href="#">F A Q</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Terms of Use</a></li>
+			</ul>
+		</div>        
+	  </nav>
+	  <nav id="footer_follow">
+	  	<div>
+			<h3>Follow</h3>
+			<ul>				
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/yt.png" alt="youtube">
+					</a>
+				</li>
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/fb.png" alt="facebook">
+					</a>
+				</li>
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/is.png" alt="instar">
+					</a>
+				</li>
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/tw.png" alt="twitter">
+					</a>
+				</li>
+			</ul>
+		</div>
+	  </nav>
+	  <div id="stamp">
+	  	<i></i>
+	  </div>
+	</div>
+  </footer>
+
+  
+
+
+ </body>
+</html>

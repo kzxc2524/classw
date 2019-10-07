@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!--[if IE 6]><html class="no-js old ie6"><![endif]-->
+<!--[if IE 7]><html class="no-js old ie7"><![endif]-->
+<!--[if IE 8]><html class="no-js old ie8"><![endif]-->
+<!--[if IE 9]><html class="no-js modern ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]>
+<html class="no-js modern">
+<![endif]-->
+
+ <head>
+  <title> Universe </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="css/pj2_header_footer.css">
+  <link rel="stylesheet" type="text/css" href="css/pj2_universe.css">
+  <link rel="stylesheet" type="text/css" href="css/grid_1200_12col.css">
+
+
+ 
+  <!--[if lt IE 9]>
+	<script src="js/html5shiv.js">
+	</script>
+	
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+	</script>
+  <![endif]-->
+
+  <!--[if lt IE 9]><script src="js/CFInstall.min.js"></script>
+	<script>window.attachEvent("onload",function(){CFInstall.check
+	({mode:"overlay"})});</script>
+  <![endif]-->
+
+  <!--[if IE 6]><script src="js/DD_belatedPNG.min.js"></script>
+	<script>DD_belatedPNG.fix('.png_bg, img');</script>
+  <![endif]-->
+
+  <script src="js/modernizr.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>-->
+  <script src="js/universe.js"></script>
+  
+  <script>
+  $(document).ready(function(){
+				$("a").click(function(e){
+				e.preventDefault();
+				});
+				
+				$(".unprevent").unbind();
+			
+				var windowWidth=$(window).width();
+				var windowHeight=$(window).height();
+			
+				if(windowWidth <= 960){
+					$('#main_gnb').css('height',windowHeight);
+					$('#main_search_box').css('height',windowHeight)
+				}
+				else{
+					$('#main_gnb').css('height',70+"px");
+					$('#main_search_box').css('height',70+'px')
+					}
+
+			$(window).resize(function(){
+				windowWidth=$(window).width();
+				windowHeight=$(window).height();
+				if(windowWidth <= 960){
+					$('#main_gnb').css('height',windowHeight);
+					$('#main_search_box').css('height',windowHeight)
+				}
+				else{
+					$('#main_gnb').css('height',70+"px");
+					$('#main_search_box').css('height',70+'px')
+		
+					}
+			});
+		});
+
+ /*
+jquery 1.6 버전 이하
+$('input:radio[name="fruit"][value="apple"]).attr('checked', 'checked');
+
+jquery 1.6 버전 이상
+$('input:radio[name="fruit"][value="apple"]).prop('checked', true);
+
+
+2. radio 버튼 선택된 값 가져오기
+var fruitValue = $('input:radio[name="fruit"]:checked).val();
+
+출처: https://yangyag.tistory.com/107 [Hello Brother!]
+	*/ 
+  </script>
+
+
+   
+ 
+ </head>
+
+ <body id="universe">
+  
+  <input type="checkbox" name="gnb_button" id="gnb_button">
+  <input type="checkbox" name="main_search_button" id="main_search_button">
+  <header id="main_header">
+	<div>		
+		<label for="gnb_button">			
+			<span></span>
+			<span></span>
+		</label>
+		<h1><a href="pj2_main.html" class="unprevent"><img src="images/logo.svg" alt="logo"></a></h1>		
+		<nav id="top_gnb">
+			<div><a href="#">Login-in</a></div>
+			<div>
+				<label for="main_search_button">
+					<span>Search</span>
+					<img src="images/icon/search0.png" alt="icon">
+				</label>
+			</div>
+		</nav>		
+	</div>
+	
+	<form id="main_search_box" method="get">		
+		<div>			
+			<label for="real_search">
+				<img src="images/icon/search.png" alt="icon">
+			</label>	
+			<input type="search" name="real_search" id="real_search" placeholder="검색어를 입력하세요" required>
+			<input type="submit" name="real_search_submit" id="real_search_submit" value="검색">
+			<label for="main_search_button">취소</label>
+		</div>
+	</form>		
+	
+	<nav id="main_gnb">
+		<div id="gnb_header">
+			<h1><a href="pj2_main.html" class="unprevent"><img src="images/logo_black.png" alt="logo"></a></h1>
+		</div>
+		<a href="#" class="skip">
+			로그인
+		</a>
+		<hr class="skip">
+		<ul>
+			<li><a href="#">News</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb main_gnb_inner1">
+							<ol>
+								<li class="col-4"><a href="pj2_news.html" class="unprevent">Article</a></li>
+								<li class="col-4"><a href="#">Notice</a></li>
+								<li class="col-4 last"><a href="#">Event</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner1 clearfix">
+							<h2 >Hot issue</h2>
+							<ol>
+								<li class="col-3">
+									<a href="#">
+										<img src="image/news/important_news1.png" alt="hotissue">
+										<p>와이랩, 드라마 '아스달 연대기' 쿠키영상 제작</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="#">
+										<img src="image/news/important_news2.png" alt="hotissue">
+										<p>테러맨, 릴리아? 샤샤? 레드스완의 등장</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="#">
+										<img src="image/news/important_news3.png" alt="hotissue">
+										<p>슈퍼스트링 첫 크로스오버! '부활대테러' 2020년 연재</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3 last">
+									<a href="#">
+										<img src="image/news/important_news4.png" alt="hotissue">
+										<p>라인게임즈 게임 2020년 출시예정</p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+			<li><a href="pj2_universe.html" class="unprevent">Superstring</a>
+				<div class="row">
+					<div class="row2 flow">
+						
+						<div class="main_gnb_inner main_gnb_inner2 col-6">
+							<h2>Universe</h2>
+							<ol>
+								<li>
+									<a href="pj2_universe.html" class="unprevent">
+										<img src="image/universe/uni_back588.png" alt="universe">
+										<p></p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner2 col-6 last">
+							<h2>Time line</h2>
+							<ol>
+								<li>
+									<a href="#">
+										<img src="image/universe/time588.png" alt="timeline">
+										<p></p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+			<li><a href="#">Character</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-6"><a href="pj2_character.html" class="unprevent">All Character</a></li>
+								<li class="col-6 last"><a href="#">Team&Group</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner3 clearfix">
+							<h2>Key Character</h2>
+							<ol>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character49.png" alt="character">
+											<p class="chname chname1">문수</p>
+											<p class="chname chname2">암행어사</p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character91.png" alt="character">
+											<p class="chname chname1">아지태</p>
+											<p class="chname chname2"></p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="pj2_characterinfo.html" class="unprevent">
+										<figure class="characterbox">
+											<img src="image/character/character57.png" alt="character">
+											<p class="chname chname1">민정우</p>
+											<p class="chname chname2">테러맨</p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character80.png" alt="character">
+											<p class="chname chname1">숙희</p>
+											<p class="chname chname2">수키</p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character63.png" alt="character">
+											<p class="chname chname1">반</p>
+											<p class="chname chname2"></p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2 last">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character106.png" alt="character">
+											<p class="chname chname1">원미호</p>
+											<p class="chname chname2"></p>
+										</figure>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+			<li><a href="#">Webtoon</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-6"><a href="#">Publishing</a></li>
+								<li class="col-6 last"><a href="#">All Webtoon</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner4 clearfix">
+							<h2>Popular Webtoon</h2>
+							<ol>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon010.png" alt="webtoon">
+										<p>테러맨</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon002.png" alt="webtoon">
+										<p>버닝헬</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon005.png" alt="webtoon">
+										<p>신암행어사</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon004.png" alt="webtoon">
+										<p>신석기녀</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon007.png" alt="webtoon">
+										<p>아일랜드</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2 last">
+									<a href="#">
+										<img src="image/webtoon/webtoon003.png" alt="webtoon">
+										<p>부활남</p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+
+			<li><a href="#">Gallery</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-6"><a href="#">Wall Papers</a></li>
+								<li class="col-6 last"><a href="#">Fan Pics</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner5 clearfix">
+							<h2>PR Video</h2>
+							<ol>
+								<li class="col-3">
+									<a href="https://comic-superstring.naver.com/trailer/video/c376c292-4c21-4f80-bd7b-41c20eb30ca5.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/c376c292-4c21-4f80-bd7b-41c20eb30ca5.mp4"
+										poster="image/poster/poster1.jpg">
+										 
+										</video>
+										<p>시네마틱 1차 영상</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="https://comic-superstring.naver.com/trailer/video/d243f35b-674f-4de7-bf56-412a1afa3983.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/d243f35b-674f-4de7-bf56-412a1afa3983.mp4" poster="image/poster/poster4.jpg">
+										
+										</video>
+										<p>신석기녀 프로모션 영상</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="https://comic-superstring.naver.com/trailer/video/f4a30111-9d8e-4652-aadb-1e631dbc8603.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/f4a30111-9d8e-4652-aadb-1e631dbc8603.mp4" poster="image/poster/poster2.jpg">
+									
+										</video>
+										<p>시네마틱 2차 영상</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3 last">
+									<a href="https://comic-superstring.naver.com/trailer/video/9a9ecff4-88f5-4d4d-8a15-50add877de79.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/9a9ecff4-88f5-4d4d-8a15-50add877de79.mp4" poster="image/poster/poster3.jpg">	
+										</video>
+										<p>테러맨 프로모션 영상</p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+			<li><a href="#">Games</a>
+				<div class="row">
+					<div class="row2">
+						<div class="main_gnb_inner main_gnb_inner6">
+							<h2>COMMING SOON 2020</h2>
+							<ol>
+								<li>
+									<a href="https://youtu.be/_4qSTKg3iM8">
+										<video style="width:25%; height:auto;" src="https://youtu.be/_4qSTKg3iM8" poster="image/poster/poster5.jpg">				
+										</video>
+										<p></p>
+										<p></p>
+									</a>
+								</li>						
+							</ol>
+						</div>
+					</div>
+				</div>	
+			</li>
+			
+			<li><a href="pj2_community.html" class="unprevent">Community</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-4"><a href="#">Free Board</a></li>
+								<li class="col-4"><a href="#">Study Board</a></li>
+								<li class="col-4 last"><a href="#">Webtoon Board</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner7 col-6">
+							<h2>Best of Month</h2>
+							<ul class="month_best">
+								<li class="commu_list">
+									<a href="#">										
+										<span>1</span>
+										<p class="subject">백백교 수장은 아지태가 아니고 따로 있다</p>
+										<p class="subject_plus"><span>380</span> 7.1</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>2</span>
+										<p class="subject">파락호 복장 고증오류 같은데</p>
+										<p class="subject_plus"><span>289</span> 7.13</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>3</span>
+										<p class="subject">백백교스케일 진짜 커지넹..</p>
+										<p class="subject_plus"><span>330</span> 7.9</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">										
+										<span>4</span>
+										<p class="subject">하우스키퍼에 등장한 대통령은 분명 아지태일 것이라 예상됨</p>
+										<p class="subject_plus"><span>296</span> 7.8</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>5</span>
+										<p class="subject">석환 능력도 과학적인건 아닌가보네 베로니카처럼</p>
+										<p class="subject_plus"><span>288</span> 7.21</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner7 col-6 last">
+							<h2>Best of Weeks</h2>
+							<ul class="weeks_best">
+								<li class="commu_list">
+									<a href="#">
+										<span>1</span>
+										<p class="subject">지금 부산 센텀시티에서 테러맨 영화 촬영 중임</p>
+										<p class="subject_plus"><span>340</span> 7.31</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>2</span>
+										<p class="subject">작품들 유료화가 솔직히 세계관 홍보에 엄청악재인듯</p>
+										<p class="subject_plus"><span>470</span> 7.29</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>3</span>
+										<p class="subject">이번 미리보기 샤샤 미쳤네</p>
+										<p class="subject_plus"><span>274</span> 7.28</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>4</span>
+										<p class="subject">개인적으로 바라는 신암행어사 엔딩</p>
+										<p class="subject_plus"><span>191</span> 7.30</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>5</span>
+										<p class="subject">테러맨 기적의 논리</p>
+										<p class="subject_plus"><span>139</span> 7.28</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>			
+			</li>
+			
+
+			<li><a href="#">More</a>
+				<div class="row">
+					<div class="sub_gnb row2">
+						<ol>
+							<li class="col-4"><a href="pj2_shop.html" class="unprevent">Shop</a></li>
+							<li class="col-4"><a href="#">SNS</a></li>
+							<li class="col-4 last"><a href="#">Movie/Drama</a></li>
+						</ol>
+					</div>
+				</div>			
+			</li>
+			
+		</ul>
+	</nav>
+  </header>
+
+	<section id="universe_banner" class="row">
+		<h2>Super String Universe</h2>
+		<p>어느 날, 원인불명의 이유로 
+		   목성이 궤도를 이탈하는 사건이 일어나고<br>
+		   목성의 중력으로 화성은 폭파되고 지구 역시 멸망의 위기에 처한다.<br>
+
+		   인류를 구하기 위해, 대한그룹의 회장 원미호는 
+		   인류를 다른 차원으로 이주시킬 계획을 세운다.<br>
+
+		   이 모든 재앙이 특정 세력이 일으킨 인재였다는 것을 알게된 원미호는
+		   차원을 넘어온 능력자들이 모아 세계의 존망을 건 싸움을 시작하려 한다…!
+		</p>
+		<hr>
+	</section>
+
+	 <div id="map_guide">
+	<p><a href="pj2_main.html" class="unprevent">
+		Home <img src="images/icon/guide_arrow.png" alt="guide">
+		</a>
+		<a href="pj2_universe.html" class="unprevent">
+	   Superstring <img src="images/icon/guide_arrow.png" alt="guide">
+	   </a>
+	   <span>Universe</span>
+	  </p>
+  </div>
+
+	<section id="universe_banner_first" class="universe_banners row">
+		<input type="radio" name="universe_inner_button" id="universe_inner_button1">
+		<h2><label for="universe_inner_button1">오래된 음모</label></h2>
+		<div class="universe_inner1 universe_inner">
+			<p>
+			</p>
+			<input type="checkbox" name="secret_button1" id="secret_button1">
+			<label for="secret_button1">
+				<div class="secret1 secret">
+				</div>
+				<p class="explanation explanation1">
+					<span>대성팔족</span><br>
+					백백교가 말하는 '백의교리'를 전파하는 8개의 가문을 말한다.<br>
+					백, 연, 사, 국, 목, 진, 협, 해의 가문이 있다.<br>
+					백제의 대성팔족을 모티브로 했다.
+				</p>
+			</label>
+			<input type="checkbox" name="secret_button2" id="secret_button2">
+			<label for="secret_button2">
+				<div class="secret2 secret">
+				</div>
+				<p class="explanation explanation2">
+					<span>백백교</span><br>
+					세상이 하얗게 돼 아무것도 없는 상태가 생명의 영생이라는 교리를 추구하는 종교.<br>
+					1만년 전부터 존재했으며 현재도 일반종교와 세계 기관에 암약하고 있는 세계 최대 권력의 종교집단이다.
+
+				</p>
+			</label>
+			<input type="checkbox" name="secret_button3" id="secret_button3">
+			<label for="secret_button3">
+				<div class="secret3 secret">
+				</div>
+				<p class="explanation explanation3">
+					<span>지장종</span><br>
+					백백교의 분파 중 하나,<br>
+					특이하게도 백백교의 교리와 달리 재난을 막는 것이 목표,.<br>
+					하지만 대를 위해 소를 거리낌 없이 희생시킨다.
+				</p>
+			</label>
+			<input type="checkbox" name="secret_button4" id="secret_button4">
+			<label for="secret_button4">
+				<div class="secret4 secret">
+				</div>
+				<p class="explanation explanation4">
+					<span>재난준비위원회</span><br>
+					곧 올 재난에 대비하기 위해서 설립된 조직...이나<br>
+					실상은 백백교의 수하집단이자 손꼽히는 트롤링 악질 조직.<br>
+					줄여서 재준위라 불린다.
+				</p>
+			</label>
+		</div>
+	</section>
+
+	<section id="universe_banner_second" class="universe_banners row">
+		<input type="radio" name="universe_inner_button" id="universe_inner_button2">
+		<h2><label for="universe_inner_button2">위기의 인류</label></h2>
+		<div class="universe_inner2 universe_inner">
+			<p	>
+				<span>목성의 궤도 이탈</span><br>
+				원인불명의 이유로 궤도를 이탈한 목성은 태양으로 끌려가며 화성을 파괴하고<br>
+				지구도 화성과 같은 운명에 놓이게 된다.<br>
+				
+				<span>무저갱</span><br>
+				목성의 영향으로 깊이를 알 수 없는 싱크홀이 지구 곳곳에 발생한다.<br>
+				땅과 하늘을 가리지 않고 생기며 다른 차원과의 통로가 된다<br>
+			</p>
+		</div>
+	</section>
+
+	<section id="universe_banner_third" class="universe_banners row">
+		<input type="radio" name="universe_inner_button" id="universe_inner_button3">
+		<h2><label for="universe_inner_button3">차원을 넘어서</label></h2>
+		<div class="universe_inner3 universe_inner">
+			<div>
+			</div>
+			<div>
+			</div>
+			<p	>
+				<span>슈퍼스트링</span><br>
+				전무후무의 재난 속에서 대한그룹의 원미호는 인류 다른 차원으로 이주시키려 시도한다.<br>
+				차원을 문을 열자 나타난건 쾌타천의 악귀 무리들...<br>
+				하지만 그 문을 통해 다른 세상의 영웅들이 재난에 빠진 지구로 모이게 된다!
+			</p>
+		</div>
+	</section>
+
+
+
+  
+
+  
+  <footer id="main_footer" class="row clearfix">
+  	<div>
+	  <nav id="footer_gnb" class="row2">
+		<div>
+			<input type="checkbox" name="footer_gnb1" id="footer_gnb1" class="footer_gnb_button">
+			<h2><label for="footer_gnb1">SITE</label></h2>
+			<ul>
+				<li><a href="pj2_news.html" class="unprevent">News</a></li>
+				<li><a href="pj2_universe.html" class="unprevent">Super String</a></li>
+				<li><a href="pj2_character.html" class="unprevent">Character</a></li>
+				<li><a href="#">Webtoon</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">Games</a></li>
+				<li><a href="#" class="unprevent">Community</a></li>
+			</ul>
+		</div>
+		<div>
+			<input type="checkbox" name="footer_gnb2" id="footer_gnb2" class="footer_gnb_button">
+			<h2><label for="footer_gnb2">ABOUT</label></h2>
+			<ul>
+				<li><a href="#">Creator Note</a></li>
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="#">Advertising</a></li>
+			</ul>
+		</div>
+        <div>
+			<input type="checkbox" name="footer_gnb3" id="footer_gnb3" class="footer_gnb_button">
+			<h2><label for="footer_gnb3">SERVICE CENTER</label></h2>
+			<ul>
+				<li><a href="#">Service Center</a></li>
+				<li><a href="#">F A Q</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Terms of Use</a></li>
+			</ul>
+		</div>        
+	  </nav>
+	  <nav id="footer_follow">
+	  	<div>
+			<h3>Follow</h3>
+			<ul>
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/yt.png" alt="youtube">
+					</a>
+				</li>
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/fb.png" alt="facebook">
+					</a>
+				</li>
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/is.png" alt="instar">
+					</a>
+				</li>
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/tw.png" alt="twitter">
+					</a>
+				</li>
+			</ul>
+		</div>		
+	  </nav>
+	  <div id="stamp">
+	  	<i></i>
+	  </div>
+	</div>
+  </footer>
+
+ 
+
+
+ </body>
+</html>

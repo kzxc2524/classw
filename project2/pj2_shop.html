@@ -1,0 +1,2680 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!--[if IE 6]><html class="no-js old ie6"><![endif]-->
+<!--[if IE 7]><html class="no-js old ie7"><![endif]-->
+<!--[if IE 8]><html class="no-js old ie8"><![endif]-->
+<!--[if IE 9]><html class="no-js modern ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]>
+<html class="no-js modern">
+<![endif]-->
+
+ <head>
+  <title> Shop </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="css/pj2_header_footer.css">
+  <link rel="stylesheet" type="text/css" href="css/pj2_shop.css">
+  <link rel="stylesheet" type="text/css" href="css/pj2_controller.css">
+  <link rel="stylesheet" type="text/css" href="css/grid_1200_12col.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  
+  
+  <!--[if lt IE 9]>
+	<script src="js/html5shiv.js">
+	</script>		
+	
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+	</script>
+  <![endif]-->
+
+  <!--[if lt IE 9]><script src="js/CFInstall.min.js"></script>
+	<script>window.attachEvent("onload",function(){CFInstall.check
+	({mode:"overlay"})});</script>
+  <![endif]-->
+
+  <!--[if IE 6]><script src="js/DD_belatedPNG.min.js"></script>
+	<script>DD_belatedPNG.fix('.png_bg, img');</script>
+  <![endif]-->
+
+  <script src="js/modernizr.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+  <!--↑ 스와이프 적용하는 문서에서 제이쿼리도 사용하면 꼭 넣어줘야함-->
+  <script src="js/shop.js"></script>
+  <script> // 공통 스크립트
+  		
+
+	$(document).ready(function(){
+				$("a").click(function(e){
+				e.preventDefault();
+				});
+				
+				$(".unprevent").unbind();
+			
+				var windowWidth=$(window).width();
+				var windowHeight=$(window).height();
+			
+				if(windowWidth <= 960){
+					$('#main_gnb').css('height',windowHeight);
+					$('#main_search_box').css('height',windowHeight)
+				}
+				else{
+					$('#main_gnb').css('height',70+"px");
+					$('#main_search_box').css('height',70+'px')
+					}
+
+			$(window).resize(function(){
+				windowWidth=$(window).width();
+				windowHeight=$(window).height();
+				if(windowWidth <= 960){
+					$('#main_gnb').css('height',windowHeight);
+					$('#main_search_box').css('height',windowHeight)
+				}
+				else{
+					$('#main_gnb').css('height',70+"px");
+					$('#main_search_box').css('height',70+'px')
+		
+					}
+			});				
+	
+	
+		$(window).scroll(function(){ 
+		
+					//스크롤의 위치가 상단에서 450보다 크면  
+					 // if($(window).scrollTop() > 450){ 
+		
+				    if(window.pageYOffset >= $('.content').offset().top-100){  
+			        	$('.controller').addClass('fix');  
+						 }else{  
+				      $('.controller').removeClass('fix'); 
+					}  
+				  }
+
+
+				/*if($('input#gnb_button:checked').val();=true){
+					$('#news_controller').removeClass('fix');
+				}else{
+					$('#news_controller').addClass('fix');
+				}*/
+);
+
+
+
+	 $("#page_select").bind("click",function(){
+		var page = prompt("이동할 페이지를 입력해주세요","1");
+		if(page != null){
+			if(page<=3){
+				$("input:radio[name=goods_page]").prop('checked',false);
+				$("#goods_page"+page).prop('checked', true);
+				$(".seleted_page").empty();
+				$(".seleted_page").append(page);
+			}else{
+				 alert("이동할 수 없는 페이지 입니다");
+				}			
+		}else{
+			  alert("1페이지로 돌아갑니다");
+			  $('#goods_page1').prop("checked",true);
+			}
+		});
+
+		/*if(page<=8){
+			$("input:radio[name=]").prop('checked',false);
+			$("#character_page"+page).prop('checked', true);
+			$(".seleted_page").empty();
+			$(".seleted_page").append(page);
+		}else{
+			alert("이동할 수 없는 페이지 입니다");
+		}
+
+	 });*/
+
+	$("#footer_gnb1").click(function(){
+			$("#footer_gnb2").prop('checked',false);
+			$("#footer_gnb3").prop('checked',false);	
+		});
+			
+
+		$("#footer_gnb2").click(function(){
+			$("#footer_gnb1").prop('checked',false);
+			$("#footer_gnb3").prop('checked',false);	
+		});	
+		
+		$("#footer_gnb3").click(function(){
+			$("#footer_gnb1").prop('checked',false);
+			$("#footer_gnb2").prop('checked',false);	
+		});
+	
+
+
+
+}); //wrapper
+
+
+ 	/*
+	jquery 1.6 버전 이하
+
+$('input:radio[name="fruit"][value="apple"]).attr('checked', 'checked');
+
+
+
+jquery 1.6 버전 이상
+
+$('input:radio[name="fruit"][value="apple"]).prop('checked', true);
+
+
+
+
+
+2. radio 버튼 선택된 값 가져오기
+
+var fruitValue = $('input:radio[name="fruit"]:checked).val();
+
+
+
+출처: https://yangyag.tistory.com/107 [Hello Brother!]
+	*/
+  </script>
+ 
+  <style>
+    
+   .swiper-slide {
+      
+      /* Center slide text vertically */
+      /* display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;*/
+    }
+  </style>
+ </head>
+
+ <body id="shop">
+  <input type="checkbox" name="gnb_button" id="gnb_button">
+  <input type="checkbox" name="main_search_button" id="main_search_button">
+  <header id="main_header">
+	<div>		
+		<label for="gnb_button">			
+			<span></span>
+			<span></span>
+		</label>
+		<h1><a href="pj2_main.html" class="unprevent"><img src="images/logo.svg" alt="logo"></a></h1>		
+		<nav id="top_gnb">
+			<div><a href="#">Login-in</a></div>
+			<div>
+				<label for="main_search_button">
+					<span>Search</span>
+					<img src="images/icon/search0.svg" alt="icon">
+				</label>
+			</div>
+		</nav>		
+	</div>
+	
+	<form id="main_search_box" method="get">		
+		<div>			
+			<label for="real_search">
+				<img src="images/icon/search.png" alt="icon">
+			</label>	
+			<input type="search" name="real_search" id="real_search" placeholder="검색어를 입력하세요" required>
+			<input type="submit" name="real_search_submit" id="real_search_submit" value="검색">
+			<label for="main_search_button">취소</label>
+		</div>
+	</form>		
+	
+	<nav id="main_gnb">
+		<div id="gnb_header">
+			<h1><a href="pj2_main.html" class="unprevent"><img src="images/logo_black.png" alt="logo"></a></h1>
+		</div>
+		<a href="#" class="skip">
+			로그인
+		</a>
+		<hr class="skip">
+		<ul>
+			<li><a href="#">News</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb main_gnb_inner1">
+							<ol>
+								<li class="col-4"><a href="pj2_news.html" class="unprevent">Article</a></li>
+								<li class="col-4"><a href="#">Notice</a></li>
+								<li class="col-4 last"><a href="#">Event</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner1 clearfix">
+							<h2 >Hot issue</h2>
+							<ol>
+								<li class="col-3">
+									<a href="#">
+										<img src="image/news/important_news1.png" alt="hotissue">
+										<p>와이랩, 드라마 '아스달 연대기' 쿠키영상 제작</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="#">
+										<img src="image/news/important_news2.png" alt="hotissue">
+										<p>테러맨, 릴리아? 샤샤? 레드스완의 등장</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="#">
+										<img src="image/news/important_news3.png" alt="hotissue">
+										<p>슈퍼스트링 첫 크로스오버! '부활대테러' 2020년 연재</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3 last">
+									<a href="#">
+										<img src="image/news/important_news4.png" alt="hotissue">
+										<p>라인게임즈 게임 2020년 출시예정</p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+			<li><a href="pj2_universe.html" class="unprevent">Superstring</a>
+				<div class="row">
+					<div class="row2 flow">
+						
+						<div class="main_gnb_inner main_gnb_inner2 col-6">
+							<h2>Universe</h2>
+							<ol>
+								<li>
+									<a href="pj2_universe.html" class="unprevent">
+										<img src="image/universe/uni_back588.png" alt="universe">
+										<p></p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner2 col-6 last">
+							<h2>Time line</h2>
+							<ol>
+								<li>
+									<a href="#">
+										<img src="image/universe/time588.png" alt="timeline">
+										<p></p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+			<li><a href="#">Character</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-6"><a href="pj2_character.html" class="unprevent">All Character</a></li>
+								<li class="col-6 last"><a href="#">Team&Group</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner3 clearfix">
+							<h2>Key Character</h2>
+							<ol>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character49.png" alt="character">
+											<p class="chname chname1">문수</p>
+											<p class="chname chname2">암행어사</p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character91.png" alt="character">
+											<p class="chname chname1">아지태</p>
+											<p class="chname chname2"></p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="pj2_characterinfo.html" class="unprevent">
+										<figure class="characterbox">
+											<img src="image/character/character57.png" alt="character">
+											<p class="chname chname1">민정우</p>
+											<p class="chname chname2">테러맨</p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character80.png" alt="character">
+											<p class="chname chname1">숙희</p>
+											<p class="chname chname2">수키</p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character63.png" alt="character">
+											<p class="chname chname1">반</p>
+											<p class="chname chname2"></p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2 last">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character106.png" alt="character">
+											<p class="chname chname1">원미호</p>
+											<p class="chname chname2"></p>
+										</figure>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+			<li><a href="#">Webtoon</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-6"><a href="#">Publishing</a></li>
+								<li class="col-6 last"><a href="#">All Webtoon</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner4 clearfix">
+							<h2>Popular Webtoon</h2>
+							<ol>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon010.png" alt="webtoon">
+										<p>테러맨</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon002.png" alt="webtoon">
+										<p>버닝헬</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon005.png" alt="webtoon">
+										<p>신암행어사</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon004.png" alt="webtoon">
+										<p>신석기녀</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon007.png" alt="webtoon">
+										<p>아일랜드</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2 last">
+									<a href="#">
+										<img src="image/webtoon/webtoon003.png" alt="webtoon">
+										<p>부활남</p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+
+			<li><a href="#">Gallery</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-6"><a href="#">Wall Papers</a></li>
+								<li class="col-6 last"><a href="#">Fan Pics</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner5 clearfix">
+							<h2>PR Video</h2>
+							<ol>
+								<li class="col-3">
+									<a href="https://comic-superstring.naver.com/trailer/video/c376c292-4c21-4f80-bd7b-41c20eb30ca5.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/c376c292-4c21-4f80-bd7b-41c20eb30ca5.mp4"
+										poster="image/poster/poster1.jpg">
+										 
+										</video>
+										<p>시네마틱 1차 영상</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="https://comic-superstring.naver.com/trailer/video/d243f35b-674f-4de7-bf56-412a1afa3983.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/d243f35b-674f-4de7-bf56-412a1afa3983.mp4" poster="image/poster/poster4.jpg">
+										
+										</video>
+										<p>신석기녀 프로모션 영상</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="https://comic-superstring.naver.com/trailer/video/f4a30111-9d8e-4652-aadb-1e631dbc8603.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/f4a30111-9d8e-4652-aadb-1e631dbc8603.mp4" poster="image/poster/poster2.jpg">
+									
+										</video>
+										<p>시네마틱 2차 영상</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3 last">
+									<a href="https://comic-superstring.naver.com/trailer/video/9a9ecff4-88f5-4d4d-8a15-50add877de79.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/9a9ecff4-88f5-4d4d-8a15-50add877de79.mp4" poster="image/poster/poster3.jpg">	
+										</video>
+										<p>테러맨 프로모션 영상</p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+			<li><a href="#">Games</a>
+				<div class="row">
+					<div class="row2">
+						<div class="main_gnb_inner main_gnb_inner6">
+							<h2>COMMING SOON 2020</h2>
+							<ol>
+								<li>
+									<a href="https://youtu.be/_4qSTKg3iM8">
+										<video style="width:25%; height:auto;" src="https://youtu.be/_4qSTKg3iM8" poster="image/poster/poster5.jpg">				
+										</video>
+										<p></p>
+										<p></p>
+									</a>
+								</li>						
+							</ol>
+						</div>
+					</div>
+				</div>	
+			</li>
+			
+			<li><a href="pj2_community.html" class="unprevent">Community</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-4"><a href="#">Free Board</a></li>
+								<li class="col-4"><a href="#">Study Board</a></li>
+								<li class="col-4 last"><a href="#">Webtoon Board</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner7 col-6">
+							<h2>Best of Month</h2>
+							<ul class="month_best">
+								<li class="commu_list">
+									<a href="#">										
+										<span>1</span>
+										<p class="subject">백백교 수장은 아지태가 아니고 따로 있다</p>
+										<p class="subject_plus"><span>380</span> 7.1</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>2</span>
+										<p class="subject">파락호 복장 고증오류 같은데</p>
+										<p class="subject_plus"><span>289</span> 7.13</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>3</span>
+										<p class="subject">백백교스케일 진짜 커지넹..</p>
+										<p class="subject_plus"><span>330</span> 7.9</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">										
+										<span>4</span>
+										<p class="subject">하우스키퍼에 등장한 대통령은 분명 아지태일 것이라 예상됨</p>
+										<p class="subject_plus"><span>296</span> 7.8</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>5</span>
+										<p class="subject">석환 능력도 과학적인건 아닌가보네 베로니카처럼</p>
+										<p class="subject_plus"><span>288</span> 7.21</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner7 col-6 last">
+							<h2>Best of Weeks</h2>
+							<ul class="weeks_best">
+								<li class="commu_list">
+									<a href="#">
+										<span>1</span>
+										<p class="subject">지금 부산 센텀시티에서 테러맨 영화 촬영 중임</p>
+										<p class="subject_plus"><span>340</span> 7.31</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>2</span>
+										<p class="subject">작품들 유료화가 솔직히 세계관 홍보에 엄청악재인듯</p>
+										<p class="subject_plus"><span>470</span> 7.29</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>3</span>
+										<p class="subject">이번 미리보기 샤샤 미쳤네</p>
+										<p class="subject_plus"><span>274</span> 7.28</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>4</span>
+										<p class="subject">개인적으로 바라는 신암행어사 엔딩</p>
+										<p class="subject_plus"><span>191</span> 7.30</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>5</span>
+										<p class="subject">테러맨 기적의 논리</p>
+										<p class="subject_plus"><span>139</span> 7.28</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>			
+			</li>
+			
+
+			<li><a href="#">More</a>
+				<div class="row">
+					<div class="sub_gnb row2">
+						<ol>
+							<li class="col-4"><a href="pj2_shop.html" class="unprevent">Shop</a></li>
+							<li class="col-4"><a href="#">SNS</a></li>
+							<li class="col-4 last"><a href="#">Movie/Drama</a></li>
+						</ol>
+					</div>
+				</div>			
+			</li>
+			
+		</ul>
+	</nav>
+  </header>
+
+  
+
+  <section id="shop_banner" class="row">
+	<div class="row">	
+		<div class="row2">
+			<img src="image/shop/card/checkcard.png" alt="checkcard">
+			<p>세상에 없던 콜라보레이션</p>
+			<img src="image/banner/shinhan_logo_b.png" alt="main_tittle">
+			<p>신청기간 19.8.1(목) ~ 8.29(목)</p>
+			<img src="image/banner/read_more_b.png" alt="read_more">
+		</div>
+	</div>
+  </section>
+
+  <div id="map_guide">
+	<p>
+		<a href="pj2_main.html" class="unprevent">
+		Home <img src="images/icon/guide_arrow.png" alt="guide">
+		</a>
+		<a href="#">
+	   more
+	   <img src="images/icon/guide_arrow.png" alt="guide">
+	   </a>
+	   <span>Shop</span>
+	</p>
+  </div>
+  
+  <div id="recommend_goods" class="row2">
+	 <div class="swiper-container swiper1">
+		<h2>한정판매 상품</h2>
+		<div class="swiper-wrapper">
+		  <div class="ss swiper-slide hjgoods">
+			<a href="#">
+				<div class="goods_img hj1"></div>
+				<p>쿠쿠 충전 마우스패드</p>
+				<p>￦38,900</p>
+			</a>
+		  </div>
+		  <div class="ss swiper-slide hjgoods">
+			<a href="#">
+				<div class="goods_img hj2"></div>
+				<p>숙희 테러맨 작화 티셔츠</p>
+				<p>￦13,900</p>
+			</a>
+		  </div>
+		  <div class="ss swiper-slide hjgoods">
+			<a href="#">
+				<div class="goods_img hj3"></div>
+				<p>산도 암막 블라인드 블랙</p>
+				<p>￦39,900</p>
+			</a>
+		  </div>
+		  <div class="ss swiper-slide hjgoods">
+			<a href="#">
+				<div class="goods_img hj4"></div>
+				<p>숙희 암막 블라인드 챠콜</p>
+				<p>￦39,900</p>
+			</a>
+		  </div>
+		  <div class="ss swiper-slide hjgoods">
+			<a href="#">
+				<div class="goods_img hj5"></div>
+				<p>버닝헬 암막 블라인드 컨셉아트ver</p>
+				<p>￦39,900</p>
+			</a>
+		  </div>
+		  <div class="ss swiper-slide hjgoods">
+			<a href="#">
+				<div class="goods_img hj6"></div>
+				<p>민정우 텀블러</p>
+				<p>￦11,900</p>
+			</a>
+		  </div>
+		</div>
+		<!-- Add Pagination -->
+		<div class="swiper-pagination swiper-pagination1"></div>
+	 </div>
+
+  <!-- Swiper -->
+	 <div class="swiper-container swiper1">
+		 <h2>새로나온 상품</h2>
+		 <div class="swiper-wrapper">
+			<div class="ss swiper-slide nwgoods">
+				<a href="#">
+					<div class="goods_img nw1"></div>
+					<p>예린, 석환 머그컵 2P 세트</p>
+					<p>￦11,900</p>
+				</a>
+			</div>
+			<div class="ss swiper-slide nwgoods">
+				<a href="#">
+					<div class="goods_img nw2"></div>
+					<p>쿠쿠 충전 마우스패드</p>
+					<p>￦38,900</p>		
+				</a>
+			</div>
+			<div class="ss swiper-slide nwgoods">
+				<a href="#">
+					<div class="goods_img nw3"></div>
+					<p>반 블랙 암막 블라인드</p>
+					<p>￦39,900</p>		
+				</a>
+			</div>
+			<div class="ss swiper-slide nwgoods">
+				<a href="#">
+					<div class="goods_img nw4"></div>
+					<p>버닝헬 암막 블라인드 화이트</p>
+					<p>￦39,900</p>		
+				</a>
+			</div>
+			<div class="ss swiper-slide nwgoods">
+				<a href="#">
+					<div class="goods_img nw5"></div>
+					<p>캉타우 티셔츠 블랙</p>
+					<p>￦11,900</p>		
+				</a>
+			</div>
+			<div class="ss swiper-slide nwgoods">
+				<a href="#">
+					<div class="goods_img nw6"></div>
+					<p>테러맨 기능성 티셔츠 화이트</p>
+					<p>￦16,900</p>
+				</a>
+			</div>
+		</div>
+			
+		<!-- Add Pagination -->
+		<div class="swiper-pagination swiper-pagination2"></div>
+	 </div>
+
+  <!-- Swiper -->
+	<div class="swiper-container swiper1">
+	 <h2>인기 상품</h2>
+	 <div class="swiper-wrapper">
+		   <div class="ss swiper-slide iggoods">
+			<a href="#">
+				<div class="goods_img ig1"></div>
+				<p>쿠쿠 머그컵 화이트</p>
+				<p>￦6,900 
+					<span>
+						<img src="images/icon/point.svg"  alt="point">
+						69,000
+					</span>
+				</p>		
+			</a>
+		  </div>
+		  <div class="ss swiper-slide iggoods">
+			<a href="#">
+				<div class="goods_img ig2"></div>
+				<p>베로니카 암막 블라인드 블랙</p>
+				<p>￦38,900 
+					<span>
+						<img src="images/icon/point.svg"  alt="point">
+						389,000
+					</span>
+				</p>		
+			</a>
+		  </div>
+		  <div class="ss swiper-slide iggoods">
+			<a href="#">
+				<div class="goods_img ig3"></div>
+				<p>쿠쿠 카드지갑 진챠콜</p>
+				<p>￦6,900 
+					<span>
+						<img src="images/icon/point.svg"  alt="point">
+						69,000
+					</span>
+				</p>		
+			</a>
+		  </div>
+		  <div class="ss swiper-slide iggoods">
+			<a href="#">
+				<div class="goods_img ig4"></div>
+				<p>슈퍼스트링로고 티셔츠 블랙</p>
+				<p>￦8,900 
+					<span>
+						<img src="images/icon/point.svg"  alt="point">
+						89,000
+					</span>
+				</p>	
+			</a>
+		  </div>
+		  <div class="ss swiper-slide iggoods">
+			<a href="#">
+				<div class="goods_img ig5"></div>
+				<p>민정우 텀블러</p>
+				<p>￦11,900				
+				</p>
+			</a>
+		  </div>
+		  <div class="ss swiper-slide iggoods">
+			<a href="#">
+				<div class="goods_img ig6"></div>
+				<p>슈퍼스트링로고 카드지갑</p>
+				<p>￦14,900 
+					<span>
+						<img src="images/icon/point.svg" alt="point">
+						149,000
+					</span>
+				</p>
+			</a>	
+		  </div>
+		</div>
+		<!-- Add Pagination -->
+		<div class="swiper-pagination swiper-pagination3">
+		</div>
+	  </div>
+</div><!--recommend_goods-->
+
+
+  <section id="shop_content" class="content row">
+  	<div class="row2">
+		<h2>카테고리별 상품</h2>
+		<div id="shop_controller" class="controller">
+			<ul>
+				<li>
+					<input type="checkbox" name="controll_category" id="controll_category">
+					<label for="controll_category">
+						<img src="images/icon/category.svg" alt="category_select">
+						<p>카테고리</p>
+					</label>			
+					<div id="controll_category_box">
+						<ul>
+							<li>
+								<label for="category_all">전체</label>
+							</li>
+							<li>
+								<label for="category_cup">머그컵,텀블러</label>
+							</li>
+							<li>
+								<label for="category_tshirts">의류</label>
+							</li>
+							<li>
+								<label for="category_note">다이어리/노트</label>
+							</li>
+							<li>
+								<label for="category_cardholder">카드지갑</label>
+							</li>
+							<li>
+								<label for="category_electro">전자기기</label>
+							</li>
+							<li>
+								<label for="category_blind">블라인드</label>
+							</li>
+							<li>
+								<label for="category_alined">제휴상품</label>
+							</li>
+						</ul>
+					</div>				
+				</li>
+				<li>
+					<a href="#" onclick="return false">
+						<img src="images/icon/sort.svg" alt="sort">
+						<p>정렬</p>
+					</a>
+				</li>
+				<li>
+					<input type="checkbox" name="content_search_button" id="content_search_button">
+					<label for="content_search_button">				
+						<img src="images/icon/search.svg" alt="search">
+						<p>검색</p>
+					</label>
+					<form id="character_search_box" method="get" class="content_search_box">	
+						<div>			
+							<label for="content_search">
+								<img src="images/icon/search.svg" alt="icon">
+							</label>	
+							<input type="search" name="content_search" id="content_search" placeholder="연관 키워드를 입력하세요." required>
+							<input type="submit" name="content_search_submit" id="content_search_submit" class="content_search_submit" value="검색">
+							<label for="content_search_button">취소</label>
+						</div>
+					</form>	
+				</li>
+				<li>
+					<a id="likes_select" href="#" onclick="return false">						
+						<img src="images/icon/cart.svg" alt="page">
+						<p><span class="seleted_likes">0</span></p>
+						
+					</a>	
+				</li>
+			</ul>
+		</div>
+
+		<input type="radio" name="category" id="category_all" value="all" checked>
+		<input type="radio" name="category" id="category_cup" value="cup">
+		<input type="radio" name="category" id="category_tshirts" value="tshirts">
+		<input type="radio" name="category" id="category_note" value="note">
+		<input type="radio" name="category" id="category_cardholder" value="cardholder">
+		<input type="radio" name="category" id="category_electro" value="electro">
+		<input type="radio" name="category" id="category_blind" value="blind">
+		<input type="radio" name="category" id="category_alined" value="alined">
+			
+		
+		<div id="category_box" class="">
+			<ul>
+				<li>
+					<label for="category_all">전체</label>
+				</li>
+				<li>
+					<label for="category_cup">머그컵,텀블러</label>
+				</li>
+				<li>
+					<label for="category_tshirts">의류</label>
+				</li>
+				<li>
+					<label for="category_note">다이어리/노트</label>
+				</li>
+				<li>
+					<label for="category_cardholder">카드지갑</label>
+				</li>
+				<li>
+					<label for="category_electro">전자기기</label>
+				</li>
+				<li>
+					<label for="category_blind">블라인드</label>
+				</li>
+				<li>
+					<label for="category_alined">제휴상품</label>
+				</li>
+			</ul>
+		</div>
+
+		<section id="all_goods" class=""> <!--swiper-container swiper4 -->
+			<div class="all_goods"> <!--swiper-wrapper -->
+				<div class="ss goods all mg"><!--swiper-slide-->
+					<a href="#">
+						<div class="goods_img all1 mg1"></div>
+						<p>예린, 석환 머그컵 2p 세트</p>
+						<p>￦6,900 
+							<span>
+							
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mg">
+					<a href="#">
+						<div class="goods_img all2 mg2"></div>
+						<p>민정우 텀블러 히아신스</p>
+						<p>￦11,900 
+							<span>
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mg">
+					<a href="#">
+						<div class="goods_img all3 mg3"></div>
+						<p>반 머그컵 레드</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mg">
+					<a href="#">
+						<div class="goods_img all4 mg4"></div>
+						<p>예린 머그컵 화이트</p>
+						<p>￦6,900 
+							<span>
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mg">
+					<a href="#">
+						<div class="goods_img all5 mg5"></div>
+						<p>석환 머그컵 화이트</p>
+						<p>￦6,900 
+							<span>								
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mg">
+					<a href="#">
+						<div class="goods_img all6 mg6"></div>
+						<p>탄 텀블러 버건디</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mg">
+					<a href="#">
+						<div class="goods_img all7 mg7"></div>
+						<p>산도 텀블러 블랙</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mg">
+					<a href="#">
+						<div class="goods_img all8 mg8"></div>
+						<p>릴리아&샤샤 머그컵 퍼플</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mg">
+					<a href="#">
+						<div class="goods_img all9 mg9"></div>
+						<p>하시우 머그컵 로즈골드</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mg">
+					<a href="#">
+						<div class="goods_img all10 mg10"></div>
+						<p>민정우 머그컵 블루</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mg">
+					<a href="#">
+						<div class="goods_img all11 mg11"></div>
+						<p>쿠쿠 머그컵 화이트</p><!---->
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mg">
+					<a href="#">
+						<div class="goods_img all12 mg12"></div>
+						<p>네빌 머그컵 화이트</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mg">
+					<a href="#">
+						<div class="goods_img all13 mg13"></div>
+						<p>김민혁 텀블러 블랙</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mg">
+					<a href="#">
+						<div class="goods_img all14 mg14"></div>
+						<p>카우카&캉타우 텀블러 민트</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mg">
+					<a href="#">
+						<div class="goods_img all15 mg15"></div>
+						<p>베로니카 텀블러 빅토리아블루</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mg">
+					<a href="#">
+						<div class="goods_img all16 mg16"></div>
+						<p>차예린 텀블러 옐로우</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mg">
+					<a href="#">
+						<div class="goods_img all17 mg17"></div>
+						<p>코넬리아&쿠쿠 텀블러 버킹햄블루</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mg">
+					<a href="#">
+						<div class="goods_img all18 mg18"></div>
+						<p>강하늘 텀블러 오렌지</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ts">
+					<a href="#">
+						<div class="goods_img all19 ts1"></div>
+						<p>숙희 테러맨 작화 티셔츠 블랙</p>
+						<p>￦13,900 
+							<span>
+								
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ts">
+					<a href="#">
+						<div class="goods_img all20 ts2"></div>
+						<p>슈퍼스트링로고 티셔츠 블랙</p>
+						<p>￦8,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								89,000
+							</span>
+						</p>		
+					</a>
+				</div>
+			
+				<div class="ss goods all ts">
+					<a href="#">
+						<div class="goods_img all21 ts3"></div>
+						<p>슈퍼스트링로고 기능성 티셔츠 화이트</p>
+						<p>￦16,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								169,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ts">
+					<a href="#">
+						<div class="goods_img all22 ts4"></div>
+						<p>민정우 티셔츠 화이트 ver.슈트</p>
+						<p>￦9,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								99,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ts">
+					<a href="#">
+						<div class="goods_img all23 ts5"></div>
+						<p>민정우 캉타우 작화 티셔츠 화이트</p>
+						<p>￦9,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								99,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ts">
+					<a href="#">
+						<div class="goods_img all24 ts6"></div>
+						<p>아일랜드 포스터 티셔츠 블랙</p>
+						<p>￦9,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								99,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ts">
+					<a href="#">
+						<div class="goods_img all25 ts7"></div>
+						<p>반 티셔츠 블랙</p>
+						<p>￦9,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								99,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ts">
+					<a href="#">
+						<div class="goods_img all26 ts8"></div>
+						<p>캉타우 티셔츠 블랙</p>
+						<p>￦9,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								99,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ts">
+					<a href="#">
+						<div class="goods_img all27 ts9"></div>
+						<p>테러맨 기능성 티셔츠 화이트</p>
+						<p>￦16,900 
+							<span>
+							
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ts">
+					<a href="#">
+						<div class="goods_img all28 ts10"></div>
+						<p>쿠쿠 기능성 티션츠 화이트</p>
+						<p>￦16,900
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								169,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ts">
+					<a href="#">
+						<div class="goods_img all29 ts11"></div>
+						<p>버닝헬 기능성 티션츠 화이트</p>
+						<p>￦16,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								169,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ts">
+					<a href="#">
+						<div class="goods_img all30 ts12"></div>
+						<p>레드스완 티셔츠 화이트</p>
+						<p>￦9,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								99,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all nt">
+					<a href="#">
+						<div class="goods_img all31 nt1"></div>
+						<p>민정우 무지노트</p>
+						<p>￦4,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								49,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all nt">
+					<a href="#">
+						<div class="goods_img all32 nt2"></div>
+						<p>민정우 드로잉 노트 베이지</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all nt">
+					<a href="#">
+						<div class="goods_img all33 nt3"></div>
+						<p>이재우 드로잉 노트 그린</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all nt">
+					<a href="#">
+						<div class="goods_img all34 nt4"></div>
+						<p>전영하 드로잉 노트 옐로그린</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all nt">
+					<a href="#">
+						<div class="goods_img all35 nt5"></div>
+						<p>신혜율 드로잉 노트 핑크</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all nt">
+					<a href="#">
+						<div class="goods_img all36 nt6"></div>
+						<p>원술 드로잉 노트 스카이블루</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all nt">
+					<a href="#">
+						<div class="goods_img all37 nt7"></div>
+						<p>요한 드로잉 노트 화이트</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all nt">
+					<a href="#">
+						<div class="goods_img all38 nt8"></div>
+						<p>쿠쿠 드로잉 노트 화이트</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all nt">
+					<a href="#">
+						<div class="goods_img all39 nt9"></div>
+						<p>카타리나 드로잉 노트 화이트</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all nt">
+					<a href="#">
+						<div class="goods_img all40 nt10"></div>
+						<p>야크 드로잉 노트 블루챠콜</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all nt">
+					<a href="#">
+						<div class="goods_img all41 nt11"></div>
+						<p>최경이 드로잉 노트 민트</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+			
+				<div class="ss goods all nt">
+					<a href="#">
+						<div class="goods_img all42 nt12"></div>
+						<p>김한 드로잉 노트 오렌지</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ch">
+					<a href="#">
+						<div class="goods_img all43 ch1"></div>
+						<p>쿠쿠 카드지갑 핑크</p>
+						<p>￦13,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								139,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ch">
+					<a href="#">
+						<div class="goods_img all44 ch2"></div>
+						<p>쿠쿠 카드지갑 진챠콜</p>
+						<p>￦13,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								139,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ch">
+					<a href="#">
+						<div class="goods_img all45 ch3"></div>
+						<p>쿠쿠 카드지갑 옐로</p>
+						<p>￦13,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								139,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ch">
+					<a href="#">
+						<div class="goods_img all46 ch4"></div>
+						<p>쿠쿠 카드지갑 아이보리</p>
+						<p>￦13,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								139,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ch">
+					<a href="#">
+						<div class="goods_img all47 ch5"></div>
+						<p>쿠쿠 카드지갑 블루</p>
+						<p>￦13,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								139,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ch">
+					<a href="#">
+						<div class="goods_img all48 ch6"></div>
+						<p>쿠쿠 카드지갑 블랙</p>
+						<p>￦13,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								139,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ch">
+					<a href="#">
+						<div class="goods_img all49 ch7"></div>
+						<p>쿠쿠 카드지갑 브라운</p>
+						<p>￦13,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								139,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ch">
+					<a href="#">
+						<div class="goods_img all50 ch8"></div>
+						<p>쿠쿠 카드지갑 레드</p>
+						<p>￦13,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								139,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ch">
+					<a href="#">
+						<div class="goods_img all51 ch9"></div>
+						<p>쿠쿠 카드지갑 그린</p>
+						<p>￦13,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								139,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ch">
+					<a href="#">
+						<div class="goods_img all52 ch10"></div>
+						<p>슈퍼스트링로고 카드지갑 핑크</p>
+						<p>￦13,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								139,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ch">
+					<a href="#">
+						<div class="goods_img all53 ch11"></div>
+						<p>슈퍼스트링로고 카드지갑 진챠콜</p>
+						<p>￦13,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								139,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ch">
+					<a href="#">
+						<div class="goods_img all54 ch12"></div>
+						<p>슈퍼스트링로고 카드지갑 옐로</p>
+						<p>￦13,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								139,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ch">
+					<a href="#">
+						<div class="goods_img all55 ch13"></div>
+						<p>슈퍼스트링로고 카드지갑 아이보리</p>
+						<p>￦13,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								139,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ch">
+					<a href="#">
+						<div class="goods_img all56 ch14"></div>
+						<p>슈퍼스트링로고 카드지갑 블루</p>
+						<p>￦13,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								139,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ch">
+					<a href="#">
+						<div class="goods_img all57 ch15"></div>
+						<p>슈퍼스트링로고 카드지갑 블랙</p>
+						<p>￦13,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								139,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ch">
+					<a href="#">
+						<div class="goods_img all58 ch16"></div>
+						<p>슈퍼스트링로고 카드지갑 브라운</p>
+						<p>￦13,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								139,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ch">
+					<a href="#">
+						<div class="goods_img all59 ch17"></div>
+						<p>슈퍼스트링로고 카드지갑 레드</p>
+						<p>￦13,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								139,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all ch">
+					<a href="#">
+						<div class="goods_img all60 ch18"></div>
+						<p>슈퍼스트링로고 카드지갑 그린</p>
+						<p>￦13,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								139,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mp">
+					<a href="#">
+						<div class="goods_img all61 mp1"></div>
+						<p>킬러 충전 마우스패드 ver.한준우</p>
+						<p>￦38,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								389,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mp">
+					<a href="#">
+						<div class="goods_img all62 mp2"></div>
+						<p>민정우 충전 마우스패드</p>
+						<p>￦38,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								389,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				
+				<div class="ss goods all mp">
+					<a href="#">
+						<div class="goods_img all63 mp3"></div>
+						<p>쿠쿠 충전 마우스패드</p>
+						<p>￦38,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								389,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mp">
+					<a href="#">
+						<div class="goods_img all64 mp4"></div>
+						<p>김민혁 충전 마우스패드</p>
+						<p>￦38,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								389,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mp">
+					<a href="#">
+						<div class="goods_img all65 mp5"></div>
+						<p>오세정 충전 마우스패드</p>
+						<p>￦38,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								389,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mp">
+					<a href="#">
+						<div class="goods_img all66 mp6"></div>
+						<p>베로니카 충전 마우스패드</p>
+						<p>￦38,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								389,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mp">
+					<a href="#">
+						<div class="goods_img all67 mp7"></div>
+						<p>슈퍼스트링로고 충전 마우스패드</p>
+						<p>￦38,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								389,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mp">
+					<a href="#">
+						<div class="goods_img all68 mp8"></div>
+						<p>신암행어사 충전 마우스패드 ver.환웅 소환</p>
+						<p>￦38,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								389,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mp">
+					<a href="#">
+						<div class="goods_img all69 mp9"></div>
+						<p>하스티 충전 마우스패드 ver.게임 일러스트</p>
+						<p>￦38,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								389,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mp">
+					<a href="#">
+						<div class="goods_img all70 mp10"></div>
+						<p>원효 충전 마우스패드 ver.게임 일러스트</p>
+						<p>￦38,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								389,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mp">
+					<a href="#">
+						<div class="goods_img all71 mp11"></div>
+						<p>쥬 충전 마우스패드 ver.게임 일러스트</p>
+						<p>￦38,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								389,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all mp">
+					<a href="#">
+						<div class="goods_img all72 mp12"></div>
+						<p>아지태 충전 마우스패드</p>
+						<p>￦38,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								389,000
+							</span>
+						</p>		
+					</a>
+				</div>			
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all73 bd1"></div>
+						<p>디아나 블라인드 블랙</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all74 bd2"></div>
+						<p>김민혁 블라인드 화이트 ver부활남</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all75 bd3"></div>
+						<p>네빌 블라인드 화이트</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all76 bd4"></div>
+						<p>레드스완 블라인드 챠콜</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all77 bd5"></div>
+						<p>릴리아 & 샤샤 블라인드 블랙 ver.과거</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all78 bd6"></div>
+						<p>릴리아 블라인드 블랙 ver.현재</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all79 bd7"></div>
+						<p>마미아 블라인드 챠콜</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all80 bd8"></div>
+						<p>문수 블라인드 챠콜</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all81 bd9"></div>
+						<p>민석영 블라인드 블랙</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all82 bd10"></div>
+						<p>민정우 블라인드 블랙</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all83 bd11"></div>
+						<p>반 암막 블라인드 블랙</p>
+						<p>￦39,900 
+							<span>
+								
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all84 bd12"></div>
+						<p>버닝헬 암막 블라인드 화이트</p>
+						<p>￦39,900 
+							<span>
+								
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all85 bd13"></div>
+						<p>버닝헬 암막 블라인드 화이트 ver.컨셉아트</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all86 bd14"></div>
+						<p>쥬 암막 블라인드 화이트</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all87 bd15"></div>
+						<p>베로니카 암막 블라인드 블랙</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all88 bd16"></div>
+						<p>산도 암막 블라인드  블랙</p>
+						<p>￦39,900 
+							<span>
+								
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all89 bd17"></div>
+						<p>숙희 암막 블라인드 블랙 ver.군인</p>
+						<p>￦39,900 
+							<span>
+								
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all90 bd18"></div>
+						<p>숙희 암막 블라인드 챠콜 ver.일상</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all91 bd19"></div>
+						<p>숙희 암막 블라인드 챠콜 ver.테러맨</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all92 bd20"></div>
+						<p>숙희 암막 블라인드 챠콜 ver.심연의 하늘</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all93 bd21"></div>
+						<p>심연의 하늘 암막 블라인드 화이트</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all94 bd22"></div>
+						<p>야크 암막 블라인드 블랙</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all95 bd23"></div>
+						<p>코넬리아 암막 블라인드 챠콜</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all96 bd24"></div>
+						<p>쿠쿠 암막 블라인드 화이트</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all97 bd25"></div>
+						<p>하스티 암막 블라인드 화이트</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all98 bd26"></div>
+						<p>하시우 암막 블라인드 화이트</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all bd">
+					<a href="#">
+						<div class="goods_img all99 bd27"></div>
+						<p>혼내드림 암막 블라인드 화이트</p>
+						<p>￦39,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all cd">
+					<a href="#">
+						<div class="goods_img all100 cd1"></div>
+						<p>혜율 신한체크카드</p>
+						<p>신청하러가기!
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								399,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all cd">
+					<a href="#">
+						<div class="goods_img all101 cd2"></div>
+						<p>릴리아 & 샤샤 T머니</p>
+						<p>￦39,900 
+							<span>
+								
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all cd">
+					<a href="#">
+						<div class="goods_img all102 cd3"></div>
+						<p>반 T머니</p>
+						<p>￦6,900 
+							<span>
+								
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all cd">
+					<a href="#">
+						<div class="goods_img all103 cd4"></div>
+						<p>석환 T머니</p>
+						<p>￦6,900 
+							<span>
+								
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all cd">
+					<a href="#">
+						<div class="goods_img all104 cd5"></div>
+						<p>원효 T머니</p>
+						<p>￦6,900 
+							<span>
+								
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods goods all cd">
+					<a href="#">
+						<div class="goods_img all105 cd6"></div>
+						<p>쥬 T머니</p>
+						<p>￦6,900 
+							<span>
+								
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods goods all cd">
+					<a href="#">
+						<div class="goods_img all106 cd7"></div>
+						<p>카우카 T머니</p>
+						<p>￦6,900 
+							<span>
+								
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all cd">
+					<a href="#">
+						<div class="goods_img all107 cd8"></div>
+						<p>캉타우 T머니</p>
+						<p>￦6,900 
+							<span>
+								
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all cd">
+					<a href="#">
+						<div class="goods_img all108 cd9"></div>
+						<p>쿠쿠 T머니</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>
+				<div class="ss goods all cd">
+					<a href="#">
+						<div class="goods_img all109 cd10"></div>
+						<p>테러맨 T머니</p>
+						<p>￦6,900 
+							<span>
+								<img src="images/icon/point.svg"  alt="point">
+								69,000
+							</span>
+						</p>		
+					</a>
+				</div>		 
+			</div><!--all goods-->
+		</section>
+		
+		
+	</div>
+ </section>
+		
+		
+	
+
+  <footer id="main_footer" class="row clearfix">
+  	<div>
+	  <nav id="footer_gnb" class="row2">
+		<div>
+			<input type="checkbox" name="footer_gnb1" id="footer_gnb1" class="footer_gnb_button">
+			<h2><label for="footer_gnb1">SITE</label></h2>
+			<ul>
+				<li><a href="pj2_news.html" class="unprevent">News</a></li>
+				<li><a href="pj2_universe.html" class="unprevent">Super String</a></li>
+				<li><a href="pj2_character.html" class="unprevent">Character</a></li>
+				<li><a href="#">Webtoon</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">Games</a></li>
+				<li><a href="community" class="unprevent">Community</a></li>
+			</ul>
+		</div>
+		<div>
+			<input type="checkbox" name="footer_gnb2" id="footer_gnb2" class="footer_gnb_button">
+			<h2><label for="footer_gnb2">ABOUT</label></h2>
+			<ul>
+				<li><a href="#">Creator Note</a></li>
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="#">Advertising</a></li>
+			</ul>
+		</div>
+        <div>
+			<input type="checkbox" name="footer_gnb3" id="footer_gnb3" class="footer_gnb_button">
+			<h2><label for="footer_gnb3">SERVICE CENTER</label></h2>
+			<ul>
+				<li><a href="#">Service Center</a></li>
+				<li><a href="#">F A Q</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Terms of Use</a></li>
+			</ul>
+		</div>        
+	  </nav>
+	  <nav id="footer_follow">
+	  	<div>
+			<h3>Follow</h3>
+			<ul>			
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/yt.png" alt="youtube">
+					</a>
+				</li>
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/fb.png" alt="facebook">
+					</a>
+				</li>
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/is.png" alt="instar">
+					</a>
+				</li>
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/tw.png" alt="twitter">
+					</a>
+				</li>
+			</ul>
+		</div>
+	  </nav>
+	  <div id="stamp">
+	  	<i></i>
+	  </div>
+	</div>
+  </footer>
+
+  
+<script src="js/swiper.min.js"></script>
+ <script>
+	var swiper1 = new Swiper('.swiper1', {
+		  slidesPerView: 5,
+		  spaceBetween: 24,
+		  pagination: {
+			//el: '.swiper-pagination1',
+			clickable: true,
+		  },
+		   breakpoints: {
+        960: {
+          slidesPerView: 4,
+          spaceBetween: 8,
+        },
+        540: {
+          slidesPerView: 3,
+          spaceBetween: 4,
+        }
+      }
+		});
+	var swiper4 = new Swiper('.swiper4', {
+      
+	  slidesPerView: 3,
+	  slidesPerColumn: 3,
+	  spaceBetween: 24,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+	   breakpoints: {
+        960: {
+          slidesPerView: 3,
+          spaceBetween: 8,
+        },
+        540: {
+          slidesPerView: 2,
+          spaceBetween: 4,
+        }
+      }
+    });
+
+	window.addEventListener('resize',function(){
+		var swiper1 = new Swiper('.swiper1', {
+		  slidesPerView: 5,
+		  spaceBetween: 24,
+		  pagination: {
+			//el: '.swiper-pagination1',
+			clickable: true,
+		  },
+		   breakpoints: {
+        960: {
+          slidesPerView: 4,
+          spaceBetween: 8,
+        },
+        540: {
+          slidesPerView: 3,
+          spaceBetween: 4,
+        }
+      }
+		});
+	var swiper4 = new Swiper('.swiper4', {
+      
+	  slidesPerView: 3,
+	  slidesPerColumn: 3,
+	  spaceBetween: 24,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+	   breakpoints: {
+        960: {
+          slidesPerView: 3,
+          spaceBetween: 8,
+        },
+        540: {
+          slidesPerView: 2,
+          spaceBetween: 4,
+        }
+      }
+    });
+	
+	});
+/*
+var swiper2 = new Swiper('.swiper2', {
+      slidesPerView: 5,
+	  spaceBetween: 24,
+      pagination: {
+       // el: '.swiper-pagination2',
+        clickable: true,
+      },
+    });
+	 var swiper3 = new Swiper('.swiper3', {
+      slidesPerView: 5,
+	  spaceBetween: 24,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });
+	var swiper4 = new Swiper('.swiper4', {
+      slidesPerView: 4,
+	  slidesPerColumn: 3,
+	  spaceBetween: 24,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+
+    });
+
+
+
+
+
+	}else if(window.innerWidth>=541 && window.innerWidth<=960){
+		var swiper1 = new Swiper('.swiper1', {
+		  slidesPerView: 4,
+		  spaceBetween: 8,
+		  pagination: {
+			//el: '.swiper-pagination1',
+			clickable: true,
+		  },
+		});
+
+		var swiper2 = new Swiper('.swiper2', {
+      slidesPerView: 4,
+	  spaceBetween: 8,
+      pagination: {
+       // el: '.swiper-pagination2',
+        clickable: true,
+      },
+    });
+	 var swiper3 = new Swiper('.swiper3', {
+      slidesPerView: 4,
+	  spaceBetween: 8,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });
+	var swiper4 = new Swiper('.swiper4', {
+      slidesPerView: 3,
+	  slidesPerColumn: 3,
+	  spaceBetween: 8,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });
+	var swiper5 = new Swiper('.swiper5', {
+      slidesPerView: 6,
+	  spaceBetween: 8,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });
+	}if(window.innerWidth<=540){
+		var swiper1 = new Swiper('.swiper1', {
+		  slidesPerView: 3,
+		  spaceBetween: 4,
+		  pagination: {
+			//el: '.swiper-pagination1',
+			clickable: true,
+		  },
+		});
+		var swiper2 = new Swiper('.swiper2', {
+      slidesPerView: 3,
+	  spaceBetween: 4,
+      pagination: {
+       // el: '.swiper-pagination2',
+        clickable: true,
+      },
+    });
+	 var swiper3 = new Swiper('.swiper3', {
+      slidesPerView: 3,
+	  spaceBetween: 4,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });
+	var swiper4 = new Swiper('.swiper4', {
+      slidesPerView: 2,
+	  slidesPerColumn: 3,
+	  spaceBetween: 4,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });	
+	var swiper5 = new Swiper('.swiper5', {
+      slidesPerView: 4,
+	  
+	  spaceBetween: 4,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });
+	}
+
+	window.onresize = function(event) {
+  	if(window.innerWidth>=960){
+		var swiper1 = new Swiper('.swiper1', {
+		  slidesPerView: 5,
+		  spaceBetween: 24,
+		  pagination: {
+			//el: '.swiper-pagination1',
+			clickable: true,
+		  },
+		});
+		var swiper2 = new Swiper('.swiper2', {
+      slidesPerView: 5,
+	  spaceBetween: 24,
+      pagination: {
+       // el: '.swiper-pagination2',
+        clickable: true,
+      },
+    });
+	 var swiper3 = new Swiper('.swiper3', {
+      slidesPerView: 5,
+	  spaceBetween: 24,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });
+	var swiper4 = new Swiper('.swiper4', {
+      slidesPerView: 4,
+	  slidesPerColumn: 3,
+	  spaceBetween: 24,
+
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });
+	var swiper5 = new Swiper('.swiper5', {
+      slidesPerView: 4,
+	  
+	  spaceBetween: 24,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });
+
+	}else if(window.innerWidth>=768 && window.innerWidth<=960){
+		var swiper1 = new Swiper('.swiper1', {
+		  slidesPerView: 4,
+		  spaceBetween: 8,
+		  pagination: {
+			//el: '.swiper-pagination1',
+			clickable: true,
+		  },
+		});
+
+		var swiper2 = new Swiper('.swiper2', {
+      slidesPerView: 4,
+	  spaceBetween: 8,
+      pagination: {
+       // el: '.swiper-pagination2',
+        clickable: true,
+      },
+    });
+	 var swiper3 = new Swiper('.swiper3', {
+      slidesPerView: 4,
+	  spaceBetween: 8,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });
+	var swiper4 = new Swiper('.swiper4', {
+      slidesPerView: 3,
+	  
+	  spaceBetween: 8,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });
+	var swiper5 = new Swiper('.swiper5', {
+      slidesPerView: 3,
+	
+	  spaceBetween: 8,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });
+
+	}if(window.innerWidth<=767){
+		var swiper1 = new Swiper('.swiper1', {
+		  slidesPerView: 3,
+		  spaceBetween: 4,
+		  pagination: {
+			//el: '.swiper-pagination1',
+			clickable: true,
+		  },
+		});
+		var swiper2 = new Swiper('.swiper2', {
+      slidesPerView: 3,
+	  spaceBetween: 4,
+      pagination: {
+       // el: '.swiper-pagination2',
+        clickable: true,
+      },
+    });
+	 var swiper3 = new Swiper('.swiper3', {
+      slidesPerView: 3,
+	  spaceBetween: 4,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });
+	var swiper4 = new Swiper('.swiper4', {
+      slidesPerView: 2,
+	  slidesPerColumn: 3,
+	  spaceBetween: 4,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });
+	var swiper5 = new Swiper('.swiper5', {
+      slidesPerView: 2,
+	 
+	  spaceBetween: 4,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });
+	}
+	};
+*/
+    
+   
+  </script>
+ </body>
+</html>

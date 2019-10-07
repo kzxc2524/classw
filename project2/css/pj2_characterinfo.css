@@ -1,0 +1,1496 @@
+@charset "UTF-8";
+
+#characterinfo #map_guide>p>span{font:1.07em "Do Hyeon", sans-serif;}
+
+@media screen and (min-width:961px){
+
+#characterinfo_banner>div
+	{height:545px;
+	 background:url(../image/banner/minjungwoo.png)no-repeat left center;
+	 background-size:cover;
+	 -webkit-background-size:cover;
+	 -moz-background-size:cover;
+	 -ms-background-size:cover;
+	 -o-background-size:cover;
+	 }
+
+#characterinfo_banner>div>div{height:100%;
+							  position:relative;
+							  }
+
+#characterinfo_banner h2{position:absolute;
+					     top:41.5%; left:10%;
+						color: #b01116;
+						font-size: 2.3em;
+						display:inline-block;
+						
+						}
+
+#characterinfo_banner h3{font:1.6em "Do Hyeon",sans-serif;
+						 display:inline-block;
+						 position:absolute;
+					     top:47%; left:28%;
+						 text-shadow:1px 1px 4px #fff;
+						 }
+#characterinfo_banner>div>div>p{font:1.3em/1.6 "Do Hyeon",sans-serif;
+								text-shadow:1px 1px 4px #fff;
+								position:absolute;
+								top:60%; left:10%;
+								}
+
+
+#abillity{margin-bottom:60px;}
+#abillity>h2{font:2em "Do Hyeon",sans-serif;
+			 margin-bottom:30px;
+			}
+#skills{height:200px;}
+#skills>.container{height:100%;}
+#skills>.container>.box:nth-of-type(6n)
+					{margin-right:0;}
+
+#skills>.container>.box>.chart{position:relative;							   
+							   margin:0 auto;
+							   width:100%;
+							   text-align:center;
+							   }
+#skills>.container>.box>.chart>canvas{width:110px; height:100%;
+									  margin:0 auto 0;
+									  
+									  }	
+#skills>.container>.box>.chart>span{position:absolute;
+									left:50%; top:25%;
+									transform:translateX(-50%);
+									-webkit-transform:translateX(-50%);
+									-moz-transform:translateX(-50%);
+									-ms-transform:translateX(-50%);
+									-o-transform:translateX(-50%);
+									text-align:center;
+									font:2.5em "Do Hyeon",sans-serif;
+									}
+#skills>.container>.box>p{text-align:center;
+							font:1.4em "Do Hyeon",sans-serif;
+						 }
+
+ #profile>ul{overflow:hidden;
+			 width:100%;
+			 padding-left:2%;
+			}
+#profile>ul>li{width:46%;
+			   float:left;
+			   border-bottom:1px solid #828282;
+			   margin-right:5%;
+			  }
+#profile>ul>li:nth-child(2n){margin-right:0;}
+#profile>ul>li>p:nth-of-type(1){
+				    width:15%;
+					text-align:right;					
+					font:1.2em "Do Hyeon",sans-serif;
+					float:left;				
+					 padding:2% 2% 1%;
+			  box-sizing:border-box;
+			  -webkit-box-sizing:border-box;
+			  -moz-box-sizing:border-box;
+			  -ms-box-sizing:border-box;
+			  -o-box-sizing:border-box;
+					}
+#profile>ul>li>p:nth-of-type(2)
+			 {width:76%;			  			 
+			  font:bold 1em 'SeoulNamsanM', sans-serif;
+			  float:left;
+			  padding:2% 2% 1%;
+			  box-sizing:border-box;
+			  -webkit-box-sizing:border-box;
+			  -moz-box-sizing:border-box;
+			  -ms-box-sizing:border-box;
+			  -o-box-sizing:border-box;
+			  }
+
+
+
+
+
+#focusing_banner{background:black;
+			  margin-bottom:60px;
+			  min-height:400px;
+			  max-height:460px;
+			  position:relative;
+			  padding-left:2%;
+			  overflow:hidden !important;
+			  box-sizing:border-box;
+			  -webkit-box-sizing:border-box;
+			  -moz-box-sizing:border-box;
+			  -ms-box-sizing:border-box;
+			  -o-box-sizing:border-box;
+			 }
+#focusing_banner>section{
+					 height:100%;					 
+					}
+#focusing_banner>section>div{height:100%;
+							 overflow:hidden;
+							 position:relative;
+							}
+
+#focusing_banner>section>div>.focusing_box{
+					  width:49%;
+					  min-height:400px;
+					  max-height:460px;
+					  float:left;
+					  background:#000;					   
+					  padding-top:2%;
+					  box-sizing:border-box;
+					  -webkit-box-sizing:border-box;
+					  -moz-box-sizing:border-box;
+					  -ms-box-sizing:border-box;
+					  -o-box-sizing:border-box;
+					  z-index:1;
+					  position:relative;
+					  }
+
+
+#focusing_banner>section>div>.focusing_img
+					 {width:48.9%;
+					  min-height:400px;
+					  max-height:460px;
+					  float:left;
+					  overflow:hidden;					  
+					  }
+.focusing_img1
+{background:url(../image/banner/focusing_moment1.png)no-repeat right center;
+}
+
+.focusing_img2
+{background:url(../image/banner/focusing_moment2.png)no-repeat right center;}
+
+.focusing_img3
+{background:url(../image/banner/focusing_moment3.png)no-repeat right center;}
+
+.focusing_img4
+{background:url(../image/banner/focusing_moment4.png)no-repeat right top;}
+
+.focusing_img5
+{background:url(../image/banner/focusing_moment5.png)no-repeat right center;}
+.focusing_img6
+{background:url(../image/banner/focusing_moment6.png)no-repeat right center;}
+
+.swiper-pagination>span:nth-of-type(1)
+{background:url(../images/tag/focusing_thumbnail1.svg)no-repeat center center;}
+.swiper-pagination>span:nth-of-type(2)
+{background:url(../images/tag/focusing_thumbnail2.svg)no-repeat center center;}
+.swiper-pagination>span:nth-of-type(3)
+{background:url(../images/tag/focusing_thumbnail3.svg)no-repeat center center;}
+.swiper-pagination>span:nth-of-type(4)
+{background:url(../images/tag/focusing_thumbnail4.svg)no-repeat center center;}
+.swiper-pagination>span:nth-of-type(5)
+{background:url(../images/tag/focusing_thumbnail5.svg)no-repeat center center;}
+.swiper-pagination>span:nth-of-type(6)
+{background:url(../images/tag/focusing_thumbnail6.svg)no-repeat center center;}
+
+
+#focusing_banner>section>div:after{content:"";/*img랑 같은 레벨*/
+									min-height:320px;
+									max-height:460px;
+									width:150px;
+									border-bottom:500px solid #000;
+									border-right:75px solid transparent;
+									position:absolute;
+									left:49%; top:0;
+									box-sizing:border-box;
+									-webkit-box-sizing:border-box;
+									-moz-box-sizing:border-box;
+									-ms-box-sizing:border-box;
+									-o-box-sizing:border-box;
+									
+									}
+
+.focusing_num{color:#fff;
+			  font:1.6em "Roboto Black", sans-serif;
+			  float:left;
+			  border-right:10px solid #fdc010;
+			  padding-right:10px;
+			  margin-right:10px;
+			  height:170px;
+			  text-align:right;
+			 }
+.focusing_num>span{color:#fdc010;
+				   font:2em "Roboto Black", sans-serif;
+				   display:block;
+				   text-align:right;
+				  }
+.focusing_txt{float:left;
+			  margin-top:135px;
+			  width:81%;
+			 }
+.focusing_txt>h3{color:#fff;
+				 font:2em "Do Hyeon",sans-serif;
+				}
+.focusing_txt>p{color:#fff;
+			    font: 1em/1.8 'SeoulNamsanM', sans-serif;
+			   }
+#additional_info h2{font:2em "Do Hyeon",sans-serif;
+					margin-bottom:30px;
+					display:inline-block;
+					}
+
+.swiper-pagination{position:absolute;
+				   bottom:-4px !important;
+				   }
+.swiper-pagination>span{display:inline-block;
+						  width:160px;
+						  height:45px;
+						  background:#fff;
+						  border-radius:5px;
+						  -webkit-border-radius:5px;
+						  -moz-border-radius:5px;
+						  -ms-border-radius:5px;
+						  -o-border-radius:5px;
+						  margin:0 !important;
+						  font:1.5em/45px "Do Hyeon",sans-serif;
+						 }
+.swiper-slide>a p{color:#000;
+				  font:1.5em "Do Hyeon",sans-serif;
+				  text-align:center;
+				  }
+
+#characterinfo .casts{height:auto !important;}
+.connect>div>div{padding-bottom:126px;}
+.team .swiper-slide{padding-bottom:0;}
+
+.connect .characterbox:after{margin-top:-4px;}
+
+#additional_info>div{margin-bottom:60px;}
+#additional_info .swiper-slide img{transition:all ease-out 0.3s;
+							   -webkit-transition:all ease-out 0.3s;
+							   -moz-transition:all ease-out 0.3s;
+							   -ms-transition:all ease-out 0.3s;
+							   -o-transition:all ease-out 0.3s;
+							  }
+#additional_info>div>div>.swiper-slide:hover>a>div>img{transform:translateY(-25px);
+										 -webkit-transform:translateY(-25px);
+										 -moz-transform:translateY(-25px);
+										 -ms-transform:translateY(-25px);
+										 -o-transform:translateY(-25px);
+										}
+
+#additional_info>div>div>.swiper-slide:hover>a>div>p{color:#b01116;}
+#additional_info{position:relative;}
+#select_connect{float:right;								
+				overflow:hidden;
+				position:absolute;
+				width:301px;
+				right:0;
+				z-index:100;
+				}
+
+.companion{clear:both;}
+#select_connect>label{display:block;
+					  font:1.5em "Do Hyeon",sans-serif;
+					  margin-left:20%;
+					  float:left;
+					 }
+
+
+
+#companion:checked+input+input
++#select_connect>label:nth-of-type(1){color:#03a0ff;}
+
+
+#enemy:checked+input
++#select_connect>label:nth-of-type(2){color:#03a0ff;}
+
+#team:checked
++#select_connect>label:nth-of-type(3){color:#03a0ff;}
+
+
+
+#fanart h2{font:2em "Do Hyeon",sans-serif;
+					margin-bottom:30px;}
+				
+
+#fanart>div{overflow:hidden;}
+.fanarts{height:200px;		 
+		margin-bottom:30px;
+		transition:all ease 1s;
+		-webkit-transition:all ease 1s;
+		-moz-transition:all ease 1s;
+		-ms-transition:all ease 1s;
+		-o-transition:scale ease 1s;
+		}
+.fanarts:nth-of-type(3n){margin-right:0;}
+.fanarts:nth-of-type(n+4){margin-bottom:0;}
+ 
+#fanart .fanarts>a:hover,
+#fanart .fanarts>a:hover{transform:scale(1.5,1.5);
+					   background-size:contain;
+					   position:relative;
+					   z-index:10;
+					   transition:all ease 10s;
+						-webkit-transition:all ease 10s;
+						-moz-transition:all ease 10s;
+						-ms-transition:all ease 10s;
+						-o-transition:scale ease 10s;
+						}
+#fanart .fanarts>a{display:block;
+				   width:100%; height:100%;
+				  }
+
+#fanart .fanarts1>a
+{background:url(../image/poster/fanart1.png)no-repeat center center;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;
+}
+#fanart .fanarts2>a
+{background:url(../image/poster/fanart2.png)no-repeat center center;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;
+}
+#fanart .fanarts3>a
+{background:url(../image/poster/fanart3.png)no-repeat center top;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;
+}
+#fanart .fanarts4>a
+{background:url(../image/poster/fanart4.png)no-repeat center top;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;
+}
+#fanart .fanarts5>a
+{background:url(../image/poster/fanart5.png)no-repeat center center;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;
+}
+#fanart .fanarts6>a
+{background:url(../image/poster/fanart6.png)no-repeat center center;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;
+}
+
+#goods_banner{background:#000;
+			  margin:60px 0;
+			 }
+
+#goods_banner>div{overflow:hidden;}
+#goods_banner>div>img{display:block;
+					  width:50%;
+					  float:left;
+					  }
+
+
+}
+
+
+
+@media screen and (min-width:962px) and (max-width:1550px){
+#profile>ul>li>p:nth-of-type(1){
+				    width:18%;
+					text-align:right;					
+					font:1.2em "Do Hyeon",sans-serif;
+					float:left;				
+					 padding:2% 2% 1%;
+			  box-sizing:border-box;
+			  -webkit-box-sizing:border-box;
+			  -moz-box-sizing:border-box;
+			  -ms-box-sizing:border-box;
+			  -o-box-sizing:border-box;
+					}
+
+#focusing_banner{background:black;
+			  margin-bottom:60px;
+			  min-height:400px;
+			  max-height:460px;
+			  position:relative;
+			  padding-left:2%;
+			  overflow:hidden !important;
+			  width:98% !important;
+			 }
+#focusing_banner>section{
+					 height:100%;
+					 
+					}
+#focusing_banner>section>div{height:100%;
+							 overflow:hidden;
+							 position:relative;
+							}
+
+#focusing_banner>section>div>.focusing_box{
+					  width:50%;
+					  min-height:400px;
+					  max-height:460px;
+					  float:left;
+					  background:#000;					   
+					  padding-top:2%;
+					  -webkit-box-sizing:border-box;
+					  -moz-box-sizing:border-box;
+					  -ms-box-sizing:border-box;
+					  -o-box-sizing:border-box;
+					  z-index:1;
+					  position:relative;
+					  }
+
+
+#focusing_banner>section>div>.focusing_img
+					 {width:48.9%;
+					  min-height:400px;
+					  max-height:460px;
+					  float:left;
+					  overflow:hidden;					  
+					  }
+.focusing_img1
+{background:url(../image/banner/focusing_moment1.png)no-repeat center;
+background-size:cover;
+}
+
+.focusing_img2
+{background:url(../image/banner/focusing_moment2.png)no-repeat center;}
+
+.focusing_img3
+{background:url(../image/banner/focusing_moment3.png)no-repeat center;}
+
+.focusing_img4
+{background:url(../image/banner/focusing_moment4.png)no-repeat top;}
+.focusing_img5
+{background:url(../image/banner/focusing_moment5.png)no-repeat center;}
+.focusing_img6
+{background:url(../image/banner/focusing_moment6.png)no-repeat center;}
+
+
+#focusing_banner>section>div:after{content:"";/*img랑 같은 레벨*/
+									min-height:320px;
+									max-height:460px;
+									width:150px;
+									border-bottom:500px solid #000;
+									border-right:75px solid transparent;
+									position:absolute;
+									left:48%; top:0;
+									box-sizing:border-box;
+									-webkit-box-sizing:border-box;
+									-moz-box-sizing:border-box;
+									-ms-box-sizing:border-box;
+									-o-box-sizing:border-box;
+									
+									}
+
+.focusing_num{color:#fff;
+			  font:1.6em "Roboto Black", sans-serif;
+			  float:left;
+			  border-right:10px solid #fdc010;
+			  padding-right:10px;
+			  margin-right:10px;
+			  height:170px;
+			  text-align:right;
+			 }
+.focusing_num>span{color:#fdc010;
+				   font:2em "Roboto Black", sans-serif;
+				   display:block;
+				   text-align:right;
+				  }
+.focusing_txt{float:left;
+			  margin-top:85px;
+			  width:70%;
+			 }
+.focusing_txt>h3{color:#fff;
+				 font:2em "Do Hyeon",sans-serif;
+				}
+.focusing_txt>p{color:#fff;
+			    font: 1em/1.4 'SeoulNamsanM', sans-serif;
+			   }
+
+}
+
+
+
+@media screen and (min-width:768px) and (max-width:960px){
+#characterinfo_banner>div
+	{height:460px;
+	 background:url(../image/banner/minjungwoo.png)no-repeat center center;
+	 background-size:cover;
+	 -webkit-background-size:cover;
+	 -moz-background-size:cover;
+	 -ms-background-size:cover;
+	 -o-background-size:cover;
+	 }
+
+#characterinfo_banner>div>div{height:100%;
+							  position:relative;
+							  }
+
+#characterinfo_banner h2{position:absolute;
+					     top:41.5%; left:10%;
+						color: #b01116;
+						font-size: 2.3em;
+						display:inline-block;
+						
+						}
+
+#characterinfo_banner h3{font:1.6em "Do Hyeon",sans-serif;
+						 display:inline-block;
+						 position:absolute;
+					     top:47%; left:30%;
+						 text-shadow:1px 1px 4px #000;
+						 color:#fff;
+						 }
+#characterinfo_banner>div>div>p{font:1.3em/1.6 "Do Hyeon",sans-serif;
+								text-shadow:1px 1px 4px #000;
+								position:absolute;
+								top:60%; left:10%;
+								color:#fff;
+								}
+
+			 
+#abillity{margin-bottom:60px;}
+#abillity>h2{font:2.2em "Do Hyeon",sans-serif;
+			 color:#fff;
+			}
+#skills{padding-bottom:25px;
+		
+		}
+#skills>.container{height:100%;
+				   overflow:hidden;
+				   }
+
+#skills>.container>.box>.chart{position:relative;							   
+							   margin:0 auto;
+							   width:100%;
+							   text-align:center;
+							   }
+#skills>.container>.box>.chart>canvas{width:110px; height:100%;
+									  margin:0 auto 0;}
+#skills>.container>.box:nth-of-type(3n){margin-right:0;}									  
+#skills>.container>.box>.chart>span{position:absolute;
+									left:50%; top:25%;
+									transform:translateX(-50%);
+									-webkit-transform:translateX(-50%);
+									-moz-transform:translateX(-50%);
+									-ms-transform:translateX(-50%);
+									-o-transform:translateX(-50%);
+									text-align:center;
+									font:2.5em "Do Hyeon",sans-serif;
+									color:#fff;
+									}
+#skills>.container>.box>p{text-align:center;
+							font:1.8em "Do Hyeon",sans-serif;
+							color:#fff;
+						 }
+
+
+
+
+ #profile>ul{overflow:hidden;
+			 width:100%;
+			 padding-left:2%;
+			}
+#profile>ul>li{width:46%;
+			   float:left;
+			   border-bottom:1px solid #828282;
+			   margin-right:5%;
+			  }
+#profile>ul>li:nth-child(2n){margin-right:0;}
+#profile>ul>li>p:nth-of-type(1){
+				    width:23%;
+					text-align:right;					
+					font:1.6em "Do Hyeon",sans-serif;
+					float:left;				
+					 padding:2% 2% 1%;
+			  box-sizing:border-box;
+			  -webkit-box-sizing:border-box;
+			  -moz-box-sizing:border-box;
+			  -ms-box-sizing:border-box;
+			  -o-box-sizing:border-box;
+			  color:#fff;
+					}
+#profile>ul>li>p:nth-of-type(2)
+			 {width:62%;			  			 
+			  font:bold 1.4em 'SeoulNamsanM', sans-serif;
+			  float:left;
+			  padding:2% 2% 1%;
+			  box-sizing:border-box;
+			  -webkit-box-sizing:border-box;
+			  -moz-box-sizing:border-box;
+			  -ms-box-sizing:border-box;
+			  -o-box-sizing:border-box;
+			  color:#fff;
+			  }
+
+
+
+
+
+#focusing_banner{background:black;
+			  margin-bottom:60px;
+			  min-height:600px;
+			  max-height:600px;
+			  position:relative;
+			  padding-left:2%;
+			  overflow:hidden !important;
+			  width:98% !important;
+			 }
+#focusing_banner>section{
+					 height:100%;
+
+					 
+					}
+#focusing_banner>section>div{height:100%;
+							 overflow:hidden;
+							 position:relative;
+							 display:flex;
+							 display:-webkit-box;
+							 display:-webkit-flex;
+							 display:-moz-box;
+							 display:-ms-flexbox;
+							 flex-flow:column-reverse;
+							 -webkit-flex-flow:column-reverse;
+							 -moz-flex-flow:column-reverse;
+							}
+
+#focusing_banner>section>div>.focusing_box{
+					  width:100%;
+					  min-height:300px;
+					  max-height:300px;					  
+					  background:#000;					   
+					  padding-top:20px;
+					  -webkit-box-sizing:border-box;
+					  -moz-box-sizing:border-box;
+					  -ms-box-sizing:border-box;
+					  -o-box-sizing:border-box;
+					/*  z-index:1;
+					  position:relative;*/
+					  }
+
+
+#focusing_banner>section>div>.focusing_img
+					 {width:98%;
+					  min-height:300px;
+					  max-height:300px;
+					  float:left;
+					  overflow:hidden;					  
+					  }
+#focusing_banner>section>div>.focusing_img
+					  {display:block;}
+.focusing_img1
+{background:url(../image/banner/focusing_moment1.png)no-repeat right center;
+}
+
+.focusing_img2
+{background:url(../image/banner/focusing_moment2.png)no-repeat right center;}
+
+.focusing_img3
+{background:url(../image/banner/focusing_moment3.png)no-repeat right center;}
+
+.focusing_img4
+{background:url(../image/banner/focusing_moment4.png)no-repeat right top;}
+
+.focusing_img5
+{background:url(../image/banner/focusing_moment5.png)no-repeat right center;}
+
+.focusing_img6
+{background:url(../image/banner/focusing_moment6.png)no-repeat right center;}
+
+
+.swiper-pagination>span:nth-of-type(1)
+{background:url(../images/tag/focusing_thumbnail1.svg)no-repeat center center;
+background-size:contain;
+-webkit-background-size:contain;
+-moz-background-size:contain;
+-ms-background-size:contain;
+-o-background-size:contain;}
+
+.swiper-pagination>span:nth-of-type(2)
+{background:url(../images/tag/focusing_thumbnail2.svg)no-repeat center center;
+background-size:contain;
+-webkit-background-size:contain;
+-moz-background-size:contain;
+-ms-background-size:contain;
+-o-background-size:contain;}
+
+.swiper-pagination>span:nth-of-type(3)
+{background:url(../images/tag/focusing_thumbnail3.svg)no-repeat center center;
+background-size:contain;
+-webkit-background-size:contain;
+-moz-background-size:contain;
+-ms-background-size:contain;
+-o-background-size:contain;}
+
+.swiper-pagination>span:nth-of-type(4)
+{background:url(../images/tag/focusing_thumbnail4.svg)no-repeat center center;
+background-size:contain;
+-webkit-background-size:contain;
+-moz-background-size:contain;
+-ms-background-size:contain;
+-o-background-size:contain;}
+
+.swiper-pagination>span:nth-of-type(5)
+{background:url(../images/tag/focusing_thumbnail5.svg)no-repeat center center;
+background-size:contain;
+-webkit-background-size:contain;
+-moz-background-size:contain;
+-ms-background-size:contain;
+-o-background-size:contain;}
+
+.swiper-pagination>span:nth-of-type(6)
+{background:url(../images/tag/focusing_thumbnail6.svg)no-repeat center center;
+background-size:contain;
+-webkit-background-size:contain;
+-moz-background-size:contain;
+-ms-background-size:contain;
+-o-background-size:contain;}
+
+
+.focusing_num{color:#fff;
+			  font:1.6em "Roboto Black", sans-serif;
+			  float:left;
+			  border-right:10px solid #fdc010;
+			  padding-right:10px;
+			  margin-right:10px;
+			  height:125px;
+			  text-align:right;
+			 }
+.focusing_num>span{color:#fdc010;
+				   font:2em "Roboto Black", sans-serif;
+				   display:block;
+				   text-align:right;
+				  }
+.focusing_txt{float:left;
+			  margin-top:100px;
+			  width:81%;
+			 }
+.focusing_txt>h3{color:#fff;
+				 font:2em "Do Hyeon",sans-serif;
+				}
+.focusing_txt>p{color:#fff;
+			    font:1.2em/1.8 'SeoulNamsanM', sans-serif;
+			   }
+#additional_info h2{font:2.2em "Do Hyeon",sans-serif;
+					margin-bottom:30px;
+					display:inline-block;
+					color:#fff;
+					}
+
+.swiper-pagination{position:absolute;
+				   bottom:-3px !important;
+				   }
+.swiper-pagination>span{display:inline-block;
+						  width:16.6%;
+						  height:45px;
+						  background:#fff;
+						  border-radius:5px;
+						  -webkit-border-radius:5px;
+						  -moz-border-radius:5px;
+						  -ms-border-radius:5px;
+						  -o-border-radius:5px;
+						  margin:0 !important;
+						  font:1.5em/45px "Do Hyeon",sans-serif;
+						 }
+.swiper-slide>a p{color:#fff;
+				  font:1.5em "Do Hyeon",sans-serif;
+				  text-align:center;
+				  }
+
+#characterinfo .casts{height:auto !important;}
+.connect>div>div{padding-bottom:126px;}
+.team .swiper-slide{padding-bottom:0;}
+
+.connect .characterbox:after{margin-top:-4px;}
+
+#additional_info>div{margin-bottom:60px;}
+#additional_info .swiper-slide img{transition:all ease-out 0.3s;
+							   -webkit-transition:all ease-out 0.3s;
+							   -moz-transition:all ease-out 0.3s;
+							   -ms-transition:all ease-out 0.3s;
+							   -o-transition:all ease-out 0.3s;
+							  }
+#additional_info>div>div>.swiper-slide:hover>a>div>img{transform:translateY(-25px);
+										 -webkit-transform:translateY(-25px);
+										 -moz-transform:translateY(-25px);
+										 -ms-transform:translateY(-25px);
+										 -o-transform:translateY(-25px);
+										}
+
+#additional_info>div>div>.swiper-slide:hover>a>div>p{color:#b01116;}
+#additional_info{position:relative;}
+#select_connect{float:right;								
+				overflow:hidden;
+				position:absolute;
+				width:301px;
+				right:0;
+				z-index:100;
+				}
+
+.companion{clear:both;}
+#select_connect>label{display:block;
+					  font:1.5em "Do Hyeon",sans-serif;
+					  margin-left:20%;
+					  float:left;
+					  color:#fff;
+					 }
+
+
+
+#companion:checked+input+input
++#select_connect>label:nth-of-type(1){color:#03a0ff;}
+
+
+#enemy:checked+input
++#select_connect>label:nth-of-type(2){color:#03a0ff;}
+
+#team:checked
++#select_connect>label:nth-of-type(3){color:#03a0ff;}
+
+
+
+#fanart h2{font:2.2em "Do Hyeon",sans-serif;
+					margin-bottom:30px;
+					color:#fff;
+					}
+				
+
+#fanart>div{overflow:hidden;}
+.fanarts{height:200px;		 
+		/*margin-bottom:30px;*/
+		transition:all ease 1s;
+		-webkit-transition:all ease 1s;
+		-moz-transition:all ease 1s;
+		-ms-transition:all ease 1s;
+		-o-transition:scale ease 1s;
+		}
+.fanarts:nth-of-type(3n){margin-right:0;}
+.fanarts:nth-of-type(n+4){margin-bottom:0;}
+ 
+#fanart .fanarts>a:hover,
+#fanart .fanarts>a:focus{transform:scale(1.5,1.5);
+					   background-size:contain;
+					   background-position:center center;
+					   position:relative;
+					   z-index:10;
+					   transition:all ease 10s;
+						-webkit-transition:all ease 10s;
+						-moz-transition:all ease 10s;
+						-ms-transition:all ease 10s;
+						-o-transition:scale ease 10s;
+						}
+
+#fanart .fanarts>a{display:block;
+				  height:100%;
+				  width:100%;
+					}
+#fanart .fanarts1>a
+{background:url(../image/poster/fanart1.png)no-repeat center center;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;
+}
+#fanart .fanarts2>a
+{background:url(../image/poster/fanart2.png)no-repeat center center;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;
+}
+#fanart .fanarts3>a
+{background:url(../image/poster/fanart3.png)no-repeat center top;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;
+}
+#fanart .fanarts4>a
+{background:url(../image/poster/fanart4.png)no-repeat center top;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;
+}
+#fanart .fanarts5>a
+{background:url(../image/poster/fanart5.png)no-repeat center center;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;
+}
+#fanart .fanarts6>a
+{background:url(../image/poster/fanart6.png)no-repeat center center;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;
+}
+
+#goods_banner{background:#000;
+			  margin:60px 0;
+			 }
+
+#goods_banner>div{overflow:hidden;}
+#goods_banner>div>img{display:block;
+					  width:50%;
+					  float:left;
+					  }
+
+
+
+
+#goods_banner{background:black;
+			  margin-bottom:60px;
+			 }
+#goods_banner>div{overflow:hidden;}
+#goods_banner>div>img{display:block;
+					  width:50%;
+					  float:left;
+					  }
+
+}
+
+
+
+
+
+@media screen and (max-width:767px){
+
+#characterinfo_banner>div
+	{height:460px;
+	 background:url(../image/banner/minjungwoo.png)no-repeat center center;
+	 background-size:cover;
+	 -webkit-background-size:cover;
+	 -moz-background-size:cover;
+	 -ms-background-size:cover;
+	 -o-background-size:cover;
+	 }
+
+#characterinfo_banner>div>div{height:100%;
+							  position:relative;
+							  }
+
+#characterinfo_banner h2{position:absolute;
+					     top:41.5%; left:10%;
+						color: #b01116;
+						font-size: 3.2em;
+						display:inline-block;
+						
+						}
+
+#characterinfo_banner h3{font:2.4em "Do Hyeon",sans-serif;
+						 display:inline-block;
+						 position:absolute;
+					     top:47%; left:48%;
+						 color:#fff;
+						 text-shadow:1px 1px 4px #000;
+						 }
+#characterinfo_banner>div>div>p{font:1.8em/1.6 "Do Hyeon",sans-serif;
+								color:#fff;
+								text-shadow:1px 1px 4px #000;
+								position:absolute;
+								top:60%; left:10%;
+								}
+
+
+#abillity{margin-bottom:60px;}
+#abillity>h2{font:2.2em "Do Hyeon",sans-serif;
+			 color:#fff;
+			}
+#skills{padding-bottom:25px;
+		
+		}
+#skills>.container{height:100%;
+				   overflow:hidden;
+				   }
+
+#skills>.container>.box>.chart{position:relative;							   
+							   margin:0 auto;
+							   width:100%;
+							   text-align:center;
+							   }
+#skills>.container>.box>.chart>canvas{width:110px; height:100%;
+									  margin:0 auto 0;}
+#skills>.container>.box:nth-of-type(2n){margin-right:0;}									  
+#skills>.container>.box>.chart>span{position:absolute;
+									left:50%; top:25%;
+									transform:translateX(-50%);
+									-webkit-transform:translateX(-50%);
+									-moz-transform:translateX(-50%);
+									-ms-transform:translateX(-50%);
+									-o-transform:translateX(-50%);
+									text-align:center;
+									font:4em "Do Hyeon",sans-serif;
+									color:#fff;
+									}
+#skills>.container>.box>p{text-align:center;
+							font:2.4em "Do Hyeon",sans-serif;
+							color:#fff;
+						 }
+
+
+ #profile>ul{overflow:hidden;
+			 width:100%;
+			 padding-left:2%;
+			}
+#profile>ul>li{width:100%;
+			   border-bottom:1px solid #828282;
+			   margin-right:5%;
+			   overflow:hidden;
+			  }
+#profile>ul>li:nth-child(2n){margin-right:0;}
+#profile>ul>li>p:nth-of-type(1){
+				    width:23%;
+					text-align:right;					
+					font:2.2em "Do Hyeon",sans-serif;
+					float:left;				
+					 padding:2% 2% 1%;
+			  box-sizing:border-box;
+			  -webkit-box-sizing:border-box;
+			  -moz-box-sizing:border-box;
+			  -ms-box-sizing:border-box;
+			  -o-box-sizing:border-box;
+			  color:#fff;
+					}
+#profile>ul>li>p:nth-of-type(2)
+			 {width:62%;			  			 
+			  font:bold 2em 'SeoulNamsanM', sans-serif;
+			  float:left;
+			  padding:2% 2% 1%;
+			  box-sizing:border-box;
+			  -webkit-box-sizing:border-box;
+			  -moz-box-sizing:border-box;
+			  -ms-box-sizing:border-box;
+			  -o-box-sizing:border-box;
+			  color:#fff;
+			  }
+
+
+
+
+
+#focusing_banner{background:black;
+			  margin-bottom:60px;
+			  min-height:475px;
+			  max-height:475px;
+			  position:relative;
+			  padding-left:2%;
+			  overflow:hidden !important;
+			  
+			  box-sizing:border-box;
+			  -webkit-box-sizing:border-box;
+			  -moz-box-sizing:border-box;
+			  -ms-box-sizing:border-box;
+			  -o-box-sizing:border-box;
+			 }
+#focusing_banner>section{height:100%;						
+						 }
+#focusing_banner>section>div{height:100%;
+							 overflow:hidden;
+							 position:relative;
+							 display:flex;
+							 display:-webkit-box;
+							 display:-webkit-flex;
+							 display:-moz-box;
+							 display:-ms-flexbox;
+							 flex-flow:column-reverse;
+							 -webkit-flex-flow:column-reverse;
+							 -moz-flex-flow:column-reverse;
+							}
+
+#focusing_banner>section>div>.focusing_box{
+					  
+					  min-height:475px;
+					  max-height:475px;					  
+					  background:#000;					   
+					 padding-top:20px;
+					  box-sizing:border-box;
+					  -webkit-box-sizing:border-box;
+					  -moz-box-sizing:border-box;
+					  -ms-box-sizing:border-box;
+					  -o-box-sizing:border-box;
+					 /*z-index:1;
+					  position:relative;*/
+					  }
+
+
+#focusing_banner>section>div>.focusing_img
+					 {width:98%;
+					  min-height:200px;
+					  max-height:200px;
+					   overflow:hidden;					  
+					  }
+
+.focusing_img1
+{background:url(../image/banner/focusing_moment1.png)no-repeat right center;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;
+}
+
+.focusing_img2
+{background:url(../image/banner/focusing_moment2.png)no-repeat right center;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;
+}
+
+.focusing_img3
+{background:url(../image/banner/focusing_moment3.png)no-repeat right center;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;}
+
+.focusing_img4
+{background:url(../image/banner/focusing_moment4.png)no-repeat right top;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;}
+
+.focusing_img5
+{background:url(../image/banner/focusing_moment5.png)no-repeat right center;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;}
+
+.focusing_img6
+{background:url(../image/banner/focusing_moment6.png)no-repeat right center;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;
+}
+
+
+.swiper-pagination>span:nth-of-type(1)
+{background:url(../images/tag/focusing_thumbnail1.svg)no-repeat center center;
+background-size:contain;
+-webkit-background-size:contain;
+-moz-background-size:contain;
+-ms-background-size:contain;
+-o-background-size:contain;}
+
+.swiper-pagination>span:nth-of-type(2)
+{background:url(../images/tag/focusing_thumbnail2.svg)no-repeat center center;
+background-size:contain;
+-webkit-background-size:contain;
+-moz-background-size:contain;
+-ms-background-size:contain;
+-o-background-size:contain;}
+
+.swiper-pagination>span:nth-of-type(3)
+{background:url(../images/tag/focusing_thumbnail3.svg)no-repeat center center;
+background-size:contain;
+-webkit-background-size:contain;
+-moz-background-size:contain;
+-ms-background-size:contain;
+-o-background-size:contain;}
+
+.swiper-pagination>span:nth-of-type(4)
+{background:url(../images/tag/focusing_thumbnail4.svg)no-repeat center center;
+background-size:contain;
+-webkit-background-size:contain;
+-moz-background-size:contain;
+-ms-background-size:contain;
+-o-background-size:contain;}
+
+.swiper-pagination>span:nth-of-type(5)
+{background:url(../images/tag/focusing_thumbnail5.svg)no-repeat center center;
+background-size:contain;
+-webkit-background-size:contain;
+-moz-background-size:contain;
+-ms-background-size:contain;
+-o-background-size:contain;}
+
+.swiper-pagination>span:nth-of-type(6)
+{background:url(../images/tag/focusing_thumbnail6.svg)no-repeat center center;
+background-size:contain;
+-webkit-background-size:contain;
+-moz-background-size:contain;
+-ms-background-size:contain;
+-o-background-size:contain;}
+
+
+.focusing_num{color:#fff;
+			  font:1.8em "Roboto Black", sans-serif;
+			  float:left;
+			  border-right:10px solid #fdc010;
+			  padding-right:10px;
+			  margin-right:10px;
+			  height:75px;
+			  text-align:right;
+			 }
+.focusing_num>span{color:#fdc010;
+				   font:2em "Roboto Black", sans-serif;
+				   display:block;
+				   text-align:right;
+				  }
+.focusing_txt{float:left;
+			  margin-top:9%;
+			  width:70%;
+			 }
+.focusing_txt>h3{color:#fff;
+				 font:2.2em/1.6 "Do Hyeon",sans-serif;
+				}
+.focusing_txt>p{color:#fff;
+			    font:2em/1.2 'SeoulNamsanM', sans-serif;
+			   }
+#additional_info h2{font:2em "Do Hyeon",sans-serif;
+					margin-bottom:30px;
+					display:inline-block;
+					color:#fff;
+					}
+
+.swiper-pagination{position:absolute;
+				   bottom:-3px !important;
+				   }
+.swiper-pagination>span{display:inline-block;
+						  width:16.6%;
+						  height:45px;
+						  background:#fff;
+						  border-radius:5px;
+						  -webkit-border-radius:5px;
+						  -moz-border-radius:5px;
+						  -ms-border-radius:5px;
+						  -o-border-radius:5px;
+						  margin:0 !important;
+						  font:1.5em/45px "Do Hyeon",sans-serif;
+						 }
+.swiper-slide>a p{color:#fff;
+				  font:1.5em "Do Hyeon",sans-serif;
+				  text-align:center;
+				  }
+
+#characterinfo .casts{height:auto !important;}
+.connect>div>div{padding-bottom:126px;}
+.team .swiper-slide{padding-bottom:0;}
+
+.connect .characterbox:after{margin-top:-4px;}
+
+#additional_info>div{margin-bottom:60px;}
+#additional_info .swiper-slide img{transition:all ease-out 0.3s;
+							   -webkit-transition:all ease-out 0.3s;
+							   -moz-transition:all ease-out 0.3s;
+							   -ms-transition:all ease-out 0.3s;
+							   -o-transition:all ease-out 0.3s;
+							  }
+#additional_info>div>div>.swiper-slide:hover>a>div>img{transform:translateY(-25px);
+										 -webkit-transform:translateY(-25px);
+										 -moz-transform:translateY(-25px);
+										 -ms-transform:translateY(-25px);
+										 -o-transform:translateY(-25px);
+										}
+
+#additional_info>div>div>.swiper-slide:hover>a>div>p{color:#b01116;}
+#additional_info{position:relative;}
+#select_connect{float:right;								
+				overflow:hidden;
+				position:absolute;
+				width:301px;
+				right:0;
+				z-index:100;
+				}
+
+.companion{clear:both;}
+#select_connect>label{display:block;
+					  font:1.5em "Do Hyeon",sans-serif;
+					  margin-left:20%;
+					  float:left;
+					  color:#fff;
+					 }
+
+
+
+#companion:checked+input+input
++#select_connect>label:nth-of-type(1){color:#03a0ff;}
+
+
+#enemy:checked+input
++#select_connect>label:nth-of-type(2){color:#03a0ff;}
+
+#team:checked
++#select_connect>label:nth-of-type(3){color:#03a0ff;}
+
+
+
+#fanart h2{font:2.2em "Do Hyeon",sans-serif;
+					margin-bottom:30px;
+					color:#fff;
+					}
+				
+
+#fanart>div{overflow:hidden;}
+.fanarts{height:200px;		 
+		/*margin-bottom:30px;*/
+		transition:all ease 1s;
+		-webkit-transition:all ease 1s;
+		-moz-transition:all ease 1s;
+		-ms-transition:all ease 1s;
+		-o-transition:scale ease 1s;
+		}
+.fanarts:nth-of-type(2n){margin-right:0;}
+.fanarts:nth-of-type(n+4){margin-bottom:0;}
+ 
+#fanart .fanarts>a:hover,
+#fanart .fanarts>a:focus{transform:scale(1.5,1.5);
+					   background-size:contain;
+					   background-position:center center;
+					   position:relative;
+					   z-index:10;
+					   transition:all ease 10s;
+						-webkit-transition:all ease 10s;
+						-moz-transition:all ease 10s;
+						-ms-transition:all ease 10s;
+						-o-transition:scale ease 10s;
+						}
+
+#fanart .fanarts>a{display:block;
+				   width:100%; height:100%;
+				  }
+
+#fanart .fanarts1>a
+{background:url(../image/poster/fanart1.png)no-repeat center center;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;
+}
+#fanart .fanarts2>a
+{background:url(../image/poster/fanart2.png)no-repeat center center;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;
+}
+#fanart .fanarts3>a
+{background:url(../image/poster/fanart3.png)no-repeat center top;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;
+}
+#fanart .fanarts4>a
+{background:url(../image/poster/fanart4.png)no-repeat center top;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;
+}
+#fanart .fanarts5>a
+{background:url(../image/poster/fanart5.png)no-repeat center center;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;
+}
+#fanart .fanarts6>a
+{background:url(../image/poster/fanart6.png)no-repeat center center;
+background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-ms-background-size:cover;
+-o-background-size:cover;
+}
+
+#goods_banner{background:black;
+			  margin-bottom:60px;
+			 }
+#goods_banner>div{overflow:hidden;}
+#goods_banner>div>img{display:block;
+					  width:100%;
+					  }
+
+
+
+}
+
+
+@media screen and (min-width:900px) and (max-width:960px){
+
+/*#key_character .chname2{bottom:-125px;
+						font-size:1.5em;
+						}*/
+
+.connect .chname2{bottom:-55%;
+						}
+
+}
+@media screen and (min-width:768px) and (max-width:899px){
+
+/*#key_character .chname2{bottom:-120px;
+						font-size:1.5em;
+						}*/
+
+.connect .chname2{bottom:-120px;
+						}
+
+}
+
+@media screen and (min-width:660px) and (max-width:767px){
+
+/*#key_character .chname2{bottom:-145px;
+						font-size:1.5em;
+						}*/
+
+.connect .chname2{bottom:-140px;
+						font-size:1.5em;
+						}
+
+}
+
+@media screen and (min-width:501px) and (max-width:659px){
+
+/*#key_character .chname2{bottom:-105px;
+						font-size:1.5em;
+						}*/
+
+.connect .chname2{bottom:-100px;}
+
+}
+
+
+@media screen and (min-width:425px) and (max-width:500px){
+
+.characterbox .chname2{bottom:-85px;}
+
+}
+
+@media screen and (min-width:375px) and (max-width:424px){
+
+.characterbox .chname2{bottom:-75px;}
+
+}
+
+@media screen and (max-width:374px){
+
+.chname2{bottom:-66px;}
+
+}

@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!--[if IE 6]><html class="no-js old ie6"><![endif]-->
+<!--[if IE 7]><html class="no-js old ie7"><![endif]-->
+<!--[if IE 8]><html class="no-js old ie8"><![endif]-->
+<!--[if IE 9]><html class="no-js modern ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]>
+<html class="no-js modern">
+<![endif]-->
+
+ <head>
+  <title> Super String The Others </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="css/pj2_header_footer.css">
+  <link rel="stylesheet" type="text/css" href="css/pj2_main.css">
+  <link rel="stylesheet" type="text/css" href="css/pj2_controller.css">
+  <link rel="stylesheet" type="text/css" href="css/grid_1200_12col.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="css/slider-pro.min.css" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="css/examples.css" media="screen"/>
+
+ 
+  <!--[if lt IE 9]>
+	<script src="js/html5shiv.js">
+	</script>
+	
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+	</script>
+  <![endif]-->
+
+  <!--[if lt IE 9]><script src="js/CFInstall.min.js"></script>
+	<script>window.attachEvent("onload",function(){CFInstall.check
+	({mode:"overlay"})});</script>
+  <![endif]-->
+
+  <!--[if IE 6]><script src="js/DD_belatedPNG.min.js"></script>
+	<script>DD_belatedPNG.fix('.png_bg, img');</script>
+  <![endif]-->
+
+  <script src="js/modernizr.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  
+  <script>
+  
+
+	$(document).ready(function(){
+				$("a").click(function(e){
+				e.preventDefault();
+				});
+				
+				$(".unprevent").unbind();
+			
+				var windowWidth=$(window).width();
+				var windowHeight=$(window).height();
+			
+				if(windowWidth <= 960){
+					$('#main_gnb').css('height',windowHeight);
+					$('#main_search_box').css('height',windowHeight);
+				}
+				else{
+					$('#main_gnb').css('height',70+"px");
+					$('#main_search_box').css('height',70+'px');
+					}
+
+			$(window).resize(function(){
+				windowWidth=$(window).width();
+				windowHeight=$(window).height();
+				if(windowWidth <= 960){
+					$('#main_gnb').css('height',windowHeight);
+					$('#main_search_box').css('height',windowHeight)
+				}
+				else{
+					$('#main_gnb').css('height',70+"px");
+					$('#main_search_box').css('height',70+'px')
+		
+					}
+			});				
+	
+	
+		/*$(window).scroll(function(){ 
+		
+					//스크롤의 위치가 상단에서 450보다 크면  
+					 // if($(window).scrollTop() > 450){ 
+		
+				    if(window.pageYOffset >= $('.content').offset().top){  
+			        	$('.controller').addClass('fix');  
+						 }else{  
+				      $('.controller').removeClass('fix'); 
+					}  
+				  }
+);*/
+
+
+				/*if($('input#gnb_button:checked').val();=true){
+					$('#news_controller').removeClass('fix');
+				}else{
+					$('#news_controller').addClass('fix');
+				}*/
+
+
+/*
+	 $("#page_select").bind("click",function(){
+		var page = prompt("이동할 페이지를 입력해주세요","1");
+		//jquery에서는 null체크 할때 != ull을 활용한다!!!		
+		if(page != null){
+			if(page<=3){
+				$("input:radio[name=news_page]").prop('checked',false);
+				$("#news_page"+page).prop('checked', true);
+				$(".seleted_page").empty();
+				$(".seleted_page").append(page);
+			}else{
+				 alert("이동할 수 없는 페이지 입니다");
+				}			
+		}else{
+			  alert("1페이지로 돌아갑니다");
+			  $('#news_page1').prop("checked",true);
+			}
+		});*/
+
+		/*if(page<=3){
+				$("input:radio[name=news_page]").prop('checked',false);
+				$("#news_page"+page).prop('checked', true);
+				$(".seleted_page").empty();
+				$(".seleted_page").append(page);
+			}else{
+				 alert("이동할 수 없는 페이지 입니다");
+				}*/
+		/*$('input:radio[name=news_page]').change(function(){
+			if(typeof page === null ){
+				$('#news_page1').prop("checked",true);
+			}
+		 });
+		
+
+		$('input:radio[name=news_page]').change(function(){
+			if($('#news_page1').prop("checked") == false){
+				if($('#news_page2').prop("checked") == false){
+					if($('#news_page3').prop("checked") == false){
+						$('#news_page1').prop("checked",true);
+					}
+				}
+			}
+		});*/
+	 
+
+	
+
+	
+
+	$("#footer_gnb1").click(function(){
+			$("#footer_gnb2").prop('checked',false);
+			$("#footer_gnb3").prop('checked',false);	
+		});
+			
+
+		$("#footer_gnb2").click(function(){
+			$("#footer_gnb1").prop('checked',false);
+			$("#footer_gnb3").prop('checked',false);	
+		});	
+		
+		$("#footer_gnb3").click(function(){
+			$("#footer_gnb1").prop('checked',false);
+			$("#footer_gnb2").prop('checked',false);	
+		});
+	
+
+
+
+}); //wrapper 닫음
+
+
+
+/*
+$(document).ready(function(){
+   $('input[name=news_page]').each(function(index,item){
+			$(item).change(function(){
+				if($(item).is(':checked')) {
+					$(".seleted_page").empty();
+					$(".seleted_page").append(index+1);
+				}
+			});   
+   });
+});*/
+ 	/*
+	jquery 1.6 버전 이하
+
+$('input:radio[name="fruit"][value="apple"]).attr('checked', 'checked');
+
+
+
+jquery 1.6 버전 이상
+
+$('input:radio[name="fruit"][value="apple"]).prop('checked', true);
+
+
+
+
+
+2. radio 버튼 선택된 값 가져오기
+
+var fruitValue = $('input:radio[name="fruit"]:checked).val();
+
+
+
+출처: https://yangyag.tistory.com/107 [Hello Brother!]
+	*/ 
+  </script>
+   <script src="js/jquery.sliderPro.min.js"></script>
+
+  <script>
+	if($(window).width()>960){
+		$( document ).ready(function( $ ) {
+			$( '#example3' ).sliderPro({
+				width: 2000,
+				height: 500,
+				fade: true,
+				arrows: true,
+				buttons: true,
+				fullScreen: true,
+				shuffle: false,
+				smallSize: 300,
+				mediumSize: 768,
+				largeSize: 1920,
+				thumbnailArrows: false,
+				autoplay: true
+			});
+		});	
+	}if($(window).width()<=960 && $(window).width()>=768){
+		$( document ).ready(function( $ ) {
+			$( '#example3' ).sliderPro({
+				width: 960,
+				height: 240,
+				fade: true,
+				arrows: true,
+				buttons: true,
+				fullScreen: false,
+				shuffle: false,
+				smallSize: 300,
+				mediumSize: 768,
+				largeSize: 1920,
+				thumbnailArrows: false,
+				autoplay: true
+			});
+		});	
+	}if($(window).width()<768){
+		$( document ).ready(function( $ ) {
+			$( '#example3' ).sliderPro({
+				width: 960,
+				height: 240,
+				fade: true,
+				arrows: true,
+				buttons: true,
+				fullScreen: false,
+				shuffle: false,
+				smallSize: 300,
+				mediumSize: 768,
+				largeSize: 1920,
+				thumbnailArrows: false,
+				autoplay: true
+			});
+		});	
+	}
+
+	
+  </script>
+   
+ 
+ </head>
+
+ <body id="main">
+  <input type="checkbox" name="gnb_button" id="gnb_button">
+  <input type="checkbox" name="main_search_button" id="main_search_button">
+  <header id="main_header">
+	<div>		
+		<label for="gnb_button">			
+			<span></span>
+			<span></span>
+		</label>
+		<h1><a href="pj2_main.html" class="unprevent"><img src="images/logo.svg" alt="logo"></a></h1>		
+		<nav id="top_gnb">
+			<div><a href="#">Login-in</a></div>
+			<div>
+				<label for="main_search_button">
+					<span>Search</span>
+					<img src="images/icon/search0.png" alt="icon">
+				</label>
+			</div>
+		</nav>		
+	</div>
+	
+	<form id="main_search_box" method="get">		
+		<div>			
+			<label for="real_search">
+				<img src="images/icon/search.png" alt="icon">
+			</label>	
+			<input type="search" name="real_search" id="real_search" placeholder="검색어를 입력하세요" required>
+			<input type="submit" name="real_search_submit" id="real_search_submit" value="검색">
+			<label for="main_search_button">취소</label>
+		</div>
+	</form>		
+	
+	<nav id="main_gnb">
+		<div id="gnb_header">
+			<h1><a href="pj2_main.html" class="unprevent"><img src="images/logo_black.png" alt="logo"></a></h1>
+		</div>
+		<a href="#" class="skip">
+			로그인
+		</a>
+		<hr class="skip">
+		<ul>
+			<li><a href="#">News</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb main_gnb_inner1">
+							<ol>
+								<li class="col-4"><a href="pj2_news.html" class="unprevent">Article</a></li>
+								<li class="col-4"><a href="#">Notice</a></li>
+								<li class="col-4 last"><a href="#">Event</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner1 clearfix">
+							<h2 >Hot issue</h2>
+							<ol>
+								<li class="col-3">
+									<a href="#">
+										<img src="image/news/important_news1.png" alt="hotissue">
+										<p>와이랩, 드라마 '아스달 연대기' 쿠키영상 제작</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="#">
+										<img src="image/news/important_news2.png" alt="hotissue">
+										<p>테러맨, 릴리아? 샤샤? 레드스완의 등장</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="#">
+										<img src="image/news/important_news3.png" alt="hotissue">
+										<p>슈퍼스트링 첫 크로스오버! '부활대테러' 2020년 연재</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3 last">
+									<a href="#">
+										<img src="image/news/important_news4.png" alt="hotissue">
+										<p>라인게임즈 게임 2020년 출시예정</p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+			<li><a href="pj2_universe.html" class="unprevent">Superstring</a>
+				<div class="row">
+					<div class="row2 flow">
+						
+						<div class="main_gnb_inner main_gnb_inner2 col-6">
+							<h2>Universe</h2>
+							<ol>
+								<li>
+									<a href="pj2_universe.html" class="unprevent">
+										<img src="image/universe/uni_back588.png" alt="universe">
+										<p></p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner2 col-6 last">
+							<h2>Time line</h2>
+							<ol>
+								<li>
+									<a href="#">
+										<img src="image/universe/time588.png" alt="timeline">
+										<p></p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+			<li><a href="#">Character</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-6"><a href="pj2_character.html" class="unprevent">All Character</a></li>
+								<li class="col-6 last"><a href="#">Team&Group</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner3 clearfix">
+							<h2>Key Character</h2>
+							<ol>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character49.png" alt="character">
+											<p class="chname chname1">문수</p>
+											<p class="chname chname2">암행어사</p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character91.png" alt="character">
+											<p class="chname chname1">아지태</p>
+											<p class="chname chname2"></p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="pj2_characterinfo.html" class="unprevent">
+										<figure class="characterbox">
+											<img src="image/character/character57.png" alt="character">
+											<p class="chname chname1">민정우</p>
+											<p class="chname chname2">테러맨</p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character80.png" alt="character">
+											<p class="chname chname1">숙희</p>
+											<p class="chname chname2">수키</p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character63.png" alt="character">
+											<p class="chname chname1">반</p>
+											<p class="chname chname2"></p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2 last">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character106.png" alt="character">
+											<p class="chname chname1">원미호</p>
+											<p class="chname chname2"></p>
+										</figure>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+			<li><a href="#">Webtoon</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-6"><a href="#">Publishing</a></li>
+								<li class="col-6 last"><a href="#">All Webtoon</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner4 clearfix">
+							<h2>Popular Webtoon</h2>
+							<ol>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon010.png" alt="webtoon">
+										<p>테러맨</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon002.png" alt="webtoon">
+										<p>버닝헬</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon005.png" alt="webtoon">
+										<p>신암행어사</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon004.png" alt="webtoon">
+										<p>신석기녀</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon007.png" alt="webtoon">
+										<p>아일랜드</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2 last">
+									<a href="#">
+										<img src="image/webtoon/webtoon003.png" alt="webtoon">
+										<p>부활남</p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+
+			<li><a href="#">Gallery</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-6"><a href="#">Wall Papers</a></li>
+								<li class="col-6 last"><a href="#">Fan Pics</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner5 clearfix">
+							<h2>PR Video</h2>
+							<ol>
+								<li class="col-3">
+									<a href="https://comic-superstring.naver.com/trailer/video/c376c292-4c21-4f80-bd7b-41c20eb30ca5.mp4">
+										<video style="width:100%; height:auto;"  src="https://comic-superstring.naver.com/trailer/video/c376c292-4c21-4f80-bd7b-41c20eb30ca5.mp4"
+										poster="image/poster/poster1.jpg">
+										 
+										</video>
+										<p>시네마틱 1차 영상</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="https://comic-superstring.naver.com/trailer/video/d243f35b-674f-4de7-bf56-412a1afa3983.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/d243f35b-674f-4de7-bf56-412a1afa3983.mp4" poster="image/poster/poster4.jpg">
+										
+										</video>
+										<p>신석기녀 프로모션 영상</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="https://comic-superstring.naver.com/trailer/video/f4a30111-9d8e-4652-aadb-1e631dbc8603.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/f4a30111-9d8e-4652-aadb-1e631dbc8603.mp4" poster="image/poster/poster2.jpg">
+									
+										</video>
+										<p>시네마틱 2차 영상</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3 last">
+									<a href="https://comic-superstring.naver.com/trailer/video/9a9ecff4-88f5-4d4d-8a15-50add877de79.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/9a9ecff4-88f5-4d4d-8a15-50add877de79.mp4" poster="image/poster/poster3.jpg">	
+										</video>
+										<p>테러맨 프로모션 영상</p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+			<li><a href="#">Games</a>
+				<div class="row">
+					<div class="row2">
+						<div class="main_gnb_inner main_gnb_inner6">
+							<h2>COMMING SOON 2020</h2>
+							<ol>
+								<li>
+									<a href="https://youtu.be/_4qSTKg3iM8">
+										<video style="width:25%; height:auto;" src="https://youtu.be/_4qSTKg3iM8" poster="image/poster/poster5.jpg">				
+										</video>
+										<p></p>
+										<p></p>
+									</a>
+								</li>						
+							</ol>
+						</div>
+					</div>
+				</div>	
+			</li>
+			
+			<li><a href="pj2_community.html" class="unprevent">Community</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-4"><a href="#">Free Board</a></li>
+								<li class="col-4"><a href="#">Study Board</a></li>
+								<li class="col-4 last"><a href="#">Webtoon Board</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner7 col-6">
+							<h2>Best of Month</h2>
+							<ul class="month_best">
+								<li class="commu_list">
+									<a href="#">										
+										<span>1</span>
+										<p class="subject">백백교 수장은 아지태가 아니고 따로 있다</p>
+										<p class="subject_plus"><span>380</span> 7.1</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>2</span>
+										<p class="subject">파락호 복장 고증오류 같은데</p>
+										<p class="subject_plus"><span>289</span> 7.13</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>3</span>
+										<p class="subject">백백교스케일 진짜 커지넹..</p>
+										<p class="subject_plus"><span>330</span> 7.9</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">										
+										<span>4</span>
+										<p class="subject">하우스키퍼에 등장한 대통령은 분명 아지태일 것이라 예상됨</p>
+										<p class="subject_plus"><span>296</span> 7.8</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>5</span>
+										<p class="subject">석환 능력도 과학적인건 아닌가보네 베로니카처럼</p>
+										<p class="subject_plus"><span>288</span> 7.21</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner7 col-6 last">
+							<h2>Best of Weeks</h2>
+							<ul class="weeks_best">
+								<li class="commu_list">
+									<a href="#">
+										<span>1</span>
+										<p class="subject">지금 부산 센텀시티에서 테러맨 영화 촬영 중임</p>
+										<p class="subject_plus"><span>340</span> 7.31</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>2</span>
+										<p class="subject">작품들 유료화가 솔직히 세계관 홍보에 엄청악재인듯</p>
+										<p class="subject_plus"><span>470</span> 7.29</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>3</span>
+										<p class="subject">이번 미리보기 샤샤 미쳤네</p>
+										<p class="subject_plus"><span>274</span> 7.28</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>4</span>
+										<p class="subject">개인적으로 바라는 신암행어사 엔딩</p>
+										<p class="subject_plus"><span>191</span> 7.30</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>5</span>
+										<p class="subject">테러맨 기적의 논리</p>
+										<p class="subject_plus"><span>139</span> 7.28</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>			
+			</li>
+			
+
+			<li><a href="#">More</a>
+				<div class="row">
+					<div class="sub_gnb row2">
+						<ol>
+							<li class="col-4"><a href="pj2_shop.html" class="unprevent">Shop</a></li>
+							<li class="col-4"><a href="#">SNS</a></li>
+							<li class="col-4 last"><a href="#">Movie/Drama</a></li>
+						</ol>
+					</div>
+				</div>			
+			</li>
+			
+		</ul>
+	</nav>
+  </header>
+
+
+	<section id="main_banner" class="row center">
+		<div id="example3" class="slider-pro">
+			<div class="sp-slides">
+				<div class="sp-slide">
+					<img class="sp-image"
+						alt="main-slide-image" src="image/slide/main_banner_webtoon.png" 
+						data-src="image/slide/main_banner_webtoon.png"
+						data-small="image/slide/main_banner_webtoon.png"
+						data-medium="image/slide/main_banner_webtoon.png"
+						data-large="image/slide/main_banner_webtoon.png"
+						data-retina="image/slide/main_banner_webtoon.png"/>
+
+					
+				</div>
+
+				<div class="sp-slide">
+					<img class="sp-image"
+						alt="main-slide-image" src="image/slide/main_banner_newgoods.png" 
+						data-src="image/slide/main_banner_newgoods.png" 
+						data-small="image/slide/main_banner_newgoods.png"
+						data-medium="image/slide/main_banner_newgoods.png"
+						data-large="image/slide/main_banner_newgoods.png"
+						data-retina="image/slide/main_banner_newgoods.png"/>
+
+					
+					
+				</div>
+
+				<div class="sp-slide">
+					<img class="sp-image"
+						alt="main-slide-image" src="image/slide/main_banner_sns.png" 
+						data-src="image/slide/main_banner_sns.png" 
+						data-small="image/slide/main_banner_sns.png"
+						data-medium="image/slide/main_banner_sns.png"
+						data-large="image/slide/main_banner_sns.png"
+						data-retina="image/slide/main_banner_sns.png"/>
+
+					
+				</div>
+
+				<div class="sp-slide">
+					<img class="sp-image"
+						alt="main-slide-image" src="image/slide/main_banner_draw.png" 
+						data-src="image/slide/main_banner_draw.png" 
+						data-small="image/slide/main_banner_draw.png"
+						data-medium="image/slide/main_banner_draw.png"
+						data-large="image/slide/main_banner_draw.png"
+						data-retina="image/slide/main_banner_draw.png"/>
+
+					
+				</div>
+
+				<div class="sp-slide">
+					<img class="sp-image"
+						alt="main-slide-image" src="image/slide/main_banner_card.png" 
+						data-src="image/slide/main_banner_card.png" 
+						data-small="image/slide/main_banner_card.png"
+						data-medium="image/slide/main_banner_card.png"
+						data-large="image/slide/main_banner_card.png"
+						data-retina="image/slide/main_banner_card.png"/>
+
+					
+				</div>
+
+				<div class="sp-slide">
+					<img class="sp-image" alt="main-slide-image" src="image/slide/main_banner_event.png" 
+						data-src="image/slide/main_banner_event.png" 
+						data-small="image/slide/main_banner_event.png"
+						data-medium="image/slide/main_banner_event.png"
+						data-large="image/slide/main_banner_event.png"
+						data-retina="image/slide/main_banner_event.png"/>
+
+					
+				</div>
+			</div>
+		</div>
+  </section>
+
+
+   <section id="main_first_section" class="row2 flow">
+  		<h2 class="row">News</h2>
+		<article id="news_banner" class="col-6 tcol-6">
+			<ul>
+				<li>
+					<a href="#">
+						<div>
+							<p>YLAB, 드라마 '아스달 연대기' 쿠키영상 제작</p>
+						</div>					
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div>
+							<p>테러맨, 릴리아? 샤샤? 레드스완의 등장</p>
+						</div>	
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div>
+							<p>2020년 ‘부활대테러’ 연재 확정!</p>
+						</div>	
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div>
+							<p>라인게임즈 모바일게임 슈퍼스트링 2020년 출시예정</p>
+						</div>	
+					</a>
+				</li>
+			</ul>
+		</article>
+			<div class="newscard col-3 tcol-6 mcol-6 tlast">	
+				<div class="newscard_inner">
+					<div class="card front">
+						<img src="image/news/news1.jpg" alt="main_article">
+					</div>
+					<div class="card back">
+						<a href="#">
+							<h3>
+									슈퍼스트링 13번째 신작 ‘호러전파상’ 네이버웹툰 연재
+							</h3>
+							<p>
+									와이랩이 제작한 자사의 웹툰 유니버스 ‘슈퍼스트링’ 신작 &lt;호러전파상&gt;이 6월 9일 네이버웹툰에서 연재를 시작했다. 해당 작품은 매주 일요일 업데이트 될 예정이다.
+									&lt;호러전파상&gt;은 정체를 알 수 없는 미모의 전파상 주인 ‘야크’가 필요한 물건에 의해 전파사에 찾아오는 ···손님들에게 고사양의 물건을 공짜로 주는 대신 몇가지 주의사항을 전하고 물건의 효과를 극대화해 자신의 욕망을 충족하기 위해 이를 어기는 손님들이 어떤 충격적인 결말을 맞이하게 될지를 보여준다.
+							</p>
+						</a>
+					</div>
+				</div>	
+			</div>
+			<div class="newscard col-3 tcol-6 mcol-6 last mlast">			
+				<div class="newscard_inner">
+					<div class="card front">
+						<img src="image/news/news2.png" alt="main_article">
+					</div>
+					<div class="card back">
+						<a href="#">
+							<h3>
+									'신암행어사', 과거의 영웅이 현재에 등장하다
+							</h3>
+							<p>
+									&lt;신암행어사&gt;의 경우에는 과거의 작품을 최근에 창설된 슈퍼스트링 프로젝트에 편입했기 때문이다. &lt;아일랜드&gt;를 같은 플랫폼에서 완결 내어 이 또한 슈퍼스트링 프로젝트에 편입한 윤인완과 양경일의 현 연재 작품에는 과거의 이야기를 현재의 삶에 어떻게 접목할 것인지에 대한 고민이 담겨있다. 요컨대 이것은 리메이크도 ···아니요재연재인데, 말하자면 과거의 망령을 현재에 살려낸 것이나 다름없으므로, 그 망령이 구천을 떠돌지 않고 현세에 적응할 수 있을지에 대한 의문이 우리에게는 있다.
+									
+									그에 대한 첫 번째 발걸음. 고전이란 게 시대가 변해도 통용되는 의미를 품는 것이라면 이 &lt;신암행어사&gt;의 이야기는 확실히 고	전이다. 작품의 주인공 문수는 멸망한 나라 쥬신의 상급관리이자 암행어사로, 세상을 떠돌며 악덕한 사람들을 혼내주는 역할을 하고 있다. 장르로 따지면 피카레스크에 속하는 이 작품에서 문수는 선한지 악한지 구분할 수 없게 나오며, 그럼에도 그가 아니라면 더 큰 악인 아지태를 죽일 수가 없다고 사람들은 말한다. 이때 아지태를 문수만이 죽일 수 있는 것은 문수에게 아지태의 술법이 통하지 않기 때문인데, 여기서 우리는 악은 악을 죽일 수 없다는 피카레스크의 새로	운 논리를 보게 된다.
+						
+							</p>
+						</a>
+					</div>
+				</div>	
+			</div>
+			<div class="newscard col-3 tcol-6 mcol-6 tlast">			
+				<div class="newscard_inner">
+					<div class="card front">
+						<img src="image/news/news14.jpg" alt="main_article">
+					</div>
+					<div class="card back">
+						<a href="#">
+							<h3>
+									와이랩, 벤처캐피탈 3개사로부터 40억 규모 투자 유치… 누적 투자액 70억
+							</h3>
+							<p>
+									웹툰 제작사 와이랩이 지난달 네시삼십삼분의 전략적 투자 유치에 이어 캡스톤파트너스, 키움증권 등으로부터 40억원의 투자 유치를 했다. VIK로부터 30억원을 투자 받은 지 1년만이다.
+									와이랩은 작가의 저작권을 대행하는 기존 웹툰 에이전시들과 달리					 IP(지적재산권)를				 직접 보유하고 있는 유일한 웹툰 회사	다	.	신	암	행어사의 윤인완 작가를 주축으로, 소속	 프	로	듀	서	들이	작품	을	기획	하고 이에 대한 저작권을 작가들과 공유하는 형	태다.	 이	러한	시스		템	은	 미국	의 마블과DC 코믹스가 취하고 있는데	, IP	 사업	을 회	사의	 의사결정에 따라 제한 없	이 진	행할	  수		있다는 강점이 있다.
+							</p>
+						</a>
+					</div>
+				</div>	
+			</div>
+			<div class="newscard col-3 tcol-6 mcol-6 mlast">			
+				<div class="newscard_inner">
+					<div class="card front">
+						<img src="image/news/news4.png" alt="main_article">
+					</div>
+					<div class="card back">
+						<a href="#">
+							<h3>
+									넷플릭스 '킹덤', 원작 만화 '버닝헬' 조선판 좀비물 통할까?
+							</h3>
+							<p>
+									넷플릭스 드라마 ‘킹덤’의 티저 영상이 공개되면서 원작 만화에 관심이 모이고 있다. 내년 1월 베일을 벗는 넷플릭스 드라마 ‘킹덤’은 윤인완, 양경일 작가의 ‘버닝 헬-신의 나라’를 원작으로 하고 있다.
+									아울러 ‘시그널’ 작가 김은희 작가가 각본을 맡으면서 더욱 기대감이 높아지고 있다.
+							</p>
+						</a>
+					</div>
+				</div>	
+			</div>
+			<div class="newscard col-3 tcol-6 mcol-6 tlast">			
+				<div class="newscard_inner">
+					<div class="card front">
+						<img src="image/news/news3.jpg" alt="main_article">
+					</div>
+					<div class="card back">
+						<a href="#">
+							<h3>
+									인간과 A.I, 좀비의 색다른 조합 ‘하우스키퍼’ 연재
+							</h3>
+							<p>
+									"하우스키퍼"는 가정용 A.I ‘하스티’가 좀비 바이러스에 감염된 주인을 구하기 위해 전투용 A.I로 각성하며 벌어지는 이야기로, 평범한 인공지능 로봇이 단 한 명의 주인을 위해 전 인류와 전쟁하는 처절한 싸움을 다루고 있다. 그동안 흔히 볼 수 없었던 ‘인간, A.I, 좀비 바이러스’라는 색다른 조합이 독자들의 기대감을 ··· 증폭시킨다.
+	
+					이번 신작은 네이버웹툰에서 인기리에 연재 중인 "부활남"의 채용택					 작가가 글을, "선녀강림", "라온" 이후 일본에서 "비탄의 아	리	아	A	A	" 등을 연재하며 인기리에 활동하던 유현 작가가	작화	를		맡았	다.	"하우스키퍼"는 유현작가의 국내 복귀작으로	섬세	한 그	림체는	 "하우스키퍼"의 완성도를 극대화했다. 독자들은	‘빠	른 전개	와 참신	한 스토	리’, ‘대작의 기운이 느껴진다’, ‘전설이 돌아왔다’며 작품을 응원했다.
+							</p>
+						</a>
+					</div>
+				</div>	
+			</div>
+			<div class="newscard col-3 tcol-6 mcol-6 last mlast">			
+				<div class="newscard_inner">
+					<div class="card front">
+						<img src="image/news/news11.jpg" alt="main_article">
+					</div>
+					<div class="card back">
+						<a href="#">
+							<h3>
+									와이랩, 만화 ‘신의 나라’ 네이버 시리즈 연재
+							</h3>
+							<p>
+									만화 ‘신의 나라’가 네이버 시리즈에서 연재된다. 만화 ‘신의 나라’는 2014년 웹툰 제작의 명가 와이랩이 발표한 작품으로서, 와이랩의 수장 윤인완 작가가 기획하고 드라마 장르물의 대가 김은희 작가가 스토리를, 만화계의 거장 양경일 작가가 작화를 담당해 호흡을 맞춘 작품으로 넷플릭스 오리지널 시리즈 ‘킹덤’의 원작이다. 
+					‘신의 나라’는 조선시대 좀비물이라는 독특한 설정을 가졌으며 왕					세자가 반역자로 몰리며 펼쳐지는 서스펜스를 담고 있다. 와	이	랩	에	서	는 장르성이 두드러진다고 판단해 초기부터 글	로벌	 만	화로	기획	하여 2014년 일본 소학관의 인기 잡지인 ‘빅 코	믹 스	피리츠	’에		발표	했다. 발표 당시 참신한 소재와 반전	 스토리	로 일본	 독자들	사이에	서 큰 화제가 되었다.
+					와이랩은 만화와 드라마를 오가며 느낄 수 있는 오리지널리티와 각					색의 묘미를 극대화하기 위하여 드라마 방영에 앞서 1월 1	7	일	부	터	네이버 시리즈앱과 시리즈 홈페이지에서 ‘신의 나라’를	 웹	툰		형태	로		연재한다. 이번 연재는 폭넓은 독자층과의 소	통하기	 위해	전체		연령가	 및 19세 연령가 총 2가지 버전으	로 제작	되었다.	네이버	시리즈에	서는 오픈 기념 프로모션으로 2월 21일	까지 ‘신	의 나라’	 웹툰	을 매일	 1편씩 무료로 이용할 수 있는 ‘너에게만 무료’ 프로모션을 진행한다. 
+							</p>
+						</a>
+					</div>
+				</div>	
+			</div>
+			<div class="newscard col-3 tcol-6 mcol-6 tlast">			
+				<div class="newscard_inner">
+					<div class="card front">
+						<img src="image/news/news5.jpg" alt="main_article">
+					</div>
+					<div class="card back">
+						<a href="#">
+							<h3>
+									심준경 와이랩 대표 인터뷰
+							</h3>
+							<p>
+								“웹툰은 성장 잠재력이 큰 산업입니다. 무엇보다 한국이 주도할 수 있는 몇 안 되는 산업 중 하나라는 점에 매력을 느꼈죠.”
+					서울 합정동 와이랩스튜디오에서 최근 만난 심준경 와이랩 대표(사진)는 잘나가는 벤처캐피털리스트에서 웹툰 제작사 최고경영자(CEO)로 변신한 이유에 대해 ··· 이같이 설명했다.
+							</p>
+						</a>
+					</div>
+				</div>	
+			</div>
+			<div class="newscard col-3 tcol-6 mcol-6 mlast">			
+				<div class="newscard_inner">
+					<div class="card front">
+						<img src="image/news/news6.jpg" alt="main_article">
+					</div>
+					<div class="card back">
+						<a href="#">
+							<h3>
+									기획형 웹툰시대 연 와이랩
+							</h3>
+							<p>
+									신암행어사, 테러맨, 신석기녀, 부활남, 심연의 하늘, 캉타우, 아일랜드, 세상은 돈과 권력, 삼국지톡...이 웹툰들은 네이버웹툰에서 상위권을 차지하는 인기작이라는 점 외에 또 다른 공통점이 있다. 웹툰 배경에 박혀있는 '기획, 제작 와이랩'이란 로고다.
+					와이랩 이름으로 나오는 수많은 웹툰 작품들은 수백만 ··· 조회수를					 자랑한다. 작가에 대한 지원이 남다른 덕분이다. 지난	해	엔	독	립	레이블(독자적으로 활동하는 소그룹)도 허용했다. 엔	터테	인먼	트	사의	레이블처럼 작가가 직접 작품 기획과 제작에 뛰어	들 수	 있도	록		했다는	 설명이다. ‘실질객관동화’ ‘조선왕조실	톡’으로	 인기를	 끈		웹툰 작	가 무적핑크를 주축으로 한 '핑크잼'이 독립 레이블의 대표적인 사례다.
+							</p>
+						</a>
+				</div>
+			</div>	
+		</div>
+  </section>
+
+
+  <section id="main_second_section" class="row">
+	<article class="row2">
+		<h2 class="row">Universe</h2>
+		<ul class="row center">
+			<li>
+				<a href="#">
+					<p>I</p>
+					<p>음모</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<p>II</p>
+					<p>위기의 인류</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<p>III</p>
+					<p>차원을 넘어</p>
+				</a>
+			</li>
+		</ul>
+	</article>
+	<hr>
+	<hr>
+  </section>
+
+
+ 
+  <section id="main_third_section" class="row2 flow">
+  	<h2 class="row2 center">Webtoon</h2>
+	<div class="webtoon_gallery col-3 tcol-4 mcol-6">
+		<a href="#">
+			<img src="image/webtoon/webtoon014.png" alt="webtoon_image">
+			<p>호러전파상</p>
+			<p>
+                이태원 어느 골목에 위치한 기묘한 분위기의 전파사.<br>
+                그곳의 주인인 '야크'. 필연에 의해 찾는 손님들에게 물건을 공짜로 주는 대신 몇 가지 주의사항을 준다.<br>
+                그러나 손님들은 물건의 효과를 극대화 시켜 자신의 욕망을 충족하기 위해, 이를 어기면서부터 어떠한 사건이 벌어지게 된다.
+            </p>
+		</a>
+		<p><a href="https://comic.naver.com/webtoon/list.nhn?titleId=729037&weekday=sun" target='_blank' class="unprevent">웹툰 보러 바로가기</a></p>
+	</div>
+	<div class="webtoon_gallery col-3 tcol-4 mcol-6 mlast">
+		<a href="#">
+			<img src="image/webtoon/webtoon013.png" alt="webtoon_image">
+			<p>하우스키퍼</p>
+			<p>
+                아이슈타인이 만물이론을 탄생시킨 다른 차원의 세계<br>
+                1976년 9월 4일. 사상 최악의 바이러스가 창궐된다.<br>
+                바이러스로 인해 인강성을 상실하고 괴물이 되어버린 네빌.<br>
+                그런 네빌을 주인이자 소중한 가족으로 여기는 하스티.<br>
+                생존한 인간들은 바이러스 감염자를 포기했지만 하스티만은 네빌을 포기하지 않는다.
+            </p>
+		</a>
+		<p><a href="https://comic.naver.com/webtoon/list.nhn?titleId=723046" target='_blank' class="unprevent">웹툰 보러 바로가기</a></p>
+	</div>
+	<div class="webtoon_gallery col-3 tcol-4 tlast mcol-6">
+		<a href="#">
+			<img src="image/webtoon/webtoon009.png" alt="webtoon_image">
+			<p>캉타우</p>
+			<p>
+                먼 옛날 지구를 둘러싸고 치열한 전쟁을 벌인 우주세력 오크타와 스펠타..<br>
+                기나긴 공방 중, 모종의 이유로 긴 동면상태에 빠진다..<br>
+                하지만 먼저 깨어난 스펠타는 지구 점령을 위해 다시 세력을 키우고 있었다..<br>
+                나를 위해서만 살고 싶었던 지구인 소년 강현은 우연히 오크타의 거대 병기 '캉타우'의 파일럿이 되어 스펠타와 맞설 수밖에 없게 되는데..
+            </p>
+		</a>
+		<p><a href="https://comic.naver.com/webtoon/list.nhn?titleId=714293" target='_blank' class="unprevent">웹툰 보러 바로가기</a></p>
+	</div>
+	<div class="webtoon_gallery col-3 last tcol-4 mcol-6 mlast">
+		<a href="#">
+			<img src="image/webtoon/webtoon010.png" alt="webtoon_image">
+			<p>테러맨</p>
+			<p>
+				고등학교 1학년인 정우는 자신에게 닥칠 불행을 미리 보는 초능력을 가지고 있다.<br>
+				어릴 적 어머니를 사고로 잃은 뒤 소심한 성격으로 자란 정우는, 우연히 들른 백화점이 곧 무너져 내릴 것을 알게되자 사람들을 대피시키기로 마음먹는다.<br>
+				도망치라는 정우의 외침을 사람들이 무시하자, 정우는 테러리스트인척 하며 사람들을 쫓아내는 극단적인 방법을 선택한다.<br>
+			</p>
+		</a>
+		<p><a href="https://comic.naver.com/webtoon/list.nhn?titleId=670149" target='_blank' class="unprevent">웹툰 보러 바로가기</a></p>
+	</div>
+	<div class="webtoon_gallery col-3 tcol-4 mcol-6">
+		<a href="#">
+			<img src="image/webtoon/webtoon003.png" alt="webtoon_image">
+			<p>부활남</p>
+			<p>불같은 성질 탓에 29살이 되도록 취업 한 번 못해본 석환.<br>
+			어느 날 옆집을 찾아온 사채업자들과 싸우다 칼에 찔린다.<br>
+			꿈도, 희망도, 기대도 없던 삶.<br>
+			그래도 이건 너무 허무하다며 죽어가는데, 3일이 지나 방에서 깨어난다!<br>
+			자신의 부활 능력을 깨달은 석환은 소중한 사람을 지키기 위해 거대 폭력 조직의 배후를 찾아 나선다.
+			</p>
+		</a>
+		<p><a href="https://comic.naver.com/webtoon/list.nhn?titleId=670139" target='_blank' class="unprevent">웹툰 보러 바로가기</a></p>
+	</div>
+	<div class="webtoon_gallery col-3 tcol-4 tlast mcol-6 mlast">
+		<a href="#">
+			<img src="image/webtoon/webtoon004.png" alt="webtoon_image">
+			<p>신석기녀</p>
+			<p>
+                사춘기에 성장이 멈춘 불로불사 여고생 숙희.<br>
+                엄청난 괴력과 무한한 생명력으로 수천년을 홀로 외롭게 살아온 그녀 앞에 시한부 선고를 받은 한 남자가 나타난다.<br>
+                숙희는 우연히 그 남자를 구해주게 되는데...<br>
+                삶이 더 이상 소중하지 않은 불로불사소녀와 하루하루가 너무나도 소중한 시한부청년 수의사가 펼치는 티격태격 로맨스.
+            </p>
+		</a>
+		<p><a href="https://comic.naver.com/webtoon/list.nhn?titleId=703308" target='_blank' class="unprevent">웹툰 보러 바로가기</a></p>
+	</div>
+	<div class="webtoon_gallery col-3 tcol-4 mcol-6">
+		<a href="#">
+			<img src="image/webtoon/webtoon007.png" alt="webtoon_image">
+			<p>아일랜드</p>
+			<p>
+                세간을 떠들썩하게 만든 사고를 친 후 제주도로 쫓겨난 대한그룹 외동딸 원미호.<br>
+                제주도에 도착하자마자 정염귀의 표적이 되지만, 구세주처럼 나타난 반이 그녀를 구한다.<br>
+                하지만 미호가 요괴들에게 죽기 전에 그녀를 죽이겠다는 반.<br>
+                미호는 정염귀를 잡아줄 때마다 돈을 주겠다며 그에게 거래를 제안한다.
+            </p>
+		</a>
+		<p><a href="https://comic.naver.com/webtoon/list.nhn?titleId=678500#" target='_blank' class="unprevent">웹툰 보러 바로가기</a></p>
+	</div>
+	<div class="webtoon_gallery col-3 last tcol-4 mcol-6 mlast">
+		<a href="#">
+			<img src="image/webtoon/webtoon005.png" alt="webtoon_image">
+			<p>신암행어사</p>
+			<p>
+                
+                멸망한 고대 국가 쥬신.<br>
+                모든 기관과 제도가 사라진 틈을 타 악인들이 기승을 부린다.<br>
+                문수는 사랑했던 사람들과의 약속을 지키기 위해 암행어사로서 전국을 떠돌며 악인들을 처벌한다.<br>
+                하지만 그의 마패로 정화될 수 없을 만큰 혼란스러운 세상.<br>
+                문수는 쥬신의 멸망을 일으킨 아지태와 숙명을 건 전쟁을 벌인다.
+            
+            </p>
+		</a>
+		<p><a href="https://comic.naver.com/webtoon/list.nhn?titleId=678500#" target='_blank' class="unprevent">웹툰 보러 바로가기</a></p>
+	</div>
+	<div class="webtoon_gallery col-3 clearfix tcol-4 tlast mcol-6 ">
+		<a href="#">
+			<img src="image/webtoon/webtoon006.png" alt="webtoon_image">
+			<p>심연의 하늘</p>
+			<p>
+                평범한 고등학생 하늘은 어느날 암흑 속에서 눈을 뜬다.<br>
+                알수 없는 원인으로 도시 전체가 거대한 싱크홀에 빠지고 수백, 수천마리의 벌레가 떼로 나타나 사람들을 공격한다.<br>
+                절체절명의 위기에 빠진 하늘을 수한 건 다름아닌 같은 고등학생 혜율.<br>
+                혼란스러운 세상, 하늘과 혜율은 함께 행동하기로 결심하고, 신문에서 발견한 광화문의 대피소를 찾아 긴 여정을 떠난다.
+            </p>
+		</a>
+		<p><a href="https://comic.naver.com/webtoon/list.nhn?titleId=608261" target='_blank' class="unprevent">웹툰 보러 바로가기</a></p>
+	</div>
+	<div class="webtoon_gallery col-3 tcol-4 mcol-6 mlast">
+		<a href="#">
+			<img src="image/webtoon/webtoon001.png" alt="webtoon_image">
+			<p>나의 밤은 당신의 낮보다 아름답다</p>
+			<p>테니스 선수였던 하시우는 강남 유명 술집에 들어서는 언니, 하미우를 발견한다.<br>
+			언니를 비난하는 순간, 누군가 쏜 총알이 미우의 이마를 관통하고, 때마침 지나가는 트럭이 미우의 몸을 치면서 단순 사고사로 처리된다.<br>
+			언니의 수상한 죽음을 목격한 시우는 진실을 파헤치고 복수를 하기 위해, 그토록 증오하던 화류계에 뛰어들어 그녀의 죽음 속 진실을 파헤친다.<br>
+			정상의 자리까지 올라간 시우는 대한민국을 움직이는 인물들이 펼친 판을 뒤흔든다.</p>
+		</a>
+		<p><a href="http://webtoon.daum.net/webtoon/view/mynight" target='_blank' class="unprevent">웹툰 보러 바로가기</a></p>
+	</div>
+	<div class="webtoon_gallery col-3 tcol-4 mcol-6">
+		<a href="#">
+			<img src="image/webtoon/webtoon008.png" alt="webtoon_image">
+			<p>웨스트우드 비브라토</p>
+			<p>
+                남아프리카의 악기수리공 코넬리아 보보워셔.<br>
+                악기에 담긴 저마다의 사연을 듣고, 손님들의 마음을 치유한다.<br>
+                과거 아프리카 내전 지역의 유명한 무기 수리공이었던 그녀는 깊은 상처를 딛고 손님들과 악기에 담긴 애절한 이야기를 풀어나가면서 그들의 애환을 위로한다.
+            </p>
+		</a>
+		<p><a href="https://comic.naver.com/webtoon/list.nhn?titleId=301382" target='_blank' class="unprevent">웹툰 보러 바로가기</a></p>
+	</div>
+	<div class="webtoon_gallery col-3 last tcol-4 tlast mcol-6 mlast">
+		<a href="#">
+		<img src="image/webtoon/webtoon002.png" alt="webtoon_image">
+			<p>버닝헬</p>
+			<p>
+                조선 중기 독도 근처에 '대초열지옥'이라 불리는 섬이 있다.<br>
+                조선은 유교의 도리를 어긴 패륜죄의 선비들을, 에도는 무사도의 길을 벗어난 살인귀들을 그곳에 보낸다.<br>
+                연쇄살인 및 시체 해부 죄로 유배된 조선 혜민서 의관 김한과 살인 및 식인 죄로 유배된 에도 사무라이 쥬.<br>
+                지옥도에서 만난 두 살인마의 생사를 가르는 결투가 시작된다.
+            </p>
+		</a>
+		<p><a href="https://comic.naver.com/webtoon/list.nhn?titleId=653857" target='_blank' class="unprevent">웹툰 보러 바로가기</a></p>
+	</div>
+	<div class="webtoon_gallery col-3 clearfix tcol-4 mcol-6">
+		<a href="#">
+			<img src="image/webtoon/webtoon012.png" alt="webtoon_image">
+			<p>프린스의왕자(카페 드 쇼콜라)</p>
+			<p>
+                재력, 외모, 두뇌... 모든 것을 가진 남자, 시현<br>
+                단 한가지 흠이 있다는 상상을 뛰어넘는 동생 바보라는 것!<br>
+
+                연애 시뮬레이션 게임 '비밀의 화원'에 빠진 동생 때문에 제작사인 '캐슬소프트'를 조사하기 시작한 시현.<br>
+                회사 대표이면서 동시에 '비밀의 화원' 속 주인공이 몽룡의 전과를 발견하고, 캐슬소프트에 잠입해 회사를 무너뜨리기로 결심한다.
+            </p>
+		</a>
+		<p><a href="https://comic.naver.com/webtoon/list.nhn?titleId=666196" target='_blank' class="unprevent">웹툰 보러 바로가기</a></p>
+	</div>
+	<div class="webtoon_gallery col-3 tcol-4 mcol-6 mlast">
+		<a href="#">
+			<img src="image/webtoon/webtoon011.png" alt="webtoon_image">
+			<p>파락호</p>
+			<p>슈퍼스트링의 연재 예정 작품, 주인공은 파락호다.
+			</p>
+		</a>
+		<p>
+			<a href="#"></a>
+		</p>
+	</div>
+	<div class="webtoon_gallery col-3 tcol-4 mcol-6">
+		<a href="#">
+			<img src="image/webtoon/comming_soon.png" alt="webtoon_image">
+			<p></p>
+			<p></p>
+		</a>
+		<p><a href="#"></a></p>
+	</div>
+	<div class="webtoon_gallery col-3 last tcol-4 mcol-6 mlast">
+		<a href="#">
+			<img src="image/webtoon/comming_soon.png" alt="webtoon_image">
+			<p></p>
+			<p></p>
+		</a>
+		<p><a href="#"></a></p>
+	</div>
+	
+	<section id="webtoonlight">
+	</section>
+  </section>
+
+  
+  <section id="main_forth_section" class="row">
+  	<article id="main_character_banner" class="row">		
+		<input type="radio" id="character_banner1" name="character_banner" checked="checked">
+		<input type="radio" id="character_banner2" name="character_banner">
+		<input type="radio" id="character_banner3" name="character_banner">
+		<input type="radio" id="character_banner4" name="character_banner">
+		<input type="radio" id="character_banner5" name="character_banner">
+		<input type="radio" id="character_banner6" name="character_banner">
+		<input type="radio" id="character_banner7" name="character_banner">
+		<input type="radio" id="character_banner8" name="character_banner">
+		<ul>
+			<li>
+				<a href="#">
+					<img src="image/slide/main_characterbaner_hyeyul.png" alt="character">
+					<p></p>
+				</a>
+			</li>			
+			<li>
+				<a href="#">
+					<img src="image/slide/main_characterbaner_minjungwoo.png" alt="character">
+					<p></p>
+				</a>
+			</li>			
+			<li>
+				<a href="#">
+					<img src="image/slide/main_characterbaner_seokhwan.png" alt="character">
+					<p></p>
+				</a>
+			</li>			
+			<li>
+				<a href="#">
+					<img src="image/slide/main_characterbaner_wonmiho.png" alt="character">
+					<p></p>
+				</a>
+			</li>			
+			<li>
+				<a href="#">
+					<img src="image/slide/main_characterbaner_ban.png" alt="character">
+					<p></p>
+				</a>
+			</li>			
+			<li>
+				<a href="#">
+					<img src="image/slide/main_characterbaner_sooki.png" alt="character">
+					<p></p>
+				</a>
+			</li>			
+			<li>
+				<a href="#">
+					<img src="image/slide/main_characterbaner_jyu.png" alt="character">
+					<p></p>
+				</a>
+			</li>			
+			<li>
+				<a href="#">
+					<img src="image/slide/main_characterbaner_redswan.png" alt="character">
+					<p></p>
+				</a>
+			</li>
+		</ul>
+	</article>
+	<div id="select_character" class="row2" >
+		
+			<label for="character_banner1"><img src="image/slide/main_characterbaner_hyeyul.png" alt="character"></label>
+			<label for="character_banner2"><img src="image/slide/main_characterbaner_minjungwoo.png" alt="character"></label>
+			<label for="character_banner3"><img src="image/slide/main_characterbaner_seokhwan.png" alt="character"></label>
+			<label for="character_banner4"><img src="image/slide/main_characterbaner_wonmiho.png" alt="character"></label>
+			<label for="character_banner5"><img src="image/slide/main_characterbaner_ban.png" alt="character"></label>
+			<label for="character_banner6"><img src="image/slide/main_characterbaner_sooki.png" alt="character"></label>
+			<label for="character_banner7"><img src="image/slide/main_characterbaner_jyu.png" alt="character"></label>
+			<label for="character_banner8"><img src="image/slide/main_characterbaner_redswan.png" alt="character"></label>
+		
+	</div>
+  </section>
+  
+
+  
+  <footer id="main_footer" class="row clearfix">
+  	<div>
+	  <nav id="footer_gnb" class="row2">
+		<div>
+			<input type="checkbox" name="footer_gnb1" id="footer_gnb1" class="footer_gnb_button">
+			<h2><label for="footer_gnb1">SITE</label></h2>
+			<ul>
+				<li><a href="pj2_news.html" class="unprevent">News</a></li>
+				<li><a href="pj2_universe.html" class="unprevent">Super String</a></li>
+				<li><a href="pj2_character.html" class="unprevent">Character</a></li>
+				<li><a href="#">Webtoon</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">Games</a></li>
+				<li><a href="#" class="unprevent">Community</a></li>
+			</ul>
+		</div>
+		<div>
+			<input type="checkbox" name="footer_gnb2" id="footer_gnb2" class="footer_gnb_button">
+			<h2><label for="footer_gnb2">ABOUT</label></h2>
+			<ul>
+				<li><a href="#">Creator Note</a></li>
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="#">Advertising</a></li>
+			</ul>
+		</div>
+        <div>
+			<input type="checkbox" name="footer_gnb3" id="footer_gnb3" class="footer_gnb_button">
+			<h2><label for="footer_gnb3">SERVICE CENTER</label></h2>
+			<ul>
+				<li><a href="#">Service Center</a></li>
+				<li><a href="#">F A Q</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Terms of Use</a></li>
+			</ul>
+		</div>        
+	  </nav>
+	  <nav id="footer_follow">
+	  	<div>
+			<h3>Follow</h3>
+			<ul>
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/yt.png" alt="youtube">
+					</a>
+				</li>
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/fb.png" alt="facebook">
+					</a>
+				</li>
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/is.png" alt="instar">
+					</a>
+				</li>
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/tw.png" alt="twitter">
+					</a>
+				</li>
+			</ul>
+		</div>		
+	  </nav>
+	  <div id="stamp">
+	  	<i></i>
+	  </div>
+	</div>
+  </footer>
+
+ 
+
+
+ </body>
+</html>

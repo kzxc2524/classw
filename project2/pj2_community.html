@@ -1,0 +1,2166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!--[if IE 6]><html class="no-js old ie6"><![endif]-->
+<!--[if IE 7]><html class="no-js old ie7"><![endif]-->
+<!--[if IE 8]><html class="no-js old ie8"><![endif]-->
+<!--[if IE 9]><html class="no-js modern ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]>
+<html class="no-js modern">
+<![endif]-->
+
+ <head>
+  <title> Community </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="css/pj2_header_footer.css">
+  <link rel="stylesheet" type="text/css" href="css/pj2_controller.css">
+  <link rel="stylesheet" type="text/css" href="css/grid_1200_12col.css">
+  <link rel="stylesheet" type="text/css" href="css/pj2_community.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="css/slider-pro.min.css" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="css/examples.css" media="screen"/>
+
+ 
+  <!--[if lt IE 9]>
+	<script src="js/html5shiv.js">
+	</script>
+	
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+	</script>
+  <![endif]-->
+
+  <!--[if lt IE 9]><script src="js/CFInstall.min.js"></script>
+	<script>window.attachEvent("onload",function(){CFInstall.check
+	({mode:"overlay"})});</script>
+  <![endif]-->
+
+  <!--[if IE 6]><script src="js/DD_belatedPNG.min.js"></script>
+	<script>DD_belatedPNG.fix('.png_bg, img');</script>
+  <![endif]-->
+
+  <script src="js/modernizr.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+  <script src="js/community.js"></script>
+  
+  <script>
+  
+
+	$(document).ready(function(){
+				$("a").click(function(e){
+				e.preventDefault();
+				});
+				
+				$(".unprevent").unbind();
+			
+				var windowWidth=$(window).width();
+				var windowHeight=$(window).height();
+			
+				if(windowWidth <= 960){
+					$('#main_gnb').css('height',windowHeight);
+					$('#main_search_box').css('height',windowHeight);
+				}
+				else{
+					$('#main_gnb').css('height',70+"px");
+					$('#main_search_box').css('height',70+'px');
+					}
+
+			$(window).resize(function(){
+				windowWidth=$(window).width();
+				windowHeight=$(window).height();
+				if(windowWidth <= 960){
+					$('#main_gnb').css('height',windowHeight);
+					$('#main_search_box').css('height',windowHeight)
+				}
+				else{
+					$('#main_gnb').css('height',70+"px");
+					$('#main_search_box').css('height',70+'px')
+		
+					}
+			});				
+	
+	
+		/*$(window).scroll(function(){ 
+		
+					//스크롤의 위치가 상단에서 450보다 크면  
+					 // if($(window).scrollTop() > 450){ 
+		
+				    if(window.pageYOffset >= $('.content').offset().top){  
+			        	$('.controller').addClass('fix');  
+						 }else{  
+				      $('.controller').removeClass('fix'); 
+					}  
+				  }
+);*/
+
+
+				/*if($('input#gnb_button:checked').val();=true){
+					$('#news_controller').removeClass('fix');
+				}else{
+					$('#news_controller').addClass('fix');
+				}*/
+
+
+/*
+	 $("#page_select").bind("click",function(){
+		var page = prompt("이동할 페이지를 입력해주세요","1");
+		//jquery에서는 null체크 할때 != ull을 활용한다!!!		
+		if(page != null){
+			if(page<=3){
+				$("input:radio[name=news_page]").prop('checked',false);
+				$("#news_page"+page).prop('checked', true);
+				$(".seleted_page").empty();
+				$(".seleted_page").append(page);
+			}else{
+				 alert("이동할 수 없는 페이지 입니다");
+				}			
+		}else{
+			  alert("1페이지로 돌아갑니다");
+			  $('#news_page1').prop("checked",true);
+			}
+		});*/
+
+		/*if(page<=3){
+				$("input:radio[name=news_page]").prop('checked',false);
+				$("#news_page"+page).prop('checked', true);
+				$(".seleted_page").empty();
+				$(".seleted_page").append(page);
+			}else{
+				 alert("이동할 수 없는 페이지 입니다");
+				}*/
+		/*$('input:radio[name=news_page]').change(function(){
+			if(typeof page === null ){
+				$('#news_page1').prop("checked",true);
+			}
+		 });
+		
+
+		$('input:radio[name=news_page]').change(function(){
+			if($('#news_page1').prop("checked") == false){
+				if($('#news_page2').prop("checked") == false){
+					if($('#news_page3').prop("checked") == false){
+						$('#news_page1').prop("checked",true);
+					}
+				}
+			}
+		});*/
+	 
+
+	
+
+	
+
+	$("#footer_gnb1").click(function(){
+			$("#footer_gnb2").prop('checked',false);
+			$("#footer_gnb3").prop('checked',false);	
+		});
+			
+
+		$("#footer_gnb2").click(function(){
+			$("#footer_gnb1").prop('checked',false);
+			$("#footer_gnb3").prop('checked',false);	
+		});	
+		
+		$("#footer_gnb3").click(function(){
+			$("#footer_gnb1").prop('checked',false);
+			$("#footer_gnb2").prop('checked',false);	
+		});
+	
+
+
+
+}); //wrapper 닫음
+
+
+
+/*
+$(document).ready(function(){
+   $('input[name=news_page]').each(function(index,item){
+			$(item).change(function(){
+				if($(item).is(':checked')) {
+					$(".seleted_page").empty();
+					$(".seleted_page").append(index+1);
+				}
+			});   
+   });
+});*/
+ 	/*
+	jquery 1.6 버전 이하
+
+$('input:radio[name="fruit"][value="apple"]).attr('checked', 'checked');
+
+
+
+jquery 1.6 버전 이상
+
+$('input:radio[name="fruit"][value="apple"]).prop('checked', true);
+
+
+
+
+
+2. radio 버튼 선택된 값 가져오기
+
+var fruitValue = $('input:radio[name="fruit"]:checked).val();
+
+
+
+출처: https://yangyag.tistory.com/107 [Hello Brother!]
+	*/ 
+	
+  </script>
+   
+ 
+ </head>
+
+ <body id="community">
+  <input type="checkbox" name="gnb_button" id="gnb_button">
+  <input type="checkbox" name="main_search_button" id="main_search_button">
+  <header id="main_header">
+	<div>		
+		<label for="gnb_button">			
+			<span></span>
+			<span></span>
+		</label>
+		<h1><a href="pj2_main.html" class="unprevent"><img src="images/logo.svg" alt="logo"></a></h1>		
+		<nav id="top_gnb">
+			<div><a href="#">Login-in</a></div>
+			<div>
+				<label for="main_search_button">
+					<span>Search</span>
+					<img src="images/icon/search0.png" alt="icon">
+				</label>
+			</div>
+		</nav>		
+	</div>
+	
+	<form id="main_search_box" method="get">		
+		<div>			
+			<label for="real_search">
+				<img src="images/icon/search.png" alt="icon">
+			</label>	
+			<input type="search" name="real_search" id="real_search" placeholder="검색어를 입력하세요" required>
+			<input type="submit" name="real_search_submit" id="real_search_submit" value="검색">
+			<label for="main_search_button">취소</label>
+		</div>
+	</form>		
+	
+	<nav id="main_gnb">
+		<div id="gnb_header">
+			<h1><a href="pj2_main.html" class="unprevent"><img src="images/logo_black.png" alt="logo"></a></h1>
+		</div>
+		<a href="#" class="skip">
+			로그인
+		</a>
+		<hr class="skip">
+		<ul>
+			<li><a href="#">News</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb main_gnb_inner1">
+							<ol>
+								<li class="col-4"><a href="pj2_news.html" class="unprevent">Article</a></li>
+								<li class="col-4"><a href="#">Notice</a></li>
+								<li class="col-4 last"><a href="#">Event</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner1 clearfix">
+							<h2 >Hot issue</h2>
+							<ol>
+								<li class="col-3">
+									<a href="#">
+										<img src="image/news/important_news1.png" alt="hotissue">
+										<p>와이랩, 드라마 '아스달 연대기' 쿠키영상 제작</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="#">
+										<img src="image/news/important_news2.png" alt="hotissue">
+										<p>테러맨, 릴리아? 샤샤? 레드스완의 등장</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="#">
+										<img src="image/news/important_news3.png" alt="hotissue">
+										<p>슈퍼스트링 첫 크로스오버! '부활대테러' 2020년 연재</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3 last">
+									<a href="#">
+										<img src="image/news/important_news4.png" alt="hotissue">
+										<p>라인게임즈 게임 2020년 출시예정</p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+			<li><a href="pj2_universe.html" class="unprevent">Superstring</a>
+				<div class="row">
+					<div class="row2 flow">
+						
+						<div class="main_gnb_inner main_gnb_inner2 col-6">
+							<h2>Universe</h2>
+							<ol>
+								<li>
+									<a href="pj2_universe.html" class="unprevent">
+										<img src="image/universe/uni_back588.png" alt="universe">
+										<p></p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner2 col-6 last">
+							<h2>Time line</h2>
+							<ol>
+								<li>
+									<a href="#">
+										<img src="image/universe/time588.png" alt="timeline">
+										<p></p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+			<li><a href="#">Character</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-6"><a href="pj2_character.html" class="unprevent">All Character</a></li>
+								<li class="col-6 last"><a href="#">Team&Group</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner3 clearfix">
+							<h2>Key Character</h2>
+							<ol>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character49.png" alt="character">
+											<p class="chname chname1">문수</p>
+											<p class="chname chname2">암행어사</p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character91.png" alt="character">
+											<p class="chname chname1">아지태</p>
+											<p class="chname chname2"></p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="pj2_characterinfo.html" class="unprevent">
+										<figure class="characterbox">
+											<img src="image/character/character57.png" alt="character">
+											<p class="chname chname1">민정우</p>
+											<p class="chname chname2">테러맨</p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character80.png" alt="character">
+											<p class="chname chname1">숙희</p>
+											<p class="chname chname2">수키</p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character63.png" alt="character">
+											<p class="chname chname1">반</p>
+											<p class="chname chname2"></p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2 last">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character106.png" alt="character">
+											<p class="chname chname1">원미호</p>
+											<p class="chname chname2"></p>
+										</figure>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+			<li><a href="#">Webtoon</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-6"><a href="#">Publishing</a></li>
+								<li class="col-6 last"><a href="#">All Webtoon</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner4 clearfix">
+							<h2>Popular Webtoon</h2>
+							<ol>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon010.png" alt="webtoon">
+										<p>테러맨</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon002.png" alt="webtoon">
+										<p>버닝헬</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon005.png" alt="webtoon">
+										<p>신암행어사</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon004.png" alt="webtoon">
+										<p>신석기녀</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon007.png" alt="webtoon">
+										<p>아일랜드</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2 last">
+									<a href="#">
+										<img src="image/webtoon/webtoon003.png" alt="webtoon">
+										<p>부활남</p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+
+			<li><a href="#">Gallery</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-6"><a href="#">Wall Papers</a></li>
+								<li class="col-6 last"><a href="#">Fan Pics</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner5 clearfix">
+							<h2>PR Video</h2>
+							<ol>
+								<li class="col-3">
+									<a href="https://comic-superstring.naver.com/trailer/video/c376c292-4c21-4f80-bd7b-41c20eb30ca5.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/c376c292-4c21-4f80-bd7b-41c20eb30ca5.mp4"
+										poster="image/poster/poster1.jpg">
+										 
+										</video>
+										<p>시네마틱 1차 영상</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="https://comic-superstring.naver.com/trailer/video/d243f35b-674f-4de7-bf56-412a1afa3983.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/d243f35b-674f-4de7-bf56-412a1afa3983.mp4" poster="image/poster/poster4.jpg">
+										
+										</video>
+										<p>신석기녀 프로모션 영상</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="https://comic-superstring.naver.com/trailer/video/f4a30111-9d8e-4652-aadb-1e631dbc8603.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/f4a30111-9d8e-4652-aadb-1e631dbc8603.mp4" poster="image/poster/poster2.jpg">
+									
+										</video>
+										<p>시네마틱 2차 영상</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3 last">
+									<a href="https://comic-superstring.naver.com/trailer/video/9a9ecff4-88f5-4d4d-8a15-50add877de79.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/9a9ecff4-88f5-4d4d-8a15-50add877de79.mp4" poster="image/poster/poster3.jpg">	
+										</video>
+										<p>테러맨 프로모션 영상</p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+			<li><a href="#">Games</a>
+				<div class="row">
+					<div class="row2">
+						<div class="main_gnb_inner main_gnb_inner6">
+							<h2>COMMING SOON 2020</h2>
+							<ol>
+								<li>
+									<a href="https://youtu.be/_4qSTKg3iM8">
+										<video style="width:25%; height:auto;" src="https://youtu.be/_4qSTKg3iM8" poster="image/poster/poster5.jpg">				
+										</video>
+										<p></p>
+										<p></p>
+									</a>
+								</li>						
+							</ol>
+						</div>
+					</div>
+				</div>	
+			</li>
+			
+			<li><a href="pj2_community.html" class="unprevent">Community</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-4"><a href="#">Free Board</a></li>
+								<li class="col-4"><a href="#">Study Board</a></li>
+								<li class="col-4 last"><a href="#">Webtoon Board</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner7 col-6">
+							<h2>Best of Month</h2>
+							<ul class="month_best">
+								<li class="commu_list">
+									<a href="#">										
+										<span>1</span>
+										<p class="subject">백백교 수장은 아지태가 아니고 따로 있다</p>
+										<p class="subject_plus"><span>380</span> 7.21</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>2</span>
+										<p class="subject">파락호 복장 고증오류 같은데</p>
+										<p class="subject_plus"><span>289</span> 7.13</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>3</span>
+										<p class="subject">백백교스케일 진짜 커지넹..</p>
+										<p class="subject_plus"><span>330</span> 7.9</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">										
+										<span>4</span>
+										<p class="subject">하우스키퍼 메인 빌런으로 아지태 어떠냐?</p>
+										<p class="subject_plus"><span>296</span> 7.8</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>5</span>
+										<p class="subject">석환 능력도 과학적인건 아닌가보네 베로니카처럼</p>
+										<p class="subject_plus"><span>288</span> 7.21</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner7 col-6 last">
+							<h2>Best of Weeks</h2>
+							<ul class="weeks_best">
+								<li class="commu_list">
+									<a href="#">
+										<span>1</span>
+										<p class="subject">지금 부산 센텀시티에서 테러맨 영화 촬영 중임</p>
+										<p class="subject_plus"><span>340</span> 7.31</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>2</span>
+										<p class="subject">작품들 유료화가 솔직히 세계관 홍보에 엄청악재인듯</p>
+										<p class="subject_plus"><span>470</span> 7.31</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>3</span>
+										<p class="subject">이번 미리보기 샤샤 미쳤네</p>
+										<p class="subject_plus"><span>274</span> 7.28</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>4</span>
+										<p class="subject">개인적으로 바라는 신암행어사 엔딩</p>
+										<p class="subject_plus"><span>192</span> 7.31</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>5</span>
+										<p class="subject">테러맨 기적의 논리</p>
+										<p class="subject_plus"><span>139</span> 7.28</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>			
+			</li>
+			
+
+			<li><a href="#">More</a>
+				<div class="row">
+					<div class="sub_gnb row2">
+						<ol>
+							<li class="col-4"><a href="pj2_shop.html" class="unprevent">Shop</a></li>
+							<li class="col-4"><a href="#">SNS</a></li>
+							<li class="col-4 last"><a href="#">Movie/Drama</a></li>
+						</ol>
+					</div>
+				</div>			
+			</li>
+			
+		</ul>
+	</nav>
+  </header>
+
+
+  <section id="community_banner" class="row center">
+  	<div class="row2"> 
+		<div>
+		</div>
+		<div>
+		</div>
+		<div>
+		</div>
+	</div>
+  </section>
+  
+  <div id="map_guide">
+	<p>
+		<a href="pj2_main.html" class="unprevent">
+		Home <img src="images/icon/guide_arrow.png" alt="guide">
+		</a>
+		
+	   <span>Community</span>
+	</p>
+  </div>
+
+  <section id="community_content" class="row2">
+	   <section id="best_month" class="col-6 tcol-6">
+			<div>
+				<h2>월간 베스트</h2>
+				<ul class="month_best">
+					<li class="commu_list">
+						<a href="#">										
+							<span>1</span>
+							<p class="subject">백백교 수장은 아지태가 아니고 따로 있다</p>
+							<p class="subject_plus"><span>380</span> 7.21</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span>2</span>
+							<p class="subject">파락호 복장 고증오류 같은데</p>
+							<p class="subject_plus"><span>289</span> 7.13</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span>3</span>
+							<p class="subject">백백교스케일 진짜 커지넹..</p>
+							<p class="subject_plus"><span>330</span> 7.9</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">										
+							<span>4</span>
+							<p class="subject">하우스키퍼에 등장한 대통령은 분명 아지태이라 예상됨</p>
+							<p class="subject_plus"><span>296</span> 7.8</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span>5</span>
+							<p class="subject">석환 능력도 과학적인건 아닌가보네 베로니카처럼</p>
+							<p class="subject_plus"><span>288</span> 7.21</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span>6</span>
+							<p class="subject">아무도 안 물어봤지만 캉타우는 오래 휴재 할만 함</p>
+							<p class="subject_plus"><span>300</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span>7</span>
+							<p class="subject">호러전파상 2화 마지막쯤에 나오는 초상화</p>
+							<p class="subject_plus"><span>192</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span>8</span>
+							<p class="subject">릴리아가 과거보다 현재가 약한 것은 팩트임</p>
+							<p class="subject_plus"><span>188</span> 7.8</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span>9</span>
+							<p class="subject">테러맨 기적의 논리</p>
+							<p class="subject_plus"><span>139</span> 7.28</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span>10</span>
+							<p class="subject">작품들 유료화가 솔직히 세계관 홍보에 엄청 악재인듯</p>
+							<p class="subject_plus"><span>470</span> 7.31</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section id="best_weeks" class=" col-6 tcol-6 last tlast">
+			<div>
+				<h2>주간 베스트</h2>
+				<ul class="weeks_best">
+					<li class="commu_list">
+						<a href="#">
+							<span>1</span>
+							<p class="subject">지금 부산 센텀시티에서 테러맨 영화 촬영</p>
+							<p class="subject_plus"><span>340</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span>2</span>
+							<p class="subject">작품들 유료화가 솔직히 세계관 홍보에 엄청 악재인듯</p>
+							<p class="subject_plus"><span>470</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span>3</span>
+							<p class="subject">이번 미리보기 샤샤 미쳤네</p>
+							<p class="subject_plus"><span>274</span> 7.28</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span>4</span>
+							<p class="subject">개인적으로 바라는 신암행어사 엔딩</p>
+							<p class="subject_plus"><span>192</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span>5</span>
+							<p class="subject">테러맨 기적의 논리</p>
+							<p class="subject_plus"><span>139</span> 7.28</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span>6</span>
+							<p class="subject">백백교 수장은 아지태가 아니고 따로 있다</p>
+							<p class="subject_plus"><span>380</span> 7.21</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span>7</span>
+							<p class="subject">영실도 싸움잘하네</p>
+							<p class="subject_plus"><span>79</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span>8</span>
+							<p class="subject">원술 진짜 개불쌍하다</p>
+							<p class="subject_plus"><span>104</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span>9</span>
+							<p class="subject">테러맨 이번화 보고 느끼는데 진자 슈퍼스트링은 테러맨이 중심이네</p>
+							<p class="subject_plus"><span>121</span> 7.29</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span>10</span>
+							<p class="subject">아 ㅋㅋ 신석기녀 매력 포인트</p>
+							<p class="subject_plus"><span>68</span> 7.28</p>
+						</a>
+					</li>				
+				</ul>
+			</div>
+	   </section>
+	   <section id="free_board" class="col-6 tcol-6">
+			<div>
+				<h2>자유게시판</h2>
+				<ul class="cs free_board">
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">아무도 안 물어봤지만 캉타우는 오래 휴재 할만 함</p>
+							<p class="subject_plus"><span>300</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">신암행어사 이제 슬슬 달라지는 결말이 보이네</p>
+							<p class="subject_plus"><span>470</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">호러전파상 2화 마지막쯤에 나오는 초상화</p>
+							<p class="subject_plus"><span>192</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">하우스키퍼에 등장한 대통령은 분명 아지태일 것이라 예상됨</p>
+							<p class="subject_plus"><span>191</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">영실도 싸움잘하네</p>
+							<p class="subject_plus"><span>79</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">원술 진짜 개불쌍하다</p>
+							<p class="subject_plus"><span>104</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">슢스도 계획 탄탄하게 구상해서 내년 서울 코믹콘에 나오면 좋겠음</p>
+							<p class="subject_plus"><span>64</span> 7.29</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">누가 가상캐스팅 해봐</p>
+							<p class="subject_plus"><span>200</span> 7.29</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">베로니카는 왜 그렇게 이완 좋아하는 거냐?</p>
+							<p class="subject_plus"><span>87</span> 7.29</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">테러맨 기적의 논리</p>
+							<p class="subject_plus"><span>139</span> 7.28</p>
+						</a>
+					</li>				
+				</ul>
+			</div>
+	   </section>
+	   <section id="study_board" class=" col-6 tcol-6 last tlast">
+			<div>
+				<h2>연구글</h2>
+				<ul class="cs study_board">
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">작품들 유료화가 솔직히 세계관 홍보에 엄청 악재인듯</p>
+							<p class="subject_plus"><span>470</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">이제 슬슬 어벤져스처럼 모두 모여서 메인스토리 해야하지않나?</p>
+							<p class="subject_plus"><span>470</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">개인적으로 바라는 신암행어사 엔딩</p>
+							<p class="subject_plus"><span>192</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">지금 부산 센텀시티에서 테러맨 영화 촬영 중임</p>
+							<p class="subject_plus"><span>340</span> 7.31</p>							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">슈퍼스트링 세계관 정리해보면</p>
+							<p class="subject_plus"><span>79</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">하... 다음화까지 미리보기 했지만 전혀 이해안되네</p>
+							<p class="subject_plus"><span>46</span> 7.30</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">파워레벨 떡밥 종결해준다</p>
+							<p class="subject_plus"><span>64</span> 7.29</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">이번 미리보기 샤샤 미쳤네</p>
+							<p class="subject_plus"><span>274</span> 7.28</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">테러 대 부활 대충 그려봄</p>
+							<p class="subject_plus"><span>87</span> 7.24</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">백백교 수장은 아지태가 아니고 따로 있다</p>
+							<p class="subject_plus"><span>380</span> 7.21</p>
+						</a>
+					</li>				
+				</ul>
+			</div>
+	   </section>
+		
+		<input type="radio" name="webtoon_board_tap" id="webtoon_board_tap1" checked>
+		<input type="radio" name="webtoon_board_tap" id="webtoon_board_tap2">
+		<input type="radio" name="webtoon_board_tap" id="webtoon_board_tap3">
+		<input type="radio" name="webtoon_board_tap" id="webtoon_board_tap4">
+		<input type="radio" name="webtoon_board_tap" id="webtoon_board_tap5">
+		<input type="radio" name="webtoon_board_tap" id="webtoon_board_tap6">
+		<input type="radio" name="webtoon_board_tap" id="webtoon_board_tap7">
+		<input type="radio" name="webtoon_board_tap" id="webtoon_board_tap8">
+		<input type="radio" name="webtoon_board_tap" id="webtoon_board_tap9">
+		<input type="radio" name="webtoon_board_tap" id="webtoon_board_tap10">
+		<input type="radio" name="webtoon_board_tap" id="webtoon_board_tap11">
+		<input type="radio" name="webtoon_board_tap" id="webtoon_board_tap12">
+		<input type="radio" name="webtoon_board_tap" id="webtoon_board_tap13">
+
+	   <section id="webtoon_board" class="row">
+	   		<h2>작품별 게시판</h2>
+				<div id="webtoon_board_tap_button" class="row">
+					<ul>
+						<li><label for="webtoon_board_tap1">테러맨</label></li>
+						<li><label for="webtoon_board_tap2">신암행어사</label></li>
+						<li><label for="webtoon_board_tap3">부활남</label></li>
+						<li><label for="webtoon_board_tap4">신석기녀</label></li>
+						<li><label for="webtoon_board_tap5">심연의 하늘</label></li>
+						<li><label for="webtoon_board_tap6">캉타우</label></li>
+						<li><label for="webtoon_board_tap7">아일랜드</label></li>
+						<li><label for="webtoon_board_tap8">호러전파상</label></li>
+						<li><label for="webtoon_board_tap9">하우스키퍼</label></li>
+						<li><label for="webtoon_board_tap10">버닝헬</label></li>
+						<li><label for="webtoon_board_tap11">프린스의 왕자</label></li>
+						<li><label for="webtoon_board_tap12">나당밤</label></li>
+						<li><label for="webtoon_board_tap13">웨스트우드 비브라토</label></li>
+					</ul>
+				</div>
+				<ul class="cs webtoon_board webtoon_board_1">
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">아무래도 평균적으로 캐릭터 제일 잘뽑는 작품은 테러맨 같다</p>
+							<p class="subject_plus"><span>65</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">테러맨 시즌 2는 캐릭터 하나 하나가 너무 매력적이네</p>
+							<p class="subject_plus"><span>11</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">(스포) 테러맨 과거편도 얼마 안 남은 듯</p>
+							<p class="subject_plus"><span>21</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">걍 테러맨만 단독작으로 이어가자</p>
+							<p class="subject_plus"><span>57</span> 7.31</p>						
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">테러맨은 진짜 꿀잼이당</p>
+							<p class="subject_plus"><span>21</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">테러맨이나 부활남 베댓으로 테러 대 부활설명좀 올려주셈</p>
+							<p class="subject_plus"><span>48</span> 7.30</p>					
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">테러맨 백화점테러 에피소드가 삼풍참사 관련해서 실제로있었던 괴담인거 앎?</p>
+							<p class="subject_plus"><span>56</span> 7.30</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">영화화 된다면 뭐가 신호탄 쏘는게 제일 나을거같음?</p>
+							<p class="subject_plus"><span>45</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">스포) 테러맨 오늘자 미리보기 이해안된게 있는데 질문좀</p>
+							<p class="subject_plus"><span>15</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>						
+							<p class="subject">베로니카는 왜 그렇게 이완 좋아하는 거냐?</p>
+							<p class="subject_plus"><span>87</span> 7.29</p>	
+						</a>
+					</li>				
+				</ul>
+				<ul class="cs webtoon_board webtoon_board_2">
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">신암행어사 이제 슬슬 달라지는 결말이 보이네</p>
+							<p class="subject_plus"><span>470</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">개인적으로 바라는 신암행어사 엔딩</p>
+							<p class="subject_plus"><span>192</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">아지태 주인공으로 만화한편 만들자</p>
+							<p class="subject_plus"><span>73</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">쾌타천이랑 원효는 안 살리냐?</p>
+							<p class="subject_plus"><span>51</span> 7.31</p>						
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">신암행어사 을파소(미완)</p>
+							<p class="subject_plus"><span>46</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">신암행어사는 루 죽을때까지만해도 깔끔하고 멋졌는데</p>
+							<p class="subject_plus"><span>15</span> 7.31</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">신암행 댓글보면서 느끼는건데</p>
+							<p class="subject_plus"><span>14</span> 7.31</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">원작에선 극락에 원술도 있었던거 같은데</p>
+							<p class="subject_plus"><span>41</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">아지태 부활 기원 1일차...</p>
+							<p class="subject_plus"><span>14</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">신암행어사 원판 본사람 질문</p>
+							<p class="subject_plus"><span>45</span> 7.30</p>
+						</a>
+					</li>				
+				</ul>
+				<ul class="cs webtoon_board webtoon_board_3">
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">미리보기서 혼내드림 계단되냐?</p>
+							<p class="subject_plus"><span>11</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">타이거 백사아니네</p>
+							<p class="subject_plus"><span>41</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">슈퍼스트링 최고의 빌런은 단연 김민혁이다.</p>
+							<p class="subject_plus"><span>13</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">근데 석환이 인기 많음?</p>
+							<p class="subject_plus"><span>45</span> 7.31</p>						
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">부활남은 누가 죽어도 별 감흥이 없네 ㅋㅋ</p>
+							<p class="subject_plus"><span>12</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">저퀄)테러대부활 요약</p>
+							<p class="subject_plus"><span>32</span> 7.31</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">슈퍼스트링은 부활남이랑 신석기녀좀 어케 바꾸면 좋으련만</p>
+							<p class="subject_plus"><span>31</span> 7.30</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">혼내드림 다죽게되면 넘아쉬울듯 	</p>
+							<p class="subject_plus"><span>34</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">구금산vs장태원</p>
+							<p class="subject_plus"><span>43</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">부활남이 노잼인건 인정하는데</p>
+							<p class="subject_plus"><span>51</span> 7.29</p>
+						</a>
+					</li>				
+				</ul>
+				<ul class="cs webtoon_board webtoon_board_4">
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">신석기녀는 나노 머신만 해결하면...</p>
+							<p class="subject_plus"><span>300</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">신석기녀 로맨스임??? </p>
+							<p class="subject_plus"><span>21</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">난 사랑 불로불사 약화 설정이 좀 그렇긴 해도...</p>
+							<p class="subject_plus"><span>25</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">나노봇은 뭔말임?</p>
+							<p class="subject_plus"><span>41</span> 7.31</p>						
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">나노머신 파기된 거 좋은데...</p>
+							<p class="subject_plus"><span>51</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">해명 이 새키...</p>
+							<p class="subject_plus"><span>13</span> 7.30</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">우리 귀여운 수키만 예쁘게 많이 그려주긔</p>
+							<p class="subject_plus"><span>31</span> 7.30</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">스포) 신석기녀 이재신</p>
+							<p class="subject_plus"><span>7</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">신석기녀 뒷 내용 예상</p>
+							<p class="subject_plus"><span>19</span> 7.29</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">어짜핀 숙희는 나중에 능력다시 사용해서 살아날꺼</p>
+							<p class="subject_plus"><span>15</span> 7.29</p>
+						</a>
+					</li>				
+				</ul>
+				<ul class="cs webtoon_board webtoon_board_5">
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">백백교가 뭐냐 백백교가</p>
+							<p class="subject_plus"><span>23</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">심연이 결말이 아니라 가장 첫이야기인데 아직도 모르는넘이 있네</p>
+							<p class="subject_plus"><span>98</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">심연 시즌5 마지막 즈음에 이해가 안 돼서 그런데</p>
+							<p class="subject_plus"><span>15</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">심연의 하늘 세계관 속에선 뒤진놈들 많지만</p>
+							<p class="subject_plus"><span>10</span> 7.31</p>						
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">심연의 하늘에 나온 인물들 다시 등장 안함?</p>
+							<p class="subject_plus"><span>29</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">시간 되돌렸으면 강하늘, 신혜율 지금 어디있는거?</p>
+							<p class="subject_plus"><span>98</span> 7.30</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">강하늘 불쌍하다 힘들게 시간 돌렸는데 제주도...</p>
+							<p class="subject_plus"><span>41</span> 7.30</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">그럼 지금 하늘이 헤율이 몇살인거지?</p>
+							<p class="subject_plus"><span>62</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">왠지 시즌3인가 4에 나왔던 의사부부 슥 지나갔을 듯</p>
+							<p class="subject_plus"><span>23</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">시즌1~3은 그냥 한묶음임?</p>
+							<p class="subject_plus"><span>11</span> 7.30</p>
+						</a>
+					</li>				
+				</ul>
+				<ul class="cs webtoon_board webtoon_board_6">
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">근데 캉타우는 언제 복귀할까요...?</p>
+							<p class="subject_plus"><span>51</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">캉타우 마지막화에서 민정우 나온다길래 봤는데</p>
+							<p class="subject_plus"><span>45</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">베로니카 vs 캉타우</p>
+							<p class="subject_plus"><span>79</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">캉타우가 이거 버티는거 가능?/p>
+							<p class="subject_plus"><span>25</span> 7.31</p>						
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">이번 화 캉타우 지렸다	</p>
+							<p class="subject_plus"><span>89</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">근데 캉타우는 기곈데 아지태능력이 통함?</p>
+							<p class="subject_plus"><span>122</span> 7.31</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">캉타우는 짧게 끊어가나보네</p>
+							<p class="subject_plus"><span>49</span> 7.30</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">캉타우는 어느정돌까</p>
+							<p class="subject_plus"><span>15</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">끼요오오옷 민정우 지렸다 (캉타우 무료분)</p>
+							<p class="subject_plus"><span>15</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">오늘 캉타우 회차 좋다.</p>
+							<p class="subject_plus"><span>84</span>7.30</p>
+						</a>
+					</li>				
+				</ul>
+				<ul class="cs webtoon_board webtoon_board_7">
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">문수=반 아니냐 ㅋㅋㅋㅋ</p>
+							<p class="subject_plus"><span>48</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">아일랜드 1부도 신암행어사처럼 그림체 바꿔서 그려주겠지?</p>
+							<p class="subject_plus"><span>45</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">아일2부 숙희 나와서 볼라했는데 내가 싫은 그림체</p>
+							<p class="subject_plus"><span>68</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">아일랜드 3부는 언제나옴?</p>
+							<p class="subject_plus"><span>48</span> 7.31</p>						
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">솔직히 유료화 좀 짜증난다...</p>
+							<p class="subject_plus"><span>32</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">아일랜드 볼 수 있는 곳 없음?</p>
+							<p class="subject_plus"><span>41</span> 7.31</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">아일랜드 다 보려면 얼마 질러야됨?</p>
+							<p class="subject_plus"><span>132</span> 7.31</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">쾌타천이 기존 악귀 조종 가능?</p>
+							<p class="subject_plus"><span>21</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">원래 있던 악귀들은 어디서 온거지?</p>
+							<p class="subject_plus"><span>42</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">제주도 한정인데도 스케일 대박이다...</p>
+							<p class="subject_plus"><span>14</span> 7.30</p>
+						</a>
+					</li>				
+				</ul>
+				<ul class="cs webtoon_board webtoon_board_8">
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">호러전파상 11화에 동굴</p>
+							<p class="subject_plus"><span>32</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">호러전파상 야크는 원효처럼 악수의 일족인듯...</p>
+							<p class="subject_plus"><span>56</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">호러전파 도 봤다 캉타우 도 남은건 신암행어사</p>
+							<p class="subject_plus"><span>77</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">호러전파상 2화 마지막쯤에 나오는 초상화</p>
+							<p class="subject_plus"><span>63</span> 7.31</p>						
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">야크는 차원이동이 가능한 캐릭터라고 함.</p>
+							<p class="subject_plus"><span>77</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">근데 야크는 전투력이 있는애인건가</p>
+							<p class="subject_plus"><span>41</span> 7.30</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">야크?</p>
+							<p class="subject_plus"><span>32</span> 7.30</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">야크는 차원이동 능력자라는데</p>
+							<p class="subject_plus"><span>55</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">야크 남자냐 여자냐</p>
+							<p class="subject_plus"><span>96</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">호러전파상에서 숙희말이죠...</p>
+							<p class="subject_plus"><span>89</span> 7.30</p>
+						</a>
+					</li>				
+				</ul>
+				<ul class="cs webtoon_board webtoon_board_9">
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">하스티정도면 신암행에서 어느정도냐?</p>
+							<p class="subject_plus"><span>21</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">하스티 vs 석환</p>
+							<p class="subject_plus"><span>21</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">하스티 펀치 vs 중손 참격</p>
+							<p class="subject_plus"><span>34</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">하우스키퍼가 슈퍼스트링이랑 같은 세계관이 맞긴 맞는거냐?</p>
+							<p class="subject_plus"><span>21</span> 7.31</p>						
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">하우스키퍼 내 생각보단 스케일 크게 나오네</p>
+							<p class="subject_plus"><span>10</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">캉타우 쟝카 vs 하우스키퍼 슈퍼솔져</p>
+							<p class="subject_plus"><span>65</span> 7.30</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">하우스키퍼 개인적으로 좀 실망이네요 ㅋㅋ</p>
+							<p class="subject_plus"><span>13</span> 7.30</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">하우스키퍼 저거랑 테러맨 부활남이 같은세계관이라니</p>
+							<p class="subject_plus"><span>13</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">하우스키퍼 개망했네 ㅋ 스토리 작가가</p>
+							<p class="subject_plus"><span>3</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">하스티 장발 스타일 보고 싶다. </p>
+							<p class="subject_plus"><span>66</span> 7.30</p>
+						</a>
+					</li>				
+				</ul>
+				<ul class="cs webtoon_board webtoon_board_10">
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">버닝헬 재밌음??</p>
+							<p class="subject_plus"><span>13</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">애초에 슢스 시작부터가 윤인완이가 자기작품들 엮어볼라고</p>
+							<p class="subject_plus"><span>13</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">버닝헬 김환이였나?걔는 왜 안나오는걸까</p>
+							<p class="subject_plus"><span>27</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">버닝헬에는 슈퍼스트링 장면 없냐</p>
+							<p class="subject_plus"><span>50</span> 7.30</p>						
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">버닝헬 결제할가치있는 작품임?</p>
+							<p class="subject_plus"><span>22</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">쥬 얘는 어느정도 쎈거냐?</p>
+							<p class="subject_plus"><span>63</span> 7.30</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">버닝헬 슈퍼스트링 맞냐</p>
+							<p class="subject_plus"><span>10</span> 7.30</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">정이사오가 치카이임?</p>
+							<p class="subject_plus"><span>22</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">쥬, 치카이가 슢스 참여 하는 거 아님?</p>
+							<p class="subject_plus"><span>30</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">버닝헬이 총 10부작이냐?</p>
+							<p class="subject_plus"><span>6</span> 7.30</p>
+						</a>
+					</li>				
+				</ul>
+				<ul class="cs webtoon_board webtoon_board_11">
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">머냐 프린스의 왕자 볼수잇는곳 없냐</p>
+							<p class="subject_plus"><span>12</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">슈퍼스트링 웹툰들 드라마화 했으면 좋겠다</p>
+							<p class="subject_plus"><span>21</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">프린스의 왕자는 왜 슈퍼스트링임?</p>
+							<p class="subject_plus"><span>43</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">프린스의 왕자 의외로 좀 복잡한듯</p>
+							<p class="subject_plus"><span>27</span> 7.28</p>						
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">테러맨에 박시현 잠깐 나온거 아는사람?</p>
+							<p class="subject_plus"><span>90</span> 7.27</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">프린스에 원미호라도 잠깐 등장했으면 좋았을텐데</p>
+							<p class="subject_plus"><span>44</span> 7.24</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">드라마 프린스의 왕자 원작이 이거 맞음? 아니지?</p>
+							<p class="subject_plus"><span>30</span> 7.24</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">뭔가 슢스에 참여한다면 시현이랑 몽룡 밖에 없을 듯 한데</p>
+							<p class="subject_plus"><span>36</span> 7.22</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">근데 캐릭터 이름들이 왜 다 이모양이야?</p>
+							<p class="subject_plus"><span>6</span> 7.21</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">그래서 박유나는 결혼 함?</p>
+							<p class="subject_plus"><span>21</span> 7.20</p>
+						</a>
+					</li>				
+				</ul>
+				<ul class="cs webtoon_board webtoon_board_12">
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">나의밤은당신의낮보다아름답다 연재 재개 언제 다시 할까</p>
+							<p class="subject_plus"><span>30</span>7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">은근히 잘 알려지지 않은 연계 하나.</p>
+							<p class="subject_plus"><span>35</span>7.29</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">슈퍼스트링 세계관 설정 정보 내가 다 알려줄게</p>
+							<p class="subject_plus"><span>65</span>7.27</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">나당밤은 너무 화류계 느낌이라 슢스 같지 않음</p>
+							<p class="subject_plus"><span>33</span> 7.26</p>						
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">근데 나의 밤은 이거 19금 아님?</p>
+							<p class="subject_plus"><span>87</span> 7.24</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">나당밤 완결임? 휴재임?</p>
+							<p class="subject_plus"><span>31</span> 7.22</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">하시우랑 원미호랑 서로 아는사이?</p>
+							<p class="subject_plus"><span>48</span> 7.19</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">테러맨에 곧 하시우 등장하겠네</p>
+							<p class="subject_plus"><span>92</span> 7.16</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">하시우랑 민정우랑 아는 사이인거 보면 민정우 이새키....</p>
+							<p class="subject_plus"><span>87</span> 7.15</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">하시우가 석환 좋아함?</p>
+							<p class="subject_plus"><span>23</span> 7.15</p>
+						</a>
+					</li>				
+				</ul>
+				<ul class="cs	webtoon_board webtoon_board_13">
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">근데 생각해보니 웃긴게</p>
+							<p class="subject_plus"><span>15</span>7.21</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">웨스트우드 비브라토에 유디 크리스난디(봉춘이)도 나옴?</p>
+							<p class="subject_plus"><span>78</span> 7.21</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">쿠쿠 다시 나오는거 좋다</p>
+							<p class="subject_plus"><span>66</span> 7.17</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">테러맨 그림체도 좋은데 원작이 더 맘에 듦</p>
+							<p class="subject_plus"><span>65</span> 7.15</p>						
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">코넬리아 주변인은 안나오나?</p>
+							<p class="subject_plus"><span>53</span> 7.12</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">쿠쿠는 어떻게 영어 듣고 읽고 다함?</p>
+							<p class="subject_plus"><span>99</span> 7.9</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">근데 코넬리아 정도면 슈퍼 솔져 제작 가능?</p>
+							<p class="subject_plus"><span>63</span> 7.7</p>
+							
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">코넬리아 기술력으로 아이언맨 가자</p>
+							<p class="subject_plus"><span>101</span> 7.3</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">봉춘이는 코넬리아랑 어떻게 알게 된거?</p>
+							<p class="subject_plus"><span>55</span> 6.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">원작에 코넬리아 약혼자? 있지 않았나?</p>
+							<p class="subject_plus"><span>23</span> 6.27</p>
+						</a>
+					</li>				
+				</ul>
+	   </section>
+	   <section id="join_board" class="col-6 tcol-6">
+			<div>
+				<h2>가입인사</h2>
+				<ul class="cs join_board">
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">가입인사~</p>
+							<p class="subject_plus"><span>11</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">안녕하세요~</p>
+							<p class="subject_plus"><span>20</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">안녕하세요, 가입인사드립니다(여기 신암행어사 팬분들 계신가요?)</p>
+							<p class="subject_plus"><span>60</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">가입 인사 올려요!</p>
+							<p class="subject_plus"><span>31</span> 7.31</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">새내기입니다.</p>
+							<p class="subject_plus"><span>22</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">인사 오지게 박습니다</p>
+							<p class="subject_plus"><span>53</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">가입인사드립니다</p>
+							<p class="subject_plus"><span>24</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">심연의 하늘 다보고옵니다 오져요</p>
+							<p class="subject_plus"><span>101</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">슈퍼스트링 세계관 입문하러왔어요</p>
+							<p class="subject_plus"><span>15</span> 7.30</p>
+						</a>
+					</li>
+					<li class="commu_list">
+						<a href="#">
+							<span></span>
+							<p class="subject">안녕하세예 가입인사하러 왔어예</p>
+							<p class="subject_plus"><span>45</span> 7.30</p>
+						</a>
+					</li>				
+				</ul>
+			</div>
+	   </section>
+  </section>
+
+
+  
+
+  
+  <footer id="main_footer" class="row clearfix">
+  	<div>
+	  <nav id="footer_gnb" class="row2">
+		<div>
+			<input type="checkbox" name="footer_gnb1" id="footer_gnb1" class="footer_gnb_button">
+			<h2><label for="footer_gnb1">SITE</label></h2>
+			<ul>
+				<li><a href="pj2_news.html" class="unprevent">News</a></li>
+				<li><a href="pj2_universe.html" class="unprevent">Super String</a></li>
+				<li><a href="pj2_character.html" class="unprevent">Character</a></li>
+				<li><a href="#">Webtoon</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">Games</a></li>
+				<li><a href="#" class="unprevent">Community</a></li>
+			</ul>
+		</div>
+		<div>
+			<input type="checkbox" name="footer_gnb2" id="footer_gnb2" class="footer_gnb_button">
+			<h2><label for="footer_gnb2">ABOUT</label></h2>
+			<ul>
+				<li><a href="#">Creator Note</a></li>
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="#">Advertising</a></li>
+			</ul>
+		</div>
+        <div>
+			<input type="checkbox" name="footer_gnb3" id="footer_gnb3" class="footer_gnb_button">
+			<h2><label for="footer_gnb3">SERVICE CENTER</label></h2>
+			<ul>
+				<li><a href="#">Service Center</a></li>
+				<li><a href="#">F A Q</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Terms of Use</a></li>
+			</ul>
+		</div>        
+	  </nav>
+	  <nav id="footer_follow">
+		<div>
+			<h3>Follow</h3>
+			<ul>			
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/yt.png" alt="youtube">
+					</a>
+				</li>
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/fb.png" alt="facebook">
+					</a>
+				</li>
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/is.png" alt="instar">
+					</a>
+				</li>
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/tw.png" alt="twitter">
+					</a>
+				</li>
+			</ul>
+		</div>
+	  </nav>
+	  <div id="stamp">
+	  	<i></i>
+	  </div>
+	</div>
+  </footer>
+
+  <script src="js/swiper.min.js"></script>
+  
+  <script>
+	var swiper1 = new Swiper('.swiper1', {
+		  slidesPerView: 7,
+		  spaceBetween: 0,
+		  pagination: {
+			//el: '.swiper-pagination1',
+			clickable: true,
+		  },
+		  
+		});
+
+	/* breakpoints: {
+        960: {
+          slidesPerView: 4,
+          spaceBetween: 8,
+        },
+        540: {
+          slidesPerView: 3,
+          spaceBetween: 4,
+        }
+      }*/
+	</script>
+ </body>
+</html>

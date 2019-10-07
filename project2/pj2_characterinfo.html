@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!--[if IE 6]><html class="no-js old ie6"><![endif]-->
+<!--[if IE 7]><html class="no-js old ie7"><![endif]-->
+<!--[if IE 8]><html class="no-js old ie8"><![endif]-->
+<!--[if IE 9]><html class="no-js modern ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]>
+<html class="no-js modern">
+<![endif]-->
+
+ <head>
+  <title> character_민정우 </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="css/pj2_header_footer.css">
+  <link rel="stylesheet" type="text/css" href="css/pj2_characterinfo.css">
+  <link rel="stylesheet" type="text/css" href="css/pj2_controller.css">
+  <link rel="stylesheet" type="text/css" href="css/grid_1200_12col.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+
+ 
+  <!--[if lt IE 9]>
+	<script src="js/html5shiv.js">
+	</script>		
+	
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+	</script>
+  <![endif]-->
+
+  <!--[if lt IE 9]><script src="js/CFInstall.min.js"></script>
+	<script>window.attachEvent("onload",function(){CFInstall.check
+	({mode:"overlay"})});</script>
+  <![endif]-->
+
+  <!--[if IE 6]><script src="js/DD_belatedPNG.min.js"></script>
+	<script>DD_belatedPNG.fix('.png_bg, img');</script>
+  <![endif]-->
+
+  <script src="js/modernizr.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+  <script src="js/jquery.easypiechart.min.js"></script>
+  <script src="js/characterinfo.js"></script>
+  <script> // 공통 스크립트
+  		
+
+	$(document).ready(function(){
+				$("a").click(function(e){
+				e.preventDefault();
+				});
+				
+				$(".unprevent").unbind();
+			
+				var windowWidth=$(window).width();
+				var windowHeight=$(window).height();
+			
+				if($(window).width() <= 960){
+					$('#main_gnb').css('height',windowHeight);
+					$('#main_search_box').css('height',windowHeight)
+				}
+				else{
+					$('#main_gnb').css('height',70+"px");
+					$('#main_search_box').css('height',70+'px')
+					}
+
+			$(window).resize(function(){
+				windowWidth=$(window).width();
+				windowHeight=$(window).height();
+				if($(window).width() <= 960){
+					$('#main_gnb').css('height',windowHeight);
+					$('#main_search_box').css('height',windowHeight)
+				}
+				else{
+					$('#main_gnb').css('height',70+"px");
+					$('#main_search_box').css('height',70+'px')
+		
+					}
+			});				
+	
+	
+		/*$(window).scroll(function(){ 
+		
+					//스크롤의 위치가 상단에서 450보다 크면  
+					 // if($(window).scrollTop() > 450){ 
+		
+				    if(window.pageYOffset >= $('.content').offset().top){  
+			        	$('.controller').addClass('fix');  
+						 }else{  
+				      $('.controller').removeClass('fix'); 
+					}  
+				  }
+					
+
+				if($('input#gnb_button:checked').val();=true){
+					$('#news_controller').removeClass('fix');
+				}else{
+					$('#news_controller').addClass('fix');
+				}
+});*/
+
+
+
+	 $("#page_select").bind("click",function(){
+		var page = prompt("이동할 페이지를 입력해주세요","1");
+		if(page != null){
+			if(page<=3){
+				$("input:radio[name=goods_page]").prop('checked',false);
+				$("#goods_page"+page).prop('checked', true);
+				$(".seleted_page").empty();
+				$(".seleted_page").append(page);
+			}else{
+				 alert("이동할 수 없는 페이지 입니다");
+				}			
+		}else{
+			  alert("1페이지로 돌아갑니다");
+			  $('#goods_page1').prop("checked",true);
+			}
+		});
+
+		/*if(page<=8){
+			$("input:radio[name=]").prop('checked',false);
+			$("#character_page"+page).prop('checked', true);
+			$(".seleted_page").empty();
+			$(".seleted_page").append(page);
+		}else{
+			alert("이동할 수 없는 페이지 입니다");
+		}
+
+	 });*/
+
+	$("#footer_gnb1").click(function(){
+			$("#footer_gnb2").prop('checked',false);
+			$("#footer_gnb3").prop('checked',false);	
+		});
+			
+
+		$("#footer_gnb2").click(function(){
+			$("#footer_gnb1").prop('checked',false);
+			$("#footer_gnb3").prop('checked',false);	
+		});	
+		
+		$("#footer_gnb3").click(function(){
+			$("#footer_gnb1").prop('checked',false);
+			$("#footer_gnb2").prop('checked',false);	
+		});
+	
+
+
+
+}); //wrapper
+
+
+ 	/*
+	jquery 1.6 버전 이하
+
+$('input:radio[name="fruit"][value="apple"]).attr('checked', 'checked');
+
+
+
+jquery 1.6 버전 이상
+
+$('input:radio[name="fruit"][value="apple"]).prop('checked', true);
+
+
+
+
+
+2. radio 버튼 선택된 값 가져오기
+
+var fruitValue = $('input:radio[name="fruit"]:checked).val();
+
+
+
+출처: https://yangyag.tistory.com/107 [Hello Brother!]
+	*/
+  </script>
+ 
+  <style>
+    
+   .swiper-slide {
+      
+      /* Center slide text vertically */
+      /* display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;*/
+    }
+  </style>
+ </head>
+
+ <body id="characterinfo">
+  <input type="checkbox" name="gnb_button" id="gnb_button">
+  <input type="checkbox" name="main_search_button" id="main_search_button">
+  <header id="main_header">
+	<div>		
+		<label for="gnb_button">			
+			<span></span>
+			<span></span>
+		</label>
+		<h1><a href="pj2_main.html" class="unprevent"><img src="images/logo.svg" alt="logo"></a></h1>		
+		<nav id="top_gnb">
+			<div><a href="#">Login-in</a></div>
+			<div>
+				<label for="main_search_button">
+					<span>Search</span>
+					<img src="images/icon/search0.svg" alt="icon">
+				</label>
+			</div>
+		</nav>		
+	</div>
+	
+	<form id="main_search_box" method="get">		
+		<div>			
+			<label for="real_search">
+				<img src="images/icon/search.png" alt="icon">
+			</label>	
+			<input type="search" name="real_search" id="real_search" placeholder="검색어를 입력하세요" required>
+			<input type="submit" name="real_search_submit" id="real_search_submit" value="검색">
+			<label for="main_search_button">취소</label>
+		</div>
+	</form>		
+	
+	<nav id="main_gnb">
+		<div id="gnb_header">
+			<h1><a href="pj2_main.html" class="unprevent"><img src="images/logo_black.png" alt="logo"></a></h1>
+		</div>
+		<a href="#" class="skip">
+			로그인
+		</a>
+		<hr class="skip">
+		<ul>
+			<li><a href="#">News</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb main_gnb_inner1">
+							<ol>
+								<li class="col-4"><a href="pj2_news.html" class="unprevent">Article</a></li>
+								<li class="col-4"><a href="#">Notice</a></li>
+								<li class="col-4 last"><a href="#">Event</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner1 clearfix">
+							<h2 >Hot issue</h2>
+							<ol>
+								<li class="col-3">
+									<a href="#">
+										<img src="image/news/important_news1.png" alt="hotissue">
+										<p>와이랩, 드라마 '아스달 연대기' 쿠키영상 제작</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="#">
+										<img src="image/news/important_news2.png" alt="hotissue">
+										<p>테러맨, 릴리아? 샤샤? 레드스완의 등장</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="#">
+										<img src="image/news/important_news3.png" alt="hotissue">
+										<p>슈퍼스트링 첫 크로스오버! '부활대테러' 2020년 연재</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3 last">
+									<a href="#">
+										<img src="image/news/important_news4.png" alt="hotissue">
+										<p>라인게임즈 게임 2020년 출시예정</p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+			<li><a href="pj2_universe.html" class="unprevent">Superstring</a>
+				<div class="row">
+					<div class="row2 flow">
+						
+						<div class="main_gnb_inner main_gnb_inner2 col-6">
+							<h2>Universe</h2>
+							<ol>
+								<li>
+									<a href="pj2_universe.html" class="unprevent">
+										<img src="image/universe/uni_back588.png" alt="universe">
+										<p></p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner2 col-6 last">
+							<h2>Time line</h2>
+							<ol>
+								<li>
+									<a href="#">
+										<img src="image/universe/time588.png" alt="timeline">
+										<p></p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+			<li><a href="#">Character</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-6"><a href="pj2_character.html" class="unprevent">All Character</a></li>
+								<li class="col-6 last"><a href="#">Team&Group</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner3 clearfix">
+							<h2>Key Character</h2>
+							<ol>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character49.png" alt="character">
+											<p class="chname chname1">문수</p>
+											<p class="chname chname2">암행어사</p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character91.png" alt="character">
+											<p class="chname chname1">아지태</p>
+											<p class="chname chname2"></p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="pj2_characterinfo.html" class="unprevent">
+										<figure class="characterbox">
+											<img src="image/character/character57.png" alt="character">
+											<p class="chname chname1">민정우</p>
+											<p class="chname chname2">테러맨</p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character80.png" alt="character">
+											<p class="chname chname1">숙희</p>
+											<p class="chname chname2">수키</p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character63.png" alt="character">
+											<p class="chname chname1">반</p>
+											<p class="chname chname2"></p>
+										</figure>
+									</a>
+								</li>
+								<li class="col-2 last">
+									<a href="#">
+										<figure class="characterbox">
+											<img src="image/character/character106.png" alt="character">
+											<p class="chname chname1">원미호</p>
+											<p class="chname chname2"></p>
+										</figure>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+			<li><a href="#">Webtoon</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-6"><a href="#">Publishing</a></li>
+								<li class="col-6 last"><a href="#">All Webtoon</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner4 clearfix">
+							<h2>Popular Webtoon</h2>
+							<ol>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon010.png" alt="webtoon">
+										<p>테러맨</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon002.png" alt="webtoon">
+										<p>버닝헬</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon005.png" alt="webtoon">
+										<p>신암행어사</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon004.png" alt="webtoon">
+										<p>신석기녀</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2">
+									<a href="#">
+										<img src="image/webtoon/webtoon007.png" alt="webtoon">
+										<p>아일랜드</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-2 last">
+									<a href="#">
+										<img src="image/webtoon/webtoon003.png" alt="webtoon">
+										<p>부활남</p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+
+			<li><a href="#">Gallery</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-6"><a href="#">Wall Papers</a></li>
+								<li class="col-6 last"><a href="#">Fan Pics</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner5 clearfix">
+							<h2>PR Video</h2>
+							<ol>
+								<li class="col-3">
+									<a href="https://comic-superstring.naver.com/trailer/video/c376c292-4c21-4f80-bd7b-41c20eb30ca5.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/c376c292-4c21-4f80-bd7b-41c20eb30ca5.mp4"
+										poster="image/poster/poster1.jpg">
+										 
+										</video>
+										<p>시네마틱 1차 영상</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="https://comic-superstring.naver.com/trailer/video/d243f35b-674f-4de7-bf56-412a1afa3983.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/d243f35b-674f-4de7-bf56-412a1afa3983.mp4" poster="image/poster/poster4.jpg">
+										
+										</video>
+										<p>신석기녀 프로모션 영상</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3">
+									<a href="https://comic-superstring.naver.com/trailer/video/f4a30111-9d8e-4652-aadb-1e631dbc8603.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/f4a30111-9d8e-4652-aadb-1e631dbc8603.mp4" poster="image/poster/poster2.jpg">
+									
+										</video>
+										<p>시네마틱 2차 영상</p>
+										<p></p>
+									</a>
+								</li>
+								<li class="col-3 last">
+									<a href="https://comic-superstring.naver.com/trailer/video/9a9ecff4-88f5-4d4d-8a15-50add877de79.mp4">
+										<video style="width:100%; height:auto;" src="https://comic-superstring.naver.com/trailer/video/9a9ecff4-88f5-4d4d-8a15-50add877de79.mp4" poster="image/poster/poster3.jpg">	
+										</video>
+										<p>테러맨 프로모션 영상</p>
+										<p></p>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+
+			<li><a href="#">Games</a>
+				<div class="row">
+					<div class="row2">
+						<div class="main_gnb_inner main_gnb_inner6">
+							<h2>COMMING SOON 2020</h2>
+							<ol>
+								<li>
+									<a href="https://youtu.be/_4qSTKg3iM8">
+										<video style="width:25%; height:auto;" src="https://youtu.be/_4qSTKg3iM8" poster="image/poster/poster5.jpg">				
+										</video>
+										<p></p>
+										<p></p>
+									</a>
+								</li>						
+							</ol>
+						</div>
+					</div>
+				</div>	
+			</li>
+			
+			<li><a href="pj2_community.html" class="unprevent">Community</a>
+				<div class="row">
+					<div class="row2">
+						<div class="sub_gnb">
+							<ol>
+								<li class="col-4"><a href="#">Free Board</a></li>
+								<li class="col-4"><a href="#">Study Board</a></li>
+								<li class="col-4 last"><a href="#">Webtoon Board</a></li>
+							</ol>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner7 col-6">
+							<h2>Best of Month</h2>
+							<ul class="month_best">
+								<li class="commu_list">
+									<a href="#">										
+										<span>1</span>
+										<p class="subject">백백교 수장은 아지태가 아니고 따로 있다</p>
+										<p class="subject_plus"><span>380</span> 7.1</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>2</span>
+										<p class="subject">파락호 복장 고증오류 같은데</p>
+										<p class="subject_plus"><span>289</span> 7.13</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>3</span>
+										<p class="subject">백백교스케일 진짜 커지넹..</p>
+										<p class="subject_plus"><span>330</span> 7.9</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">										
+										<span>4</span>
+										<p class="subject">하우스키퍼에 등장한 대통령은 분명 아지태일 것이라 예상됨</p>
+										<p class="subject_plus"><span>296</span> 7.8</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>5</span>
+										<p class="subject">석환 능력도 과학적인건 아닌가보네 베로니카처럼</p>
+										<p class="subject_plus"><span>288</span> 7.21</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="main_gnb_inner main_gnb_inner7 col-6 last">
+							<h2>Best of Weeks</h2>
+							<ul class="weeks_best">
+								<li class="commu_list">
+									<a href="#">
+										<span>1</span>
+										<p class="subject">지금 부산 센텀시티에서 테러맨 영화 촬영 중임</p>
+										<p class="subject_plus"><span>340</span> 7.31</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>2</span>
+										<p class="subject">작품들 유료화가 솔직히 세계관 홍보에 엄청악재인듯</p>
+										<p class="subject_plus"><span>470</span> 7.29</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>3</span>
+										<p class="subject">이번 미리보기 샤샤 미쳤네</p>
+										<p class="subject_plus"><span>274</span> 7.28</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>4</span>
+										<p class="subject">개인적으로 바라는 신암행어사 엔딩</p>
+										<p class="subject_plus"><span>191</span> 7.30</p>
+									</a>
+								</li>
+								<li class="commu_list">
+									<a href="#">
+										<span>5</span>
+										<p class="subject">테러맨 기적의 논리</p>
+										<p class="subject_plus"><span>139</span> 7.28</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>			
+			</li>
+			
+
+			<li><a href="#">More</a>
+				<div class="row">
+					<div class="sub_gnb row2">
+						<ol>
+							<li class="col-4"><a href="#" class="pj2_shop.html">Shop</a></li>
+							<li class="col-4"><a href="#">SNS</a></li>
+							<li class="col-4 last"><a href="#">Movie/Drama</a></li>
+						</ol>
+					</div>
+				</div>			
+			</li>
+			
+		</ul>
+	</nav>
+  </header>
+
+  
+
+  <section id="characterinfo_banner" class="row">
+	<div class="row">	
+		<div class="row2">			
+			<h2>Terror Man</h2>
+			<h3>민정우</h3>			
+			<p>불행을 예지할 수 있는 초능력이 있는 소년,<br>
+
+			그는 자신의 능력을 활용해 사람들을 위험으로부터 구하기 위해 테러리스트로 위장한다.<br>
+
+			하지만, 사람들을 구하면 구할수록 스스로 불행해진다는 것을 깨닫고 절망과 희망 사이에서 몸부림친다.
+			</p>
+		</div>
+	</div>
+  </section>
+
+  <div id="map_guide">
+	<p><a href="pj2_main.html" class="unprevent">
+		Home <img src="images/icon/guide_arrow.png" alt="guide">
+		</a>
+		<a href="pj2_character.html">
+	   character
+	   <img src="images/icon/guide_arrow.png" alt="guide">
+	   </a>
+	   <span>민정우</span>
+	 </p>
+  </div>
+  
+  <section id="abillity" class="row">
+  	<h2 class="row2">프로필</h2>
+  	<div id="skills" class="row2">
+		<div class="container">
+			<div class="box col-2 tcol-4 mcol-6">
+				<div class="chart chart1" data-percent="62.5">
+					<span>5</span>
+				</div>
+				<p>내구성</p>
+			</div>
+			<div class="box col-2 tcol-4 mcol-6">
+				<div class="chart chart2" data-percent="60">
+					<span>6</span>
+				</div>
+				<p>기술</p>
+			</div>
+			<div class="box col-2 tcol-4 mcol-6">
+				<div class="chart chart3" data-percent="75">
+					<span>6</span>
+				</div>
+				<p>에너지</p>
+			</div>
+			<div class="box col-2 tcol-4 mcol-6">
+				<div class="chart chart4" data-percent="37.5">
+					<span>3</span>
+				</div>
+				<p>힘</p>
+			</div>
+			<div class="box col-2 tcol-4 mcol-6">
+				<div class="chart chart5" data-percent="75">
+					<span>6</span>
+				</div>
+				<p>민첩</p>
+			</div>
+			<div class="box col-2 tcol-4 mcol-6">
+				<div class="chart chart6" data-percent="87.5">
+					<span>7</span>
+				</div>
+				<p>지성</p>
+			</div>
+		</div>
+	</div>
+	
+	<div id="profile" class="row2">
+		<ul>
+			<li>
+				<p>이름</p>
+				<p>민정우</p>
+			</li>
+			<li>
+				<p>계열</p>
+				<p>영웅, 인간</p>
+			</li>
+			<li>
+				<p>별명</p>
+				<p>테러리스트, 테러맨, 바이올렛, 도련님</p>
+			</li>
+			<li>
+				<p>기술</p>
+				<p>이매진 바이올렛, 총술, 격투술 등</p>
+			</li>
+			<li>
+				<p>직업</p>
+				<p>테러리스트(공식적)</p>
+			</li>
+			<li>
+				<p>무기</p>
+				<p>약물, 방독면, 전기장갑, 총기류, 자석부츠, 배낭, 스텔스기</p>
+			</li>
+			<li>
+				<p>특이사항</p>
+				<p>민석영·윤승아의 아들, 갑부, 슈퍼스트링 전반에 걸쳐 등장</p>
+			</li>
+		</ul>
+	</div>
+  </section>
+
+
+  <section id="focusing_banner" class="focusing-container row">
+    <section class="swiper-wrapper">
+      <div class="swiper-slide ">
+		<div class="focusing_box">
+			<p class="focusing_num"><span>01</span>Focusing<br>Moment</p>
+			<div class="focusing_txt">
+				<h3>모든 것의 시작</h3>
+				<p>
+				장을 보던 중 우연히 백화점 전체가 보라색 안개로 뒤덮인 것을 감지하게 된 민정우<br>
+				재난이 닥칠 것을 경고해 경비에게 사람들을 대피시킬 것을 주장하지만, 거절당하고<br>
+				사람들을 구하기위해 테러리스트로 위장헤 움직인다!
+				</p>
+			</div>
+		</div>
+		<div class="focusing_img focusing_img1">
+		</div>
+		
+	  </div>
+      <div class="swiper-slide">
+		<div class="focusing_box">
+			<p class="focusing_num"><span>02</span>Focusing<br>Moment</p>
+			<div class="focusing_txt">
+				<h3>스승이자 친구 릴리아</h3>
+				<p>
+				일상으로 돌아온 어느 수학여행의 날, <br>
+				아버지 민석영의 명령으로 정우를 찾아온 이매진 프로젝트 능력자 강성현.<br>
+
+				릴리아는 강성현의 능력에 당해 정우를 공격하고,<br>
+
+				정우는 어쩔 수 없이 가족이자 친구이자 스승인 릴리아와 싸운다.
+				</p>
+			</div>
+		</div>
+		<div class="focusing_img focusing_img2">
+		</div>
+		
+	  </div>
+      <div class="swiper-slide">
+		<div class="focusing_box">
+			<p class="focusing_num"><span>03</span>Focusing<br>Moment</p>
+			<div class="focusing_txt">
+				<h3>각성하는 민정우</h3>
+				<p>
+				절친 김민혁의 사연을 듣고 증덕교를 조사하던 민정우,<br>
+				드디어 증덕교의 흑막 연하연, 이현성과의 결전을 벌이게 된다.<br>
+
+				하지만 이현성과 전투하던 과정에서 릴리아가 죽음의 위기에 처하게 되고<br>
+				쓰러진 릴리아를 본 민정우는 각성하게 된다.
+				</p>
+			</div>
+		</div>
+		<div class="focusing_img focusing_img3">
+		</div>
+		
+	  </div>
+      <div class="swiper-slide">
+		<div class="focusing_box">
+			<p class="focusing_num"><span>04</span>Focusing<br>Moment</p>
+			<div class="focusing_txt">
+				<h3>새로운 슈트 장착!</h3>
+				<p>
+				연하연의 뒤를 이었다고 알려진 인물 ‘천기수’를 체포하기 위해 작전을 실행한다.<br>
+
+				이때 등장한 민정우는 새로운 슈트를 착용하고 있는데?<br>
+
+				작전 성공을 목적에 앞두고 갑자기 나타난 킬러에게 천기수는 살해 당하고<br>
+				정우는 새로운 슈트의 힘을 선보인다.
+				</p>
+			</div>
+		</div>
+		<div class="focusing_img focusing_img4">
+		</div>
+		
+	  </div>
+      <div class="swiper-slide">
+		<div class="focusing_box">
+			<p class="focusing_num"><span>05</span>Focusing<br>Moment</p>
+			<div class="focusing_txt">
+				<h3>재난준비위원회 테러리스트</h3>
+				<p>
+				‘슈퍼스트링’ 세계관 속 주요기관 중 하나로 ‘재준위’라고도 불리는 재난준비위원회,<br>
+
+				캉타우 에필로그에 재난준비위원회 소속인 김봉춘의 연락을 받고<br>
+				민정우가 등장해 지구를 침략해온 외계종족의 말단을 제압한다.<br>
+
+				이후 정우는 '테러리스트'으로서 재난준비위원회의 소속으로 활동한다.<br>
+				</p>
+			</div>
+		</div>
+		<div class="focusing_img focusing_img5">
+		</div>
+		
+	  </div>
+      <div class="swiper-slide">
+		<div class="focusing_box">
+			<p class="focusing_num"><span>06</span>Focusing<br>Moment</p>
+			<div class="focusing_txt">
+				<h3>‘드디어 찾았군 우리가 죽을 자리’</h3>
+				<p>
+				백백교의 계속되는 방해로 ‘프로젝트 하늘’는 실패로 돌아가고<br>
+
+				엉망진창이 된 지구에서 강하늘을 구해낸 민정우<br>
+
+				기적의 확률 '플랜:제로'를 위해 파괴 돼가는 지구에서 마지막 희망의 로켓을 쏘아올린다.
+				</p>
+			</div>
+		</div>
+		<div class="focusing_img focusing_img6">
+		</div>
+		
+	  </div>
+    </section>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination">
+	</div>
+  </section>
+
+  
+  <section id="additional_info" class="row2">
+	 <div class="cast swiper-container swiper1">
+		<h2>출연 작품</h2>
+		<div class="swiper-wrapper">
+		  <div class="swiper-slide casts casts1">
+			<a href="#">
+				<div>
+					<img src="image/poster/terrorman_s1.png" alt="cast_poster">
+					<p>테러맨 시즌1</p>
+				</div>
+			</a>
+		  </div>
+		  <div class="swiper-slide casts casts1">
+			<a href="#">
+				<div>
+					<img src="image/poster/terrorman_s2.png" alt="cast_poster">				
+				<p>테러맨 시즌2</p>
+				</div>
+			</a>
+		  </div>
+		  <div class="swiper-slide casts casts4">
+			<a href="#">
+				<div>
+					<img src="image/poster/distantsky_s1.png" alt="cast_poster">	
+					<p>심연의 하늘 시즌1</p>
+				</div>
+			</a>
+		  </div>
+		  <div class="swiper-slide casts casts5">
+			<a href="#">
+				<div>
+					<img src="image/poster/distantsky_s2.png" alt="cast_poster">	
+					<p>심연의 하늘 시즌2</p>
+				</div>
+			</a>
+		  </div>
+		  <div class="swiper-slide casts casts6">
+			<a href="#">
+				<div>
+					<img src="image/poster/distantsky_s3.png" alt="cast_poster">	
+					<p>심연의 하늘 시즌3</p>
+				</div>
+			</a>
+		  </div>
+		  <div class="swiper-slide casts casts7">
+			<a href="#">
+				<div>
+					<img src="image/poster/distantsky_s4.png" alt="cast_poster">	
+					<p>심연의 하늘 시즌4</p>
+				</div>
+			</a>
+		  </div>
+		  <div class="swiper-slide casts casts8">
+			<a href="#">
+				<div>
+					<img src="image/poster/distantsky_s5.png" alt="cast_poster">	
+					<p>심연의 하늘 시즌5</p>
+				</div>
+			</a>
+		  </div>
+		  <div class="swiper-slide casts casts9">
+			<a href="#">
+				<div>
+					<img src="image/poster/kangtaw.png" alt="cast_poster">				
+					<p>캉타우 시즌1</p>
+				</div>
+			</a>
+		  </div>
+		  <div class="swiper-slide casts casts10">
+			<a href="#">
+				<div>
+					<img src="image/poster/rewakenman_s1.png" alt="cast_poster">				
+					<p>부활남 시즌1</p>
+				</div>
+			</a>
+		  </div>		  
+		  <div class="swiper-slide casts casts11">
+			<a href="#">
+				<div>
+					<img src="image/poster/rewakenman_s0.png" alt="cast_poster">
+					<p>부활남 시즌0</p>
+				</div>
+			</a>
+		  </div>
+		  <div class="swiper-slide casts casts12">
+			<a href="#">
+				<div>
+					<img src="image/poster/cavegirl_s1.png" alt="cast_poster">
+					<p>신석기녀 시즌1</p>
+				</div>
+			</a>
+		  </div>
+		</div>
+		<!-- Add Pagination -->
+		<div class="swiper-pagination swiper-pagination1"></div>
+	 </div>
+
+	  <input type="radio" name="connect" id="companion" checked>
+	  <input type="radio" name="connect" id="enemy">
+	  <input type="radio" name="connect" id="team">
+	  
+	  <section id="select_connect">
+		  <label for="companion">동료</label>
+		  <label for="enemy">적</label>
+		  <label for="team">팀/그룹</label>
+	  </section>
+
+  <!-- Swiper -->
+	 <div class="connect companion swiper-container swiper2">
+		 <h2>관련 캐릭터</h2>
+		 <div class="swiper-wrapper">
+			<div class="swiper-slide character_companion">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character114.png" alt="character">
+						<p class="chname chname1">윤승아</p>
+						<p class="chname chname2"></p>
+					</figure>
+				</a>
+			</div>
+			<div class="swiper-slide character_companion">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character41.png" alt="character">
+						<p class="chname chname1">릴리아</p>
+						<p class="chname chname2"></p>
+					</figure>
+				</a>
+			</div>
+			<div class="swiper-slide character_companion">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character19.png" alt="character">
+						<p class="chname chname1">김봉춘</p>
+						<p class="chname chname2">유디 크리스난디</p>
+					</figure>
+				</a>
+			</div>
+			<div class="swiper-slide character_companion">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character157.png" alt="character">
+						<p class="chname chname1">코넬리아 보보워셔</p>
+						<p class="chname chname2">천재무기수리공</p>
+					</figure>
+				</a>
+			</div>
+			<div class="swiper-slide character_companion">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character159.png" alt="character">
+						<p class="chname chname1">쿠쿠</p>
+						<p class="chname chname2"></p>
+					</figure>
+				</a>
+			</div>
+			<div class="swiper-slide character_companion">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character80.png" alt="character">
+						<p class="chname chname1">숙희</p>
+						<p class="chname chname2">수키</p>
+					</figure>
+				</a>
+			</div>
+			<div class="swiper-slide character_companion">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character7.png" alt="character">
+						<p class="chname chname1">강하늘</p>
+						<p class="chname chname2"></p>
+					</figure>
+				</a>
+			</div>
+			<div class="swiper-slide character_companion">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character89.png" alt="character">
+						<p class="chname chname1">신혜율</p>
+						<p class="chname chname2"></p>
+					</figure>
+				</a>
+			</div>
+			<div class="swiper-slide character_companion">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character55.png" alt="character">
+						<p class="chname chname1">민석영</p>
+						<p class="chname chname2"></p>
+					</figure>
+				</a>
+			</div>
+			<div class="swiper-slide character_companion">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character5.png" alt="character">
+						<p class="chname chname1">강성현</p>
+						<p class="chname chname2">리딩어</p>
+					</figure>
+				</a>
+			</div>
+			<div class="swiper-slide character_companion">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character180.png" alt="character">
+						<p class="chname chname1">후유키 츠라라</p>
+						<p class="chname chname2"></p>
+					</figure>
+				</a>
+			</div>
+			<div class="swiper-slide character_companion">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character170.png" alt="character">
+						<p class="chname chname1">하시우</p>
+						<p class="chname chname2"></p>
+					</figure>
+				</a>
+			</div>
+			<div class="swiper-slide character_companion">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character18.png" alt="character">
+						<p class="chname chname1">김민혁</p>
+						<p class="chname chname2"></p>
+					</figure>
+				</a>
+			</div>
+			<div class="swiper-slide character_companion">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character129.png" alt="character">
+						<p class="chname chname1">장덕만</p>
+						<p class="chname chname2"></p>
+					</figure>
+				</a>
+			</div>
+			<div class="swiper-slide character_companion">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character145.png" alt="character">
+						<p class="chname chname1">진수호</p>
+						<p class="chname chname2"></p>
+					</figure>
+				</a>
+			</div>
+			<div class="swiper-slide character_companion">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character118.png" alt="character">
+						<p class="chname chname1">이민지</p>
+						<p class="chname chname2"></p>
+					</figure>
+				</a>
+			</div>
+		</div>
+			
+		<!-- Add Pagination -->
+		<div class="swiper-pagination swiper-pagination2"></div>
+	 </div>
+	 
+
+	 <div class="connect enemy swiper-container swiper2">
+		 <h2>관련 캐릭터</h2>
+		 <div class="swiper-wrapper">
+			<div class="swiper-slide character_enemy">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character37.png" alt="character">
+						<p class="chname chname1">레드스완</p>
+						<p class="chname chname2"></p>
+					</figure>
+				</a>
+			</div>
+			<div class="swiper-slide character_enemy">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character100.png" alt="character">
+						<p class="chname chname1">연하연</p>
+						<p class="chname chname2"></p>
+					</figure>
+				</a>
+			</div>
+			<div class="swiper-slide character_enemy">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character126.png" alt="character">
+						<p class="chname chname1">이현성</p>
+						<p class="chname chname2"></p>
+					</figure>
+				</a>
+			</div>
+			<div class="swiper-slide character_enemy">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character77.png" alt="character">
+						<p class="chname chname1">석환</p>
+						<p class="chname chname2"></p>
+					</figure>
+				</a>
+			</div>
+			<div class="swiper-slide character_enemy">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character173.png" alt="character">
+						<p class="chname chname1">한준우</p>
+						<p class="chname chname2"></p>
+					</figure>
+				</a>
+			</div>
+			<div class="swiper-slide character_enemy">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/character26.png" alt="character">
+						<p class="chname chname1">김하윤</p>
+						<p class="chname chname2"></p>
+					</figure>
+				</a>
+			</div>
+			<div class="swiper-slide character_enemy">
+				<a href="#">
+					<figure class="characterbox">
+						<img src="image/character/sjh.png" alt="character">
+						<p class="chname chname1">신재한</p>
+						<p class="chname chname2"></p>
+					</figure>
+				</a>
+			</div>
+		</div>
+			
+		<!-- Add Pagination -->
+		<div class="swiper-pagination swiper-pagination2"></div>
+	 </div>
+
+	 <div class="connect team swiper-container swiper3">
+		 <h2>관련 캐릭터</h2>
+		 <div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<a href="#">
+					<div>
+						<img src="image/poster/superstringteam.png" alt="cast_poster">
+						<p>슈퍼스트링팀</p>
+					</div>
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="#">
+					<div>
+						<img src="image/poster/msyteam.png" alt="cast_poster">				
+						<p>민석영 사단</p>
+					</div>
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="#">
+					<div>
+						<img src="image/poster/jjw.png" alt="cast_poster">				
+						<p>재난준비위원회</p>
+					</div>
+				</a>
+			 </div>
+			<div class="swiper-slide">
+				<a href="#">
+					<div>
+						<img src="image/poster/beakback.png" alt="cast_poster">				
+						<p>백백교</p>
+					</div>
+				</a>
+			</div>
+		 </div>
+		<!-- Add Pagination -->
+		<div class="swiper-pagination swiper-pagination2"></div>
+	 </div>
+  </section>
+  
+  <section id="fanart" class="row">
+  	<div class="row2">
+		<h2>팬아트</h2>
+		<div class="fanarts fanarts1 col-4 tcol-4 mcol-6">
+			<a href="#"></a>
+		</div>
+		<div class="fanarts fanarts2 col-4 tcol-4 mcol-6">
+			<a href="#"></a>
+		</div>
+		<div class="fanarts fanarts3 col-4 tcol-4 mcol-6">
+			<a href="#"></a>
+		</div>
+		<div class="fanarts fanarts4 col-4 tcol-4 mcol-6">
+			<a href="#"></a>
+		</div>
+		<div class="fanarts fanarts5 col-4 tcol-4 mcol-6">
+			<a href="#"></a>
+		</div>
+		<div class="fanarts fanarts6 col-4 tcol-4 mcol-6">
+			<a href="#"></a>
+		</div>
+	</div>
+  </section>
+
+  
+  <section id="goods_banner" class="row">
+  	<div class="row2">
+		<img src="image/banner/character_goods_pr.png" alt="goods_pr">
+		<img src="image/banner/character_goods_pr_txt.png" alt="goods_pr_text">
+	</div>
+  </section>	
+		
+		
+	
+
+  <footer id="main_footer" class="row clearfix">
+  	<div>
+	  <nav id="footer_gnb" class="row2">
+		<div>
+			<input type="checkbox" name="footer_gnb1" id="footer_gnb1" class="footer_gnb_button">
+			<h2><label for="footer_gnb1">SITE</label></h2>
+			<ul>
+				<li><a href="pj2_news.html" class="unprevent">News</a></li>
+				<li><a href="pj2_universe.html" class="unprevent">Super String</a></li>
+				<li><a href="pj2_character.html" class="unprevent">Character</a></li>
+				<li><a href="#">Webtoon</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">Games</a></li>
+				<li><a href="#" class="pj2_community.html">Community</a></li>
+			</ul>
+		</div>
+		<div>
+			<input type="checkbox" name="footer_gnb2" id="footer_gnb2" class="footer_gnb_button">
+			<h2><label for="footer_gnb2">ABOUT</label></h2>
+			<ul>
+				<li><a href="#">Creator Note</a></li>
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="#">Advertising</a></li>
+			</ul>
+		</div>
+        <div>
+			<input type="checkbox" name="footer_gnb3" id="footer_gnb3" class="footer_gnb_button">
+			<h2><label for="footer_gnb3">SERVICE CENTER</label></h2>
+			<ul>
+				<li><a href="#">Service Center</a></li>
+				<li><a href="#">F A Q</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Terms of Use</a></li>
+			</ul>
+		</div>        
+	  </nav>
+	  <nav id="footer_follow">
+	  	<div>
+			<h3>Follow</h3>
+			<ul>			
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/yt.png" alt="youtube">
+					</a>
+				</li>
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/fb.png" alt="facebook">
+					</a>
+				</li>
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/is.png" alt="instar">
+					</a>
+				</li>
+				<li>
+					<a href="#" class="unprevent">
+						<img src="images/icon/tw.png" alt="twitter">
+					</a>
+				</li>
+			</ul>
+		</div>
+	  </nav>
+	  <div id="stamp">
+	  	<i></i>
+	  </div>
+	</div>
+  </footer>
+
+  
+<script src="js/swiper.min.js"></script>
+ <script>
+
+  	if(window.innerWidth>=960){
+		var swiper1 = new Swiper('.swiper1', {
+		  slidesPerView: 4,
+		  spaceBetween: 24,
+		  pagination: {
+			//el: '.swiper-pagination1',
+			clickable: true,
+		  },
+		});
+		var swiper2 = new Swiper('.swiper2', {
+      slidesPerView: 6,
+	  spaceBetween: 24,
+      pagination: {
+       // el: '.swiper-pagination2',
+        clickable: true,
+      },
+    });
+	 var swiper3 = new Swiper('.swiper3', {
+      slidesPerView: 4,
+	  spaceBetween: 24,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });
+	var swiper = new Swiper('.focusing-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '"></span>';
+        },
+      },
+    });
+	}else if(window.innerWidth>=768 && window.innerWidth<=960){
+		var swiper1 = new Swiper('.swiper1', {
+		  slidesPerView: 4,
+		  spaceBetween: 8,
+		  pagination: {
+			//el: '.swiper-pagination1',
+			clickable: true,
+		  },
+		});
+
+		var swiper2 = new Swiper('.swiper2', {
+      slidesPerView: 4,
+	  spaceBetween: 8,
+      pagination: {
+       // el: '.swiper-pagination2',
+        clickable: true,
+      },
+    });
+	 var swiper3 = new Swiper('.swiper3', {
+      slidesPerView: 4,
+	  spaceBetween: 8,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });
+	var swiper = new Swiper('.focusing-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '"></span>';
+        },
+      },
+    });
+	}if(window.innerWidth<=767){
+		var swiper1 = new Swiper('.swiper1', {
+		  slidesPerView: 3,
+		  spaceBetween: 4,
+		  pagination: {
+			//el: '.swiper-pagination1',
+			clickable: true,
+		  },
+		});
+		var swiper2 = new Swiper('.swiper2', {
+      slidesPerView: 3,
+	  spaceBetween: 4,
+      pagination: {
+       // el: '.swiper-pagination2',
+        clickable: true,
+      },
+    });
+	 var swiper3 = new Swiper('.swiper3', {
+      slidesPerView: 3,
+	  spaceBetween: 4,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });
+	var swiper = new Swiper('.focusing-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '"></span>';
+        },
+      },
+    });
+	}
+
+	window.onresize = function(event) {
+  	if(window.innerWidth>=960){
+		var swiper1 = new Swiper('.swiper1', {
+		  slidesPerView: 4,
+		  spaceBetween: 24,
+		  pagination: {
+			//el: '.swiper-pagination1',
+			clickable: true,
+		  },
+		});
+		var swiper2 = new Swiper('.swiper2', {
+      slidesPerView: 6,
+	  spaceBetween: 24,
+      pagination: {
+       // el: '.swiper-pagination2',
+        clickable: true,
+      },
+    });
+	 var swiper3 = new Swiper('.swiper3', {
+      slidesPerView: 4,
+	  spaceBetween: 24,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });
+	var swiper = new Swiper('.focusing-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '"></span>';
+        },
+      },
+    });
+	}else if(window.innerWidth>=768 && window.innerWidth<=960){
+		var swiper1 = new Swiper('.swiper1', {
+		  slidesPerView: 4,
+		  spaceBetween: 8,
+		  pagination: {
+			//el: '.swiper-pagination1',
+			clickable: true,
+		  },
+		});
+
+		var swiper2 = new Swiper('.swiper2', {
+      slidesPerView: 4,
+	  spaceBetween: 8,
+      pagination: {
+       // el: '.swiper-pagination2',
+        clickable: true,
+      },
+    });
+
+	 var swiper3 = new Swiper('.swiper3', {
+      slidesPerView: 4,
+	  spaceBetween: 8,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });
+
+	var swiper = new Swiper('.focusing-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '"></span>';
+        },
+      },
+    });
+
+	}if(window.innerWidth<=767){
+		var swiper1 = new Swiper('.swiper1', {
+		  slidesPerView: 3,
+		  spaceBetween: 4,
+		  pagination: {
+			//el: '.swiper-pagination1',
+			clickable: true,
+		  },
+		});
+		var swiper2 = new Swiper('.swiper2', {
+      slidesPerView: 3,
+	  spaceBetween: 4,
+      pagination: {
+       // el: '.swiper-pagination2',
+        clickable: true,
+      },
+    });
+	 var swiper3 = new Swiper('.swiper3', {
+      slidesPerView: 3,
+	  spaceBetween: 4,
+      pagination: {
+       // el: '.swiper-pagination3',
+        clickable: true,
+      },
+    });
+	var swiper = new Swiper('.focusing-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '"></span>';
+        },
+      },
+    });
+
+	}
+	};
+	
+
+
+
+	$(function() {
+        $('.chart1').easyPieChart({
+            //your options goes here
+			lineWidth:15,
+			lineCap:'square', //butt round square
+			barColor:'#b01116',
+			scaleColor:'rgba(255,255,255,0)'
+        });
+		 $('.chart2').easyPieChart({
+            //your options goes here
+			lineWidth:15,
+			lineCap:'square', //butt round square
+			barColor:'#03a0ff',
+			scaleColor:'rgba(255,255,255,0)'
+        });
+		 $('.chart3').easyPieChart({
+            //your options goes here
+			lineWidth:15,
+			lineCap:'square', //butt round square
+			barColor:'#fdc010',
+			scaleColor:'rgba(255,255,255,0)'
+        });
+		 $('.chart4').easyPieChart({
+            //your options goes here
+			lineWidth:15,
+			lineCap:'square', //butt round square
+			barColor:'#b01116',
+			scaleColor:'rgba(255,255,255,0)'
+        });
+		 $('.chart5').easyPieChart({
+            //your options goes here
+			lineWidth:15,
+			lineCap:'square', //butt round square
+			barColor:'#03a0ff',
+			scaleColor:'rgba(255,255,255,0)'
+        });
+		 $('.chart6').easyPieChart({
+            //your options goes here
+			lineWidth:15,
+			lineCap:'square', //butt round square
+			barColor:'#fdc010',
+			scaleColor:'rgba(255,255,255,0)'
+        });
+		
+    });
+    
+   
+  </script>
+ </body>
+</html>
