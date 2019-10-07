@@ -4663,7 +4663,7 @@ label[for="bc_flip"]>span
 	}
 #bc_flip:checked+section>section>#contact_businesscard
 		{transform:rotateY(-180deg) !important;
-		 -webkit-rotateY(-180deg) !important;
+		 -webkit-transform:rotateY(-180deg) !important;
 		 -moz-transform:rotateY(-180deg) !important;
 		 -ms-transform:rotateY(-180deg) !important;
 		 -o-transform:rotateY(-180deg) !important;
