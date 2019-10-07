@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 114.9 24.2" style="enable-background:new 0 0 114.9 24.2;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#A6A8AB;stroke-miterlimit:10;}
+	.st1{fill:#A6A8AB;}
+	.st2{font-family:'NanumBarunGothicBold';}
+	.st3{font-size:12px;}
+</style>
+<g>
+	<path class="st0" d="M109.4,23.7H5.5c-2.8,0-5-2.3-5-5V5.5c0-2.7,2.3-5,5-5h103.9c2.8,0,5,2.3,5,5v13.3
+		C114.4,21.5,112.2,23.7,109.4,23.7z"/>
+	<g>
+		<text transform="matrix(1 0 0 1 29.3784 16.6538)" class="st1 st2 st3">보고 싶어요</text>
+	</g>
+	<g>
+		<g>
+			<path class="st1" d="M19.6,13.1v3.6c0,0.1,0,0.2-0.1,0.3c-0.1,0-0.1,0.1-0.3,0.1h-1.6c-0.1,0-0.2,0-0.3-0.1
+				c-0.1,0-0.1-0.1-0.1-0.3v-3.6h-3.6c-0.2,0-0.3-0.1-0.3-0.3v-1.4c0-0.2,0.1-0.3,0.3-0.3h3.6V7.5c0-0.2,0.1-0.3,0.3-0.3h1.6
+				c0.2,0,0.3,0.1,0.3,0.3v3.6H23c0.1,0,0.2,0,0.3,0.1c0,0.1,0.1,0.1,0.1,0.3v1.4c0,0.1,0,0.2-0.1,0.3c0,0.1-0.1,0.1-0.3,0.1h-3.4
+				V13.1z"/>
+		</g>
+	</g>
+	<polygon class="st1" points="102.3,16.1 105.7,10.3 98.9,10.3 	"/>
+</g>
+</svg>
