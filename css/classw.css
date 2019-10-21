@@ -2152,7 +2152,7 @@ label[for="touchguide"]
 		 transform-style:preserve-3d;
 		 -webkit-transform-style:preserve-3d;
 		 -moz-transform-style:preserve-3d;
-		 -ms-transform-style:flat;
+		 -ms-transform-style:preserve-3d;
 		 -o-transform-style:preserve-3d;
 		 perspective:300px;
 		 -webkit-perspective:300px;
@@ -4747,4 +4747,18 @@ label[for="bc_flip"]>span
 		 -o-transform:translateX(-50%);
 		}
 
-}	
+}
+
+_:-ms-input-placeholder, :root .skill_box>.skill_name,
+_:-ms-input-placeholder, :root .skill_rank:after,
+_:-ms-input-placeholder, :root #pf01_contact_back .bc_bottom>p
+		{background:none;}
+_:-ms-input-placeholder, :root #contact_businesscard
+		{overflow:hidden;}
+_:-ms-input-placeholder, :root #pf01_contact_back .pf01_contact_logo
+		{background:url(../images/pf01_logo_w.svg)no-repeat center}
+
+/*
+_:-ms-input-placeholder, :root .class {  ....; }    <--   IE10 이상에서 작동 (IE11 포함)
+_:-ms-fullscreen, :root .class { ....; }   <--   IE11에서만 작동
+*/
